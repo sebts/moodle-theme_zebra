@@ -1,0 +1,11 @@
+html {background-color:[[setting:backgroundcolor]];color:[[setting:thirdcolor]];}
+#page {max-width:1140px;}
+#page-header {background:url([[setting:logourl]]) no-repeat scroll left top transparent;padding-top:[[setting:logourlheight]];}
+a {color:[[setting:firstcolor]];}
+a:hover {color:[[setting:secondcolor]];}
+#page-border-wrapper {background-color:[[setting:fourthcolor]];}
+#custommenu {background:none repeat scroll 0 0 [[setting:firstcolor]];height:40px;position:relative;}
+#custom_menu_1 {font-size:20px;margin-top:-19px;color:[[setting:backgroundcolor]];position:absolute;top:50%;}
+.yui3-skin-sam .yui3-menu-content, .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-content {border:0 none;}
+.region-content {padding:4px;}
+.block, .forumpost {border-color:[[setting:firstcolor]];}

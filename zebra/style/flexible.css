@@ -1,0 +1,19 @@
+/* All Columns */
+
+/* 1 Column */
+@media screen and (max-width: 599px) {
+
+}
+
+/* 2 Column */
+@media screen and (min-width: 600px) and (max-width: 799px) {
+
+}
+
+/* 3 Column */
+@media screen and (min-width: 800px) {
+
+        #page-inner-wrapper {padding:50px;margin-bottom:20px;}
+
+        #page-border-wrapper {border:10px solid;}
+}

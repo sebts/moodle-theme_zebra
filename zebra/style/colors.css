@@ -1,0 +1,56 @@
+/* All Columns */
+
+html {color: #2F2F2F;background-color: #999;}
+
+#page-inner-wrapper {background-color:#CCCCCC;background:-moz-linear-gradient(top, #cedce7 0%, #FBFCFD 33%, #EEEEEE 75%, #BED4E5 100%);}
+#page-border-wrapper {border-color:#FFF;border-color:rgba(255,255,255,0.2);}
+
+#dock {background-color: #99CCFF;}
+
+#dockeditem {background-color: #FFFFFF;}
+
+/* 1 Column */
+
+@media screen and (max-width: 599px) {
+
+        #page-content,
+        #region-main-box,
+        #region-post-box {background: none repeat scroll 0 0 transparent;}
+
+        /* Main Content Background */
+        #region-main {background-color: #FFFFFF;}
+
+        /* Side-Pre and Side-Post Content Background */
+        #region-pre,
+        #region-post {background-color: #99CCFF;}
+
+}
+
+/* 2 Column */
+
+@media screen and (min-width: 600px) and (max-width: 799px) {
+
+        /* Main Content Background */
+        #region-main {background-color: #FFFFFF;}
+
+        /* Side-Pre and Side-Post Content Background */
+        #region-main-wrap {background-color: #99CCFF;}
+
+        #page-content {background-color: transparent;}
+
+}
+
+/* 3 Column */
+
+@media screen and (min-width: 800px) {
+
+        /* Main Content Background */
+        #region-main-box {background-color: #FFFFFF;}
+
+        /* Side-Pre Content Background */
+        #region-post-box {background-color: #99CCFF;}
+
+        /* Side-Post Content Background */
+        #page-content {background-color: #99CCFF;}
+
+}
