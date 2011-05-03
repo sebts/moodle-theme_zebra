@@ -1,5 +1,5 @@
 html {background-color:[[setting:backgroundcolor]];color:[[setting:thirdcolor]];}
-body {max-width:1140px;}
+#page {max-width:1140px;}
 #page-header {background:url([[setting:logourl]]) no-repeat scroll left top transparent;padding-top:[[setting:logourlheight]];}
 a {color:[[setting:firstcolor]];}
 a:hover {color:[[setting:secondcolor]];}
