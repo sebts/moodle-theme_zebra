@@ -23,13 +23,15 @@
 
 /* All Columns */
 html {color:[[setting:thirdcolor]];background-color:[[setting:backgroundcolor]];}
-body {background:url([[setting:backgroundurl]]) no-repeat scroll center top transparent;}
+body {background:url([[setting:backgroundurl]]) no-repeat scroll left top transparent;}
 legend {color:[[setting:thirdcolor]];}
 
 #page-header {background:url([[setting:logourl]]) no-repeat scroll left top transparent;min-height:[[setting:logourlheight]];}
 .navbar {background-color:[[setting:fourthcolor]];border-bottom:1px solid [[setting:backgroundcolor]];}
 #page-footer-wrapper {background-color:[[setting:fourthcolor]];}
 #page-footer {background-color:[[setting:backgroundcolor]];}
+
+#user-pic .defaultuserpic {background-color:[[setting:firstcolor]];}
 
 a,
 a:visited {color:[[setting:firstcolor]];}
@@ -62,7 +64,8 @@ span.unread {background-color:[[setting:secondcolor]];}
 .calendartable td {border-color:[[setting:backgroundcolor]];}
 
 /* 1 Column */
-@media screen and (max-width: 599px) {
+@media screen and (max-width:[[setting:onecolmax]]),
+screen and (max-device-width:[[setting:onecolmax]]) {
     #region-main {background-color: [[setting:fourthcolor]];}
     #region-pre,
     #region-post {background-color: [[setting:fifthcolor]];}
@@ -71,7 +74,8 @@ span.unread {background-color:[[setting:secondcolor]];}
 }
 
 /* 2 Column */
-@media screen and (min-width: 600px) and (max-width: 799px) {
+@media screen and (min-width:[[setting:twocolmin]]) and (max-width:[[setting:twocolmax]]),
+screen and (min-device-width:[[setting:twocolmin]]) and (max-device-width:[[setting:twocolmax]]) {
     #region-main {background-color: [[setting:fourthcolor]];}
     #region-main-wrap,
     #region-pre,
@@ -79,7 +83,8 @@ span.unread {background-color:[[setting:secondcolor]];}
 }
 
 /* 3 Column */
-@media screen and (min-width: 800px) {
+@media screen and (min-width:[[setting:threecolmin]]),
+screen and (min-device-width:[[setting:threecolmin]]) {
     #region-main {background-color:[[setting:fourthcolor]];}
     #region-post-box,
     #region-main-wrap,
