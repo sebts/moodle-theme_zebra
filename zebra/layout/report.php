@@ -53,7 +53,8 @@ echo $OUTPUT->doctype() ?>
     <title><?php echo $PAGE->title; ?></title>
     <link rel="shortcut icon" type="image/png" href="<?php echo $OUTPUT->pix_url('favicon/favicon', 'theme'); ?>" />
     <link rel="icon" href="<?php echo $OUTPUT->pix_url('favicon/favicon', 'theme'); ?>" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $OUTPUT->pix_url('favicon/apple-touch-icon-114x114-precomposed.png', 'theme'); ?>">    <?php echo $OUTPUT->standard_head_html(); ?>
+    <link rel="apple-touch-icon-precomposed" href="<?php echo $OUTPUT->pix_url('favicon/apple-touch-icon-precomposed', 'theme'); ?>">
+    <?php echo $OUTPUT->standard_head_html(); ?>
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
     <?php echo $OUTPUT->standard_top_of_body_html(); ?>
