@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Zebra theme settings page
+ * zebra theme settings page
  *
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
@@ -111,18 +111,18 @@ $setting = new admin_setting_configtext($name, $title, $description, '#F4F6F8', 
 $settings->add($setting);
 
 //Set page-header background color
-$name = 'theme_isc/sixthcolor';
-$title = get_string('sixthcolor', 'theme_isc');
-$description = get_string('sixthcolordesc', 'theme_isc');
-$setting = new admin_setting_configtext($name, $title, $description, 'transparent' PARAM_CLEAN, 10);
+$name = 'theme_zebra/sixthcolor';
+$title = get_string('sixthcolor','theme_zebra');
+$description = get_string('sixthcolordesc', 'theme_zebra');
+$setting = new admin_setting_configtext($name, $title, $description, 'transparent', PARAM_CLEAN, 10);
 $settings->add($setting);
 
 //Set page-footer background color
-$name = 'theme_isc/seventhcolor';
-$title = get_string('seventhcolor', 'theme_isc');
-$description = get_string('seventhcolordesc', 'theme_isc');
+$name = 'theme_zebra/seventhcolor';
+$title = get_string('seventhcolor','theme_zebra');
+$description = get_string('seventhcolordesc', 'theme_zebra');
 $setting = new admin_setting_configtext($name, $title, $description, '#DDDDDD', PARAM_CLEAN, 10);
-$setting->add($setting);
+$settings->add($setting);
 
 //This is the descriptor for the following color scheme settings
 $name = 'theme_zebra/schemeinfo';
