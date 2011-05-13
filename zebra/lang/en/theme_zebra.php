@@ -121,7 +121,10 @@ $string['miscinfodesc'] = 'Change the settings for miscellaneous things';
 $string['customcss'] = 'Custom CSS';
 $string['customcssdesc'] = 'Input any custom CSS here';
 
-$string['branding'] = 'Footer logos';
+$string['enablezoom'] = 'Enable page zoom';
+$string['enablezoomdesc'] = 'Enable page zooming for mobile devices';
+
+$string['branding'] = 'Hide footer logos';
 $string['brandingdesc'] = 'Hide the branded logos in the footer';
 
 $string['menuhome'] = 'Home';

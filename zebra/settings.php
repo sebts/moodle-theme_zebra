@@ -191,6 +191,14 @@ $description = get_string('threecolmaxdesc', 'theme_zebra');
 $setting = new admin_setting_configtext($name, $title, $description, '100%', PARAM_CLEAN, 5);
 $settings->add($setting);
 
+//Enable page zooming (mobile devices)
+$name = 'theme_zebra/enablezoom';
+$visiblename = get_string('enablezoom', 'theme_zebra');
+$title = get_string('enablezoom', 'theme_zebra');
+$description = get_string('enablezoomdesc', 'theme_zebra');
+$setting = new admin_setting_configcheckbox($name, $visiblename, $description, 0);
+$settings->add($setting);
+
 //This is the descriptor for the following mzebraellaneous settings
 $name = 'theme_zebra/miscinfo';
 $heading = get_string('miscinfo', 'theme_zebra');
@@ -207,7 +215,7 @@ $settings->add($setting);
 
 //Display branded footer logos
 $name = 'theme_zebra/branding';
-$visiblename = $name;
+$visiblename = get_string('branding', 'theme_zebra');
 $title = get_string('branding', 'theme_zebra');
 $description = get_string('brandingdesc', 'theme_zebra');
 $setting = new admin_setting_configcheckbox($name, $visiblename, $description, 0);

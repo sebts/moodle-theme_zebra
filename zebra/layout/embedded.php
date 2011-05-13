@@ -29,7 +29,7 @@ echo $OUTPUT->doctype() ?>
     <link rel="shortcut icon" type="image/png" href="<?php echo $OUTPUT->pix_url('favicon/favicon', 'theme'); ?>" />
     <link rel="icon" href="<?php echo $OUTPUT->pix_url('favicon/favicon', 'theme'); ?>" />
     <link rel="apple-touch-icon-precomposed" href="<?php echo $OUTPUT->pix_url('favicon/apple-touch-icon-precomposed', 'theme'); ?>">
-    <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <?php echo $OUTPUT->standard_head_html() ?>
