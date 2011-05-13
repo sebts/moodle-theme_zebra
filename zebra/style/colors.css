@@ -26,10 +26,10 @@ html {color:[[setting:thirdcolor]];background-color:[[setting:backgroundcolor]];
 body {background:url([[setting:backgroundurl]]) no-repeat scroll left top transparent;}
 legend {color:[[setting:thirdcolor]];}
 
-#page-header {background:url([[setting:logourl]]) no-repeat scroll left top transparent;min-height:[[setting:logourlheight]];}
+#page-header {background:url([[setting:logourl]]) no-repeat scroll left top [[setting:sixthcolor]];min-height:[[setting:logourlheight]];}
 .navbar {background-color:[[setting:fourthcolor]];border-bottom:1px solid [[setting:backgroundcolor]];}
 #page-footer-wrapper {background-color:[[setting:fourthcolor]];}
-#page-footer {background-color:[[setting:backgroundcolor]];}
+#page-footer {background-color:[[setting:seventhcolor]];}
 
 #user-pic .defaultuserpic {background-color:[[setting:firstcolor]];}
 

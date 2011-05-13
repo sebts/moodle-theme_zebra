@@ -79,15 +79,19 @@ $string['colorsinfodesc'] = 'Change the settings for the colors of the page';
 $string['backgroundcolor'] = 'Background color';
 $string['backgroundcolordesc'] = 'Main background color';
 $string['firstcolor'] = 'First color';
-$string['firstcolordesc'] = 'Links and menu';
+$string['firstcolordesc'] = 'Links and menu color';
 $string['secondcolor'] = 'Second color';
-$string['secondcolordesc'] = 'Hovering';
+$string['secondcolordesc'] = 'Hovering color';
 $string['thirdcolor'] = 'Third color';
-$string['thirdcolordesc'] = 'Labels and fonts';
+$string['thirdcolordesc'] = 'Labels and fonts color';
 $string['fourthcolor'] = 'Fourth color';
-$string['fourthcolordesc'] = 'Content Background';
+$string['fourthcolordesc'] = 'Content background color';
 $string['fifthcolor'] = 'Fifth color';
-$string['fifthcolordesc'] = 'Column(s) Background';
+$string['fifthcolordesc'] = 'Column(s) background color';
+$string['sixthcolor'] = 'Sixth color';
+$string['sixthcolordesc'] = 'Header background color';
+$string['seventhcolor'] = 'Seventh color';
+$string['seventhcolordesc'] = 'Footer background color';
 
 $string['schemeinfo'] = 'Color scheme settings';
 $string['schemeinfodesc'] = 'Change the settings for the color scheme of the page';
@@ -111,8 +115,8 @@ $string['threecolmindesc'] = 'Min width for three column layout';
 $string['threecolmax'] = 'Three column max width';
 $string['threecolmaxdesc'] = 'Max width for three column layout';
 
-$string['mzebrainfo'] = 'Mzebra. Settings';
-$string['mzebrainfodesc'] = 'Change the settings for mzebraellaneous things';
+$string['miscinfo'] = 'zebra. Settings';
+$string['miscinfodesc'] = 'Change the settings for miscellaneous things';
 
 $string['customcss'] = 'Custom CSS';
 $string['customcssdesc'] = 'Input any custom CSS here';

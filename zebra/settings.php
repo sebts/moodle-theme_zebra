@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * zebra theme settings page
+ * Zebra theme settings page
  *
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
@@ -110,6 +110,20 @@ $description = get_string('fifthcolordesc', 'theme_zebra');
 $setting = new admin_setting_configtext($name, $title, $description, '#F4F6F8', PARAM_CLEAN, 10);
 $settings->add($setting);
 
+//Set page-header background color
+$name = 'theme_isc/sixthcolor';
+$title = get_string('sixthcolor', 'theme_isc');
+$description = get_string('sixthcolordesc', 'theme_isc');
+$setting = new admin_setting_configtext($name, $title, $description, 'transparent' PARAM_CLEAN, 10);
+$settings->add($setting);
+
+//Set page-footer background color
+$name = 'theme_isc/seventhcolor';
+$title = get_string('seventhcolor', 'theme_isc');
+$description = get_string('seventhcolordesc', 'theme_isc');
+$setting = new admin_setting_configtext($name, $title, $description, '#DDDDDD', PARAM_CLEAN, 10);
+$setting->add($setting);
+
 //This is the descriptor for the following color scheme settings
 $name = 'theme_zebra/schemeinfo';
 $heading = get_string('schemeinfo', 'theme_zebra');
@@ -178,9 +192,9 @@ $setting = new admin_setting_configtext($name, $title, $description, '100%', PAR
 $settings->add($setting);
 
 //This is the descriptor for the following mzebraellaneous settings
-$name = 'theme_zebra/mzebrainfo';
-$heading = get_string('mzebrainfo', 'theme_zebra');
-$information = get_string('mzebrainfodesc', 'theme_zebra');
+$name = 'theme_zebra/miscinfo';
+$heading = get_string('miscinfo', 'theme_zebra');
+$information = get_string('miscinfodesc', 'theme_zebra');
 $setting = new admin_setting_heading($name, $heading, $information);
 $settings->add($setting);
 

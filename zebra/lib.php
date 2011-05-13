@@ -127,6 +127,22 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_onecolmax($css, $onecolmax);
 
+    //Get the sixth color value from settings
+    if (!empty($theme->settings->sixthcolor)) {
+        $sixthcolor = $theme->settings->sixthcolor;
+    } else {
+        $sixthcolor = null;
+    }
+    $css = zebra_set_sixthcolor($css, $sixthcolor);
+
+    //Get the seventh color value from settings
+    if (!empty($theme->settings->seventhcolor)) {
+        $seventhcolor = $theme->settings->seventhcolor;
+    } else {
+        $seventhcolor = null;
+    }
+    $css = zebra_set_seventhcolor($css, $seventhcolor);
+
     //Get the min width for two column page layout from settings
     if (!empty($theme->settings->twocolmin)) {
         $twocolmin = $theme->settings->twocolmin;
@@ -324,6 +340,41 @@ function zebra_set_fifthcolor($css, $fifthcolor) {
     $css = str_replace($tag, $replacement, $css);
     return $css;
 }
+
+/**
+ * Sets the sixth color used for the page-header background
+ *
+ * @param string $css
+ * @param mixed $sixthcolor
+ * @return string
+ */
+function zebra_set_sixthcolor($css, $sixthcolor) {
+    $tag = '[[setting:sixthcolor]]';
+    $replacement = $sixthcolor;
+    if (is_null($replacement)) {
+        $replacement = 'transparent';
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+/**
+ * Sets the seventh color used for the page-footer background
+ *
+ * @param string $css
+ * @param mixed $seventhcolor
+ * @return string
+ */
+function zebra_set_seventhcolor($css, $seventhcolor) {
+    $tag = '[[setting:seventhcolor]]';
+    $replacement = $seventhcolor;
+    if (is_null($replacement)) {
+        $replacement = '#DDDDDD';
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
 
 /**
  * Sets the gradient background color for blocks, navbar, etc.
