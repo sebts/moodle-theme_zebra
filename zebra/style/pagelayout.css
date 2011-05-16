@@ -22,7 +22,7 @@
  */
 
 /* All Columns */
-#page {margin:0 auto;max-width:[[setting:threecolmax]];overflow:hidden;}
+#page {margin:0 auto;max-width:[[setting:threecolmax]];overflow-x:hidden;}
 #page-header,
 #custommenu,
 .navbar,
@@ -42,13 +42,11 @@
 
 
 /* 1 Column (Default) */
-@media screen and (max-width:[[setting:onecolmax]]),
-screen and (max-device-width:[[setting:onecolmax]]) {
+@media screen and (max-width:[[setting:onecolmax]]) {
 }
 
 /* 2 Column */
-@media screen and (min-width:[[setting:twocolmin]]) and (max-width:[[setting:twocolmax]]),
-screen and (min-device-width:[[setting:twocolmin]]) and (max-device-width:[[setting:twocolmax]]) {
+@media screen and (min-width:[[setting:twocolmin]]) and (max-width:[[setting:twocolmax]]) {
     #region-main-box {left:0px;width:200%;}
     #region-post-box {left:50%;margin-left:0;width:100%;}
     #region-main-wrap {float:right;position:relative;right:100%;width:50%;}
@@ -58,8 +56,7 @@ screen and (min-device-width:[[setting:twocolmin]]) and (max-device-width:[[sett
 }
 
 /* 3 Column */
-@media screen and (min-width:[[setting:threecolmin]]),
-screen and (min-device-width:[[setting:threecolmin]]) {
+@media screen and (min-width:[[setting:threecolmin]]) {
     #region-main-box {left:200px;width:200%;}
     #region-post-box {left:50%;margin-left:-400px;width:100%;float:left;}
     #region-main-wrap {float:right;position:relative;right:100%;width:50%;}
