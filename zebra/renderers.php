@@ -48,7 +48,7 @@ class theme_zebra_core_renderer extends core_renderer {
         $branchlabel = date("F j, Y");
         $branchurl   = new moodle_url('/calendar/view.php');
         $branchtitle = get_string('menutoday','theme_zebra');
-        $branchsort  = +10;
+        $branchsort  = +10000;
         $branch = $menu->add($branchlabel, $branchurl, $branchtitle, $branchsort);
         
         // If the menu has no children return an empty string
