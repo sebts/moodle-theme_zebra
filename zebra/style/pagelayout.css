@@ -22,7 +22,7 @@
  */
 
 /* All Columns */
-#page {margin:0 auto;max-width:[[setting:threecolmax]];overflow-x:hidden;}
+#page {margin:0 auto;max-width:[[setting:threecolmax]];overflow:hidden;}
 #page-header,
 #custommenu,
 .navbar,
