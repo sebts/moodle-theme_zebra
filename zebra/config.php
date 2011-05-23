@@ -145,4 +145,4 @@ $THEME->csspostprocess = 'zebra_process_css'; //Process the settings page (color
 $THEME->rendererfactory = 'theme_overridden_renderer_factory'; //Adds the custommenu stuff
 
 $THEME->javascripts = array();
-$THEME->javascripts_footer = array();
+$THEME->javascripts_footer = array('footers');
