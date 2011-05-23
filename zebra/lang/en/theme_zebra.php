@@ -24,7 +24,7 @@
 
 $string['pluginname'] = 'Zebra';
 $string['choosereadme'] = '<div class="clearfix">
-	<h1><span style="color:red;">Z</span><span style="color:blue;">e</span><span style="color:green;">b</span><span style="color:teal;">r</span><span style="color:orange;">a</span> 2.0.1</h1>
+	<h1><span style="color:red;">Z</span><span style="color:blue;">e</span><span style="color:green;">b</span><span style="color:teal;">r</span><span style="color:orange;">a</span> 2.0+</h1>
         <hr>
 	<div class="theme_screenshot" style="float:right;margin-left:4px;">
 		<img src="zebra/pix/screenshot.jpg" />
