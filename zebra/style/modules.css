@@ -33,6 +33,7 @@
 .headermain {position:absolute;bottom:0;float:none;}
 #profileblock {position:absolute;bottom:0;right:0;height:90px;text-align:right;width:100%}
 #user-pic {float:right;margin-left:10px;}
+#user-pic .userpicture {width:80px;}
 .langmenu {margin-top:5px;}
 
 /* Branding */
