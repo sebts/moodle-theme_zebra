@@ -35,7 +35,6 @@ body.has_dock_left_vertical {margin-left:30px;width:auto;}
 .has_dock_left_vertical #dockeditempanel {left:100%;}
 #dockeditempanel.dockitempanel_hidden {display:none;}
 #dockeditempanel .dockeditempanel_content {background-color:[[setting:fourthcolor]];z-index:12050;}
-#dockeditempanel .dockeditempanel_bd {overflow:auto;width:auto;}
 #dockeditempanel .dockeditempanel_bd .block_docked {margin:2px;}
 #dockeditempanel .dockeditempanel_hd {text-align:right;}
 #dockeditempanel .dockeditempanel_hd h2 {display:inline;margin:0;padding-right:2px;}
