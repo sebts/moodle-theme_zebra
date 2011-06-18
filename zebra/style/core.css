@@ -272,7 +272,7 @@
 /** Calendar **/
 .calendartable {width: 100%;}
 .calendartable th,
-.calendartable td {width:14%;vertical-align:top;text-align: center;border:1px solid;}
+.calendartable td {width:14%;vertical-align:top;text-align: center;border:1px solid;padding:2px 0;}
 
 .path-calendar .calendar-controls .previous,
 .path-calendar .calendar-controls .next,
