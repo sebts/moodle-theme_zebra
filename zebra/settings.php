@@ -199,7 +199,7 @@ $description = get_string('enablezoomdesc', 'theme_zebra');
 $setting = new admin_setting_configcheckbox($name, $visiblename, $description, 0);
 $settings->add($setting);
 
-//This is the descriptor for the following mzebraellaneous settings
+//This is the descriptor for the following miscellaneous settings
 $name = 'theme_zebra/miscinfo';
 $heading = get_string('miscinfo', 'theme_zebra');
 $information = get_string('miscinfodesc', 'theme_zebra');
