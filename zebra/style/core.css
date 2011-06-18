@@ -300,6 +300,7 @@
 .path-calendar .filters table {border-collapse:separate;border-spacing: 2px;width: 100%;}
 #page-calendar-export .indent {padding-left: 20px;}
 
+.block .minicalendarblock h3 {margin-bottom:0;}
 .block .minicalendar {width:100%;}
 .block .minicalendar th,
 .block .minicalendar td {padding:2px 0;}
