@@ -262,9 +262,6 @@
 .block.hidden .block-hider-show {
     display: inline;
 }
-.block.block_site_main_menu #section0 select {
-	width:100%;
-}
 .dir-rtl .block .header .block_action {
     float: left;
 }
