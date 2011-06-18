@@ -42,6 +42,7 @@ ul.dropdown > li {
 
 ul.dropdown > li:last-child {
         border-right:0 none;
+        border-left:1px solid [[setting:thirdcolor]];
         float:right;
         background-color:[[setting:thirdcolor]]
 }
