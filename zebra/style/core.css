@@ -262,6 +262,9 @@
 .block.hidden .block-hider-show {
     display: inline;
 }
+.block.block_site_main_menu #section0 select {
+	width:100%;
+}
 .dir-rtl .block .header .block_action {
     float: left;
 }
@@ -1082,9 +1085,9 @@ body.tag .managelink {padding: 5px;}
 #page-course-report-participation-index .participationselectform label {margin-left:15px;margin-right:5px;}
 
 .coursebox {padding:4px;}
-.coursebox .info {float: left;text-align:left;width: 40%;}
-.coursebox .info h3 {margin-top:0;}
-.coursebox .summary {float: right;text-align:left;width: 55%;}
+.coursebox .info {text-align:left;width:100%;float:none;}
+.coursebox .info h3 {margin:0 0 8px 0;}
+.coursebox .summary {text-align:left;width:100%;float:none;}
 .coursebox .summary .category {text-align:right;}
 .coursebox .teachers li {list-style-type:none;padding:0;margin:0;}
 
