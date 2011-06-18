@@ -56,7 +56,8 @@ span.unread {background-color:[[setting:secondcolor]];}
 
 .generalbox {border-color:[[setting:backgroundcolor]];}
 
-.course-content ul li.section {border: 1px solid [[setting:backgroundcolor]];}
+.coursebox {border:1px solid [[setting:backgroundcolor]];}
+.course-content ul li.section {border:1px solid [[setting:backgroundcolor]];}
 .course-content ul li.section.current {border-color:[[setting:firstcolor]];}
 
 .mform fieldset {border-color:[[setting:backgroundcolor]];}
