@@ -389,7 +389,7 @@ img.iconhelp {height:17px;margin-right:4px;vertical-align:middle;width:17px;}
 img.icontoggle {height:17px;vertical-align:middle;width:50px;}
 img.iconkbhelp {height:17px;width:49px;}
 .categorybox .category {font-weight:bold;}
-.generalbox {border:1px solid;padding:4px;}
+.generalbox {border:1px solid;padding:4px;margin-bottom:4px;}
 .generalbox p {margin-bottom:0;}
 .boxaligncenter {margin-left:auto;margin-right:auto;}
 .boxalignright {margin-left:auto;margin-right:0;}
