@@ -115,7 +115,7 @@ $string['threecolmindesc'] = 'Min width for three column layout';
 $string['threecolmax'] = 'Three column max width';
 $string['threecolmaxdesc'] = 'Max width for three column layout';
 
-$string['miscinfo'] = 'zebra. Settings';
+$string['miscinfo'] = 'Misc. settings';
 $string['miscinfodesc'] = 'Change the settings for miscellaneous things';
 
 $string['customcss'] = 'Custom CSS';
