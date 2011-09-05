@@ -24,32 +24,30 @@
 
 $string['pluginname'] = 'Zebra';
 $string['choosereadme'] = '<div class="clearfix">
-	<h1><span style="color:red;">Z</span><span style="color:blue;">e</span><span style="color:green;">b</span><span style="color:teal;">r</span><span style="color:orange;">a</span> 2.0+</h1>
+	<h1><span style="color:red;">Z</span><span style="color:blue;">e</span><span style="color:green;">b</span><span style="color:teal;">r</span><span style="color:orange;">a</span></h1>
         <hr>
 	<div class="theme_screenshot" style="float:right;margin-left:4px;">
 		<img src="zebra/pix/screenshot.jpg" />
 	</div>
 	<div class="theme_description">
+	    <p><span class="warning" style="color:orange;">Warning:</span> Zebra relies heavily on CSS3 and is <u>NOT recommended</u> for IE6 or below, but then, neither is Moodle 2.0+.</p>
+	    <br />
 		<h2>About</h2>
-		<p>Zebra is a port of Zebra from Moodle 1.9.</p>
-                <br />
-                <p><span class="warning" style="color:orange;">Warning:</span> Zebra 2.0+ relies heavily on CSS3 and is <u>NOT recommended</u> for IE6 or below, but then, neither is Moodle 2.0+.</p>
-                <br />
-                <p>Zebra features adjustable colors to seamlessly integrate the look and feel of your organization with a few simple settings.</p>
-                <br />
-                <p>Zebra also features a new page layout that offers 1, 2, or 3 column layouts using the @media CSS3 declaration, enabling you to display your site on a variety of devices and resolutions without hacking any code.</p>
-
+		<p>Zebra uses CSS3 @media queries to dynamically reflow the page layout based on screen width.  This custom 2-1-3 (middle, left, right) page layout can display 1, 2, or 3 columns depending on screen width.  It is also compatible with .side-pre-only, .side-post-only, and .content-only body classes in all 3 layouts.</p>
+        <br />
+        <p>Zebra also provides extensive customization via its settings page, including colors, logos, reflow settings, mobile settings, and a custom CSS field.</p>
 		<h2>Parents</h2>
 		<p>This theme is built upon both Base and integrates the pagelayout and dock from Rebase.</p>
 		<h2>Credits</h2>
 		<p>Zebra 2.0 is based off of the original Aardvark 1.2 (1.9) by Shaun Daubney @ Newbury-College, Zebra 1.4 (1.9) by me (Danny Wahl) @ LDi, Aardvark_makeover (2.0) by Mary Evans @ Visible-Expressions, and whatever themes those themes are based off of.</p>
 		<h2>License</h2>
-		<p>This, and all other themes included in the Moodle core, are licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>.
-		<h3>Theme Discussion Forum:</h3>
+		<p>This, and all other themes included in the Moodle core, are licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>.</p>
+		<br />
+		<p>The underlying page layout, designed independently of Moodle 2.0, and capable of being used standalone, is also licensed under the GNU General Public License.</p>
+		<h2>Theme Discussion Forum:</h2>
 		<p><a href="http://moodle.org/mod/forum/discuss.php?d=174951">http://moodle.org/mod/forum/discuss.php?d=174951</a></p>
-		<h3>Theme Credits</h3>
+		<h2>Theme Credits</h2>
 		<p><a href="http://iyware.com">Danny Wahl</a></p>
-                <br />
 	</div>
 </div>
 ';
