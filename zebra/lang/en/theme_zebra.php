@@ -31,7 +31,7 @@ $string['choosereadme'] = '<div class="clearfix">
 	</div>
 	<div class="theme_description">
 		<h2>About</h2>
-		<p>Zebra 2.0+ is a port of Zebra from Moodle 1.9.</p>
+		<p>Zebra is a port of Zebra from Moodle 1.9.</p>
                 <br />
                 <p><span class="warning" style="color:orange;">Warning:</span> Zebra 2.0+ relies heavily on CSS3 and is <u>NOT recommended</u> for IE6 or below, but then, neither is Moodle 2.0+.</p>
                 <br />
