@@ -21,57 +21,55 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-#custommenu { 
-	height: 30px;
-        background: [[setting:firstcolor]];
-	text-shadow: 0 1px 0 [[setting:thirdcolor]];
-        color: [[setting:backgroundcolor]];
+#custommenu {
+    background:[[setting:firstcolor]];
+    color:[[setting:backgroundcolor]];
+	height:30px;
+	text-shadow:0 1px 0 [[setting:thirdcolor]];
 }
 
 #custommenu ul.dropdown {
-        width:100%;
-        height:100%;
+    height:100%;
 	font:bold 13px "Trebuchet MS",Arial,Helvetica,sans-serif;
-
+    width:100%;
 }
 
-ul.dropdown > li { 
-	border-right: 1px solid [[setting:thirdcolor]]; 
+ul.dropdown > li {
+	border-right:1px solid [[setting:thirdcolor]]; 
 }
-
 
 ul.dropdown > li:last-child {
-        border-right:0 none;
-        border-left:1px solid [[setting:thirdcolor]];
-        float:right;
-        background-color:[[setting:thirdcolor]]
+    background-color:[[setting:thirdcolor]]
+    border-left:1px solid [[setting:thirdcolor]];
+    border-right:0 none;
+    float:right;
 }
 
-ul.dropdown span.customitem { 
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        height:100%;
+ul.dropdown span.customitem {
+    height:100%;
+    margin:0 none;
+    padding:0;
+    width:100%;
 }
 
 ul.dropdown li a,
-ul.dropdown span.customitem a { 
+ul.dropdown span.customitem a {
 	padding:6px 20px;
 }
 
-#custommenu ul.dropdown ul { 
+#custommenu ul.dropdown ul {
+    margin-top:0;
 	padding:0;
-        width:185px;
-        margin-top:0;
+    width:185px;
 }
 
 #custommenu ul.dropdown ul ul {
-        margin-top:-1px;
+    margin-top:-1px;
 }
 
-#custommenu ul.dropdown ul a { 
+#custommenu ul.dropdown ul a {
 	padding:7px 0px 6px 18px;
-        width:auto;
+    width:auto;
 }
 
 ul.dropdown a {
@@ -80,65 +78,64 @@ ul.dropdown a {
 
 ul.dropdown > li:first-child a,
 ul.dropdown > li:last-child a {
-        width:auto;
+    width:auto;
 }
 
 ul.dropdown > li:first-child a {
-        background:url([[pix:theme|menu/home_icon]]) no-repeat scroll center center;
+    background:url([[pix:theme|menu/home_icon]]) no-repeat scroll center center;
 }
 
 ul.dropdown > li:hover,
 ul.dropdown > li:last-child:hover {
-        background-color:[[setting:secondcolor]];
-
+    background-color:[[setting:secondcolor]];
 }
 
 ul.dropdown,
 ul.dropdown li,
 ul.dropdown ul {
 	list-style:none;
-	margin:0;
+	margin:0 none;
 	padding:0;
 }
 
 ul.dropdown li {
+    background-color: transparent;
 	float:left;
+    height:30px;
 	line-height:1.3em;
 	vertical-align:middle;
-  background-color: transparent; 
 	zoom:1 !important;
-        height:30px;
 }
 
 ul.dropdown li.hover,
 ul.dropdown li:hover {
+	cursor:default;
 	position:relative;
 	z-index:599;
-	cursor:default;
 }
 
 ul.dropdown ul {
-	visibility:hidden;
-	position:absolute;
-	top:100%;
-        z-index:598;
-	left:auto;
-	right:0;
-	font:100% "Trebuchet MS",Arial,Helvetica,sans-serif;
 	background-color:[[setting:thirdcolor]];
+	font:100% "Trebuchet MS",Arial,Helvetica,sans-serif;
+	left:auto;
+	position:absolute;
+	right:0;
+	top:100%;
+	visibility:hidden;
+    z-index:598;
 }
 
 ul.dropdown ul li {
+    border-bottom:1px solid rgba(0,0,0,0.4);
+    border-top:1px solid rgba(255,255,255,0.1);
 	float:none;
-        border-top:1px solid rgba(255,255,255,0.1);
-        border-bottom:1px solid rgba(0,0,0,0.4);
 }
 
 ul.dropdown ul ul {
-	top:0;
-	right:auto;
 	left:100%;
 	margin-top:-2px;
+	right:auto;
+	top:0;
 }
 
 ul.dropdown li:hover > ul {
@@ -153,37 +150,37 @@ ul.dropdown li.clickable-with-children > a {
 
 ul.dropdown ul span, 
 ul.dropdown ul span a, 
-ul.dropdown ul li.clickable-with-children > a { 
+ul.dropdown ul li.clickable-with-children > a {
 	background:[[setting:thirdcolor]] url([[pix:theme|menu/menu_arrow]]) no-repeat 95% center;
 }
 
 ul.dropdown a:link, ul.dropdown a:visited {
-	color: [[setting:fourthcolor]];
-	text-decoration: none;
+	color:[[setting:fourthcolor]];
+	text-decoration:none;
 }
 
 ul.dropdown ul a {
-        background-color: [[setting:thirdcolor]];
+    background-color:[[setting:thirdcolor]];
 }
 
-ul.dropdown ul a:hover { 
-	background-color: [[setting:firstcolor]];
+ul.dropdown ul a:hover {
+	background-color:[[setting:firstcolor]];
 }
 
 ul.dropdown ul ul li,
-ul.dropdown ul ul ul li { 
+ul.dropdown ul ul ul li {
 	background-color:[[setting:thirdcolor]];
 }
 
 ul.dropdown li a,
 ul.dropdown span,
-ul.dropdown span a { 
-	border: 0 none; 
-	background-color: transparent;
+ul.dropdown span a {
+	background-color:transparent;
+	border: 0 none;
 }
 
-ul.dropdown a,ul.dropdown span{ 
-	display:block; 
+ul.dropdown a,ul.dropdown span {
+	display:block;
 }
 
 ul.dropdown ul a {
@@ -197,11 +194,11 @@ ul.dropdown ul li:hover > span a {
 }
 
 ul.dropdown li.clickable-with-children:hover > a {
-background-image:url([[pix:theme|menu/menu_arrow]]);
+    background-image:url([[pix:theme|menu/menu_arrow]]);
 }
 
 ul.dropdown ul ul *.open,
 ul.dropdown ul ul li:hover > span,
 ul.dropdown ul ul li:hover > span a {
-background-image:url([[pix:theme|menu/menu_arrow]]) [[setting:firstcolor]];
+    background-image:url([[pix:theme|menu/menu_arrow]]) [[setting:firstcolor]];
 }
