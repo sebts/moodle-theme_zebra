@@ -47,7 +47,7 @@ ul.dropdown > li:last-child {
 
 ul.dropdown span.customitem {
     height:100%;
-    margin:0 none;
+    margin:0;
     padding:0;
     width:100%;
 }
@@ -94,7 +94,7 @@ ul.dropdown,
 ul.dropdown li,
 ul.dropdown ul {
 	list-style:none;
-	margin:0 none;
+	margin:0;
 	padding:0;
 }
 
@@ -187,21 +187,12 @@ ul.dropdown ul a {
 	width:166px;
 	padding:2px 0 4px 5px;
 }
-/*
+
 ul.dropdown ul li:hover > span, 
-ul.dropdown ul li:hover > span a {
-	background-image:url([[pix:theme|menu/menu_arrow]]) [[setting:firstcolor]];
-}
-*/
-
-ul.dropdown li.clickable-with-children:hover > a {
-    background-image:url([[pix:theme|menu/menu_arrow]]);
-}
-
-/*
+ul.dropdown ul li:hover > span a,
 ul.dropdown ul ul *.open,
 ul.dropdown ul ul li:hover > span,
-ul.dropdown ul ul li:hover > span a {
-    background-image:url([[pix:theme|menu/menu_arrow]]) [[setting:firstcolor]];
+ul.dropdown ul ul li:hover > span a,
+ul.dropdown li.clickable-with-children:hover > a  {
+	background:url([[pix:theme|menu/menu_arrow]]) no-repeat scroll center center [[setting:firstcolor]];
 }
-*/
