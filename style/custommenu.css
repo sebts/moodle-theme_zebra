@@ -151,7 +151,7 @@ ul.dropdown li.clickable-with-children > a {
 ul.dropdown ul span, 
 ul.dropdown ul span a, 
 ul.dropdown ul li.clickable-with-children > a {
-	background:[[setting:thirdcolor]] url([[pix:theme|menu/menu_arrow]]) no-repeat 95% center;
+	background:url([[pix:theme|menu/menu_arrow]]) no-repeat 95% center [[setting:thirdcolor]];
 }
 
 ul.dropdown a:link, ul.dropdown a:visited {
@@ -194,5 +194,5 @@ ul.dropdown ul ul *.open,
 ul.dropdown ul ul li:hover > span,
 ul.dropdown ul ul li:hover > span a,
 ul.dropdown li.clickable-with-children:hover > a  {
-	background:url([[pix:theme|menu/menu_arrow]]) no-repeat scroll center center [[setting:firstcolor]];
+	background:url([[pix:theme|menu/menu_arrow]]) no-repeat 95% center [[setting:firstcolor]];
 }
