@@ -21,7 +21,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-/* All Columns */
+/* All Views */
 body {
 	padding:0 10px;
 }
@@ -69,12 +69,12 @@ body {
 	padding:4px;
 }
 
-/* 1 Column */
+/* 1 Column View */
 @media screen and (max-width:[[setting:onecolmax]]) {
 	
 }
 
-/* 2 Column */
+/* 2 Column View */
 @media screen and (min-width:[[setting:twocolmin]]) and (max-width:[[setting:twocolmax]]) {
     #region-main-box {
     	left:0px;
@@ -115,7 +115,7 @@ body {
     }
 }
 
-/* 3 Column */
+/* 3 Column View */
 @media screen and (min-width:[[setting:threecolmin]]) {
     #region-main-box {
     	left:200px;
