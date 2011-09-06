@@ -22,7 +22,7 @@
  */
 
 #custommenu {
-    background:[[setting:firstcolor]];
+    background-color:[[setting:firstcolor]];
     color:[[setting:backgroundcolor]];
 	height:30px;
 	text-shadow:0 1px 0 [[setting:thirdcolor]];
