@@ -189,16 +189,10 @@ ul.dropdown ul a {
 }
 
 ul.dropdown ul li:hover > span, 
-ul.dropdown ul li:hover > span a {
-	background-image:url([[pix:theme|menu/menu_arrow]]) [[setting:firstcolor]];
-}
-
-ul.dropdown li.clickable-with-children:hover > a {
-    background-image:url([[pix:theme|menu/menu_arrow]]);
-}
-
+ul.dropdown ul li:hover > span a,
 ul.dropdown ul ul *.open,
 ul.dropdown ul ul li:hover > span,
-ul.dropdown ul ul li:hover > span a {
-    background-image:url([[pix:theme|menu/menu_arrow]]) [[setting:firstcolor]];
+ul.dropdown ul ul li:hover > span a,
+ul.dropdown li.clickable-with-children:hover > a {
+	background:url([[pix:theme|menu/menu_arrow]]) no-repeat scroll center center [[setting:firstcolor]];
 }
