@@ -21,74 +21,65 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+/* Top Menu */
+
 #custommenu {
-    background:[[setting:firstcolor]];
-    color:[[setting:backgroundcolor]];
 	height:30px;
 	text-shadow:0 1px 0 [[setting:thirdcolor]];
 }
 
-#custommenu ul.dropdown {
+ul.dropdown-horizontal {
     height:100%;
-	font:bold 13px "Trebuchet MS",Arial,Helvetica,sans-serif;
-    width:100%;
 }
 
-ul.dropdown > li {
+ul.dropdown-horizontal > li {
 	border-right:1px solid [[setting:thirdcolor]]; 
-}
-
-ul.dropdown > li:last-child {
-    background-color:[[setting:thirdcolor]]
-    border-left:1px solid [[setting:thirdcolor]];
-    border-right:0 none;
-    float:right;
-}
-
-ul.dropdown span.customitem {
-    height:100%;
-    margin:0;
-    padding:0;
-    width:100%;
-}
-
-ul.dropdown li a,
-ul.dropdown span.customitem a {
-	padding:6px 20px;
-}
-
-#custommenu ul.dropdown ul {
-    margin-top:0;
-	padding:0;
-    width:185px;
-}
-
-#custommenu ul.dropdown ul ul {
-    margin-top:-1px;
-}
-
-#custommenu ul.dropdown ul a {
-	padding:7px 0px 6px 18px;
-    width:auto;
-}
-
-ul.dropdown a {
-    width:145px;
-}
-
-ul.dropdown > li:first-child a,
-ul.dropdown > li:last-child a {
-    width:auto;
 }
 
 ul.dropdown > li:first-child a {
     background:url([[pix:theme|menu/home_icon]]) no-repeat scroll center center;
 }
 
+ul.dropdown-horizontal > li:first-child a,
+ul.dropdown-horizontal > li:last-child a {
+    width:auto;
+}
+
+ul.dropdown-horizontal > li:last-child {
+    background-color:[[setting:thirdcolor]];
+    border-left:1px solid [[setting:thirdcolor]];
+    border-right:0 none;
+    float:right;
+}
+
 ul.dropdown > li:hover,
 ul.dropdown > li:last-child:hover {
     background-color:[[setting:secondcolor]];
 }
+
+/* Sub Menus */
+
+ul.dropdown ul {
+    font-weight:normal;
+}
+
+ul.dropdown-horizontal ul ul {
+    margin-top:-1px;
+}
+
+/* All Custom Items */
+
+ul.dropdown-horizontal .customitem {
+    height:100%;
+}
+
+ul.dropdown-horizontal a {
+	padding:6px 20px;
+	display:block;
+	width:145px;
+}
+
+/* ----- */
 
 ul.dropdown,
 ul.dropdown li,
@@ -99,12 +90,11 @@ ul.dropdown ul {
 }
 
 ul.dropdown li {
-    background-color: transparent;
+    background-color:transparent;
 	float:left;
     height:30px;
 	line-height:1.3em;
 	vertical-align:middle;
-	zoom:1 !important;
 }
 
 ul.dropdown li.hover,
@@ -141,12 +131,6 @@ ul.dropdown ul ul {
 ul.dropdown li:hover > ul {
 	visibility:visible;
 }
-ul.dropdown span,
-ul.dropdown span a,
-ul.dropdown li.clickable-with-children > a {
-	width:145px;
-	padding:2px 6px 4px 20px;
-}
 
 ul.dropdown ul span, 
 ul.dropdown ul span a, 
@@ -177,10 +161,6 @@ ul.dropdown span,
 ul.dropdown span a {
 	background-color:transparent;
 	border: 0 none;
-}
-
-ul.dropdown a,ul.dropdown span {
-	display:block;
 }
 
 ul.dropdown ul a {
