@@ -196,6 +196,10 @@
 .dir-rtl #adminsettings .form-item  .form-label,
 .dir-rtl #adminsettings .form-item .form-description { float: right;text-align: right}
 
+.block {
+    margin-bottom:8px;
+}
+
 .block .header h2 {
     margin: 2px;
 }
