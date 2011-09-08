@@ -23,16 +23,42 @@
 
 /* Forum */
 
-.forumpost .picture img {margin:0;}
-.forumpost .row .left {width:auto;}
-.forumpost .header {height:36px;}
-.forumpost .maincontent {padding:4px;width:auto;}
-.forumpost .options {padding:4px;}
-#page-site-index .forumpost {margin:0 0 10px;}
+.forumpost .picture img {
+    margin:0;
+}
+
+.forumpost .row .left {
+    width:auto;
+}
+
+.forumpost .header {
+    height:36px;
+}
+
+.forumpost .maincontent {
+    padding:4px;
+    width:auto;
+}
+
+.forumpost .options {
+    padding:4px;
+}
+
+#page-site-index .forumpost {
+    margin:0 0 10px;
+}
 
 /* Quiz */
 
-#page-mod-quiz-view #profileblock {margin-left:auto;margin-right:auto;max-width:[[setting:threecolmax]];position:fixed;right:auto;top:10px;z-index:11000;}
+#page-mod-quiz-view #profileblock {
+    margin-left:auto;
+    margin-right:auto;
+    max-width:[[setting:threecolmax]];
+    position:fixed;
+    right:auto;
+    top:10px;
+    z-index:11000;
+}
 
 /* Profile Block */
 
