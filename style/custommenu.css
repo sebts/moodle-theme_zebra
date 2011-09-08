@@ -59,21 +59,44 @@ ul.dropdown > li:hover {
 
 /* Sub Menus */
 
-ul.dropdown-horizontal ul ul {
-    margin-top:-1px;
+ul.dropdown ul li {
+    border-bottom:1px solid rgba(0,0,0,0.4);
+    border-top:1px solid rgba(255,255,255,0.1);
 }
 
-ul.dropdown ul li {
-    border-bottom:1px inset rgba(0,0,0,0.4);
-    border-top:1px inset rgba(255,255,255,0.1);
+ul.dropdown ul li:hover {
+    border-bottom:1px solid [[setting:firstcolor]];
+    border-top:1px solid [[setting:firstcolor]];
+}
+
+ul.dropdown ul {
+	background-color:[[setting:thirdcolor]];
+	left:auto;
+	position:absolute;
+	right:0;
+	top:100%;
+	visibility:hidden;
+    z-index:598;
+    padding-left:1px; /* This compensates for the border-left on the top list items */
+}
+
+ul.dropdown ul ul {
+	left:100%;
+	margin-top:-1px;
+	right:auto;
+	top:0;
+}
+
+ul.dropdown ul span a {
+	background:url([[pix:theme|menu/menu_arrow]]) no-repeat 95% center [[setting:thirdcolor]];
+}
+
+ul.dropdown ul li:hover > span a,
+ul.dropdown ul ul li:hover > span a {
+	background-color:[[setting:firstcolor]];
 }
 
 /* All Custom Items */
-
-#custommenu .customitem {
-    height:100%;
-    line-height:18px;
-}
 
 #custommenu ul a {
 	padding:6px 20px;
@@ -93,6 +116,7 @@ ul.dropdown-horizontal li {
 	float:left;
     height:30px;
 	vertical-align:middle;
+	line-height:18px;
 }
 
 ul.dropdown li:hover > ul {
@@ -105,65 +129,11 @@ ul.dropdown li:hover {
 	position:relative;
 }
 
-/* ----- */
-
-
-
-
-
-ul.dropdown ul {
-	background-color:[[setting:thirdcolor]];
-	left:auto;
-	position:absolute;
-	right:0;
-	top:100%;
-	visibility:hidden;
-    z-index:598;
-}
-
-ul.dropdown ul ul {
-	left:100%;
-	margin-top:-2px;
-	right:auto;
-	top:0;
-}
-
-ul.dropdown ul span, 
-ul.dropdown ul span a, 
-ul.dropdown ul li.clickable-with-children > a {
-	background:url([[pix:theme|menu/menu_arrow]]) no-repeat 95% center [[setting:thirdcolor]];
-}
-
 ul.dropdown a:link, ul.dropdown a:visited {
 	color:[[setting:fourthcolor]];
 	text-decoration:none;
 }
 
-ul.dropdown ul a {
-    background-color:[[setting:thirdcolor]];
-}
-
 ul.dropdown ul a:hover {
 	background-color:[[setting:firstcolor]];
-}
-
-ul.dropdown ul ul li,
-ul.dropdown ul ul ul li {
-	background-color:[[setting:thirdcolor]];
-}
-
-ul.dropdown li a,
-ul.dropdown span,
-ul.dropdown span a {
-	background-color:transparent;
-	border: 0 none;
-}
-
-ul.dropdown ul li:hover > span, 
-ul.dropdown ul li:hover > span a,
-ul.dropdown ul ul *.open,
-ul.dropdown ul ul li:hover > span,
-ul.dropdown ul ul li:hover > span a,
-ul.dropdown li.clickable-with-children:hover > a  {
-	background:url([[pix:theme|menu/menu_arrow]]) no-repeat 95% center [[setting:firstcolor]];
 }
