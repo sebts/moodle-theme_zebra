@@ -33,11 +33,12 @@ $THEME->parents_exclude_sheets  = array(
 $THEME->sheets = array(
     'pagelayout',       //Derived from Rebase
     'core',             //Heavily modified from Base theme
+    'modules',          //Code that modifies modules slightly
     'colors',           //Applies theme color settings
     'dock',             //Derived from Rebase
     'custommenu',       //Derived from Aardvark_makeover
     'css3',             //Make the fancy stuff come later
-    'modules'           //Load users custom css from settings very last
+    'extra',            //Extra stuff that doesn't fit the above
 );
 
 $THEME->layouts = array(
