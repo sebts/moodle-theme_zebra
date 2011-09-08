@@ -21,7 +21,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-/* All Columns */
+/* All Views */
+
 html {color:[[setting:thirdcolor]];background-color:[[setting:backgroundcolor]];}
 body {background:url([[setting:backgroundurl]]) no-repeat scroll left top transparent;}
 legend {color:[[setting:thirdcolor]];}
@@ -67,7 +68,8 @@ span.unread {background-color:[[setting:secondcolor]];}
 .calendartable th,
 .calendartable td {border-color:[[setting:backgroundcolor]];}
 
-/* 1 Column */
+/* 1 Column View */
+
 @media screen and (max-width: 599px) {
     #region-main {background-color: [[setting:fourthcolor]];}
     #region-pre,
@@ -75,7 +77,8 @@ span.unread {background-color:[[setting:secondcolor]];}
     #page-content-wrapper {background-color:[[setting:firstcolor]];}
 }
 
-/* 2 Column */
+/* 2 Column View */
+
 @media screen and (min-width: 600px) and (max-width: 799px) {
     #region-main {background-color: [[setting:fourthcolor]];}
     #region-main-wrap,
@@ -83,7 +86,7 @@ span.unread {background-color:[[setting:secondcolor]];}
     #region-post {background-color: [[setting:fifthcolor]];}
 }
 
-/* 3 Column */
+/* 3 Column View */
 @media screen and (min-width: 800px) {
     #region-main {background-color:[[setting:fourthcolor]];}
     #region-post-box,
@@ -93,5 +96,6 @@ span.unread {background-color:[[setting:secondcolor]];}
 }
 
 /* Report Layout */
+
 .pagelayout-report #page-content {background-color:[[setting:fourthcolor]];}
 #report-region-pre {background-color:[[setting:fifthcolor]];}
