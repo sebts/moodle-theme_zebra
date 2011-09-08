@@ -77,7 +77,7 @@ ul.dropdown ul {
 	top:100%;
 	visibility:hidden;
     z-index:598;
-    padding-left:1px; /* This compensates for the border-left on the top list items */
+    padding-left:1px;
 }
 
 ul.dropdown ul ul {
