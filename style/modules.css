@@ -46,11 +46,3 @@
 
 #branding {margin-top:10px;}
 #branding img {padding:0 10px;}
-
-/*
-  Custom CSS
-  This is the very last piece of CSS loaded, so if something looks weird,
-  try removing your custom CSS from the theme settings page.
-*/
-
-[[setting:customcss]]

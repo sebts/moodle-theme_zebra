@@ -20,3 +20,13 @@
  * @copyright  2011 Danny Wahl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
+
+
+/*
+  Custom CSS
+  This is the very last piece of CSS loaded, so if something looks weird,
+  try removing your custom CSS from the theme settings page.
+*/
+
+[[setting:customcss]]
