@@ -26,6 +26,7 @@
 #custommenu {
 	height:30px;
 	text-shadow:0 1px 0 [[setting:thirdcolor]];
+	background-color:[[setting:firstcolor]];
 }
 
 ul.dropdown-horizontal {
@@ -40,8 +41,8 @@ ul.dropdown > li:first-child a {
     background:url([[pix:theme|menu/home_icon]]) no-repeat scroll center center;
 }
 
-ul.dropdown-horizontal > li:first-child a,
-ul.dropdown-horizontal > li:last-child a {
+#custommenu ul.dropdown-horizontal > li:first-child a,
+#custommenu ul.dropdown-horizontal > li:last-child a {
     width:auto;
 }
 
@@ -52,34 +53,33 @@ ul.dropdown-horizontal > li:last-child {
     float:right;
 }
 
-ul.dropdown > li:hover,
-ul.dropdown > li:last-child:hover {
+ul.dropdown > li:hover {
     background-color:[[setting:secondcolor]];
 }
 
 /* Sub Menus */
 
-ul.dropdown ul {
-    font-weight:normal;
-}
-
 ul.dropdown-horizontal ul ul {
     margin-top:-1px;
 }
 
-/* All Custom Items */
-
-ul.dropdown-horizontal .customitem {
-    height:100%;
+ul.dropdown ul li {
+    border-bottom:1px inset rgba(0,0,0,0.4);
+    border-top:1px inset rgba(255,255,255,0.1);
 }
 
-ul.dropdown-horizontal a {
+/* All Custom Items */
+
+#custommenu .customitem {
+    height:100%;
+    line-height:18px;
+}
+
+#custommenu ul a {
 	padding:6px 20px;
 	display:block;
 	width:145px;
 }
-
-/* ----- */
 
 ul.dropdown,
 ul.dropdown li,
@@ -89,24 +89,30 @@ ul.dropdown ul {
 	padding:0;
 }
 
-ul.dropdown li {
-    background-color:transparent;
+ul.dropdown-horizontal li {
 	float:left;
     height:30px;
-	line-height:1.3em;
 	vertical-align:middle;
+}
+
+ul.dropdown li:hover > ul {
+	visibility:visible;
 }
 
 ul.dropdown li.hover,
 ul.dropdown li:hover {
 	cursor:default;
 	position:relative;
-	z-index:599;
 }
+
+/* ----- */
+
+
+
+
 
 ul.dropdown ul {
 	background-color:[[setting:thirdcolor]];
-	font:100% "Trebuchet MS",Arial,Helvetica,sans-serif;
 	left:auto;
 	position:absolute;
 	right:0;
@@ -115,21 +121,11 @@ ul.dropdown ul {
     z-index:598;
 }
 
-ul.dropdown ul li {
-    border-bottom:1px solid rgba(0,0,0,0.4);
-    border-top:1px solid rgba(255,255,255,0.1);
-	float:none;
-}
-
 ul.dropdown ul ul {
 	left:100%;
 	margin-top:-2px;
 	right:auto;
 	top:0;
-}
-
-ul.dropdown li:hover > ul {
-	visibility:visible;
 }
 
 ul.dropdown ul span, 
@@ -161,11 +157,6 @@ ul.dropdown span,
 ul.dropdown span a {
 	background-color:transparent;
 	border: 0 none;
-}
-
-ul.dropdown ul a {
-	width:166px;
-	padding:2px 0 4px 5px;
 }
 
 ul.dropdown ul li:hover > span, 
