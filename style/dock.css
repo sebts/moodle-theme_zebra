@@ -22,6 +22,7 @@
  */
 
 /* Dock General */
+
 #dock {
     background-color:[[setting:fourthcolor]];
 }
@@ -50,6 +51,7 @@ body.has_dock_left_vertical {
 }
 
 /* Docked Block Items */
+
 #dock.dock_left_vertical .dockedtitle {
     border-bottom:1px solid [[setting:secondcolor]];
     border-top:1px solid [[setting:secondcolor]];
@@ -83,6 +85,7 @@ body.has_dock_left_vertical {
 }
 
 /* Docked Blocks */
+
 #dockeditempanel {
     border:1px solid [[setting:secondcolor]];
     left:100%;
