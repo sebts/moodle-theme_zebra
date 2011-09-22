@@ -51,11 +51,11 @@ legend {
 }
 
 #page-footer-wrapper {
-    background-color:[[setting:fourthcolor]];
+    background-color:[[setting:backgroundcolor]];
 }
 
 #page-footer {
-    background-color:[[setting:backgroundcolor]];
+    background-color:[[setting:fourthcolor]];
 }
 
 #user-pic .defaultuserpic {
