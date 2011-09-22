@@ -87,7 +87,7 @@ ul.dropdown ul ul {
 	top:0;
 }
 
-ul.dropdown ul span a:after {  border-bottom:7px solid transparent;  border-left:7px solid #F4F6F8;  border-top:7px solid transparent;  content:"";  float:right;  margin-top:3px;}
+ul.dropdown ul span a:after {  border-bottom:7px solid transparent;  border-left:7px solid [[setting:fourthcolor]];  border-top:7px solid transparent;  content:"";  float:right;  margin-top:3px;}
 
 ul.dropdown ul li:hover > span a,
 ul.dropdown ul ul li:hover > span a {
