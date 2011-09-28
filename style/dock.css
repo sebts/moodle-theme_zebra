@@ -123,7 +123,7 @@ body.has_dock_left_vertical {
 }
 
 #dockeditempanel .dockeditempanel_hd .commands {
-    display:inline;
+    float:right;
 }
 
 #dockeditempanel .dockeditempanel_hd .commands img {
