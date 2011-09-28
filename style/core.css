@@ -551,8 +551,8 @@
     vertical-align: top;
 }
 
-.block .header .block_action input {
-    margin-right: 2px;
+.block .header .block_action > * {
+    margin:0 2px;
 }
 
 .block .content {
