@@ -30,7 +30,13 @@
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *
+ * Table of Contents
+ * $1.0: Content
+ * $2.0: Custommenu
  */
+
+/* $1.0: Content */
 
 .sitetopic,
 .coursebox,
@@ -58,6 +64,8 @@
     -moz-box-shadow:0 1px 0 [[setting:fourthcolor]] inset;
     -webkit-box-shadow:0 1px 0 [[setting:fourthcolor]] inset;
 }
+
+/* $2.0: Custommenu */
 
 #custommenu ul.dropdown {
     background:linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 10%,transparent 90%,[[setting:menucolorscheme]] 100%) [[setting:firstcolor]];
