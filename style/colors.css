@@ -19,9 +19,16 @@
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *
+ * Table of Contents
+ * $1.0: All Views
+ * $2.0: One Column View
+ * $3.0: Two Column View
+ * $4.0: Three Column View
+ * $5.0: Report Layout View
  */
 
-/* All Views */
+/* $1.0: All Views */
 
 html {
     background-color:[[setting:backgroundcolor]];
@@ -151,7 +158,7 @@ span.unread {
     border-color:[[setting:backgroundcolor]];
 }
 
-/* 1 Column View */
+/* $2.0: 1 Column View */
 
 @media screen and (max-width: 599px) {
     #region-main {
@@ -168,7 +175,7 @@ span.unread {
     }
 }
 
-/* 2 Column View */
+/* $3.0: 2 Column View */
 
 @media screen and (min-width: 600px) and (max-width: 799px) {
     #region-main {
@@ -182,7 +189,8 @@ span.unread {
     }
 }
 
-/* 3 Column View */
+/* $4.0: 3 Column View */
+
 @media screen and (min-width: 800px) {
     #region-main {
         background-color:[[setting:fourthcolor]];
@@ -196,7 +204,7 @@ span.unread {
     }
 }
 
-/* Report Layout */
+/* $5.0: Report Layout View */
 
 .pagelayout-report #page-content {
     background-color:[[setting:fourthcolor]];
