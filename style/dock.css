@@ -116,10 +116,6 @@ body.has_dock_left_vertical {
     margin:2px;
 }
 
-#dockeditempanel .dockeditempanel_hd {
-    text-align:right;
-    }
-
 #dockeditempanel .dockeditempanel_hd h2 {
     display:inline;
     margin:0;
