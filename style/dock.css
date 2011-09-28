@@ -19,6 +19,11 @@
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *
+ * Table of Contents
+ * $1.0: General Settings
+ * $2.0: Docked Block Labels
+ * $3.0: Docked Blocks
  */
 
 /* Dock General */
@@ -50,7 +55,7 @@ body.has_dock_left_vertical {
     left:0;
 }
 
-/* Docked Block Items */
+/* Docked Block Labels */
 
 #dock.dock_left_vertical .dockedtitle {
     border-bottom:1px solid [[setting:secondcolor]];
