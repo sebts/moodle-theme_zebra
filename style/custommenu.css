@@ -19,9 +19,14 @@
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *
+ * Table of Contents
+ * $1.0: Top Level Menu
+ * $2.0: Sub Menus
+ * $3.0: All Menu Items
  */
 
-/* Top Menu */
+/* $1.0: Top Level Menu */
 
 #custommenu {
 	height:30px;
@@ -57,7 +62,7 @@ ul.dropdown > li:hover {
     background-color:[[setting:secondcolor]];
 }
 
-/* Sub Menus */
+/* $2.0: Sub Menus */
 
 ul.dropdown ul li {
     border-bottom:1px solid rgba(0,0,0,0.4);
@@ -94,7 +99,7 @@ ul.dropdown ul ul li:hover > span a {
 	background-color:[[setting:firstcolor]];
 }
 
-/* All Custom Items */
+/* $3.0: All Menu Items */
 
 #custommenu ul a {
 	padding:6px 20px;
