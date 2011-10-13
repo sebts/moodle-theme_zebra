@@ -130,12 +130,14 @@ ul.dropdown li:hover {
 	position:relative;
 }
 
-ul.dropdown a:link, ul.dropdown a:visited {
+ul.dropdown a:link,
+ul.dropdown a:visited,
+ul.dropdown a:hover,
+ul.dropdown a:visited {
 	color:[[setting:fourthcolor]];
 	text-decoration:none;
 }
 
 ul.dropdown ul a:hover {
 	background-color:[[setting:firstcolor]];
-	text-decoration:none;
 }
