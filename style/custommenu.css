@@ -103,6 +103,7 @@ ul.dropdown ul ul li:hover > span a {
 	padding:6px 20px;
 	display:block;
 	width:145px;
+	text-decoration:none;
 }
 
 ul.dropdown,
@@ -136,4 +137,5 @@ ul.dropdown a:link, ul.dropdown a:visited {
 
 ul.dropdown ul a:hover {
 	background-color:[[setting:firstcolor]];
+	text-decoration:none;
 }
