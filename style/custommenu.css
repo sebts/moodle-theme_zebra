@@ -133,7 +133,7 @@ ul.dropdown a:link,
 ul.dropdown a:visited,
 ul.dropdown a:hover,
 ul.dropdown a:visited {
-	color:[[setting:fourthcolor]];
+	color:[[setting:fourthcolor]] !important;
 	text-decoration:none !important;
 }
 
