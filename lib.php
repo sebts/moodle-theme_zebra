@@ -419,7 +419,7 @@ function zebra_set_menucolorscheme($css, $menucolorscheme) {
     }
     switch($menucolorscheme) {
         case 'dark':
-            $replacement = 'rgba(0, 0, 0, 0.5)';
+            $replacement = 'rgba(0, 0, 0, 0.4)';
             break;
 
         case 'light':
