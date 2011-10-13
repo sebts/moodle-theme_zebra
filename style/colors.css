@@ -72,16 +72,23 @@ legend {
 a,
 a:visited {
     color:[[setting:firstcolor]];
+    text-decoration:none;
 }
 
 a:hover,
 a:active {
     color:[[setting:thirdcolor]];
+    text-decoration:underline;
+}
+
+#page-border-wrapper a,
+#page-border-wrapper a:visited {
+    text-decoration:none;
 }
 
 #page-border-wrapper a:hover,
 #page-border-wrapper a:active {
-    color:[[setting:secondcolor]];
+    color:[[setting:firstcolor]];
 }
 
 .block {
