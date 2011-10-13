@@ -76,6 +76,11 @@ a:visited {
 
 a:hover,
 a:active {
+    color:[[setting:thirdcolor]];
+}
+
+#page-border-wrapper a:hover,
+#page-border-wrapper a:active {
     color:[[setting:secondcolor]];
 }
 
