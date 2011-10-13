@@ -67,9 +67,9 @@
 
 #custommenu,
 #custommenu ul.dropdown {
-    border-radius:8px 8px 0 0;
-    -moz-border-radius:8px 8px 0 0;
-    -webkit-border-radius:8px 8px 0 0;
+    border-radius:5px 5px 0 0;
+    -moz-border-radius:5px 5px 0 0;
+    -webkit-border-radius:5px 5px 0 0;
     background-clip:padding-box;
     -moz-background-clip:padding;
     -webkit-background-clip:padding-box;
@@ -94,6 +94,21 @@
     box-shadow: 0 1px [[setting:thirdcolor]] inset, 0 2px rgba(255, 255, 255, 0.3) inset, 0 -1px [[setting:thirdcolor]] inset;
     -moz-box-shadow: 0 1px [[setting:thirdcolor]] inset, 0 2px rgba(255, 255, 255, 0.3) inset, 0 -1px [[setting:thirdcolor]] inset;
     -webkit-box-shadow: 0 1px [[setting:thirdcolor]] inset, 0 2px rgba(255, 255, 255, 0.3) inset, 0 -1px [[setting:thirdcolor]] inset;
+    border-radius:0 5px 0 0;
+    -moz-border-radius:0 5px 0 0;
+    -webkit-border-radius:0 5px 0 0;
+    background-clip:padding-box;
+    -moz-background-clip:padding;
+    -webkit-background-clip:padding-box;
+}
+
+#custommenu ul.dropdown > li:first-child {
+    border-radius:5px 0 0 0;
+    -moz-border-radius:5px 0 0 0;
+    -webkit-border-radius:5px 0 0 0;
+    background-clip:padding-box;
+    -moz-background-clip:padding;
+    -webkit-background-clip:padding-box;   
 }
 
 #custommenu ul.dropdown > li:hover {
