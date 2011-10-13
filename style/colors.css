@@ -77,18 +77,18 @@ a:visited {
 
 a:hover,
 a:active {
-    color:[[setting:thirdcolor]];
+    color:[[setting:firstcolor]];
     text-decoration:underline;
 }
 
 #page-border-wrapper a,
 #page-border-wrapper a:visited {
-    text-decoration:none;
+    text-decoration:underline;
 }
 
 #page-border-wrapper a:hover,
 #page-border-wrapper a:active {
-    color:[[setting:firstcolor]];
+    color:[[setting:secondcolor]];
 }
 
 .block {
