@@ -56,7 +56,7 @@
     float:right;
 }
 
-.loggendin .forumpost .row .options .commands:before {
+.forumpost .row .options .commands:before {
     content:" ";
     margin-left:5px;
 }
