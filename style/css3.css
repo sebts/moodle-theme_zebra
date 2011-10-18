@@ -34,6 +34,7 @@
  * Table of Contents
  * $1.0: Content
  * $2.0: Custommenu
+ * $3.0: Forum
  */
 
 /* $1.0: Content */
@@ -127,3 +128,11 @@ ul.dropdown > li:hover {
 }
 
 ul.dropdown ul span a:after {  border-bottom:7px solid transparent;  border-left:7px solid [[setting:fourthcolor]];  border-top:7px solid transparent;  content:"";  float:right;  margin-top:3px;}
+
+/* $2.0: Custommenu */
+
+.forumpost.unread .maincontent {
+    box-shadow: 0 2px 3px [[setting:secondcolor]];
+    -moz-box-shadow: 0 2px 3px [[setting:secondcolor]];
+    -webkit-box-shadow: 0 2px 3px [[setting:secondcolor]];
+}
