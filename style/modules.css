@@ -23,6 +23,10 @@
 
 /* Forum */
 
+.forumpost {
+    border:0 none;
+}
+
 .forumpost .picture img {
     margin:0;
 }

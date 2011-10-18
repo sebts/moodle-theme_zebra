@@ -96,7 +96,6 @@ a:active {
 }
 
 .forumpost {
-    border-color:[[setting:firstcolor]];
     background-color:[[setting:fourthcolor]];
 }
 
