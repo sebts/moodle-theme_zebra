@@ -47,16 +47,16 @@
     border-style:solid;
 }
 
-.forumpost .options {
+.forumpost .row .options {
     padding:4px;
     margin-left:0;
 }
 
-.forumpost .options .commands {
+.forumpost .row .options .commands {
     float:left;
 }
 
-.forumpost .options .link {
+.forumpost .row .options .link {
     float:right;
 }
 
