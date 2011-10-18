@@ -53,11 +53,11 @@
 }
 
 .forumpost .row .options .commands {
-    float:left;
+    float:right;
 }
 
 .forumpost .row .options .link {
-    float:right;
+    float:left;
 }
 
 /* Quiz */
