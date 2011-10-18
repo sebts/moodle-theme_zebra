@@ -56,14 +56,13 @@
     float:right;
 }
 
-.forumpost .row .options .link {
-    float:right;
-    padding-right:5px;
-    margin-right:5px;
+.forumpost .row .options .link:before {
+    content:" | ";
+    margin-left:5px;
 }
 
-.forumpost .row .options .link:after {
-    content:" | ";
+.forumpost .row .options .link {
+    float:right;
 }
 
 /* Quiz */
