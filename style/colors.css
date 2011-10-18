@@ -95,10 +95,6 @@ a:active {
     border-color:[[setting:backgroundcolor]];
 }
 
-.forumpost {
-    background-color:[[setting:fourthcolor]];
-}
-
 .forumpost .header {
     background-color:[[setting:firstcolor]];
     border-bottom-color:[[setting:backgroundcolor]];
