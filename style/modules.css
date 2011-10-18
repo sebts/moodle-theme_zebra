@@ -48,7 +48,7 @@
 }
 
 .forumpost .row .options {
-    padding:4px;
+    padding:4px 0;
     margin-left:0;
 }
 
@@ -56,7 +56,7 @@
     float:right;
 }
 
-.forumpost .row .options .link:before {
+.forumpost .row .options .commands:before {
     content:" | ";
     margin-left:5px;
 }
