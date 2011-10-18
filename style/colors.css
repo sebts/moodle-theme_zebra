@@ -104,6 +104,10 @@ a:active {
     border-color:[[setting:secondcolor]];
 }
 
+.forumpost .maincontent {
+    background-color:[[setting:backgroundcolor]];
+}
+
 .forumpost.unread .maincontent {
     border-color:[[setting:secondcolor]];
 }
