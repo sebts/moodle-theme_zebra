@@ -103,12 +103,8 @@ a:active {
     background-color:[[setting:firstcolor]];
 }
 
-.forumpost.unread {
-    border-color:[[setting:secondcolor]];
-}
-
 .forumpost.unread .header {
-    background-color:[[setting:secondcolor]];
+    border-bottom:3px solid [[setting:secondcolor]];
 }
 
 .forumpost .header .subject {
