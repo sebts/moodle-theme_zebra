@@ -89,13 +89,12 @@ echo $OUTPUT->doctype(); ?>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon/l/apple-touch-icon-precomposed', 'theme'); ?>">
 <?php echo $OUTPUT->standard_head_html(); ?>
 </head>
-<body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
+<body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>" style="background-image:none;">
     <?php echo $OUTPUT->standard_top_of_body_html(); ?>
     <div id="page">
         <div id="page-inner-wrapper">
             <div id="page-header-wrapper">
-                <div id="page-header" class="clearfix">
-                    <h1 class="headermain"><?php echo $headeralt; ?></h1>
+                <div id="page-header" class="clearfix" style="margin-top:10px;height:0;background-image:none;">
                     <div id="profileblock">
                         <?php
                         if (isloggedin()) {

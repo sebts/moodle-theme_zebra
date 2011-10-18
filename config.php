@@ -119,7 +119,7 @@ $THEME->layouts = array(
     'embedded' => array(
         'file' => 'embedded.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>true)
+        'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true)
     ),
     'print' => array(
         'file' => 'general.php',
@@ -129,7 +129,7 @@ $THEME->layouts = array(
     'redirect' => array(
         'file' => 'embedded.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>true)
+        'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true)
     ),
     'report' => array(
         'file' => 'report.php', //Enables overflow for reports
