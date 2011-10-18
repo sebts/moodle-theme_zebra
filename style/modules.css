@@ -57,16 +57,12 @@
 }
 
 .forumpost .row .options .commands:before {
-    content:"&nbsp;";
+    content:" ";
 }
 
 
 .forumpost .row .options .link {
     float:right;
-}
-
-.forumpost .row .options .link:after {
-    content:"&nbsp;";
 }
 
 /* Quiz */
