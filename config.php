@@ -104,7 +104,7 @@ $THEME->layouts = array(
     'popup' => array(
         'file' => 'embedded.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true)
+        'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true)
     ),
     'frametop' => array(
         'file' => 'general.php',
