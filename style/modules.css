@@ -56,8 +56,8 @@
     float:right;
 }
 
-.forumpost .row .options .commands:before {
-    content:" | ";
+.loggendin .forumpost .row .options .commands:before {
+    content:" ";
     margin-left:5px;
 }
 
