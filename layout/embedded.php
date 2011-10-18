@@ -94,7 +94,7 @@ echo $OUTPUT->doctype(); ?>
     <div id="page">
         <div id="page-inner-wrapper">
             <div id="page-header-wrapper">
-                <div id="page-header" class="clearfix" style="margin-top:10px;height:0;background-image:none;">
+                <div id="page-header" class="clearfix" style="margin-top:10px;height:0;min-height:0;background-image:none;">
                     <div id="profileblock">
                         <?php
                         if (isloggedin()) {
