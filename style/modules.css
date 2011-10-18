@@ -56,8 +56,17 @@
     float:right;
 }
 
+.forumpost .row .options .commands:before {
+    content:"&nbsp;";
+}
+
+
 .forumpost .row .options .link {
-    float:left;
+    float:right;
+}
+
+.forumpost .row .options .link:after {
+    content:"&nbsp;";
 }
 
 /* Quiz */
