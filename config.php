@@ -102,7 +102,7 @@ $THEME->layouts = array(
         'options' => array('langmenu'=>true)
     ),
     'popup' => array(
-        'file' => 'general.php',
+        'file' => 'embedded.php',
         'regions' => array(),
         'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true)
     ),
