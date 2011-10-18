@@ -49,6 +49,15 @@
 
 .forumpost .options {
     padding:4px;
+    margin-left:0;
+}
+
+.forumpost .options .commands {
+    float:left;
+}
+
+.forumpost .options .link {
+    float:right;
 }
 
 #page-site-index .forumpost {
