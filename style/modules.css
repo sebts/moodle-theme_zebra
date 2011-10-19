@@ -76,3 +76,10 @@
     top:10px;
     z-index:11000;
 }
+
+/* Course Formats */
+
+.course-content ul.weeks li.section,
+.course-content ul.topics li.section {
+    margin:5px 0;
+}
