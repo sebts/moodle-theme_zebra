@@ -65,18 +65,6 @@
     float:right;
 }
 
-/* Quiz */
-
-#page-mod-quiz-view #profileblock {
-    margin-left:auto;
-    margin-right:auto;
-    max-width:[[setting:threecolmax]];
-    position:fixed;
-    right:auto;
-    top:10px;
-    z-index:11000;
-}
-
 /* Course Formats */
 
 .course-content ul.weeks li.section,
