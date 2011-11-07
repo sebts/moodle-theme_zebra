@@ -232,6 +232,7 @@ function zebra_set_backgroundurl($css, $backgroundurl) {
     global $OUTPUT;
     $tag = '[[setting:backgroundurl]]';
     $replacement = $backgroundurl;
+    $replacement = $OUTPUT->pix_url('$backgroundurl', 'theme');
     if (is_null($replacement)) {
         $replacement = $OUTPUT->pix_url('core/background', 'theme');
     }
