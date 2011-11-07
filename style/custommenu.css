@@ -94,8 +94,13 @@ ul.dropdown ul ul li:hover > span a {
 /* $3.0: All Menu Items */
 
 #custommenu ul a {
-	padding:6px 20px;
-	display:block;
+     display: block;
+     padding: 6px 20px;
+     width: auto;
+}
+
+#custommenu ul ul a {
+    min-width: 125px;
 }
 
 #custommenu ul.dropdown-horizontal > li:first-child a,

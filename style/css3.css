@@ -127,7 +127,7 @@ ul.dropdown > li:hover {
     -webkit-box-shadow: 0 1px [[setting:secondcolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
 }
 
-ul.dropdown ul span a:after {  border-bottom:7px solid transparent;  border-left:7px solid [[setting:fourthcolor]];  border-top:7px solid transparent;  content:"";  float:right;  margin-top:3px;}
+ul.dropdown ul span a:after {  border-bottom:7px solid transparent;  border-left:7px solid [[setting:fourthcolor]];  border-top:7px solid transparent;  content:"";  float:right;  margin-top:-15px;}
 
 /* $2.0: Custommenu */
 
