@@ -61,6 +61,7 @@ ul.dropdown > li:hover {
 ul.dropdown ul li {
     border-bottom:1px solid rgba(0,0,0,0.4);
     border-top:1px solid rgba(255,255,255,0.1);
+    width:100%;
 }
 
 ul.dropdown ul li:hover {
@@ -74,6 +75,7 @@ ul.dropdown ul {
 	visibility:hidden;
     z-index:598;
     padding-left:1px;
+    min-width:120px;
 }
 
 ul.dropdown ul ul {
@@ -94,11 +96,10 @@ ul.dropdown ul ul li:hover > span a {
 #custommenu ul a {
 	padding:6px 20px;
 	display:block;
-	min-width:100px;
 }
 
 #custommenu ul.dropdown-horizontal > li:first-child a,
-#custommenu ul.dropdown-horizontal > li:last-child a {    width: auto;}
+#custommenu ul.dropdown-horizontal > li:last-child a {    min-width: 0;}
 
 ul.dropdown,
 ul.dropdown li,
