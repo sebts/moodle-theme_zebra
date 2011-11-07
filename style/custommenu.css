@@ -45,11 +45,6 @@ ul.dropdown > li:first-child a {
     background:url([[pix:theme|menu/home_icon]]) no-repeat scroll center center;
 }
 
-#custommenu ul.dropdown-horizontal > li:first-child a,
-#custommenu ul.dropdown-horizontal > li:last-child a {
-    width:auto;
-}
-
 ul.dropdown-horizontal > li:last-child {
     background-color:[[setting:thirdcolor]];
     border-left:1px solid [[setting:thirdcolor]];
@@ -75,10 +70,7 @@ ul.dropdown ul li:hover {
 
 ul.dropdown ul {
 	background-color:[[setting:thirdcolor]];
-	left:auto;
 	position:absolute;
-	right:0;
-	top:100%;
 	visibility:hidden;
     z-index:598;
     padding-left:1px;
@@ -102,8 +94,11 @@ ul.dropdown ul ul li:hover > span a {
 #custommenu ul a {
 	padding:6px 20px;
 	display:block;
-	width:145px;
+	min-width:100px;
 }
+
+#custommenu ul.dropdown-horizontal > li:first-child a,
+#custommenu ul.dropdown-horizontal > li:last-child a {    width: auto;}
 
 ul.dropdown,
 ul.dropdown li,
