@@ -29,8 +29,8 @@
 /* $1.0: Top Level Menu */
 
 #custommenu {
-	height:30px;
-	background-color:[[setting:firstcolor]];
+    height:30px;
+    background-color:[[setting:firstcolor]];
 }
 
 ul.dropdown-horizontal {
@@ -38,7 +38,7 @@ ul.dropdown-horizontal {
 }
 
 ul.dropdown-horizontal > li {
-	border-right:1px solid [[setting:thirdcolor]]; 
+    border-right:1px solid [[setting:thirdcolor]]; 
 }
 
 ul.dropdown > li:first-child a {
@@ -69,32 +69,32 @@ ul.dropdown ul li:hover {
 }
 
 ul.dropdown ul {
-	background-color:[[setting:thirdcolor]];
-	position:absolute;
-	visibility:hidden;
+    background-color:[[setting:thirdcolor]];
+    position:absolute;
+    visibility:hidden;
     z-index:598;
     padding-left:1px;
     min-width:120px;
 }
 
 ul.dropdown ul ul {
-	left:100%;
-	margin-top:-1px;
-	right:auto;
-	top:0;
+    left:100%;
+    margin-top:-1px;
+    right:auto;
+    top:0;
 }
 
 ul.dropdown ul li:hover > span a,
 ul.dropdown ul ul li:hover > span a {
-	background-color:[[setting:firstcolor]];
+    background-color:[[setting:firstcolor]];
 }
 
 /* $3.0: All Menu Items */
 
 #custommenu ul a {
-     display: block;
-     padding: 6px 20px;
-     width: auto;
+    display: block;
+    padding: 0 20px;
+    line-height: 30px;
 }
 
 #custommenu ul ul a {
@@ -102,40 +102,42 @@ ul.dropdown ul ul li:hover > span a {
 }
 
 #custommenu ul.dropdown-horizontal > li:first-child a,
-#custommenu ul.dropdown-horizontal > li:last-child a {    min-width: 0;}
+#custommenu ul.dropdown-horizontal > li:last-child a {
+    min-width: 0;
+}
 
 ul.dropdown,
 ul.dropdown li,
 ul.dropdown ul {
-	list-style:none;
-	margin:0;
+    list-style:none;
+    margin:0;
 }
 
 ul.dropdown-horizontal li {
-	float:left;
+    float:left;
     min-height:30px;
-	vertical-align:middle;
-	line-height:18px;
+    vertical-align:middle;
+    line-height:18px;
 }
 
 ul.dropdown li:hover > ul {
-	visibility:visible;
+    visibility:visible;
 }
 
 ul.dropdown li.hover,
 ul.dropdown li:hover {
-	cursor:default;
-	position:relative;
+    cursor:default;
+    position:relative;
 }
 
 ul.dropdown a:link,
 ul.dropdown a:visited,
 ul.dropdown a:hover,
 ul.dropdown a:visited {
-	color:[[setting:fourthcolor]] !important;
-	text-decoration:none !important;
+    color:[[setting:fourthcolor]] !important;
+    text-decoration:none !important;
 }
 
 ul.dropdown ul a:hover {
-	background-color:[[setting:firstcolor]];
+    background-color:[[setting:firstcolor]];
 }
