@@ -215,7 +215,7 @@ function zebra_set_logourlheight($css, $logourlheight) {
     $tag = '[[setting:logourlheight]]';
     $replacement = $logourlheight;
     if (is_null($replacement)) {
-        $replacement = "120px";
+        $replacement = "100px";
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;

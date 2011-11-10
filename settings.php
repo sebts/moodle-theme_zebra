@@ -44,7 +44,7 @@ $settings->add($setting);
 $name = 'theme_zebra/logourlheight';
 $title = get_string('logourlheight','theme_zebra');
 $description = get_string('logourlheightdesc', 'theme_zebra');
-$setting = new admin_setting_configtext($name, $title, $description, '120px', PARAM_CLEAN, 5);
+$setting = new admin_setting_configtext($name, $title, $description, '100px', PARAM_CLEAN, 5);
 $settings->add($setting);
 
 //Set alternate text for headermain
