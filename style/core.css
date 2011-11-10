@@ -420,17 +420,17 @@
     display: block;
     float: left;
     text-align: right;
-    width: 12.5em;
+    width: 15em;
 }
 
 #adminsettings .form-item .form-label .form-shortname {
     display:block;
-    line-break: break;
+    white-space: nowrap;
 }
 
 #adminsettings .form-item .form-setting {
     display: block;
-    margin-left: 13.5em;
+    margin-left: 16em;
     text-align: left;
 }
 
@@ -464,7 +464,7 @@
 }
 #adminsettings .form-item .form-description {
     display: block;
-    margin: 0.5em 0 0em 14.25em;
+    margin: 0.5em 0 0em 16em;
     text-align: left;
 }
 
