@@ -69,58 +69,58 @@ $setting = new admin_setting_heading($name, $heading, $information);
 $settings->add($setting);
 
 //Set body background color
-$name = 'theme_zebra/backgroundcolor';
-$title = get_string('backgroundcolor','theme_zebra');
-$description = get_string('backgroundcolordesc', 'theme_zebra');
+$name = 'theme_zebra/bodybgcolor';
+$title = get_string('bodybgcolor','theme_zebra');
+$description = get_string('bodybgcolordesc', 'theme_zebra');
 $setting = new admin_setting_configtext($name, $title, $description, '#DDDDDD', PARAM_CLEAN, 10);
 $settings->add($setting);
 
 //Set links and menu color
-$name = 'theme_zebra/firstcolor';
-$title = get_string('firstcolor','theme_zebra');
-$description = get_string('firstcolordesc', 'theme_zebra');
+$name = 'theme_zebra/linkcolor';
+$title = get_string('linkcolor','theme_zebra');
+$description = get_string('linkcolordesc', 'theme_zebra');
 $setting = new admin_setting_configtext($name, $title, $description, '#234B6F', PARAM_CLEAN, 10);
 $settings->add($setting);
 
 //Set hovering color
-$name = 'theme_zebra/secondcolor';
-$title = get_string('secondcolor','theme_zebra');
-$description = get_string('secondcolordesc', 'theme_zebra');
+$name = 'theme_zebra/hovercolor';
+$title = get_string('hovercolor','theme_zebra');
+$description = get_string('hovercolordesc', 'theme_zebra');
 $setting = new admin_setting_configtext($name, $title, $description, '#4E7BA3', PARAM_CLEAN, 10);
 $settings->add($setting);
 
 //Set font color
-$name = 'theme_zebra/thirdcolor';
-$title = get_string('thirdcolor','theme_zebra');
-$description = get_string('thirdcolordesc', 'theme_zebra');
+$name = 'theme_zebra/fontcolor';
+$title = get_string('fontcolor','theme_zebra');
+$description = get_string('fontcolordesc', 'theme_zebra');
 $setting = new admin_setting_configtext($name, $title, $description, '#2F2F2F', PARAM_CLEAN, 10);
 $settings->add($setting);
 
 //Set main content background color
-$name = 'theme_zebra/fourthcolor';
-$title = get_string('fourthcolor','theme_zebra');
-$description = get_string('fourthcolordesc', 'theme_zebra');
+$name = 'theme_zebra/contentbgcolor';
+$title = get_string('contentbgcolor','theme_zebra');
+$description = get_string('contentbgcolordesc', 'theme_zebra');
 $setting = new admin_setting_configtext($name, $title, $description, '#F4F6F8', PARAM_CLEAN, 10);
 $settings->add($setting);
 
 //Set column background color
-$name = 'theme_zebra/fifthcolor';
-$title = get_string('fifthcolor','theme_zebra');
-$description = get_string('fifthcolordesc', 'theme_zebra');
+$name = 'theme_zebra/columnbgcolor';
+$title = get_string('columnbgcolor','theme_zebra');
+$description = get_string('columnbgcolordesc', 'theme_zebra');
 $setting = new admin_setting_configtext($name, $title, $description, '#F4F6F8', PARAM_CLEAN, 10);
 $settings->add($setting);
 
 //Set page-header background color
-$name = 'theme_zebra/sixthcolor';
-$title = get_string('sixthcolor','theme_zebra');
-$description = get_string('sixthcolordesc', 'theme_zebra');
+$name = 'theme_zebra/headerbgcolor';
+$title = get_string('headerbgcolor','theme_zebra');
+$description = get_string('headerbgcolordesc', 'theme_zebra');
 $setting = new admin_setting_configtext($name, $title, $description, 'transparent', PARAM_CLEAN, 10);
 $settings->add($setting);
 
 //Set page-footer background color
-$name = 'theme_zebra/seventhcolor';
-$title = get_string('seventhcolor','theme_zebra');
-$description = get_string('seventhcolordesc', 'theme_zebra');
+$name = 'theme_zebra/footerbgcolor';
+$title = get_string('footerbgcolor','theme_zebra');
+$description = get_string('footerbgcolordesc', 'theme_zebra');
 $setting = new admin_setting_configtext($name, $title, $description, '#DDDDDD', PARAM_CLEAN, 10);
 $settings->add($setting);
 

@@ -72,52 +72,52 @@ function zebra_process_css($css, $theme) {
     $css = zebra_set_menucolorscheme($css, $menucolorscheme);
 
     //Get the background color from settings
-    if (!empty($theme->settings->backgroundcolor)) {
-        $backgroundcolor = $theme->settings->backgroundcolor;
+    if (!empty($theme->settings->bodybgcolor)) {
+        $bodybgcolor = $theme->settings->bodybgcolor;
     } else {
-        $backgroundcolor = null;
+        $bodybgcolor = null;
     }
-    $css = zebra_set_backgroundcolor($css, $backgroundcolor);
+    $css = zebra_set_bodybgcolor($css, $bodybgcolor);
 
     //Get the first color value from settings
-    if (!empty($theme->settings->firstcolor)) {
-        $firstcolor = $theme->settings->firstcolor;
+    if (!empty($theme->settings->linkcolor)) {
+        $linkcolor = $theme->settings->linkcolor;
     } else {
-        $firstcolor = null;
+        $linkcolor = null;
     }
-    $css = zebra_set_firstcolor($css, $firstcolor);
+    $css = zebra_set_linkcolor($css, $linkcolor);
 
     //Get the second color value from settings
-    if (!empty($theme->settings->secondcolor)) {
-        $secondcolor = $theme->settings->secondcolor;
+    if (!empty($theme->settings->hovercolor)) {
+        $hovercolor = $theme->settings->hovercolor;
     } else {
-        $secondcolor = null;
+        $hovercolor = null;
     }
-    $css = zebra_set_secondcolor($css, $secondcolor);
+    $css = zebra_set_hovercolor($css, $hovercolor);
 
     //Get the third color value from settings
-    if (!empty($theme->settings->thirdcolor)) {
-        $thirdcolor = $theme->settings->thirdcolor;
+    if (!empty($theme->settings->fontcolor)) {
+        $fontcolor = $theme->settings->fontcolor;
     } else {
-        $thirdcolor = null;
+        $fontcolor = null;
     }
-    $css = zebra_set_thirdcolor($css, $thirdcolor);
+    $css = zebra_set_fontcolor($css, $fontcolor);
 
     //Get the fourth color value from settings
-    if (!empty($theme->settings->fourthcolor)) {
-        $fourthcolor = $theme->settings->fourthcolor;
+    if (!empty($theme->settings->contentbgcolor)) {
+        $contentbgcolor = $theme->settings->contentbgcolor;
     } else {
-        $fourthcolor = null;
+        $contentbgcolor = null;
     }
-    $css = zebra_set_fourthcolor($css, $fourthcolor);
+    $css = zebra_set_contentbgcolor($css, $contentbgcolor);
 
     //Get the fifth color value from settings
-    if (!empty($theme->settings->fifthcolor)) {
-        $fifthcolor = $theme->settings->fifthcolor;
+    if (!empty($theme->settings->columnbgcolor)) {
+        $columnbgcolor = $theme->settings->columnbgcolor;
     } else {
-        $fifthcolor = null;
+        $columnbgcolor = null;
     }
-    $css = zebra_set_fifthcolor($css, $fifthcolor);
+    $css = zebra_set_columnbgcolor($css, $columnbgcolor);
 
     //Get the max width for one column page layout from settings
     if (!empty($theme->settings->onecolmax)) {
@@ -128,20 +128,20 @@ function zebra_process_css($css, $theme) {
     $css = zebra_set_onecolmax($css, $onecolmax);
 
     //Get the sixth color value from settings
-    if (!empty($theme->settings->sixthcolor)) {
-        $sixthcolor = $theme->settings->sixthcolor;
+    if (!empty($theme->settings->headerbgcolor)) {
+        $headerbgcolor = $theme->settings->headerbgcolor;
     } else {
-        $sixthcolor = null;
+        $headerbgcolor = null;
     }
-    $css = zebra_set_sixthcolor($css, $sixthcolor);
+    $css = zebra_set_headerbgcolor($css, $headerbgcolor);
 
     //Get the seventh color value from settings
-    if (!empty($theme->settings->seventhcolor)) {
-        $seventhcolor = $theme->settings->seventhcolor;
+    if (!empty($theme->settings->footerbgcolor)) {
+        $footerbgcolor = $theme->settings->footerbgcolor;
     } else {
-        $seventhcolor = null;
+        $footerbgcolor = null;
     }
-    $css = zebra_set_seventhcolor($css, $seventhcolor);
+    $css = zebra_set_footerbgcolor($css, $footerbgcolor);
 
     //Get the min width for two column page layout from settings
     if (!empty($theme->settings->twocolmin)) {
@@ -244,12 +244,12 @@ function zebra_set_backgroundurl($css, $backgroundurl) {
  * Sets the primary background color used for body
  *
  * @param string $css
- * @param mixed $backgroundcolor
+ * @param mixed $bodybgcolor
  * @return string
  */
-function zebra_set_backgroundcolor($css, $backgroundcolor) {
-    $tag = '[[setting:backgroundcolor]]';
-    $replacement = $backgroundcolor;
+function zebra_set_bodybgcolor($css, $bodybgcolor) {
+    $tag = '[[setting:bodybgcolor]]';
+    $replacement = $bodybgcolor;
     if (is_null($replacement)) {
         $replacement = '#DDDDDD';
     }
@@ -261,12 +261,12 @@ function zebra_set_backgroundcolor($css, $backgroundcolor) {
  * Sets the first color used for custommenu and links
  *
  * @param string $css
- * @param mixed $firstcolor
+ * @param mixed $linkcolor
  * @return string
  */
-function zebra_set_firstcolor($css, $firstcolor) {
-    $tag = '[[setting:firstcolor]]';
-    $replacement = $firstcolor;
+function zebra_set_linkcolor($css, $linkcolor) {
+    $tag = '[[setting:linkcolor]]';
+    $replacement = $linkcolor;
     if (is_null($replacement)) {
         $replacement = '#234B6F';
     }
@@ -278,12 +278,12 @@ function zebra_set_firstcolor($css, $firstcolor) {
  * Sets the second color used for hovering
  *
  * @param string $css
- * @param mixed $secondcolor
+ * @param mixed $hovercolor
  * @return string
  */
-function zebra_set_secondcolor($css, $secondcolor) {
-    $tag = '[[setting:secondcolor]]';
-    $replacement = $secondcolor;
+function zebra_set_hovercolor($css, $hovercolor) {
+    $tag = '[[setting:hovercolor]]';
+    $replacement = $hovercolor;
     if (is_null($replacement)) {
         $replacement = '#4E7BAE';
     }
@@ -295,12 +295,12 @@ function zebra_set_secondcolor($css, $secondcolor) {
  * Sets the third color used for font color
  *
  * @param string $css
- * @param mixed $thirdcolor
+ * @param mixed $fontcolor
  * @return string
  */
-function zebra_set_thirdcolor($css, $thirdcolor) {
-    $tag = '[[setting:thirdcolor]]';
-    $replacement = $thirdcolor;
+function zebra_set_fontcolor($css, $fontcolor) {
+    $tag = '[[setting:fontcolor]]';
+    $replacement = $fontcolor;
     if (is_null($replacement)) {
         $replacement = '#2F2F2F';
     }
@@ -312,12 +312,12 @@ function zebra_set_thirdcolor($css, $thirdcolor) {
  * Sets the fourth color used for main content background
  *
  * @param string $css
- * @param mixed $fourthcolor
+ * @param mixed $contentbgcolor
  * @return string
  */
-function zebra_set_fourthcolor($css, $fourthcolor) {
-    $tag = '[[setting:fourthcolor]]';
-    $replacement = $fourthcolor;
+function zebra_set_contentbgcolor($css, $contentbgcolor) {
+    $tag = '[[setting:contentbgcolor]]';
+    $replacement = $contentbgcolor;
     if (is_null($replacement)) {
         $replacement = '#F4F6F8';
     }
@@ -329,12 +329,12 @@ function zebra_set_fourthcolor($css, $fourthcolor) {
  * Sets the fifth color used for columns (region-pre, region-post) background
  *
  * @param string $css
- * @param mixed $fifthcolor
+ * @param mixed $columnbgcolor
  * @return string
  */
-function zebra_set_fifthcolor($css, $fifthcolor) {
-    $tag = '[[setting:fifthcolor]]';
-    $replacement = $fifthcolor;
+function zebra_set_columnbgcolor($css, $columnbgcolor) {
+    $tag = '[[setting:columnbgcolor]]';
+    $replacement = $columnbgcolor;
     if (is_null($replacement)) {
         $replacement = '#F4F6F8';
     }
@@ -346,12 +346,12 @@ function zebra_set_fifthcolor($css, $fifthcolor) {
  * Sets the sixth color used for the page-header background
  *
  * @param string $css
- * @param mixed $sixthcolor
+ * @param mixed $headerbgcolor
  * @return string
  */
-function zebra_set_sixthcolor($css, $sixthcolor) {
-    $tag = '[[setting:sixthcolor]]';
-    $replacement = $sixthcolor;
+function zebra_set_headerbgcolor($css, $headerbgcolor) {
+    $tag = '[[setting:headerbgcolor]]';
+    $replacement = $headerbgcolor;
     if (is_null($replacement)) {
         $replacement = 'transparent';
     }
@@ -363,12 +363,12 @@ function zebra_set_sixthcolor($css, $sixthcolor) {
  * Sets the seventh color used for the page-footer background
  *
  * @param string $css
- * @param mixed $seventhcolor
+ * @param mixed $footerbgcolor
  * @return string
  */
-function zebra_set_seventhcolor($css, $seventhcolor) {
-    $tag = '[[setting:seventhcolor]]';
-    $replacement = $seventhcolor;
+function zebra_set_footerbgcolor($css, $footerbgcolor) {
+    $tag = '[[setting:footerbgcolor]]';
+    $replacement = $footerbgcolor;
     if (is_null($replacement)) {
         $replacement = '#DDDDDD';
     }

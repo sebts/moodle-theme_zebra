@@ -31,16 +31,16 @@
 /* $1.0: All Views */
 
 html {
-    background-color:[[setting:backgroundcolor]];
-    color:[[setting:thirdcolor]];
+    background-color:[[setting:bodybgcolor]];
+    color:[[setting:fontcolor]];
 }
 
 body {
-    background:url([[setting:backgroundurl]]) no-repeat scroll left top transparent;
+    background:url([[setting:backgroundurl]]) no-repeat scroll center top transparent;
 }
 
 legend {
-    color:[[setting:thirdcolor]];
+    color:[[setting:fontcolor]];
 }
 
 #page-header {
@@ -49,35 +49,35 @@ legend {
 }
 
 .navbar {
-    background-color:[[setting:fourthcolor]];
-    border-bottom:1px solid [[setting:backgroundcolor]];
+    background-color:[[setting:contentbgcolor]];
+    border-bottom:1px solid [[setting:bodybgcolor]];
 }
 
 #navbar-wrapper {
-    background-color:[[setting:firstcolor]];
+    background-color:[[setting:linkcolor]];
 }
 
 #page-footer-wrapper {
-    background-color:[[setting:fourthcolor]];
+    background-color:[[setting:contentbgcolor]];
 }
 
 #page-footer {
-    background-color:[[setting:seventhcolor]];
+    background-color:[[setting:footerbgcolor]];
 }
 
 #user-pic .defaultuserpic {
-    background-color:[[setting:firstcolor]];
+    background-color:[[setting:linkcolor]];
 }
 
 a,
 a:visited {
-    color:[[setting:firstcolor]];
+    color:[[setting:linkcolor]];
     text-decoration:none;
 }
 
 a:hover,
 a:active {
-    color:[[setting:firstcolor]];
+    color:[[setting:linkcolor]];
     text-decoration:underline;
 }
 
@@ -88,40 +88,40 @@ a:active {
 
 #page-border-wrapper a:hover,
 #page-border-wrapper a:active {
-    color:[[setting:secondcolor]];
+    color:[[setting:hovercolor]];
 }
 
 .block {
-    border-color:[[setting:backgroundcolor]];
+    border-color:[[setting:bodybgcolor]];
 }
 
 .forumpost .header {
-    background-color:[[setting:firstcolor]];
-    border-bottom-color:[[setting:backgroundcolor]];
+    background-color:[[setting:linkcolor]];
+    border-bottom-color:[[setting:bodybgcolor]];
 }
 
 .forumpost.unread .header {
-    border-color:[[setting:secondcolor]];
+    border-color:[[setting:hovercolor]];
 }
 
 .forumpost .maincontent {
-    border-color:[[setting:backgroundcolor]];
+    border-color:[[setting:bodybgcolor]];
 }
 
 .forumpost.unread .maincontent {
-    border-color:[[setting:secondcolor]];
+    border-color:[[setting:hovercolor]];
 }
 
 .forumpost .header .subject {
-    color:[[setting:fourthcolor]];
+    color:[[setting:contentbgcolor]];
 }
 
 .forumpost .header .author {
-    color:[[setting:backgroundcolor]];
+    color:[[setting:bodybgcolor]];
 }
 
 .forumpost .header a {
-    color:[[setting:fourthcolor]];
+    color:[[setting:contentbgcolor]];
 }
 
 .path-mod-forum .forumheaderlist td {
@@ -129,11 +129,11 @@ a:active {
 }
 
 .path-mod-forum .forumheaderlist {
-    border:1px solid [[setting:backgroundcolor]];
+    border:1px solid [[setting:bodybgcolor]];
 }
 
 span.unread {
-    background-color:[[setting:secondcolor]];
+    background-color:[[setting:hovercolor]];
 }
 
 .r0 {
@@ -146,44 +146,44 @@ span.unread {
 }
 
 .generalbox {
-    border-color:[[setting:backgroundcolor]];
+    border-color:[[setting:bodybgcolor]];
 }
 
 .coursebox {
-    border:1px solid [[setting:backgroundcolor]];
+    border:1px solid [[setting:bodybgcolor]];
 }
 
 .course-content ul li.section {
-    border:1px solid [[setting:backgroundcolor]];
+    border:1px solid [[setting:bodybgcolor]];
 }
 
 .course-content ul li.section.current {
-    border-color:[[setting:firstcolor]];
+    border-color:[[setting:linkcolor]];
 }
 
 .mform fieldset {
-    border-color:[[setting:backgroundcolor]];
+    border-color:[[setting:bodybgcolor]];
 }
 
 .calendartable th,
 .calendartable td {
-    border-color:[[setting:backgroundcolor]];
+    border-color:[[setting:bodybgcolor]];
 }
 
 /* $2.0: 1 Column View */
 
 @media screen and (max-width: 599px) {
     #region-main {
-        background-color: [[setting:fourthcolor]];
+        background-color: [[setting:contentbgcolor]];
     }
     
     #region-pre,
     #region-post {
-        background-color: [[setting:fifthcolor]];
+        background-color: [[setting:columnbgcolor]];
     }
     
     #page-content-wrapper {
-        background-color:[[setting:firstcolor]];
+        background-color:[[setting:linkcolor]];
     }
 }
 
@@ -191,13 +191,13 @@ span.unread {
 
 @media screen and (min-width: 600px) and (max-width: 799px) {
     #region-main {
-        background-color: [[setting:fourthcolor]];
+        background-color: [[setting:contentbgcolor]];
     }
     
     #region-main-wrap,
     #region-pre,
     #region-post {
-        background-color: [[setting:fifthcolor]];
+        background-color: [[setting:columnbgcolor]];
     }
 }
 
@@ -205,23 +205,23 @@ span.unread {
 
 @media screen and (min-width: 800px) {
     #region-main {
-        background-color:[[setting:fourthcolor]];
+        background-color:[[setting:contentbgcolor]];
     }
     
     #region-post-box,
     #region-main-wrap,
     #region-pre,
     #region-post {
-        background-color:[[setting:fifthcolor]];
+        background-color:[[setting:columnbgcolor]];
     }
 }
 
 /* $5.0: Report Layout View */
 
 .pagelayout-report #page-content {
-    background-color:[[setting:fourthcolor]];
+    background-color:[[setting:contentbgcolor]];
 }
 
 #report-region-pre {
-    background-color:[[setting:fifthcolor]];
+    background-color:[[setting:columnbgcolor]];
 }

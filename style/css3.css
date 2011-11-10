@@ -45,29 +45,29 @@
 #dockeditempanel,
 #region-pre,
 #region-post {
-    background:linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:fifthcolor]];
-    background:-moz-linear-gradient(center top, [[setting:colorscheme]] 0%, transparent 15px) [[setting:fifthcolor]];
-    background:-webkit-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:fifthcolor]];
-    background:-ms-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:fifthcolor]];
-    box-shadow:0 1px 0 [[setting:fifthcolor]] inset;
-    -moz-box-shadow:0 1px 0 [[setting:fifthcolor]] inset;
-    -webkit-box-shadow:0 1px 0 [[setting:fifthcolor]] inset;
+    background:linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:columnbgcolor]];
+    background:-moz-linear-gradient(center top, [[setting:colorscheme]] 0%, transparent 15px) [[setting:columnbgcolor]];
+    background:-webkit-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:columnbgcolor]];
+    background:-ms-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:columnbgcolor]];
+    box-shadow:0 1px 0 [[setting:columnbgcolor]] inset;
+    -moz-box-shadow:0 1px 0 [[setting:columnbgcolor]] inset;
+    -webkit-box-shadow:0 1px 0 [[setting:columnbgcolor]] inset;
 }
 
 #region-main {
-    background:linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:fourthcolor]];
-    background:-moz-linear-gradient(center top, [[setting:colorscheme]] 0%, transparent 15px) [[setting:fourthcolor]];
-    background:-webkit-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:fourthcolor]];
-    background:-ms-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:fourthcolor]];
-    box-shadow:0 1px 0 [[setting:fourthcolor]] inset;
-    -moz-box-shadow:0 1px 0 [[setting:fourthcolor]] inset;
-    -webkit-box-shadow:0 1px 0 [[setting:fourthcolor]] inset;
+    background:linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:contentbgcolor]];
+    background:-moz-linear-gradient(center top, [[setting:colorscheme]] 0%, transparent 15px) [[setting:contentbgcolor]];
+    background:-webkit-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:contentbgcolor]];
+    background:-ms-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:contentbgcolor]];
+    box-shadow:0 1px 0 [[setting:contentbgcolor]] inset;
+    -moz-box-shadow:0 1px 0 [[setting:contentbgcolor]] inset;
+    -webkit-box-shadow:0 1px 0 [[setting:contentbgcolor]] inset;
 }
 
 /* $2.0: Custommenu */
 
 #custommenu {
-    text-shadow:0 1px 0 [[setting:thirdcolor]];
+    text-shadow:0 1px 0 [[setting:fontcolor]];
 }
 
 #custommenu,
@@ -81,14 +81,15 @@ ul.dropdown {
 }
 
 ul.dropdown {
-    background:linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:firstcolor]];
-    background:-moz-linear-gradient(center top , [[setting:menucolorscheme]] 0%, transparent 66%) [[setting:firstcolor]];
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:menucolorscheme]]),color-stop(66%,transparent)) [[setting:firstcolor]];
-    background:-webkit-linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:firstcolor]];
-    background:-ms-linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:firstcolor]];
-    box-shadow: 0 1px [[setting:firstcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:firstcolor]] inset;
-    -moz-box-shadow: 0 1px [[setting:firstcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:firstcolor]] inset;
-    -webkit-box-shadow: 0 1px [[setting:firstcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:firstcolor]] inset;}
+    background:linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:linkcolor]];
+    background:-moz-linear-gradient(center top , [[setting:menucolorscheme]] 0%, transparent 66%) [[setting:linkcolor]];
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:menucolorscheme]]),color-stop(66%,transparent)) [[setting:linkcolor]];
+    background:-webkit-linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:linkcolor]];
+    background:-ms-linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:linkcolor]];
+    box-shadow: 0 1px [[setting:linkcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:linkcolor]] inset;
+    -moz-box-shadow: 0 1px [[setting:linkcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:linkcolor]] inset;
+    -webkit-box-shadow: 0 1px [[setting:linkcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:linkcolor]] inset;
+}
 
 ul.dropdown > li:first-child {
     border-radius:5px 0 0 0;
@@ -100,14 +101,14 @@ ul.dropdown > li:first-child {
 }
 
 ul.dropdown > li:last-child {
-    background:linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:thirdcolor]];
-    background:-moz-linear-gradient(center top , [[setting:menucolorscheme]] 0%, transparent 66%) [[setting:thirdcolor]];
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:menucolorscheme]]),color-stop(66%,transparent)) [[setting:thirdcolor]];
-    background:-webkit-linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:thirdcolor]];
-    background:-ms-linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:thirdcolor]];
-    box-shadow: 0 1px [[setting:thirdcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:thirdcolor]] inset;
-    -moz-box-shadow: 0 1px [[setting:thirdcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:thirdcolor]] inset;
-    -webkit-box-shadow: 0 1px [[setting:thirdcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:thirdcolor]] inset;
+    background:linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:fontcolor]];
+    background:-moz-linear-gradient(center top , [[setting:menucolorscheme]] 0%, transparent 66%) [[setting:fontcolor]];
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:menucolorscheme]]),color-stop(66%,transparent)) [[setting:fontcolor]];
+    background:-webkit-linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:fontcolor]];
+    background:-ms-linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:fontcolor]];
+    box-shadow: 0 1px [[setting:fontcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:fontcolor]] inset;
+    -moz-box-shadow: 0 1px [[setting:fontcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:fontcolor]] inset;
+    -webkit-box-shadow: 0 1px [[setting:fontcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:fontcolor]] inset;
     border-radius:0 5px 0 0;
     -moz-border-radius:0 5px 0 0;
     -webkit-border-radius:0 5px 0 0;
@@ -117,23 +118,30 @@ ul.dropdown > li:last-child {
 }
 
 ul.dropdown > li:hover {
-    background:linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:secondcolor]];
-    background:-moz-linear-gradient(center top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:secondcolor]];
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:menucolorscheme]]), color-stop(100%,rgba(0,0,0,0.3))) [[setting:secondcolor]];
-    background:-webkit-linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:secondcolor]];
-    background:-ms-linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:secondcolor]];
-    box-shadow: 0 1px [[setting:secondcolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
-    -moz-box-shadow: 0 1px [[setting:secondcolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
-    -webkit-box-shadow: 0 1px [[setting:secondcolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
+    background:linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]];
+    background:-moz-linear-gradient(center top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]];
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:menucolorscheme]]), color-stop(100%,rgba(0,0,0,0.3))) [[setting:hovercolor]];
+    background:-webkit-linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]];
+    background:-ms-linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]];
+    box-shadow: 0 1px [[setting:hovercolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
+    -moz-box-shadow: 0 1px [[setting:hovercolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
+    -webkit-box-shadow: 0 1px [[setting:hovercolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
 }
 
-ul.dropdown ul span a:after {  border-bottom:7px solid transparent;  border-left:7px solid [[setting:fourthcolor]];  border-top:7px solid transparent;  content:"";  float:right;  margin-top:2px;
-  white-space:nowrap;}
+ul.dropdown ul span a:after {
+  border-bottom:7px solid transparent;
+  border-left:7px solid [[setting:contentbgcolor]];
+  border-top:7px solid transparent;
+  content:"";
+  float:right;
+  margin-top:2px;
+  white-space:nowrap;
+}
 
 /* $2.0: Custommenu */
 
 .forumpost.unread .maincontent {
-    box-shadow: 0 2px 3px [[setting:secondcolor]];
-    -moz-box-shadow: 0 2px 3px [[setting:secondcolor]];
-    -webkit-box-shadow: 0 2px 3px [[setting:secondcolor]];
+    box-shadow: 0 2px 3px [[setting:hovercolor]];
+    -moz-box-shadow: 0 2px 3px [[setting:hovercolor]];
+    -webkit-box-shadow: 0 2px 3px [[setting:hovercolor]];
 }

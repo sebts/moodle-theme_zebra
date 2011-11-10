@@ -30,7 +30,7 @@
 
 #custommenu {
     height:30px;
-    background-color:[[setting:firstcolor]];
+    background-color:[[setting:linkcolor]];
 }
 
 ul.dropdown-horizontal {
@@ -38,7 +38,7 @@ ul.dropdown-horizontal {
 }
 
 ul.dropdown-horizontal > li {
-    border-right:1px solid [[setting:thirdcolor]]; 
+    border-right:1px solid [[setting:fontcolor]]; 
 }
 
 ul.dropdown > li:first-child a {
@@ -46,14 +46,14 @@ ul.dropdown > li:first-child a {
 }
 
 ul.dropdown-horizontal > li:last-child {
-    background-color:[[setting:thirdcolor]];
-    border-left:1px solid [[setting:thirdcolor]];
+    background-color:[[setting:fontcolor]];
+    border-left:1px solid [[setting:fontcolor]];
     border-right:0 none;
     float:right;
 }
 
 ul.dropdown > li:hover {
-    background-color:[[setting:secondcolor]];
+    background-color:[[setting:hovercolor]];
 }
 
 /* $2.0: Sub Menus */
@@ -64,12 +64,12 @@ ul.dropdown ul li {
 }
 
 ul.dropdown ul li:hover {
-    border-bottom:1px solid [[setting:firstcolor]];
-    border-top:1px solid [[setting:firstcolor]];
+    border-bottom:1px solid [[setting:linkcolor]];
+    border-top:1px solid [[setting:linkcolor]];
 }
 
 ul.dropdown ul {
-    background-color:[[setting:thirdcolor]];
+    background-color:[[setting:fontcolor]];
     position:absolute;
     visibility:hidden;
     z-index:598;
@@ -86,7 +86,7 @@ ul.dropdown ul ul {
 
 ul.dropdown ul li:hover > span a,
 ul.dropdown ul ul li:hover > span a {
-    background-color:[[setting:firstcolor]];
+    background-color:[[setting:linkcolor]];
 }
 
 /* $3.0: All Menu Items */
@@ -134,10 +134,10 @@ ul.dropdown a:link,
 ul.dropdown a:visited,
 ul.dropdown a:hover,
 ul.dropdown a:visited {
-    color:[[setting:fourthcolor]] !important;
+    color:[[setting:contentbgcolor]] !important;
     text-decoration:none !important;
 }
 
 ul.dropdown ul a:hover {
-    background-color:[[setting:firstcolor]];
+    background-color:[[setting:linkcolor]];
 }
