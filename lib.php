@@ -196,9 +196,12 @@ function zebra_process_css($css, $theme) {
 function zebra_set_logourl($css, $logourl) {
     global $OUTPUT;
     $tag = '[[setting:logourl]]';
-    $replacement = $OUTPUT->pix_url("$logourl", 'theme');
+    $replacement = $logourl;
     if (is_null($replacement)) {
         $replacement = $OUTPUT->pix_url('logo/logo', 'theme');
+    }
+    else {
+        $replacement = $OUTPUT->pix_url("$logourl", 'theme');
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -232,9 +235,11 @@ function zebra_set_backgroundurl($css, $backgroundurl) {
     global $OUTPUT;
     $tag = '[[setting:backgroundurl]]';
     $replacement = $backgroundurl;
-    $replacement = $OUTPUT->pix_url("$backgroundurl", 'theme');
     if (is_null($replacement)) {
         $replacement = $OUTPUT->pix_url('core/background', 'theme');
+    }
+    else {
+        $replacement = $OUTPUT->pix_url("$backgroundurl", 'theme');
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
