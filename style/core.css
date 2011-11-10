@@ -507,7 +507,7 @@
 }
 
 .admin_colourpicker .loadingicon {
-    vertical-align:center;
+    vertical-align: middle;
     margin-left:auto;
 }
 
@@ -736,7 +736,7 @@
 }
 
 .path-calendar .filters table {
-    border-collapse:separate;
+    border-collapse: separate;
     border-spacing: 2px;
     width: 100%;
 }
@@ -865,7 +865,7 @@ a.dimmed_text:visited,
 
 .notifytiny li,
 .notifytiny td {
-    font-size:100%;
+    font-size: 100%;
 }
 
 .red,
