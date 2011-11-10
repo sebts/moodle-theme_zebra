@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
  
-function xmldb_theme_mythemename_upgrade($oldversion) {
+function xmldb_theme_zebra_upgrade($oldversion) {
  
     if ($oldversion < 2011111002) {
         $currentsetting = get_config('theme_zebra');

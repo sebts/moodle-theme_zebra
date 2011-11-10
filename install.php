@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
  
-function xmldb_theme_mythemename_install() {
+function xmldb_theme_zebra_install() {
     $currentsetting = get_config('theme_zebra');
  
     // Create linkcolor
