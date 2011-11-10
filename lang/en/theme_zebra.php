@@ -50,12 +50,17 @@ $string['choosereadme'] = '<div class="clearfix">
                 <p><a href="http://moodle.org/plugins/view.php?plugin=theme_zebra">http://moodle.org/plugins/view.php?plugin=theme_zebra</a></p>
                 <h2>Theme Credits</h2>
 		<p><a href="http://iyware.com">Danny Wahl</a></p>
+                <h2>Don\'t forget to customize your settings!</h2>
+                <a href="../admin/settings.php?section=themesettingzebra">Zebra Theme Settings</a>
 	</div>
 </div>
 ';
 
 $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
+
+$string['notes'] = 'Theme notes';
+$string['notesdesc'] = '<p>Notes:  To apply any settings simply press "Save Changes" at the bottom of this page.</p><p>If you do not have Theme Designer Mode enabled you may need to visit the <a href="purgecaches.php">Purge All Caches</a> admin page to force the refresh.</p>';
 
 $string['headerinfo'] = 'Header settings';
 $string['headerinfodesc'] = 'Change the settings for the header region.';
