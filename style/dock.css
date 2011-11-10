@@ -29,7 +29,7 @@
 /* Dock General */
 
 #dock {
-    background-color:[[setting:fourthcolor]];
+    background-color:[[setting:contentbgcolor]];
 }
 
 #dock.nothingdocked {
@@ -51,15 +51,15 @@ body.has_dock_left_vertical {
 }
 
 #dock.dock_left_vertical {
-    border-right:1px solid [[setting:secondcolor]];
+    border-right:1px solid [[setting:hovercolor]];
     left:0;
 }
 
 /* Docked Block Labels */
 
 #dock.dock_left_vertical .dockedtitle {
-    border-bottom:1px solid [[setting:secondcolor]];
-    border-top:1px solid [[setting:secondcolor]];
+    border-bottom:1px solid [[setting:hovercolor]];
+    border-top:1px solid [[setting:hovercolor]];
     cursor:pointer;
 }
 
@@ -73,8 +73,8 @@ body.has_dock_left_vertical {
 }
 
 #dock .controls {
-    background-color:[[setting:fourthcolor]];
-    border-top:1px solid [[setting:secondcolor]];
+    background-color:[[setting:contentbgcolor]];
+    border-top:1px solid [[setting:hovercolor]];
     bottom:0;
     position:absolute;
     text-align:center;
@@ -86,13 +86,13 @@ body.has_dock_left_vertical {
 }
 
 #dock .buttons_container{
-    background-color:[[setting:fourthcolor]];
+    background-color:[[setting:contentbgcolor]];
 }
 
 /* Docked Blocks */
 
 #dockeditempanel {
-    border:1px solid [[setting:secondcolor]];
+    border:1px solid [[setting:hovercolor]];
     left:100%;
     min-width:200px;
     position:relative;
@@ -108,7 +108,7 @@ body.has_dock_left_vertical {
 }
 
 #dockeditempanel .dockeditempanel_content {
-    background-color:[[setting:fourthcolor]];
+    background-color:[[setting:contentbgcolor]];
     z-index:12050;
 }
 
