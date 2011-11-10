@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die();
  
 function xmldb_theme_mythemename_upgrade($oldversion) {
  
-    if ($oldversion < 2011111001) {
+    if ($oldversion < 2011111002) {
         $currentsetting = get_config('theme_zebra');
 
         // Create linkcolor
@@ -65,7 +65,7 @@ function xmldb_theme_mythemename_upgrade($oldversion) {
         unset_config('seventhcolor', 'theme_zebra');
         
         // Upgrade version number
-        upgrade_plugin_savepoint(true, 2011111001, 'theme', 'zebra');
+        upgrade_plugin_savepoint(true, 2011111002, 'theme', 'zebra');
         
     }
  
