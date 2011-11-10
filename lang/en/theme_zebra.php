@@ -99,7 +99,7 @@ $string['menucolorscheme'] = 'Menu color scheme';
 $string['menucolorschemedesc'] = 'Gradient of menu.';
 
 $string['columninfo'] = 'Layout Settings';
-$string['columninfodesc'] = 'Change the settings for the layout of the page.  Note: you can exclude a layout by overlapping the min and max values of the other layouts.';
+$string['columninfodesc'] = '<p>Change the settings for the layout of the page.  To test your settings simply resize your browser window or rotate the orientation of your phone/tablet.</p><p>Note: you can exclude a layout by overlapping the min and max values of the other layouts.</p><p><img src="../theme/image.php?theme=zebra&amp;image=core/one_column&amp;component=theme" style="margin:10px 10px 0 10px;" /><img src="../theme/image.php?theme=zebra&amp;image=core/two_columns&amp;component=theme" style="margin:10px 10px 0 10px;" /><img src="../theme/image.php?theme=zebra&amp;image=core/three_columns&amp;component=theme" style="margin:10px 10px 0 10px;" /></p>';
 
 $string['onecolmax'] = 'One column max width';
 $string['onecolmaxdesc'] = 'Max width for one column layout.  Display order is top: <code>region-main</code> middle: <code>region-pre</code> bottom: <code>region-post</code>';
@@ -116,13 +116,13 @@ $string['miscinfo'] = 'Misc. settings';
 $string['miscinfodesc'] = 'Change the settings for miscellaneous things.';
 
 $string['customcss'] = 'Custom CSS';
-$string['customcssdesc'] = 'Input any custom CSS here.';
+$string['customcssdesc'] = 'Input any custom CSS here.  CSS input here is the very last thing called on the page and should not be overwritten by any other rules.  If your rules are not displaying please try the following:<ol><li>check your syntax</li><li>add <code>!important</code> to your rule</li><li>manually append the rule to extra.css</li></ol>';
 
 $string['enablezoom'] = 'Enable page zoom';
 $string['enablezoomdesc'] = 'Enable page zooming for mobile devices.';
 
 $string['branding'] = 'Hide footer logos';
-$string['brandingdesc'] = 'Hide the branded logos in the footer.  These links are to sites that either sponsored or contributed development of this theme.  Full credits can be found in the readme when selecting this theme.';
+$string['brandingdesc'] = 'Hide the branded logos in the footer.  These links are to sites that either sponsored or contributed directly to development of this theme.  Full credits can be found in the readme when selecting this theme.';
 
 $string['menuhome'] = 'Home';
 $string['menumyhome'] = 'My Home';
