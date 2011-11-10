@@ -60,74 +60,74 @@ $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
 
 $string['notes'] = 'Theme notes';
-$string['notesdesc'] = '<p>Notes:  To apply any settings simply press "Save Changes" at the bottom of this page.</p><p>If you do not have Theme Designer Mode enabled you may need to visit the <a href="purgecaches.php">Purge All Caches</a> admin page to force the refresh.</p>';
+$string['notesdesc'] = '<p>To apply any settings simply press "Save Changes" at the bottom of this page.</p><p>If you do not have Theme Designer Mode enabled you may need to visit the <a href="purgecaches.php">Purge All Caches</a> admin page to force the refresh.</p>';
 
 $string['headerinfo'] = 'Header settings';
-$string['headerinfodesc'] = 'Change the settings for the header region.';
+$string['headerinfodesc'] = '<p>Change the settings for the header region.</p>';
 
 $string['logourl'] = 'Logo URL';
-$string['logourldesc'] = 'Input the URL to your logo.  This should be used in Moodle pix format (e.g. not a full path).';
+$string['logourldesc'] = '<p>Input the URL to your logo.</p><p>This should be used in Moodle pix format (e.g. not a full path).</p>';
 $string['logourlheight'] = 'Logo image height';
-$string['logourlheightdesc'] = 'Minimum height for header to provide space for logo image.  If you do not have a logo you should still leave this at the default to provide space for the profile block.';
+$string['logourlheightdesc'] = '<p>Minimum height for header to provide space for logo image.</p><p>If you do not have a logo you should still leave this at the default to provide space for the profile block.</p>';
 $string['backgroundurl'] = 'Background URL';
-$string['backgroundurldesc'] = 'Input the URL to your body background image, this should be used in Moodle pix format (e.g. not a full path).';
+$string['backgroundurldesc'] = '<p>Input the URL to your body background image.</p><p>This should be used in Moodle pix format (e.g. not a full path).</p>';
 
 $string['headeralt'] = 'Alternate text';
-$string['headeraltdesc'] = 'Text to use instead of the Site Name. Hint: Use a space (<code>&amp;nbsp;</code>) to display nothing.';
+$string['headeraltdesc'] = '<p>Text to use instead of the Site Name.</p><p>Hint: Use a space (<code>&amp;nbsp;</code>) to display nothing.</p>';
 
 $string['colorsinfo'] = 'Colors settings';
 $string['colorsinfodesc'] = '<p>Change the settings for the colors of the page.</p><p>You can use any valid color type like <code>red</code>, <code>#FF0000</code>, <code>rgb(0, 255, 255)</code>, or <code>rgba(0, 255, 255, 1.0)</code>.</p>';
 
 $string['bodybgcolor'] = 'Body background color';
-$string['bodybgcolordesc'] = 'Main background color of the page.  This is applied to the <code>&lt;body&gt;</code> tag.';
+$string['bodybgcolordesc'] = '<p>Main background color of the page.</p><p>This is applied to the <code>&lt;body&gt;</code> tag.</p>';
 $string['linkcolor'] = 'Links color';
-$string['linkcolordesc'] = 'Links and menu color.  This is applied to all links (in and out of page content) except the custommenu and the custommenu background with the exception of the "date".';
+$string['linkcolordesc'] = '<p>Links and menu color.</p><p>This is applied to all links (in and out of page content) except the custommenu and the custommenu background with the exception of the "date".</p>';
 $string['hovercolor'] = 'Hover color';
-$string['hovercolordesc'] = 'Hovering color.  This is applied to all links (in and out of the page content) and the custommenu.';
+$string['hovercolordesc'] = '<p>Hovering color.</p><p>This is applied to all links (in and out of the page content) and the custommenu.</p>';
 $string['fontcolor'] = 'Font color';
-$string['fontcolordesc'] = 'Primary font and label color.  This is applied to all labels and fonts that do not have a specific class that overrides the color like <code>.warning</code> or <code>.notifysuccess</code>.  This is also applied to the background color of the \"date\" on the custommenu.';
+$string['fontcolordesc'] = '<p>Primary font and label color.</p><p>This is applied to all labels and fonts that do not have a specific class that overrides the color like <code>.warning</code> or <code>.notifysuccess</code>.  This is also applied to the background color of the \"date\" on the custommenu.</p>';
 $string['contentbgcolor'] = 'Page background color';
-$string['contentbgcolordesc'] = 'Content background color.  This is applied to different elements depending on the current view (please see pagelayout.css for more details) but generally this is the content of the page.  This is also applied to the custommenu links color.';
+$string['contentbgcolordesc'] = '<p>Content background color.</p><p>This is applied to different elements depending on the current view (please see pagelayout.css for more details) but generally this is the content of the page.  This is also applied to the custommenu links color.</p>';
 $string['columnbgcolor'] = 'Columns background color';
-$string['columnbgcolordesc'] = 'Column(s) background color.  This is applied to different elements depending on the current view (please see pagelayout.css for more details) but generally this is the region-pre and region-post (a.k.a. block areas)';
+$string['columnbgcolordesc'] = '<p>Column(s) background color.</p><p>This is applied to different elements depending on the current view (please see pagelayout.css for more details) but generally this is the region-pre and region-post (a.k.a. block areas).</p>';
 $string['headerbgcolor'] = 'Header background color';
-$string['headerbgcolordesc'] = 'Header background color.';
+$string['headerbgcolordesc'] = '<p>Header background color.</p>';
 $string['footerbgcolor'] = 'Footer background color';
-$string['footerbgcolordesc'] = 'Footer background color.  Using <code>transparent</code> will cause the footer to display the value of <code>contentbgcolor</code> not <code>bodybgcolor</code>.  This should be set to the same value as <code>bodybgcolor</code> for a transparent effect.';
+$string['footerbgcolordesc'] = '<p>Footer background color.</p><p>Using <code>transparent</code> will cause the footer to display the value of <code>contentbgcolor</code> not <code>bodybgcolor</code>.  This should be set to the same value as <code>bodybgcolor</code> for a transparent effect.</p>';
 
 $string['schemeinfo'] = 'Color scheme settings';
-$string['schemeinfodesc'] = 'Change the settings for the color scheme of the page.';
+$string['schemeinfodesc'] = '<p>Change the settings for the color scheme of the page.</p>';
 
 $string['colorscheme'] = 'Color scheme';
-$string['colorschemedesc'] = 'Gradients and highlights.  Note: Safari 4 does not accept a fixed height gradient so it will always display as "none".';
+$string['colorschemedesc'] = '<p>Gradients and highlights.</p><p>Note: Safari 4 does not accept a fixed height gradient so it will always display as "none".</p>';
 $string['menucolorscheme'] = 'Menu color scheme';
-$string['menucolorschemedesc'] = 'Gradient of menu.';
+$string['menucolorschemedesc'] = '<p>Gradient of menu.</p>';
 
 $string['columninfo'] = 'Layout Settings';
-$string['columninfodesc'] = '<p>Change the settings for the layout of the page.  To test your settings simply resize your browser window or rotate the orientation of your phone/tablet.</p><p>Note: you can exclude a layout by overlapping the min and max values of the other layouts.</p><p><img src="../theme/image.php?theme=zebra&amp;image=core/one_column&amp;component=theme" style="margin:10px 10px 0 10px;" /><img src="../theme/image.php?theme=zebra&amp;image=core/two_columns&amp;component=theme" style="margin:10px 10px 0 10px;" /><img src="../theme/image.php?theme=zebra&amp;image=core/three_columns&amp;component=theme" style="margin:10px 10px 0 10px;" /></p>';
+$string['columninfodesc'] = '<p>Change the settings for the layout of the page.  To test your settings simply resize your browser window or rotate the orientation of your phone/tablet.</p><p>Note: you can exclude a layout by overlapping the min and max values of the other layouts.</p>';
 
 $string['onecolmax'] = 'One column max width';
-$string['onecolmaxdesc'] = 'Max width for one column layout.  Display order is top: <code>region-main</code> middle: <code>region-pre</code> bottom: <code>region-post</code>';
+$string['onecolmaxdesc'] = '<p>Max width for one column layout.</p><p>Display order is:</p><img src="../theme/image.php?theme=zebra&image=core/one_column&component=theme" style="float:left; margin-right:25px;" /><ul><li>top: <code>region-main</code></li><li>middle: <code>region-pre</code></li><li>bottom: <code>region-post</code></li></ul>';
 $string['twocolmin'] = 'Two column min width';
-$string['twocolmindesc'] = 'Min width for two column layout.  Display order is left-top: <code>region-pre</code> left-bottom: <code>region-post</code> right: <code>region-main</code>';
+$string['twocolmindesc'] = '<p>Min width for two column layout.</p>';
 $string['twocolmax'] = 'Two column max width';
-$string['twocolmaxdesc'] = 'Max width for two column layout';
+$string['twocolmaxdesc'] = '<p>Max width for two column layout</p><p>Display order is:</p><img src="../theme/image.php?theme=zebra&image=core/two_columns&component=theme" style="float:left; margin-right:25px;" /><ul><li>left-top: <code>region-pre</code></li><li>left-bottom: <code>region-post</code></li><li>right: <code>region-main</code></li></ul>';
 $string['threecolmin'] = 'Three column min width';
-$string['threecolmindesc'] = 'Min width for three column layout.  Display order is left: <code>region-pre</code> center: <code>region-main</code> right: <code>region-post</code>.';
+$string['threecolmindesc'] = '<p>Min width for three column layout.</p>';
 $string['threecolmax'] = 'Three column max width';
-$string['threecolmaxdesc'] = 'Max width for three column layout';
+$string['threecolmaxdesc'] = '<p>Max width for three column layout</p><p>Display order is:</p><img src="../theme/image.php?theme=zebra&image=core/three_columns&component=theme" style="float:left; margin-right:25px;" /><ul><li>left: <code>region-pre</code></li><li>center: <code>region-main</code></li><li>right: <code>region-post</code></li></ul>';
 
 $string['miscinfo'] = 'Misc. settings';
-$string['miscinfodesc'] = 'Change the settings for miscellaneous things.';
+$string['miscinfodesc'] = '<p>Change the settings for miscellaneous things.</p>';
 
 $string['customcss'] = 'Custom CSS';
-$string['customcssdesc'] = 'Input any custom CSS here.  CSS input here is the very last thing called on the page and should not be overwritten by any other rules.  If your rules are not displaying please try the following:<ol><li>check your syntax</li><li>add <code>!important</code> to your rule</li><li>manually append the rule to extra.css</li></ol>';
+$string['customcssdesc'] = '<p>Input any custom CSS here.</p><p>CSS input here is the very last thing called on the page and should not be overwritten by any other rules.  If your rules are not displaying please try the following:<ol><li>check your syntax</li><li>add <code>!important</code> to your rule</li><li>manually append the rule to extra.css</li></ol></p>';
 
 $string['enablezoom'] = 'Enable page zoom';
-$string['enablezoomdesc'] = 'Enable page zooming for mobile devices.';
+$string['enablezoomdesc'] = '<p>Enable page zooming for mobile devices.</p>';
 
 $string['branding'] = 'Hide footer logos';
-$string['brandingdesc'] = 'Hide the branded logos in the footer.  These links are to sites that either sponsored or contributed directly to development of this theme.  Full credits can be found in the readme when selecting this theme.';
+$string['brandingdesc'] = '<p>Hide the branded logos in the footer.</p><p>These links are to sites that either sponsored or contributed directly to development of this theme.  Full credits can be found in the readme when selecting this theme.</p>';
 
 $string['menuhome'] = 'Home';
 $string['menumyhome'] = 'My Home';
