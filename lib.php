@@ -201,7 +201,15 @@ function zebra_set_logourl($css, $logourl) {
         $replacement = $OUTPUT->pix_url('logo/logo', 'theme');
     }
     else {
-        $replacement = $OUTPUT->pix_url("$logourl", 'theme');
+       $protocol = '://';
+        $ntp = strpos($replacement, $protocol); // Check to see if a networking protocol is used
+        if($ntp === false) { // No networking protocol used
+            $relative = '/';
+            $rel = strpos($replacement, $relative); // Check to see if a relative path is used
+            if($rel !== 0) { // Doesn't start with a slash
+                $replacement = $OUTPUT->pix_url("$logourl", 'theme'); // Using Moodle output
+            }
+        }
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -239,7 +247,15 @@ function zebra_set_backgroundurl($css, $backgroundurl) {
         $replacement = $OUTPUT->pix_url('core/background', 'theme');
     }
     else {
-        $replacement = $OUTPUT->pix_url("$backgroundurl", 'theme');
+        $protocol = '://';
+        $ntp = strpos($replacement, $protocol); // Check to see if a networking protocol is used
+        if($ntp === false) { // No networking protocol used
+            $relative = '/';
+            $rel = strpos($replacement, $relative); // Check to see if a relative path is used
+            if($rel !== 0) { // Doesn't start with a slash
+                $replacement = $OUTPUT->pix_url("$backgroundurl", 'theme'); // Using Moodle output
+            }
+        }
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;

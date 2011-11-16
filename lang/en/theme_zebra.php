@@ -66,11 +66,11 @@ $string['headerinfo'] = 'Header settings';
 $string['headerinfodesc'] = '<p>Change the settings for the header region.</p>';
 
 $string['logourl'] = 'Logo URL';
-$string['logourldesc'] = '<p>Input the URL to your logo.</p><p>This should be used in Moodle pix format (e.g. not a full path).</p>';
+$string['logourldesc'] = '<p>Input the URL to your logo.</p><p>This can be used in one of three protocol types:<ul><li><p>Moodle Output (relative to theme):</p><p><code>logo/companylogo</code></p></li><li><p>Full path:</p><p><code>http://domain.com/theme/image.php?theme=zebra&image=logo&rev=1&component=theme</code><br /><code>http://domain.com/path/to/image.jpg</code></p></li><li><p>Relative Path:</p><p><code>/path/to/file/companylogo.png</code></p></li></ul></p>';
 $string['logourlheight'] = 'Logo image height';
 $string['logourlheightdesc'] = '<p>Minimum height for header to provide space for logo image.</p><p>If you do not have a logo you should still leave this at the default to provide space for the profile block.</p>';
 $string['backgroundurl'] = 'Background URL';
-$string['backgroundurldesc'] = '<p>Input the URL to your body background image.</p><p>This should be used in Moodle pix format (e.g. not a full path).</p>';
+$string['backgroundurldesc'] = '<p>Input the URL to your body background image.</p><p>This can be used in Moodle Output format (relative to theme), full path, or relative path.</p>';
 
 $string['headeralt'] = 'Alternate text';
 $string['headeraltdesc'] = '<p>Text to use instead of the Site Name.</p><p>Hint: Use a space (<code>&amp;nbsp;</code>) to display nothing.</p>';
