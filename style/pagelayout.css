@@ -24,13 +24,13 @@
 /* All Views */
 
 body {
-	padding:0 10px;
+	padding: 0 10px;
 }
 
 #page {
-	margin:0 auto;
-	max-width:[[setting:threecolmax]];
-	overflow:hidden;
+	margin: 0 auto;
+	max-width: [[setting:threecolmax]];
+	overflow: hidden;
 }
 
 #page-header,
@@ -40,81 +40,75 @@ body {
 #page-footer,
 #region-main-box,
 #region-post-box {
-	clear:both;
-	float:none;
-	position:relative;
-	width:100%;
+	clear: both;
+	float: none;
+	position: relative;
+	width: 100%;
 }
 
 #region-main,
 #region-pre,
 #region-post {
-	position:relative;
+	position: relative;
 }
 
 .side-pre-only #region-post,
 .side-post-only #region-pre,
 .content-only #region-pre,
 .content-only #region-post {
-	width:0;
-	height:0;
-	visibility:hidden;
+	width: 0;
+	height: 0;
+	visibility: hidden;
 }
 
 .content-only #region-main {
-	margin-left:0;
-	margin-right:0;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .region-content {
-	padding:4px 4px 0 4px;
-}
-
-/* 1 Column View */
-
-@media screen and (max-width:[[setting:onecolmax]]) {
-	
+	padding: 4px 4px 0 4px;
 }
 
 /* 2 Column View */
 
-@media screen and (min-width:[[setting:twocolmin]]) and (max-width:[[setting:twocolmax]]) {
+@media screen and (min-width:[[setting:twocolmin]]) {
     #region-main-box {
-    	left:0px;
-    	width:200%;
+    	left: 0;
+    	width: 200%;
     }
 
     #region-post-box {
-    	left:50%;
-    	margin-left:0;
-    	width:100%;
+    	left: 50%;
+    	margin-left: 0;
+    	width: 100%;
     }
 
     #region-main-wrap {
-    	float:right;
-    	position:relative;
-    	right:100%;
-    	width:50%;
+    	float: right;
+    	position: relative;
+    	right: 100%;
+    	width: 50%;
     }
 
     #region-main {
-    	margin-left:200px;
-    	margin-right:0;
+    	margin-left: 200px;
+    	margin-right: 0;
     }
 
     #region-pre {
-    	float:left;
-    	left:0;
-    	margin-left:-50%;
-    	width:200px;
+    	float: left;
+    	left: 0;
+    	margin-left: -50%;
+    	width: 200px;
     }
 
     #region-post {
-    	clear:left;
-    	float:left;
-    	left:0;
-    	margin-left:-50%;
-    	width:200px;
+    	clear: left;
+    	float: left;
+    	left: 0;
+    	margin-left: -50%;
+    	width: 200px;
     }
 }
 
@@ -122,96 +116,80 @@ body {
 
 @media screen and (min-width:[[setting:threecolmin]]) {
     #region-main-box {
-    	left:200px;
-    	width:200%;
+    	left: 200px;
     }
 
     #region-post-box {
-    	float:left;
-    	left:50%;
-    	margin-left:-400px;
-    	width:100%;
-    }
-
-    #region-main-wrap {
-    	float:right;
-    	position:relative;
-    	right:100%;
-    	width:50%;
+    	float: left;
+    	margin-left: -400px;
     }
 
     #region-main {
-    	margin-right:0;
-    	margin-left:400px;
+    	margin-left: 400px;
     }
 
     #region-pre {
-        float:left;
-        left:200px;
-        margin-left:-50%;
-        width:200px;
+        left: 200px;
     }
 
     #region-post {
-        float:left;
-        left:0;
-        width:200px;
+        clear: none;
+        margin-left: 0;
     }
 
     .side-pre-only #region-post-box {
-        margin-left:-200px;
+        margin-left: -200px;
     }
     
     .side-pre-only #region-main {
-        margin-left:200px;
+        margin-left: 200px;
     }
 
     .side-pre-only #region-pre {
-        left:0;
+        left: 0;
     }
 
     .side-post-only #region-main-box {
-        left:0;
+        left: 0;
     }
 
     .side-post-only #region-post-box {
-        margin-left:-200px;
+        margin-left: -200px;
     }
 
     .side-post-only #region-main {
-        margin-left:200px;
+        margin-left: 200px;
     }
 
     .content-only #region-main-box {
-        left:0;
+        left: 0;
     }
 
     .content-only #region-post-box {
-        margin-left:0;
+        margin-left: 0;
     }
 }
 
 /* Report Layout */
 
 .pagelayout-report #report-main-content {
-    float:left;
-    width:100%;
+    float: left;
+    width: 100%;
 }
 
 #report-main-content .region-content {
-    margin-left:200px;
-    overflow-x:visible;
-    overflow-y:hidden;
+    margin-left: 200px;
+    overflow-x: visible;
+    overflow-y: hidden;
 }
 
 #report-region-wrap {
-    float:right;
-    left:-100%;
-    position:relative;
-    width:0;
-
+    float: right;
+    left: -100%;
+    position: relative;
+    width: 0;
 }
 
 #report-region-pre {
-    width:200px;
+    width: 200px;
 }
