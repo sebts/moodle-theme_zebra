@@ -25,8 +25,23 @@
 defined('MOODLE_INTERNAL') || die();
  
 function xmldb_theme_zebra_upgrade($oldversion) {
+
+    if ($oldversion < 2011120500) { // New Settings in 2.1.1
+        $currentsetting = get_config('theme_zebra');
+
+        // Remove onecolmax
+        unset_config('onecolmax', 'theme_zebra');
+
+        // Remove twocolmax
+        unset_config('twocolmax', 'theme_zebra');
+
+        // Create pagemaxwidth
+        set_config('pagemaxwidth', $currentsetting->threecolmax, 'theme_zebra');
+        // Remove threecolmax
+        unset_config('threecolmax', 'theme_zebra');
+    }
  
-    if ($oldversion < 2011111004) {
+    if ($oldversion < 2011111004) { // New Settings in 2.1
         $currentsetting = get_config('theme_zebra');
 
         // Create linkcolor
@@ -66,7 +81,6 @@ function xmldb_theme_zebra_upgrade($oldversion) {
         
         // Upgrade version number
         upgrade_plugin_savepoint(true, 2011111004, 'theme', 'zebra');
-        
     }
  
     return true;

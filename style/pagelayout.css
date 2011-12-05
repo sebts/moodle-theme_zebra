@@ -29,7 +29,7 @@ body {
 
 #page {
 	margin: 0 auto;
-	max-width: [[setting:threecolmax]];
+	max-width: [[setting:pagemaxwidth]];
 	overflow: hidden;
 }
 

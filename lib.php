@@ -119,14 +119,6 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_columnbgcolor($css, $columnbgcolor);
 
-    //Get the max width for one column page layout from settings
-    if (!empty($theme->settings->onecolmax)) {
-        $onecolmax = $theme->settings->onecolmax;
-    } else {
-        $onecolmax = null;
-    }
-    $css = zebra_set_onecolmax($css, $onecolmax);
-
     //Get the sixth color value from settings
     if (!empty($theme->settings->headerbgcolor)) {
         $headerbgcolor = $theme->settings->headerbgcolor;
@@ -151,14 +143,6 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_twocolmin($css, $twocolmin);
 
-    //Get the max width for two column page layout from settings
-    if (!empty($theme->settings->twocolmax)) {
-        $twocolmax = $theme->settings->twocolmax;
-    } else {
-        $twocolmax = null;
-    }
-    $css = zebra_set_twocolmax($css, $twocolmax);
-
     //Get the min width for three column page layout from settings
     if (!empty($theme->settings->threecolmin)) {
         $threecolmin = $theme->settings->threecolmin;
@@ -167,13 +151,13 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_threecolmin($css, $threecolmin);
 
-    //Get the max width for three column page layout from settings
-    if (!empty($theme->settings->threecolmax)) {
-        $threecolmax = $theme->settings->threecolmax;
+    //Get the max width for page content from settings
+    if (!empty($theme->settings->pagemaxwidth)) {
+        $pagemaxwidth = $theme->settings->pagemaxwidth;
     } else {
-        $threecolmax = null;
+        $pagemaxwidth = null;
     }
-    $css = zebra_set_threecolmax($css, $threecolmax);
+    $css = zebra_set_pagemaxwidth($css, $pagemaxwidth);
 
     //Get any extra css the user adds from settings
     if(!empty($theme->settings->customcss)) {
@@ -457,26 +441,6 @@ function zebra_set_menucolorscheme($css, $menucolorscheme) {
 }
 
 /**
- * Sets the maximum width for one column page layout.
- * Should be the returned value of {@link zebra_set_twocolmin()}
- * minus 1. Default value should fit:
- * Smartphone portrait
- * 
- * @param string $css
- * @param mixed $onecolmax
- * @return string
- */
-function zebra_set_onecolmax($css, $onecolmax) {
-    $tag = '[[setting:onecolmax]]';
-    $replacement = $onecolmax;
-    if (is_null($replacement)) {
-        $replacement = '599px';
-    }
-    $css = str_replace($tag, $replacement, $css);
-    return $css;
-};
-
-/**
  * Sets the minimum width for two column page layout.
  * Should be the returned value of {@link zebra_set_onecolmax()}
  * plus 1. Default value should fit:
@@ -492,29 +456,7 @@ function zebra_set_twocolmin($css, $twocolmin) {
     $tag = '[[setting:twocolmin]]';
     $replacement = $twocolmin;
     if (is_null($replacement)) {
-        $replacement = '600px';
-    }
-    $css = str_replace($tag, $replacement, $css);
-    return $css;
-};
-
-/**
- * Sets the maximum width for two column page layout.
- * Should be the returned value of {@link zebra_set_threecolmin()}
- * minus 1.  Default value should fit:
- * Smartphone Landscape
- * Tablet portraid
- * SDTV
- *
- * @param string $css
- * @param mixed $twocolmax
- * @return string
- */
-function zebra_set_twocolmax($css, $twocolmax) {
-    $tag = '[[setting:twocolmax]]';
-    $replacement = $twocolmax;
-    if (is_null($replacement)) {
-        $replacement = '799px';
+        $replacement = '481px';
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -536,7 +478,7 @@ function zebra_set_threecolmin($css, $threecolmin) {
     $tag = '[[setting:threecolmin]]';
     $replacement = $threecolmin;
     if (is_null($replacement)) {
-        $replacement = '800px';
+        $replacement = '769px';
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -547,12 +489,12 @@ function zebra_set_threecolmin($css, $threecolmin) {
  * This is the max-width of #page, not body
  *
  * @param string $css
- * @param mixed $threecolmax
+ * @param mixed $pagemaxwidth
  * @return string
  */
-function zebra_set_threecolmax($css, $threecolmax) {
-    $tag = '[[setting:threecolmax]]';
-    $replacement = $threecolmax;
+function zebra_set_pagemaxwidth($css, $pagemaxwidth) {
+    $tag = '[[setting:pagemaxwidth]]';
+    $replacement = $pagemaxwidth;
     if (is_null($replacement)) {
         $replacement = '100%';
     }

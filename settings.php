@@ -162,38 +162,24 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_heading($name, $heading, $information);
     $settings->add($setting);
 
-    //Set max width for one column layout
-    $name = 'theme_zebra/onecolmax';
-    $title = get_string('onecolmax','theme_zebra');
-    $description = get_string('onecolmaxdesc', 'theme_zebra');
-    $setting = new admin_setting_configtext($name, $title, $description, '599px', PARAM_CLEAN, 5);
-    $settings->add($setting);
-
-    //Set min width for two column layout: should be onecolmax +1
+    //Set min width for two column layout
     $name = 'theme_zebra/twocolmin';
     $title = get_string('twocolmin','theme_zebra');
     $description = get_string('twocolmindesc', 'theme_zebra');
-    $setting = new admin_setting_configtext($name, $title, $description, '600px', PARAM_CLEAN, 5);
+    $setting = new admin_setting_configtext($name, $title, $description, '481px', PARAM_CLEAN, 5);
     $settings->add($setting);
 
-    //Set max width for two column layout
-    $name = 'theme_zebra/twocolmax';
-    $title = get_string('twocolmax','theme_zebra');
-    $description = get_string('twocolmaxdesc', 'theme_zebra');
-    $setting = new admin_setting_configtext($name, $title, $description, '799px', PARAM_CLEAN, 5);
-    $settings->add($setting);
-
-    //Set max width for two column layout: should be twocolmax +1
+    //Set min width for three column layout
     $name = 'theme_zebra/threecolmin';
     $title = get_string('threecolmin','theme_zebra');
     $description = get_string('threecolmindesc', 'theme_zebra');
-    $setting = new admin_setting_configtext($name, $title, $description, '800px', PARAM_CLEAN, 5);
+    $setting = new admin_setting_configtext($name, $title, $description, '769px', PARAM_CLEAN, 5);
     $settings->add($setting);
 
-    //Set max width for three column layout
-    $name = 'theme_zebra/threecolmax';
-    $title = get_string('threecolmax','theme_zebra');
-    $description = get_string('threecolmaxdesc', 'theme_zebra');
+    //Set max width for page content
+    $name = 'theme_zebra/pagemaxwidth';
+    $title = get_string('pagemaxwidth','theme_zebra');
+    $description = get_string('pagemaxwidthdesc', 'theme_zebra');
     $setting = new admin_setting_configtext($name, $title, $description, '100%', PARAM_CLEAN, 5);
     $settings->add($setting);
 

@@ -104,18 +104,14 @@ $string['menucolorscheme'] = 'Menu color scheme';
 $string['menucolorschemedesc'] = '<p>Gradient of menu.</p>';
 
 $string['columninfo'] = 'Layout Settings';
-$string['columninfodesc'] = '<p>Change the settings for the layout of the page.  To test your settings simply resize your browser window or rotate the orientation of your phone/tablet.</p><p>Note: you can exclude a layout by overlapping the min and max values of the other layouts.</p>';
+$string['columninfodesc'] = '<p>Change the settings for the layout of the page.  To test your settings simply resize your browser window or rotate the orientation of your phone/tablet.</p><figure style="float: left;"><img src="../theme/image.php?theme=zebra&image=core/one_column&component=theme"/><figcaption><ul><li>top: <code>region-main</code></li><li>middle: <code>region-pre</code></li><li>bottom: <code>region-post</code></li></ul></figcaption></figure><figure style="float: left;"><img src="../theme/image.php?theme=zebra&image=core/two_columns&component=theme"/><figcaption><ul><li>top left: <code>region-pre</code></li><li>bottom left: <code>region-post</code></li><li>right: <code>region-main</code></li></ul></figcaption></figure><figure style="float: left;"><img src="../theme/image.php?theme=zebra&image=core/three_columns&component=theme"/><figcaption><ul><li>left: <code>region-pre</code></li><li>center: <code>region-main</code></li><li>right: <code>region-post</code></li></ul></figcaption></figure><br style="clear: left;" />';
 
-$string['onecolmax'] = 'One column max width';
-$string['onecolmaxdesc'] = '<p>Max width for one column layout.</p><p>Display order is:</p><img src="../theme/image.php?theme=zebra&image=core/one_column&component=theme" style="float:left; margin-right:25px;" /><ul><li>top: <code>region-main</code></li><li>middle: <code>region-pre</code></li><li>bottom: <code>region-post</code></li></ul>';
 $string['twocolmin'] = 'Two column min width';
 $string['twocolmindesc'] = '<p>Min width for two column layout.</p>';
-$string['twocolmax'] = 'Two column max width';
-$string['twocolmaxdesc'] = '<p>Max width for two column layout</p><p>Display order is:</p><img src="../theme/image.php?theme=zebra&image=core/two_columns&component=theme" style="float:left; margin-right:25px;" /><ul><li>left-top: <code>region-pre</code></li><li>left-bottom: <code>region-post</code></li><li>right: <code>region-main</code></li></ul>';
 $string['threecolmin'] = 'Three column min width';
-$string['threecolmindesc'] = '<p>Min width for three column layout.</p>';
-$string['threecolmax'] = 'Three column max width';
-$string['threecolmaxdesc'] = '<p>Max width for three column layout</p><p>Display order is:</p><img src="../theme/image.php?theme=zebra&image=core/three_columns&component=theme" style="float:left; margin-right:25px;" /><ul><li>left: <code>region-pre</code></li><li>center: <code>region-main</code></li><li>right: <code>region-post</code></li></ul>';
+$string['threecolmindesc'] = '<p>Min width for three column layout.  Display order is:</p>';
+$string['pagemaxwidth'] = 'Page max width';
+$string['pagemaxwidthdesc'] = '<p>Max width for page content.</p>';
 
 $string['miscinfo'] = 'Misc. settings';
 $string['miscinfodesc'] = '<p>Change the settings for miscellaneous things.</p>';
