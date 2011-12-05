@@ -198,4 +198,5 @@ body {
 
 .dir-rtl {
     direction: ltr;
+    overflow-x: hidden;
 }
