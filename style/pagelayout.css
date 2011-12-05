@@ -193,3 +193,8 @@ body {
 #report-region-pre {
     width: 200px;
 }
+
+/* RTL Hack */
+.dir-rtl {
+    direction: ltr;
+}
