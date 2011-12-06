@@ -42,9 +42,7 @@
 .sitetopic,
 .coursebox,
 .block,
-#dockeditempanel,
-#region-pre,
-#region-post {
+#dockeditempanel {
     background:linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:columnbgcolor]];
     background:-moz-linear-gradient(center top, [[setting:colorscheme]] 0%, transparent 15px) [[setting:columnbgcolor]];
     background:-webkit-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:columnbgcolor]];
@@ -62,6 +60,31 @@
     box-shadow:0 1px 0 [[setting:contentbgcolor]] inset;
     -moz-box-shadow:0 1px 0 [[setting:contentbgcolor]] inset;
     -webkit-box-shadow:0 1px 0 [[setting:contentbgcolor]] inset;
+}
+
+@media screen and (min-width:[[setting:twocolmin]]) {
+    #region-pre,
+    .side-post-only #region-post {
+        background:linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:columnbgcolor]];
+        background:-moz-linear-gradient(center top, [[setting:colorscheme]] 0%, transparent 15px) [[setting:columnbgcolor]];
+        background:-webkit-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:columnbgcolor]];
+        background:-ms-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:columnbgcolor]];
+        box-shadow:0 1px 0 [[setting:columnbgcolor]] inset;
+        -moz-box-shadow:0 1px 0 [[setting:columnbgcolor]] inset;
+        -webkit-box-shadow:0 1px 0 [[setting:columnbgcolor]] inset;
+    }
+}
+
+@media screen and (min-width:[[setting:threecolmin]]) {
+    #region-post {
+        background:linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:columnbgcolor]];
+        background:-moz-linear-gradient(center top, [[setting:colorscheme]] 0%, transparent 15px) [[setting:columnbgcolor]];
+        background:-webkit-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:columnbgcolor]];
+        background:-ms-linear-gradient(top, [[setting:colorscheme]] 0%,transparent 15px) [[setting:columnbgcolor]];
+        box-shadow:0 1px 0 [[setting:columnbgcolor]] inset;
+        -moz-box-shadow:0 1px 0 [[setting:columnbgcolor]] inset;
+        -webkit-box-shadow:0 1px 0 [[setting:columnbgcolor]] inset;
+    }
 }
 
 /* $2.0: Custommenu */
