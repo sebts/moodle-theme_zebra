@@ -70,6 +70,10 @@ body {
 	padding: 4px 4px 0 4px;
 }
 
+#region-main .region-content {
+    padding: 4px;
+}
+
 /* 2 Column View */
 
 @media screen and (min-width:[[setting:twocolmin]]) {
