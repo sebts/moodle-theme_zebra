@@ -1226,8 +1226,8 @@ a.skip:active {
 /* Footer */
 
 #page-footer {
-    padding:20px 0;
-    text-align:center;
+    padding: 20px 0 0 0;
+    text-align: center;
 }
 
 #page-footer .homelink {
@@ -1241,27 +1241,27 @@ a.skip:active {
 #page-footer .logininfo,
 #page-footer .sitelink,
 #page-footer .helplink {
-    margin:0px 2px;
+    margin: 0 4px;
 }
 
 #page-footer .performanceinfo {
-    margin:2px;
-    text-align:center;
+    margin: 4px;
+    text-align: center;
 }
 
 #page-footer .performanceinfo span {
-    display:block;
+    display: block;
 }
 
 #page-footer .validators ul {
     list-style-type:none;
-    margin:0px;
-    padding:0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 #page-footer .validators ul li {
-    display:inline;
-    margin: 0 2px;
+    display: inline;
+    margin: 0 4px;
 }
 
 /* Tabs */
