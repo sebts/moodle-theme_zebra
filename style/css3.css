@@ -138,7 +138,7 @@ ul.dropdown ul span a:after {
   white-space:nowrap;
 }
 
-/* $2.0: Custommenu */
+/* $3.0: Forum */
 
 .forumpost.unread .maincontent {
     box-shadow: 0 2px 3px [[setting:hovercolor]];
