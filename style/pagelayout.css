@@ -71,7 +71,11 @@ body {
 }
 
 #region-main .region-content {
-    padding: 4px;
+    padding-bottom: 4px;
+}
+
+#region-post .region-content {
+    padding-top: 0;
 }
 
 /* 2 Column View */
@@ -139,6 +143,10 @@ body {
     #region-post {
         clear: none;
         margin-left: 0;
+    }
+
+    #region-post .region-content {
+        padding-top: 4px;
     }
 
     .side-pre-only #region-post-box {
