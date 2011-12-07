@@ -44,7 +44,7 @@ legend {
 }
 
 #page-header {
-    background:url([[setting:logourl]]) no-repeat scroll left top transparent;
+    background:url([[setting:logourl]]) no-repeat scroll left top [[setting:headerbgcolor]];
     min-height:[[setting:logourlheight]];
 }
 
