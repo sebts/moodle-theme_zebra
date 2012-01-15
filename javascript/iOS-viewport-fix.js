@@ -16,7 +16,7 @@
  */
 
 /**
- * zebra theme footer javascripts file
+ * zebra theme iOS viewport fix JavaScript file
  *
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
@@ -24,9 +24,9 @@
  */
 
 /**
- * This is the viewport fix function for iOS
- *
+ * This is the viewport fix function for iOS when rotating the screen
  */
+
 !function(doc) {
   var addEvent = 'addEventListener',
       type = 'gesturestart',
