@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * zebra theme config page
+ * zebra theme install functions
  *
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
