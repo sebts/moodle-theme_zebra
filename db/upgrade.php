@@ -100,6 +100,14 @@ function xmldb_theme_zebra_upgrade($oldversion) {
 
 		upgrade_plugin_savepoint(true, 2012011500, 'theme', 'zebra');
 	}
+
+	if ($oldversion < 2012011501) { // New Settings in 2.2.0
+
+        // Remove enablezoom
+        unset_config('enablezoom', 'theme_zebra');
+
+		upgrade_plugin_savepoint(true, 2012011501, 'theme', 'zebra');
+	}
  
     return true;
 }

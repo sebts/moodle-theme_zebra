@@ -59,17 +59,6 @@ if (!empty($PAGE->theme->settings->branding)) {
     $branding = 0;
 }
 
-if (!empty($PAGE->theme->settings->enablezoom)) {
-    $enablezoom = $PAGE->theme->settings->enablezoom;
-    if ($enablezoom == 1) {
-         $zoomenabled = 'yes';
-    } else {
-         $zoomenabled = 'no';
-    }
-} else {
-    $zoomenabled = 'no';
-}
-
 if (!empty($PAGE->theme->settings->userespond)) {
 	$userespond = $PAGE->theme->settings->userespond;
 } else {
