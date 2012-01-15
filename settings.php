@@ -191,6 +191,38 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configcheckbox($name, $visiblename, $description, 0);
     $settings->add($setting);
 
+	//This is the descriptor for the following browser compatibility settings
+	$name = 'theme_zebra/compatibilityinfo';
+	$heading = get_string('compatinfo', 'theme_zebra');
+	$information = get_string('compatinfodesc', 'theme_zebra');
+	$setting = new admin_setting_heading($name, $heading, $information);
+	$settings->add($setting);
+
+	//Enable inclusion of respond.js in the footer
+    $name = 'theme_zebra/userespond';
+    $visiblename = get_string('userespond', 'theme_zebra');
+    $title = get_string('userespond', 'theme_zebra');
+    $description = get_string('useresponddesc', 'theme_zebra');
+    $setting = new admin_setting_configcheckbox($name, $visiblename, $description, 0);
+    $settings->add($setting);
+
+	//Enable prompt of Google Chrome Frame
+    $name = 'theme_zebra/usecf';
+    $visiblename = get_string('usecf', 'theme_zebra');
+    $title = get_string('usecf', 'theme_zebra');
+    $description = get_string('usecfdesc', 'theme_zebra');
+    $setting = new admin_setting_configcheckbox($name, $visiblename, $description, 0);
+    $settings->add($setting);
+
+    //Set maximum version for Chrome Frome prompt
+    $name = 'theme_zebra/cfmaxversion';
+    $title = get_string('cfmaxversion','theme_zebra');
+    $description = get_string('cfmaxversiondesc', 'theme_zebra');
+    $default = '6';
+    $choices = array('6'=>'6', '7'=>'7', '8'=>'8');
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $settings->add($setting);
+
     //This is the descriptor for the following miscellaneous settings
     $name = 'theme_zebra/miscinfo';
     $heading = get_string('miscinfo', 'theme_zebra');

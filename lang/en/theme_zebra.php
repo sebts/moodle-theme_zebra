@@ -113,6 +113,18 @@ $string['threecolmindesc'] = '<p>Min width for three column layout.  Display ord
 $string['pagemaxwidth'] = 'Page max width';
 $string['pagemaxwidthdesc'] = '<p>Max width for page content.</p>';
 
+$string['compatinfo'] = 'Browser compatibility settings';
+$string['compatinfodesc'] = '<p>Various settings to attempt to improve browser compatibility with this theme for a more consistent user experience.</p>';
+
+$string['userespond'] = 'Include respond.js in footer';
+$string['useresponddesc'] = '<p><a href="https://github.com/scottjehl/Respond#readme">Respond.js</a> will attempt to parse the <code>@media</code> queries in the CSS and serve the proper one to browsers that do not natively support them (like IE8 and below).</p>';
+
+$string['usecf'] = 'Prompt users to install Google Chrome Frame';
+$string['usecfdesc'] = '<p>Google <a href="http://code.google.com/chrome/chromeframe/">Chrome Frame</a> is an Internet Explorer plugin that installs the Chromium Rendering engine on older browsers and enables them to use modern web technologies.</p>';
+
+$string['cfmaxversion'] = 'Maximum IE version';
+$string['cfmaxversiondesc'] = '<p>Note: <code>usecf</code> must be enabled for this to work.</p><p>This is the maximum version of Internet Explorer to prompt users to install Chrome Frame.  Versions above this will not be prompted.</p>';
+
 $string['miscinfo'] = 'Misc. settings';
 $string['miscinfodesc'] = '<p>Change the settings for miscellaneous things.</p>';
 
