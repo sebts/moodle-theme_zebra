@@ -26,27 +26,39 @@ $hasheading = ($PAGE->heading);
 $hasnavbar = (empty($PAGE->layout_options['nonavbar']) && $PAGE->has_navbar());
 $hasfooter = (empty($PAGE->layout_options['nofooter']));
 $hassidepre = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-pre', $OUTPUT));
+$hassidepost = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-post', $OUTPUT));
 $haslogininfo = (empty($PAGE->layout_options['nologininfo']));
+
 $showsidepre = ($hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT));
+$showsidepost = ($hassidepost && !$PAGE->blocks->region_completely_docked('side-post', $OUTPUT));
+
 $custommenu = $OUTPUT->custom_menu();
 $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu));
+
 $bodyclasses = array();
-if (!$showsidepre) {
+if ($showsidepre && !$showsidepost) {
+    $bodyclasses[] = 'side-pre-only';
+} else if ($showsidepost && !$showsidepre) {
+    $bodyclasses[] = 'side-post-only';
+} else if (!$showsidepost && !$showsidepre) {
     $bodyclasses[] = 'content-only';
 }
 if ($hascustommenu) {
     $bodyclasses[] = 'has_custom_menu';
 }
+
 if (!empty($PAGE->theme->settings->headeralt)) {
     $headeralt = $PAGE->theme->settings->headeralt;
 } else {
     $headeralt = $PAGE->heading;
 }
+
 if (!empty($PAGE->theme->settings->branding)) {
     $branding = $PAGE->theme->settings->branding;
 } else {
     $branding = 0;
 }
+
 if (!empty($PAGE->theme->settings->enablezoom)) {
     $enablezoom = $PAGE->theme->settings->enablezoom;
     if ($enablezoom == 1) {
@@ -57,16 +69,19 @@ if (!empty($PAGE->theme->settings->enablezoom)) {
 } else {
     $zoomenabled = 'no';
 }
+
 if (!empty($PAGE->theme->settings->userespond)) {
 	$userespond = $PAGE->theme->settings->userespond;
 } else {
 	$userespond = 0;
 }
+
 if (!empty($PAGE->theme->settings->usecf)) {
 	$usecf = $PAGE->theme->settings->usecf;
 } else {
 	$usecf = 0;
 }
+
 if (!empty($PAGE->theme->settings->cfmaxversion)) {
 	$cfmaxversion = $PAGE->theme->settings->cfmaxversion;
 } else {
@@ -76,31 +91,17 @@ if (!empty($PAGE->theme->settings->cfmaxversion)) {
 echo $OUTPUT->doctype() ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
 <head>
-	<?php if ($usecf == 1) { ?>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<?php } ?>
+	<?php if ($usecf == 1) { ?><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><?php } ?>
+
     <title><?php echo $PAGE->title; ?></title>
-    <!-- Mobile viewport optimization -->
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="480"/>
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <!--iOS web app -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <!-- Mobile IE: activate ClearType -->
-    <meta http-equiv="cleartype" content="on">
-    <!-- Default Favicons: png and ico -->
-    <link rel="shortcut icon" type="image/png" href="<?php echo $OUTPUT->pix_url('favicon/favicon', 'theme'); ?>" />
-    <link rel="icon" href="<?php echo $OUTPUT->pix_url('favicon/favicon', 'theme'); ?>" />
-    <!-- For iPhone 4 with high-resolution Retina display: -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/png" href="<?php echo $OUTPUT->pix_url('favicon/favicon', 'theme'); ?>" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $OUTPUT->pix_url('favicon/h/apple-touch-icon-precomposed', 'theme'); ?>">
-    <!-- For first-generation iPad: -->
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $OUTPUT->pix_url('favicon/m/apple-touch-icon-precomposed', 'theme'); ?>">
-    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
     <link rel="apple-touch-icon-precomposed" href="<?php echo $OUTPUT->pix_url('favicon/l/apple-touch-icon-precomposed', 'theme'); ?>">
-    <!-- For nokia devices: -->
-    <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon/l/apple-touch-icon-precomposed', 'theme'); ?>">
-    <?php echo $OUTPUT->standard_head_html(); ?>
+<?php echo $OUTPUT->standard_head_html(); ?>
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
     <?php echo $OUTPUT->standard_top_of_body_html(); ?>
