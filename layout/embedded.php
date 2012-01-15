@@ -110,8 +110,7 @@ echo $OUTPUT->doctype(); ?>
             <div id="page-header-wrapper">
                 <div id="page-header" class="clearfix" style="margin-top:10px;height:0;min-height:0;background-image:none;">
                     <div id="profileblock">
-                        <?php
-                        if (isloggedin()) {
+                        <?php if (isloggedin()) {
                             if ($haslogininfo) {
                                 echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
                                 echo $OUTPUT->login_info();
@@ -122,8 +121,7 @@ echo $OUTPUT->doctype(); ?>
                             echo $PAGE->headingmenu;
                         } else {
                             echo $OUTPUT->login_info();
-                        }
-                        ?>  
+                        } ?>  
                     </div>
                 </div>
                 <div id="page-border-wrapper">
@@ -177,19 +175,17 @@ echo $OUTPUT->doctype(); ?>
                         <p class="helplink">
                             <?php echo page_doc_link(get_string('moodledocslink')); ?>
                         </p>
-                        <?php
-                        echo $OUTPUT->login_info();
+                        <?php echo $OUTPUT->login_info();
                         echo "<br />";
                         echo $OUTPUT->standard_footer_html();
                         if ($branding == 0) {
-                        echo '<div id="branding">';
-                        echo '<a href="http://ldichina.com"><img src="'.$OUTPUT->pix_url('footer/LDi', 'theme').'" alt="LDi China"></a>';
-                        echo '<a href="http://teachwithisc.com"><img src="'.$OUTPUT->pix_url('footer/iSC', 'theme').'" alt="International Schools of China"></a>';
-                        echo '<a href="http://tiseagles.com"><img src="'.$OUTPUT->pix_url('footer/TIS', 'theme').'" alt="Tianjin International School"></a>';
-                        echo '<a href="http://iyware.com"><img src="'.$OUTPUT->pix_url('footer/iyWare', 'theme').'" alt="iyWare.com"></a>';
-                        echo '</div>';
-                        }
-                        ?>
+	                        echo '<div id="branding">';
+	                        echo '<a href="http://ldichina.com"><img src="'.$OUTPUT->pix_url('footer/LDi', 'theme').'" alt="LDi China"></a>';
+	                        echo '<a href="http://teachwithisc.com"><img src="'.$OUTPUT->pix_url('footer/iSC', 'theme').'" alt="International Schools of China"></a>';
+	                        echo '<a href="http://tiseagles.com"><img src="'.$OUTPUT->pix_url('footer/TIS', 'theme').'" alt="Tianjin International School"></a>';
+	                        echo '<a href="http://iyware.com"><img src="'.$OUTPUT->pix_url('footer/iyWare', 'theme').'" alt="iyWare.com"></a>';
+	                        echo '</div>';
+                        } ?>
                     </div>
                 </div>
             <?php } ?>
