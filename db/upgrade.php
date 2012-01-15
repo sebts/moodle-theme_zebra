@@ -25,22 +25,10 @@
 defined('MOODLE_INTERNAL') || die();
  
 function xmldb_theme_zebra_upgrade($oldversion) {
+    global $CFG, $DB;
 
-    if ($oldversion < 2011120500) { // New Settings in 2.1.1
-        $currentsetting = get_config('theme_zebra');
+    $dbman = $DB->get_manager();
 
-        // Remove onecolmax
-        unset_config('onecolmax', 'theme_zebra');
-
-        // Remove twocolmax
-        unset_config('twocolmax', 'theme_zebra');
-
-        // Create pagemaxwidth
-        set_config('pagemaxwidth', $currentsetting->threecolmax, 'theme_zebra');
-        // Remove threecolmax
-        unset_config('threecolmax', 'theme_zebra');
-    }
- 
     if ($oldversion < 2011111004) { // New Settings in 2.1
         $currentsetting = get_config('theme_zebra');
 
@@ -82,6 +70,36 @@ function xmldb_theme_zebra_upgrade($oldversion) {
         // Upgrade version number
         upgrade_plugin_savepoint(true, 2011111004, 'theme', 'zebra');
     }
+
+    if ($oldversion < 2011120500) { // New Settings in 2.1.1
+        $currentsetting = get_config('theme_zebra');
+
+        // Remove onecolmax
+        unset_config('onecolmax', 'theme_zebra');
+
+        // Remove twocolmax
+        unset_config('twocolmax', 'theme_zebra');
+
+        // Create pagemaxwidth
+        set_config('pagemaxwidth', $currentsetting->threecolmax, 'theme_zebra');
+        // Remove threecolmax
+        unset_config('threecolmax', 'theme_zebra');
+    }
+
+	if ($oldversion < 2012011500) { // New Settings in 2.2.0
+		$currentsetting = get_config('theme_zebra');
+
+		// Create userespond
+		set_config('userespond', 0, 'theme_zebra');
+
+		// Create usecf
+		set_config('usecf', 0, 'theme_zebra');
+
+		// Create maxcfversion
+		set_config('maxcfversion', 6, 'theme_zebra');
+
+		upgrade_plugin_savepoint(true, 2012011500, 'theme', 'zebra');
+	}
  
     return true;
 }
