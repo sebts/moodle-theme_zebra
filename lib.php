@@ -23,7 +23,7 @@
  */
 
 /**
- * This is the postprocess function for themes
+ * This is the postprocess function for the theme
  *
  * @param string $css Incoming CSS to process
  * @param stdClass $theme The theme object
