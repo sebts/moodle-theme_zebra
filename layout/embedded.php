@@ -63,9 +63,28 @@ if (!empty($PAGE->theme->settings->enablezoom)) {
 } else {
     $zoomenabled = 'no';
 }
+if (!empty($PAGE->theme->settings->userespond)) {
+	$userespond = $PAGE->theme->settings->userespond;
+} else {
+	$userespond = 0;
+}
+if (!empty($PAGE->theme->settings->usecf)) {
+	$usecf = $PAGE->theme->settings->usecf;
+} else {
+	$usecf = 0;
+}
+if (!empty($PAGE->theme->settings->cfmaxversion)) {
+	$cfmaxversion = $PAGE->theme->settings->cfmaxversion;
+} else {
+	$cfmaxversion = 6;
+}
+
 echo $OUTPUT->doctype(); ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
 <head>
+	<?php if ($usecf == 1) { ?>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<?php } ?>
     <title><?php echo $PAGE->title; ?></title>
     <!-- Mobile viewport optimization -->
     <meta name="HandheldFriendly" content="True">
@@ -181,6 +200,38 @@ echo $OUTPUT->doctype(); ?>
             <?php } ?>
         </div>
     </div>
+    <?php if ($usecf == 1) {
+	    switch($cfmaxversion) {
+	        case '6': ?>
+				<!--[if lt IE 7 ]>
+					<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+					<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+				<![endif]-->
+				<?php break;
+			case '7': ?>
+				<!--[if lt IE 8 ]>
+					<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+					<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+				<![endif]-->
+				<?php break;
+			case '8': ?>
+				<!--[if lt IE 9 ]>
+					<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+					<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+				<![endif]-->
+				<?php break;
+	        default: ?>
+				<!--[if lt IE 7 ]>
+					<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+					<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+				<![endif]-->
+            	<?php break;
+    	}
+	}
+
+	if ($userespond == 1) {
+		$PAGE->requires->js('/theme/zebra/javascript/respond.js');
+	} ?>
     <?php echo $OUTPUT->standard_end_of_body_html(); ?>
 </body>
 </html>
