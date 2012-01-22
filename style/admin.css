@@ -21,6 +21,10 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+.path-admin h2.main {
+	margin: 0 0 4px 0;
+}
+
 #page-admin-report-security-index .statuswarning {
 	background-color: #f0e000;
 }
@@ -43,53 +47,30 @@
 	color: #006400;
 }
 
-#page-admin-qbehaviours .disabled {
-	color: [[setting:bodybgcolor]];
-}
-
+#page-admin-qbehaviours .disabled,
 #page-admin-qtypes .disabled {
 	color: [[setting:bodybgcolor]];
 }
 
-#adminsettings fieldset {
-	margin-top: 1em;
-	padding: 1em 0.5em;
-}
-
-#adminsettings legend {
-	display: none;
-}
-
+#adminsettings fieldset,
 #adminsettings fieldset.error {
-	margin: 0.2em 0 0.5em 0;
-	padding: 0.5em 0 0 0;
-}
-
-#adminsettings fieldset.error legend {
-	display: block;
+	margin: 4px 0;
+	padding: 4px;
 }
 
 #adminsettings .form-item {
-	clear: both;
-	margin: 1em 0 2em 0;
+	margin: 4px 0;
 }
 
 #adminsettings .form-item .form-label {
-	display: block;
-	float: left;
-	width: 12.5em;
-	text-align: right;
-}
-
-#adminsettings .form-item .form-label .form-shortname {
-	display: block;
-	line-break: break;
+	width: auto;
+	float: none;
+	text-align: left;
+	margin-bottom: 4px;
 }
 
 #adminsettings .form-item .form-setting {
-	display: block;
-	margin-left: 13.5em;
-	text-align: left;
+	margin: 0;
 }
 
 #adminsettings .form-item .form-setting .form-htmlarea {
@@ -102,47 +83,36 @@
 	display: block;
 }
 
-#adminsettings .form-item .form-setting .form-multicheckbox li {
-	list-style: none;
-}
-
-#adminsettings .form-item .form-setting .form-multicheckbox ul {
-	padding: 0;
-	margin: 0;
-}
-
 #adminsettings .form-item .form-setting .defaultsnext {
-	margin-right: 0.5em;
-	display: inline;
+	margin: 0 4px 0 0;
 }
 
-#adminsettings .form-item .form-setting .locked-checkbox {
-	margin-right: 0.2em;
-	margin-left: 0.5em;
-	display: inline;
-}
-
+#adminsettings .form-item .form-setting .locked-checkbox,
 .dir-rtl #adminsettings .form-item .form-setting .locked-checkbox {
-	margin-right: 0.5em;
-	margin-left: 0.2em;
-	display: inline;
-}
-
-#adminsettings .form-item .form-setting .form-password .unmask,
-#adminsettings .form-item .form-setting .form-defaultinfo {
-	display: inline;
+	margin: 0 4px;
 }
 
 #adminsettings .form-item .form-description {
-	display: block;
-	margin: 0.5em 0 0em 14.25em;
-	text-align: left;
+	margin: 4px 0 0 0;
 }
 
 #adminsettings .form-item .pathok,
 #adminsettings .form-item .patherror {
-	margin-left: 0.5em;
+	margin-left: 4px;
 }
+
+#adminsettings .form-item .pathok {
+	color: green;
+}
+
+#adminsettings .form-item .patherror {
+	color: red;
+}
+
+.form-buttons {
+	margin: 4px 0 0 0;
+}
+
 
 #adminsettings #admin-emoticons table td input {
 	width: 8em;
@@ -252,4 +222,32 @@
 	border: 2px solid #eeaaaa;
 	padding: 4px;
 	margin-bottom: 5px;
+}
+
+#page-admin-setting-themesettings #admin-devicedetectregex table {
+	border: 1px solid [[setting:bodybgcolor]];
+}
+
+@media screen and (min-width:[[setting:threecolmin]]) {
+	#adminsettings .form-item .form-label {
+		width: 220px;
+		float: left;
+		text-align: right;
+	}
+	
+	#adminsettings .form-item .form-setting {
+		margin: 0 0 0 224px;
+		padding: 0 0 0 4px;
+		border-left: 1px solid [[setting:bodybgcolor]];
+	}
+	
+	#adminsettings .form-item .form-description {
+		margin: 0 0 0 224px;
+		padding: 4px 0 0 4px;
+		border-left: 1px solid [[setting:bodybgcolor]];
+	}
+	
+	.form-buttons {
+		margin: 4px 0 0 229px;
+	}
 }
