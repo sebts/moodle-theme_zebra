@@ -51,8 +51,6 @@
 	color: #006600;
 }
 
-/* Block which is hidden if javascript enabled, prevents fickering visible when JS from footer used! */
-
 .yui-overlay .yui-widget-bd {
 	background-color: #FFEE69;
 	border: 1px solid #A6982B;
@@ -69,20 +67,6 @@
 #maincontent {
 	margin-top: -1px;
 }
-
-/** The 1-pixel padding is there to avoid phantom scroll bars on OS X (FF, Safari and Chrome)**/
-
-/** IE6 float + background bug solution **/
-
-/**
- * Accessibility features
- */
-
-/*Accessibility: text 'seen' by screen readers but not visual users. */
-
-/*Accessibility: Skip block link, for keyboard-only users. */
-
-/* Accessibility: only certain fonts support Unicode chars like &#x25BA; in IE6 */
 
 /**
  * Header
@@ -126,10 +110,6 @@
 }
 
 /**
- * Tabs
- */
-
-/**
  * Mforms
  */
 
@@ -162,42 +142,6 @@ legend {
 .mform .fdescription.required {
 	color: #A00;
 }
-
-/** Browser corrections for mforms **/
-
-/** Fix IE double margin + float bugs **/
-
-/**
- * phpinfo styles
- */
-
-/**
- * Blogs
- */
-
-/**
- * Group
- */
-
-/**
- * Login
- */
-
-/**
- * Notes
- */
-
-/**
- * My Moodle
- */
-
-/**
- * Logs
- */
-
-/**
- * Modules
- */
 
 /**
  * Help
@@ -261,126 +205,6 @@ span.flagged-tag a {
 	background: #FFFFCC;
 }
 
-/**
- * File picker
- * Copyright (c) 2006 Yahoo! Inc. All rights reserved.
- * copy from yui/examples/treeview/assets/css/folders/tree.css
- * first or middle sibling, no children
- */
-
-/* first or middle sibling, no children */
-
-/* first or middle sibling, collapsable */
-
-/* first or middle sibling, collapsable, hover */
-
-/* first or middle sibling, expandable */
-
-/* first or middle sibling, expandable, hover */
-
-/* last sibling, no children */
-
-/* Last sibling, collapsable */
-
-/* Last sibling, collapsable, hover */
-
-/* Last sibling, expandable */
-
-/* Last sibling, expandable, hover */
-
-/* Loading icon */
-
-/* the style for the empty cells that are used for rendering the depth* of the node */
-
-/* the style of the div around each node */
-
-/* the style of the div around each node's collection of children */
-
-/* the style of the text label in ygTextNode */
-
-.file-picker strong {
-	background: #FFFFCC;
-}
-
-.file-picker .fp-toolbar {
-	background: #FFFFCC;
-}
-
-.file-picker .fp-list li {
-	border-bottom: 1px dotted gray;
-}
-
-.file-picker .fp-pathbar {
-	border-bottom: 1px dotted gray;
-}
-
-.file-picker .fp-paging a {
-	border: 1px solid #CCC;
-}
-
-.file-picker .fp-paging a.cur_page {
-	border: 1px solid blue;
-}
-
-.file-picker .fp-grid p {
-	background: #FFFFCC;
-}
-
-.file-picker .fp-grid span {
-	color: gray;
-}
-
-.file-picker .fp-error {
-	background: #FFBBBB;
-}
-
-.filepicker-filelist {
-	background: #E9F4FF;
-	border: #AACCEE 1px solid;
-}
-
-/* file picker search dialog */
-
-/**
- * File Manager
- */
-
-.filemanager-toolbar a {
-	border: 1px solid #AACCEE;
-	background: #F4FAFF;
-	color: black;
-}
-
-.filemanager-toolbar a:hover {
-	background: #FFFFFF;
-}
-
-.filemanager-toolbar .helplink a {
-	background: transparent;
-}
-
-.filemanager-container {
-	background: #E9F4FF;
-	border: #AACCEE 1px solid;
-}
-
-#fm-move-div strong {
-	color: #F00;
-}
-
-.fm-file-entry {
-	border: 1px solid #F00;
-}
-
-.fm-operation {
-	font-weight: bold;
-}
-
-.filemanager-container.dndupload-over,
-.filepicker-filelist.dndupload-over {
-	background: #8EF947;
-}
-
 /*
  * Backup and Restore CSS
  */
@@ -424,7 +248,7 @@ span.flagged-tag a {
 }
 
 #helppopupbox .yui3-widget-bd {
-	border-top: 1px solid transparent;  //Needs a 1px border
+	border-top: 1px solid transparent;
 }
 
 /**
@@ -443,10 +267,6 @@ span.flagged-tag a {
 /**
  * Fix for broken YUI images in the menunav component
  */
-
-#custommenu .yui3-menuitem-active {
-	background-color: #B3D4FF;
-}
 
 #custommenu .yui3-menu-label,
 #custommenu .yui3-menu .yui3-menu .yui3-menu-label {
@@ -474,22 +294,6 @@ span.flagged-tag a {
 .smartselect .smartselect_menu_content ul li a {
 	color: #333;
 }
-
-/* Spanning mode */
-
-/* Compact mode */
-
-/**
- * Registration
- */
-
-/**
- * Enrol
- */
-
-/**
-* Overide for RTL layout
-**/
 
 /**
  * Backup
@@ -549,10 +353,6 @@ span.flagged-tag a {
  * IE - Overide for RTL layout
  */
 
-/* Resourcelib mp3 player size: only width could be changed here, height hardcoded in JS */
-
-/* Fix for SubScript & SuperScript */
-
 /* Fix YUI 2 Treeview for Right to left languages */
 
 .dir-rtl .ygtvtn,
@@ -576,7 +376,3 @@ span.flagged-tag a {
 .dir-rtl .ygtvcancel:hover {
 	background-image: url([[pix:theme|core/yui2-treeview-sprite-rtl]]);
 }
-
-/* Fix TinyMCE editor right to left */
-
-/* Fix for ordered and unordered list in course topic summary & course weekly summary */
