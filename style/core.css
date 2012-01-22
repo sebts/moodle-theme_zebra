@@ -110,6 +110,52 @@
 }
 
 /**
+ * Tabs
+ */
+
+.tabtree {
+	margin: 0 0 8px 0;
+}
+
+.tabtree ul {
+	margin: 8px 0;
+	padding: 0 0 4px 0;
+	border-bottom: 1px solid [[setting:bodybgcolor]];
+}
+
+.tabtree li {
+	margin: 0 0 0 8px;
+	padding: 4px;
+	border: 1px solid [[setting:bodybgcolor]];
+}
+
+.tabtree ul li.here {
+	border-bottom: 1px solid [[setting:contentbgcolor]];
+}
+
+.tabtree ul li.here ul {
+	position:absolute;
+	top:100%;
+	width:100%;
+}
+
+.tabtree ul li.here .empty {
+	display:none;
+}
+
+.tabtree .nolink,
+.tabtree .nolink:hover,
+.tabtree .here {
+	color: [[setting:fontcolor]]!important;
+	text-decoration: none!important;
+}
+
+.tabtree + .clearer + .generalbox {
+	border: 0 none;
+}
+
+
+/**
  * Mforms
  */
 
