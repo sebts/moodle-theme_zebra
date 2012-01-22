@@ -20,3 +20,299 @@
  * @copyright  2011 Danny Wahl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
+/**
+ * Required to undo YUI resets that override input size
+ */
+
+/* Fix for YUI overriding styles */
+
+/**
+ * General
+ */
+
+.course-content .current {background:#E3E3E3;}
+
+.red,
+.notifyproblem {color:#660000;}
+
+.green,
+.notifysuccess {color:#006600;}
+
+.yui-overlay .yui-widget-bd {background-color:#FFEE69;border:1px solid #A6982B;border-top-color: #D4C237;color:#000000;}
+
+.clearfix:after {clear: both;content: ".";display: block;height: 0;min-width: 0;visibility: hidden;}
+
+.generalbox {border:1px solid;}
+
+/** The 1-pixel padding is there to avoid phantom scroll bars on OS X (FF, Safari and Chrome)**/
+
+/** IE6 float + background bug solution **/
+
+/**
+ * Accessibility features
+ */
+
+/*Accessibility: text 'seen' by screen readers but not visual users. */
+
+/*Accessibility: Skip block link, for keyboard-only users. */
+
+/* Accessibility: only certain fonts support Unicode chars like &#x25BA; in IE6 */
+
+/**
+ * Header
+ */
+
+/**
+ * Navbar
+ */
+
+.navbar {padding: 4px;}
+
+/**
+ * Footer
+ */
+
+#page-footer {padding: 4px;}
+
+/**
+ * Tabs
+ */
+
+/**
+ * Mforms
+ */
+
+.mform fieldset.error {border: 1px solid #A00;}
+.mform .error,
+.mform .required {color:#A00;}
+.mform .required .fgroup span label {color:#000;}
+.mform .fdescription.required {color:#A00;}
+
+/** Browser corrections for mforms **/
+
+/** Fix IE double margin + float bugs **/
+
+/**
+ * phpinfo styles
+ */
+
+/**
+ * Blogs
+ */
+
+/**
+ * Group
+ */
+
+/**
+ * Login
+ */
+
+/**
+ * Notes
+ */
+
+/**
+ * My Moodle
+ */
+
+/**
+ * Logs
+ */
+
+/**
+ * Modules
+ */
+
+/**
+ * Help
+ */
+
+#help hr {background: #ccc;}
+#help #emoticons li{border-left: 3px solid gray;}
+
+/**
+ * Comments
+ */
+
+.comment-meta span {color:gray;}
+.comment-paging .curpage{border:1px solid #CCC;}
+.comment-delete-confirm {background: #eee;}
+
+/**
+ * Completion progress report
+ */
+
+.completion-expired {background:#FFDDDD;}
+
+/**
+ * Tags
+ */
+
+#tag-user-table:after {content:".";display:block;clear:both;visibility:hidden;height:0;overflow:hidden;}list-style:none;}
+span.flagged-tag,
+span.flagged-tag a {color:#FF0000;}
+#relatedtags-autocomplete .yui-ac-content {border:1px solid #404040;background:#fff;}
+#relatedtags-autocomplete .ysearchquery {color:#808080;}
+#relatedtags-autocomplete .yui-ac-shadow {background:#a0a0a0;}
+#relatedtags-autocomplete li.yui-ac-highlight{background:#FFFFCC;}
+
+/**
+ * File picker
+ * Copyright (c) 2006 Yahoo! Inc. All rights reserved.
+ * copy from yui/examples/treeview/assets/css/folders/tree.css
+ * first or middle sibling, no children
+ */
+
+/* first or middle sibling, no children */
+
+/* first or middle sibling, collapsable */
+
+/* first or middle sibling, collapsable, hover */
+
+/* first or middle sibling, expandable */
+
+/* first or middle sibling, expandable, hover */
+
+/* last sibling, no children */
+
+/* Last sibling, collapsable */
+
+/* Last sibling, collapsable, hover */
+
+/* Last sibling, expandable */
+
+/* Last sibling, expandable, hover */
+
+/* Loading icon */
+
+/* the style for the empty cells that are used for rendering the depth* of the node */
+
+/* the style of the div around each node */
+
+/* the style of the div around each node's collection of children */
+
+/* the style of the text label in ygTextNode */
+
+.file-picker strong {background:#FFFFCC;}
+.file-picker .fp-toolbar {background: #FFFFCC;}
+.file-picker .fp-list li {border-bottom:1px dotted gray;}
+.file-picker .fp-pathbar {border-bottom: 1px dotted gray;}
+.file-picker .fp-paging a {border: 1px solid #CCC;}
+.file-picker .fp-paging a.cur_page {border: 1px solid blue;}
+.file-picker .fp-grid p {background: #FFFFCC;}
+.file-picker .fp-grid span {color:gray;}
+.file-picker .fp-error {background: #FFBBBB;}
+.filepicker-filelist {background: #E9F4FF;border: #AACCEE 1px solid}
+
+/* file picker search dialog */
+
+/**
+ * File Manager
+ */
+
+.filemanager-toolbar a {border: 1px solid #AACCEE;background: #F4FAFF;color: black;}
+.filemanager-toolbar a:hover {background: #FFFFFF;}
+.filemanager-toolbar .helplink a {background: transparent;}
+.filemanager-container {background: #E9F4FF;border: #AACCEE 1px solid;}
+#fm-move-div strong{color:red;}
+.fm-file-entry{border: 1px solid red;}
+.fm-operation {font-weight: bold;}
+
+.filemanager-container.dndupload-over,
+.filepicker-filelist.dndupload-over {background: #8EF947;}
+
+/*
+ * Backup and Restore CSS
+ */
+
+.path-backup .notification.dependencies_enforced {color:#A00;}
+.path-backup .backup_progress span.backup_stage {color:#999;}
+.path-backup .backup_progress span.backup_stage.backup_stage_complete {color:inherit;}
+
+/**
+ * Web Service
+ */
+
+#webservice-doc-generator td {border: 0px solid black;}
+
+/**
+ * Help Content (pop-up)
+ */
+
+#helppopupbox {background-color: #eee; border: 1px solid #848484;}
+#helppopupbox .yui3-widget-bd {border-top:1px solid #eee;}
+
+/**
+ * Custom menu
+ */
+
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content,
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content .ul {border:1px solid #000;}
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu {background-color:#FFF;}
+#custommenu .yui3-menu-horizontal.javascript-disabled>.yui3-menu-content>ul:after {content:"";display:block;clear:both;line-height:0;font-size:0;visibility:hidden;}
+
+/**
+ * Fix for broken YUI images in the menunav component
+ */
+
+#custommenu .yui3-menuitem-active {background-color:#B3D4FF;}
+#custommenu .yui3-menu-label,
+#custommenu .yui3-menu .yui3-menu .yui3-menu-label {background-image:url([[pix:theme|vertical-menu-submenu-indicator]]);}
+#custommenu .yui3-menu .yui3-menu .yui3-menu-label-menuvisible {background-image:url([[pix:theme|horizontal-menu-submenu-indicator]]);}
+
+/**
+ * Smart Select Element
+ */
+
+.smartselect .smartselect_mask {background-color:#fff;}
+.smartselect .smartselect_menu,
+.smartselect .smartselect_submenu {border:1px solid #000;background-color:#FFF;}
+.smartselect .smartselect_menu_content ul li a {color:#333;}
+
+/* Spanning mode */
+
+/* Compact mode */
+
+/**
+ * Registration
+ */
+
+/**
+ * Enrol
+ */
+
+/**
+* Overide for RTL layout
+**/
+
+/**
+ * Backup
+ */
+
+.backup-restore .backup-section {border:1px solid #ddd;background-color:#f6f6f6;}
+.backup-restore .backup-section > h2.header {border-bottom:1px solid #ddd;}
+.backup-restore .backup-section .backup-sub-section {background-color:#f9f9f9;border:1px solid #f3f3f3;}
+.backup-restore .backup-section .backup-sub-section h3 {border-bottom:1px solid #DDD;background-color:#e9e9e9;}
+.backup-restore .detail-pair-label {color:#444;}
+.backup-restore .detail-pair-value > .sub-detail {color:#1580B6;}
+.restore-course-search .rcs-results {border:1px solid #ddd;}
+.restore-course-search .rcs-results .paging {background-color:#eee;}
+.restore-course-category .rcs-results {border:1px solid #ddd;}
+.restore-course-category .rcs-results .paging {background-color:#eee;}
+.corelightbox {background-color:#CCC;}
+
+/**
+ * IE - Overide for RTL layout
+ */
+
+/* Resourcelib mp3 player size: only width could be changed here, height hardcoded in JS */
+
+/* Fix for SubScript & SuperScript */
+
+/* Fix YUI 2 Treeview for Right to left languages */
+
+/* Fix TinyMCE editor right to left */
+
+/* Fix for ordered and unordered list in course topic summary & course weekly summary */
