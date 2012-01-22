@@ -116,7 +116,7 @@
 }
 
 #page-admin-index #plugins-check .standard .source {
-	color: #999;
+	color: [[setting:fontcolor]];
 }
 
 #page-admin-index #plugins-check .extension .source {
@@ -136,7 +136,7 @@
 }
 
 #page-admin-index #plugins-check .status-nodb .status {
-	color: #999;
+	color: [[setting:fontcolor]];
 }
 
 #page-admin-index #plugins-check .status-delete .status {
@@ -148,23 +148,31 @@
 }
 
 #page-admin-index #plugins-check .status-uptodate .status {
-	color: #999;
+	color: [[setting:fontcolor]];
 }
 
 #page-admin-index #plugins-check .requires-ok {
-	color: #999;
+	color: [[setting:fontcolor]];
 }
 
 #page-admin-index #plugins-check .requires-failed {
 	background-color: #ffd3d9;
 }
 
+#page-admin-plugins #plugins-control-panel {
+	margin: 0 -2px;
+}
+
 #page-admin-plugins #plugins-control-panel .missingfromdisk .displayname {
 	background-color: #ffd3d9;
 }
 
+#page-admin-plugins #plugins-control-panel .availability {
+	width: 71px;
+}
+
 #page-admin-plugins #plugins-control-panel .disabled .availability {
-	background-color: #eee;
+	background-color: transparent;
 }
 
 #page-admin-plugins #plugins-control-panel .extension .source {
@@ -172,8 +180,7 @@
 }
 
 #page-admin-plugins #plugins-control-panel .requiredby {
-	font-size: 0.7em;
-	color: #999;
+	color: [[setting:fontcolor]];
 }
 
 #page-admin-mnet-peers .mform .certdetails {
