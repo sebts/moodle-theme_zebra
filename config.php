@@ -27,7 +27,7 @@ $THEME->name = 'zebra';
 $THEME->parents = array('base');
 
 $THEME->parents_exclude_sheets  = array(
-    'base'=>array(//We don't want these because we have our own
+    'base'=>array(		//We don't want these because we have our own
 		'dock',
 		'pagelayout'
 	)
@@ -36,6 +36,7 @@ $THEME->parents_exclude_sheets  = array(
 $THEME->sheets = array(
     'pagelayout',       //Generate the layout of the pages
     'core',             //Overrides for the core sheet from Base
+	'course',			//Overrides for the course sheet from Base
 	'admin',			//Overrides for the admin sheet from Base
 	'blocks',			//Overrides for the blocks sheet from Base
     'custommenu',       //Applies style to the custommenu
