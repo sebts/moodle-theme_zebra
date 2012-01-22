@@ -31,9 +31,10 @@ $THEME->parents_exclude_sheets  = array(
 );
 
 $THEME->sheets = array(
-    'pagelayout',       //Derived from Rebase
-    'core',             //Overrides some settings from Base
-    'modules',          //Code that modifies modules slightly
+    'pagelayout',       //Generate the layout of the pages
+    'core',             //Overrides for the core sheet from Base
+	'admin',			//Overrides for the admin sheet from Base
+    'modules',          //Overrides for modules
     'colors',           //Applies theme color settings
     'dock',             //Derived from Rebase
     'custommenu',       //Applies style to the custommenu
