@@ -32,7 +32,7 @@
 
 .block .header .block_action .block-hider-hide,
 .block .header .block_action .block-hider-show {
-	margin-right: 4px;
+	margin-right: 2px;
 }
 
 .block .header .block_action input {
@@ -40,7 +40,7 @@
 }
 
 .block .header .commands .icon img {
-	margin-right: 4px;
+	margin-right: 2px;
 }
 
 .block .header .commands .icon:last-of-type img {
