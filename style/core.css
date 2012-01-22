@@ -31,8 +31,14 @@
  * General
  */
 
-.course-content .current {
-	background: #E3E3E3;
+.course-content li.section {
+    border: 1px solid [[setting:bodybgcolor]];
+    margin-bottom: 4px;
+}
+
+.course-content li.current {
+    border-color: [[setting:linkcolor]];
+	background: none;
 }
 
 .red,
@@ -53,7 +59,9 @@
 }
 
 .generalbox {
-	padding: 4px;
+	margin-bottom: 4px;
+	padding: 2px;
+    border: 1px solid [[setting:bodybgcolor]];
 }
 
 /** The 1-pixel padding is there to avoid phantom scroll bars on OS X (FF, Safari and Chrome)**/
@@ -74,20 +82,41 @@
  * Header
  */
 
+#page-header {
+    background: url([[setting:logourl]]) no-repeat scroll left top [[setting:headerbgcolor]];
+    min-height: [[setting:logourlheight]];
+}
+
 /**
  * Navbar
  */
 
+#navbar-wrapper {
+    background-color: [[setting:linkcolor]];
+}
+
 .navbar {
-	padding: 4px;
+    background-color:[[setting:contentbgcolor]];
+    border-bottom: 1px solid [[setting:bodybgcolor]];
+}
+
+.breadcrumb,
+.navbutton {
+	line-height: 26px;
+	padding: 0 4px;
 }
 
 /**
  * Footer
  */
 
+#page-footer-wrapper {
+    background-color: [[setting:contentbgcolor]];
+}
+
 #page-footer {
-	padding: 4px;
+    background-color: [[setting:footerbgcolor]];
+	padding: 4px 0;
 }
 
 /**
@@ -97,6 +126,19 @@
 /**
  * Mforms
  */
+
+.mform fieldset {
+    border-color: [[setting:bodybgcolor]];
+}
+
+legend {
+	color: [[setting:fontcolor]];
+}
+
+.mform fieldset legend {
+	padding: 0 4px;
+	margin-left: 4px;
+}
 
 .mform fieldset.error {
 	border: 1px solid #A00;
@@ -171,7 +213,7 @@
 	color: gray;
 }
 
-.comment-paging .curpage{
+.comment-paging .curpage {
 	border: 1px solid #CCC;
 }
 
@@ -316,11 +358,11 @@ span.flagged-tag a {
 	border: #AACCEE 1px solid;
 }
 
-#fm-move-div strong{
+#fm-move-div strong {
 	color: #F00;
 }
 
-.fm-file-entry{
+.fm-file-entry {
 	border: 1px solid #F00;
 }
 
@@ -341,12 +383,21 @@ span.flagged-tag a {
 	color: #A00;
 }
 
-.path-backup .backup_progress span.backup_stage {
-	color: #999;
+.path-backup .backup_progress {
+	margin-bottom: 4px;
 }
 
-.path-backup .backup_progress span.backup_stage.backup_stage_complete {
-	color: inherit;
+.path-backup .backup_progress span.backup_stage,
+.path-backup .backup_progress .arrow {
+	color: [[setting:bodybgcolor]];
+}
+
+.path-backup .backup_progress .backup_stage.backup_stage_current,
+.path-backup .backup_progress span.backup_stage.backup_stage_complete,
+.path-backup .backup_progress .backup_stage_current + .accesshide + .arrow,
+.path-backup .backup_progress .backup_stage_complete + .accesshide + .arrow {
+	color: [[setting:fontcolor]];
+	font-weight: normal;
 }
 
 /**
@@ -362,12 +413,12 @@ span.flagged-tag a {
  */
 
 #helppopupbox {
-	background-color: #EEE;
-	border: 1px solid #848484;
+	background-color: [[setting:contentbgcolor]];
+	border: 1px solid [[setting:linkcolor]];
 }
 
 #helppopupbox .yui3-widget-bd {
-	border-top: 1px solid #EEE;
+	border-top: 1px solid transparent;  //Needs a 1px border
 }
 
 /**
@@ -439,49 +490,53 @@ span.flagged-tag a {
  */
 
 .backup-restore .backup-section {
-	border:1px solid #DDD;
-	background-color:#F6F6F6;
+	border: 1px solid [[setting:bodybgcolor]];
+	background-color: transparent;
 }
 
 .backup-restore .backup-section > h2.header {
-	border-bottom: 1px solid #DDD;
+	border-bottom: 0 none;
 }
 
 .backup-restore .backup-section .backup-sub-section {
-	background-color: #F9F9F9;
-	border: 1px solid #F3F3F3;
+	background-color: transparent;
+	border: 0 none;
 }
 
 .backup-restore .backup-section .backup-sub-section h3 {
-	border-bottom: 1px solid #DDD;
-	background-color: #E9E9E9;
+	border-bottom: 1px solid [[setting:bodybgcolor]];
+	background-color: transparent;
 }
 .backup-restore .detail-pair-label {
-	color: #444;
+	color: [[setting:fontcolor]];
 }
 
 .backup-restore .detail-pair-value > .sub-detail {
-	color: #1580B6;
+	color: [[setting:fontcolor]];
 }
 
 .restore-course-search .rcs-results {
-	border: 1px solid #DDD;
+	border: 1px solid [[setting:bodybgcolor]];
 }
 
 .restore-course-search .rcs-results .paging {
-	background-color: #EEE;
+	background-color: transparent;
 }
 
 .restore-course-category .rcs-results {
-	border: 1px solid #DDD;
+	border: 1px solid [[setting:bodybgcolor]];
 }
 
 .restore-course-category .rcs-results .paging {
-	background-color: #EEE;
+	background-color: transparent;
 }
 
 .corelightbox {
 	background-color: #CCC;
+}
+
+.restore-precheck-notices {
+	margin-bottom: 4px;
 }
 
 /**

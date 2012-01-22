@@ -64,10 +64,3 @@
 .forumpost .row .options .link {
     float:right;
 }
-
-/* Course Formats */
-
-.course-content ul.weeks li.section,
-.course-content ul.topics li.section {
-    margin:4px 0;
-}

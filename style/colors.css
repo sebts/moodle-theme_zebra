@@ -37,10 +37,6 @@ body {
     background: url([[setting:backgroundurl]]) no-repeat scroll center top transparent;
 }
 
-legend {
-    color: [[setting:fontcolor]];
-}
-
 #user-pic .defaultuserpic {
     background-color: [[setting:linkcolor]];
 }
@@ -121,24 +117,8 @@ span.unread {
     background: none;
 }
 
-.generalbox {
-    border-color: [[setting:bodybgcolor]];
-}
-
 .coursebox {
     border: 1px solid [[setting:bodybgcolor]];
-}
-
-.course-content ul li.section {
-    border: 1px solid [[setting:bodybgcolor]];
-}
-
-.course-content ul li.section.current {
-    border-color: [[setting:linkcolor]];
-}
-
-.mform fieldset {
-    border-color: [[setting:bodybgcolor]];
 }
 
 .calendartable th,
@@ -147,20 +127,6 @@ span.unread {
 }
 
 /* $2.0: Page Layout */
-
-#page-header {
-    background: url([[setting:logourl]]) no-repeat scroll left top [[setting:headerbgcolor]];
-    min-height: [[setting:logourlheight]];
-}
-
-#navbar-wrapper {
-    background-color: [[setting:linkcolor]];
-}
-
-.navbar {
-    background-color:[[setting:contentbgcolor]];
-    border-bottom:1px solid [[setting:bodybgcolor]];
-}
 
 #region-main {
     background-color: [[setting:contentbgcolor]];
@@ -175,14 +141,6 @@ span.unread {
 
 #page-content-wrapper {
     background-color: [[setting:linkcolor]];
-}
-
-#page-footer-wrapper {
-    background-color: [[setting:contentbgcolor]];
-}
-
-#page-footer {
-    background-color: [[setting:footerbgcolor]];
 }
 
 /* $3.0: Report Layout */
