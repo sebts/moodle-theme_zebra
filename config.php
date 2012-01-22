@@ -27,16 +27,16 @@ $THEME->name = 'zebra';
 $THEME->parents = array('base');
 
 $THEME->parents_exclude_sheets  = array(
-    'base'=>array('core', 'dock', 'pagelayout') //We don't want these because we have our own
+    'base'=>array('dock', 'pagelayout') //We don't want these because we have our own
 );
 
 $THEME->sheets = array(
     'pagelayout',       //Derived from Rebase
-    'core',             //Heavily modified from Base theme
+    'core',             //Overrides some settings from Base
     'modules',          //Code that modifies modules slightly
     'colors',           //Applies theme color settings
     'dock',             //Derived from Rebase
-    'custommenu',       //Derived from Aardvark_makeover
+    'custommenu',       //Applies style to the custommenu
     'css3',             //Make the fancy stuff come later
     'extra',            //Extra stuff that doesn't fit the above
 );
