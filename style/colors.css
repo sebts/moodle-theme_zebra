@@ -63,10 +63,6 @@ a:active {
     color: [[setting:hovercolor]];
 }
 
-.block {
-    border-color: [[setting:bodybgcolor]];
-}
-
 .forumpost .header {
     background-color: [[setting:linkcolor]];
     border-bottom-color: [[setting:bodybgcolor]];
