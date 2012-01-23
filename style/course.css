@@ -48,6 +48,8 @@
 	margin-bottom: 8px;
 	padding: 4px;
 	width: auto;
+    border: 1px solid [[setting:bodybgcolor]];
+
 }
 
 .coursebox .info .name {
