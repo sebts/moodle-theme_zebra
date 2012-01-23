@@ -19,14 +19,7 @@
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- *
- * Table of Contents
- * $1.0: General
- * $2.0: Page Layout
- * $3.0: Report Layout
  */
-
-/* $1.0: General */
 
 html {
     background-color: [[setting:bodybgcolor]];
@@ -114,17 +107,6 @@ span.unread {
     background: none;
 }
 
-.coursebox {
-    border: 1px solid [[setting:bodybgcolor]];
-}
-
-.calendartable th,
-.calendartable td {
-    border-color: [[setting:bodybgcolor]];
-}
-
-/* $2.0: Page Layout */
-
 #region-main {
     background-color: [[setting:contentbgcolor]];
 }
@@ -139,8 +121,6 @@ span.unread {
 #page-content-wrapper {
     background-color: [[setting:linkcolor]];
 }
-
-/* $3.0: Report Layout */
 
 .pagelayout-report #page-content {
     background-color: [[setting:contentbgcolor]];
