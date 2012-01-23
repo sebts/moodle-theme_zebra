@@ -64,6 +64,10 @@
     border: 1px solid [[setting:bodybgcolor]];
 }
 
+table.generalbox {
+	width: 100%;
+}
+
 #maincontent {
 	margin-top: -1px;
 }
