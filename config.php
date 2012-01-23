@@ -38,6 +38,7 @@ $THEME->sheets = array(
     'core',             //Overrides for the core sheet from Base - need this second
 	'admin',			//Overrides for the admin sheet from Base
 	'blocks',			//Overrides for the blocks sheet from Base
+	'calendar',			//Overrides for the calendar sheet from Base
 	'course',			//Overrides for the course sheet from Base
     'custommenu',       //Applies style to the custommenu
 	'dock',             //Derived from Rebase
