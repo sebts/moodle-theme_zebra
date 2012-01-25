@@ -183,6 +183,13 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configtext($name, $title, $description, '100%', PARAM_CLEAN, 5);
     $settings->add($setting);
 
+	//Set column width for region-pre and region-post
+	$name = 'theme_zebra/colwidth';
+	$title = get_string('colwidth','theme_zebra');
+	$description = get_string('colwidthdesc','theme_zebra');
+	$setting = new admin_setting_configtext($name, $title, $description, '200', PARAM_CLEAN, 5);
+	$settings->add($setting);
+
 	//This is the descriptor for the following browser compatibility settings
 	$name = 'theme_zebra/compatibilityinfo';
 	$heading = get_string('compatinfo', 'theme_zebra');

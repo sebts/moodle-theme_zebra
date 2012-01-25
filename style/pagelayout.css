@@ -105,7 +105,7 @@ body {
     }
 
     #region-main {
-    	margin-left: 200px;
+    	margin-left: [[setting:colwidth]]px;
     	margin-right: 0;
     }
 
@@ -113,7 +113,7 @@ body {
     	float: left;
     	left: 0;
     	margin-left: -50%;
-    	width: 200px;
+    	width: [[setting:colwidth]]px;
     }
 
     #region-post {
@@ -121,7 +121,7 @@ body {
     	float: left;
     	left: 0;
     	margin-left: -50%;
-    	width: 200px;
+    	width: [[setting:colwidth]]px;
     }
 }
 
@@ -129,20 +129,20 @@ body {
 
 @media screen and (min-width:[[setting:threecolmin]]) {
     #region-main-box {
-    	left: 200px;
+    	left: [[setting:colwidth]]px;
     }
 
     #region-post-box {
     	float: left;
-    	margin-left: -400px;
+    	margin-left: -[[setting:doublecolwidth]]px;
     }
 
     #region-main {
-    	margin-left: 400px;
+    	margin-left: [[setting:doublecolwidth]]px;
     }
 
     #region-pre {
-        left: 200px;
+        left: [[setting:colwidth]]px;
     }
 
     #region-post {
@@ -155,11 +155,11 @@ body {
     }
 
     .side-pre-only #region-post-box {
-        margin-left: -200px;
+        margin-left: -[[setting:colwidth]]px;
     }
     
     .side-pre-only #region-main {
-        margin-left: 200px;
+        margin-left: [[setting:colwidth]]px;
     }
 
     .side-pre-only #region-pre {
@@ -171,11 +171,11 @@ body {
     }
 
     .side-post-only #region-post-box {
-        margin-left: -200px;
+        margin-left: -[[setting:colwidth]]px;
     }
 
     .side-post-only #region-main {
-        margin-left: 200px;
+        margin-left: [[setting:colwidth]]px;
     }
 
     .content-only #region-main-box {
@@ -195,7 +195,7 @@ body {
 }
 
 #report-main-content .region-content {
-    margin-left: 200px;
+    margin-left: [[setting:colwidth]]px;
     overflow-x: visible;
     overflow-y: hidden;
 }
@@ -208,7 +208,7 @@ body {
 }
 
 #report-region-pre {
-    width: 200px;
+    width: [[setting:colwidth]]px;
 }
 
 /* RTL Hack */

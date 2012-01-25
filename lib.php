@@ -159,6 +159,22 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_pagemaxwidth($css, $pagemaxwidth);
 
+	//Get the width of the columns from settings
+	if (!empty($theme->settings->colwidth)) {
+		$colwidth = $theme->settings->colwidth;
+	} else {
+		$colwidth = null;
+	}
+	$css = zebra_set_colwidth($css, $colwidth);
+
+	//Get double the width of the colums from colwidth
+	if (!empty($theme->settings->colwidth)) {
+		$colwidth = $theme->settings->colwidth;
+	} else {
+		$colwidth = null;
+	}
+	$css = zebra_set_doublecolwidth($css, $colwidth);
+
     //Get any extra css the user adds from settings
     if(!empty($theme->settings->customcss)) {
         $customcss = $theme->settings->customcss;
@@ -501,6 +517,42 @@ function zebra_set_pagemaxwidth($css, $pagemaxwidth) {
     $css = str_replace($tag, $replacement, $css);
     return $css;
 };
+
+/**
+ * Sets the width of the columns.
+ * This affects region-pre and region-post
+ *
+ * @param string $css
+ * @param mixed $colwidth
+ * @return string
+ */
+function zebra_set_colwidth($css, $colwidth) {
+	$tag = '[[setting:colwidth]]';
+	$replacement = $colwidth;
+	if (is_null($replacement)) {
+		$replacement = 200;
+	}
+	$css = str_replace($tag, $replacement, $css);
+	return $css;
+}
+
+/**
+ * Calculates double the column width based on $colwidth
+ *
+ * @param string $css
+ * @param mixed $colwidth
+ * @return string
+ */
+function zebra_set_doublecolwidth($css, $colwidth) {
+	$tag = '[[setting:doublecolwidth]]';
+	if (is_null($colwidth)) {
+		$colwidth = 200;
+	}
+	$doublecolwidth = $colwidth * 2;
+	$replacement = $doublecolwidth;
+	$css = str_replace($tag, $replacement, $css);
+	return $css;
+}
 
 /**
  * Sets any extra css the user wants to display.
