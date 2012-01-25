@@ -71,7 +71,7 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_menucolorscheme($css, $menucolorscheme);
 
-    //Get the background color from settings
+    //Get the body background color from settings
     if (!empty($theme->settings->bodybgcolor)) {
         $bodybgcolor = $theme->settings->bodybgcolor;
     } else {
@@ -79,7 +79,7 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_bodybgcolor($css, $bodybgcolor);
 
-    //Get the first color value from settings
+    //Get the link color value from settings
     if (!empty($theme->settings->linkcolor)) {
         $linkcolor = $theme->settings->linkcolor;
     } else {
@@ -87,7 +87,7 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_linkcolor($css, $linkcolor);
 
-    //Get the second color value from settings
+    //Get the hover color value from settings
     if (!empty($theme->settings->hovercolor)) {
         $hovercolor = $theme->settings->hovercolor;
     } else {
@@ -95,7 +95,7 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_hovercolor($css, $hovercolor);
 
-    //Get the third color value from settings
+    //Get the font color value from settings
     if (!empty($theme->settings->fontcolor)) {
         $fontcolor = $theme->settings->fontcolor;
     } else {
@@ -103,7 +103,7 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_fontcolor($css, $fontcolor);
 
-    //Get the fourth color value from settings
+    //Get the content background color value from settings
     if (!empty($theme->settings->contentbgcolor)) {
         $contentbgcolor = $theme->settings->contentbgcolor;
     } else {
@@ -111,7 +111,7 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_contentbgcolor($css, $contentbgcolor);
 
-    //Get the fifth color value from settings
+    //Get the column background color value from settings
     if (!empty($theme->settings->columnbgcolor)) {
         $columnbgcolor = $theme->settings->columnbgcolor;
     } else {
@@ -119,7 +119,7 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_columnbgcolor($css, $columnbgcolor);
 
-    //Get the sixth color value from settings
+    //Get the header background color value from settings
     if (!empty($theme->settings->headerbgcolor)) {
         $headerbgcolor = $theme->settings->headerbgcolor;
     } else {
@@ -127,7 +127,7 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_headerbgcolor($css, $headerbgcolor);
 
-    //Get the seventh color value from settings
+    //Get the footer background color value from settings
     if (!empty($theme->settings->footerbgcolor)) {
         $footerbgcolor = $theme->settings->footerbgcolor;
     } else {
