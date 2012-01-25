@@ -279,7 +279,7 @@ function zebra_set_bodybgcolor($css, $bodybgcolor) {
 }
 
 /**
- * Sets the first color used for custommenu and links
+ * Sets the color used for custommenu and links
  *
  * @param string $css
  * @param mixed $linkcolor
@@ -296,7 +296,7 @@ function zebra_set_linkcolor($css, $linkcolor) {
 }
 
 /**
- * Sets the second color used for hovering
+ * Sets the color used for hovering
  *
  * @param string $css
  * @param mixed $hovercolor
@@ -313,7 +313,7 @@ function zebra_set_hovercolor($css, $hovercolor) {
 }
 
 /**
- * Sets the third color used for font color
+ * Sets the color used for font color
  *
  * @param string $css
  * @param mixed $fontcolor
@@ -330,7 +330,7 @@ function zebra_set_fontcolor($css, $fontcolor) {
 }
 
 /**
- * Sets the fourth color used for main content background
+ * Sets the color used for main content background
  *
  * @param string $css
  * @param mixed $contentbgcolor
@@ -347,7 +347,7 @@ function zebra_set_contentbgcolor($css, $contentbgcolor) {
 }
 
 /**
- * Sets the fifth color used for columns (region-pre, region-post) background
+ * Sets the color used for columns (region-pre, region-post) background
  *
  * @param string $css
  * @param mixed $columnbgcolor
@@ -364,7 +364,7 @@ function zebra_set_columnbgcolor($css, $columnbgcolor) {
 }
 
 /**
- * Sets the sixth color used for the page-header background
+ * Sets the color used for the page-header background
  *
  * @param string $css
  * @param mixed $headerbgcolor
@@ -381,7 +381,7 @@ function zebra_set_headerbgcolor($css, $headerbgcolor) {
 }
 
 /**
- * Sets the seventh color used for the page-footer background
+ * Sets the color used for the page-footer background
  *
  * @param string $css
  * @param mixed $footerbgcolor
