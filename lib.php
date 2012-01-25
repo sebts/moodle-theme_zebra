@@ -175,6 +175,38 @@ function zebra_process_css($css, $theme) {
 	}
 	$css = zebra_set_calweekend($css, $calweekend);
 
+	//Get the ok font color
+	if (!empty($theme->settings->okfontcolor)) {
+		$okfontcolor = $theme->settings->okfontcolor;
+	} else {
+		$okfontcolor = null;
+	}
+	$css = zebra_set_okfontcolor($css, $okfontcolor);
+
+	//Get the warning font color
+	if (!empty($theme->settings->warningfontcolor)) {
+		$warningfontcolor = $theme->settings->warningfontcolor;
+	} else {
+		$warningfontcolor = null;
+	}
+	$css = zebra_set_warningfontcolor($css, $warningfontcolor);
+
+	//Get the serious font color
+	if (!empty($theme->settings->seriousfontcolor)) {
+		$seriousfontcolor = $theme->settings->seriousfontcolor;
+	} else {
+		$seriousfontcolor = null;
+	}
+	$css = zebra_set_seriousfontcolor($css, $seriousfontcolor);
+
+	//Get the critical font color
+	if (!empty($theme->settings->criticalfontcolor)) {
+		$criticalfontcolor = $theme->settings->criticalfontcolor;
+	} else {
+		$criticalfontcolor = null;
+	}
+	$css = zebra_set_criticalfontcolor($css, $criticalfontcolor);
+
     //Get the min width for two column page layout from settings
     if (!empty($theme->settings->twocolmin)) {
         $twocolmin = $theme->settings->twocolmin;
@@ -517,6 +549,74 @@ function zebra_set_calweekend($css, $calweekend) {
     $replacement = $calweekend;
     if (is_null($replacement)) {
         $replacement = '#A00';
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+/**
+ * Sets the color used for ok/good scenarios
+ *
+ * @param string $css
+ * @param mixed $okfontcolor
+ * @return string
+ */
+function zebra_set_okfontcolor($css, $okfontcolor) {
+    $tag = '[[setting:okfontcolor]]';
+    $replacement = $okfontcolor;
+    if (is_null($replacement)) {
+        $replacement = '#060';
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+/**
+ * Sets the color used for warning scenarios
+ *
+ * @param string $css
+ * @param mixed $warningfontcolor
+ * @return string
+ */
+function zebra_set_warningfontcolor($css, $warningfontcolor) {
+    $tag = '[[setting:warningfontcolor]]';
+    $replacement = $warningfontcolor;
+    if (is_null($replacement)) {
+        $replacement = '#F0E000';
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+/**
+ * Sets the color used for serious scenarios
+ *
+ * @param string $css
+ * @param mixed $seriousfontcolor
+ * @return string
+ */
+function zebra_set_seriousfontcolor($css, $seriousfontcolor) {
+    $tag = '[[setting:seriousfontcolor]]';
+    $replacement = $seriousfontcolor;
+    if (is_null($replacement)) {
+        $replacement = '#F07000';
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+/**
+ * Sets the color used for critical scenarios
+ *
+ * @param string $css
+ * @param mixed $criticalfontcolor
+ * @return string
+ */
+function zebra_set_criticalfontcolor($css, $criticalfontcolor) {
+    $tag = '[[setting:criticalfontcolor]]';
+    $replacement = $criticalfontcolor;
+    if (is_null($replacement)) {
+        $replacement = '#F00000';
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;

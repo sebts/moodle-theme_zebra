@@ -172,6 +172,34 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configtext($name, $title, $description, '#A00', PARAM_CLEAN, 10);
     $settings->add($setting);
 
+    //Set OK font color
+    $name = 'theme_zebra/okfontcolor';
+    $title = get_string('okfontcolor','theme_zebra');
+    $description = get_string('okfontcolordesc', 'theme_zebra');
+    $setting = new admin_setting_configtext($name, $title, $description, '#060', PARAM_CLEAN, 10);
+    $settings->add($setting);
+
+    //Set warning font color
+    $name = 'theme_zebra/warningfontcolor';
+    $title = get_string('warningfontcolor','theme_zebra');
+    $description = get_string('warningfontcolordesc', 'theme_zebra');
+    $setting = new admin_setting_configtext($name, $title, $description, '#F0E000', PARAM_CLEAN, 10);
+    $settings->add($setting);
+
+    //Set serious font color
+    $name = 'theme_zebra/seriousfontcolor';
+    $title = get_string('seriousfontcolor','theme_zebra');
+    $description = get_string('seriousfontcolordesc', 'theme_zebra');
+    $setting = new admin_setting_configtext($name, $title, $description, '#F07000', PARAM_CLEAN, 10);
+    $settings->add($setting);
+
+    //Set critical font color
+    $name = 'theme_zebra/criticalfontcolor';
+    $title = get_string('criticalfontcolor','theme_zebra');
+    $description = get_string('criticalfontcolordesc', 'theme_zebra');
+    $setting = new admin_setting_configtext($name, $title, $description, '#F00000', PARAM_CLEAN, 10);
+    $settings->add($setting);
+
     //This is the descriptor for the following color scheme settings
     $name = 'theme_zebra/schemeinfo';
     $heading = get_string('schemeinfo', 'theme_zebra');

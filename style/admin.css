@@ -26,25 +26,25 @@
 }
 
 #page-admin-report-security-index .statuswarning {
-	background-color: #f0e000;
+	background-color: [[setting:warningfontcolor]];
 }
 
 #page-admin-report-security-index .statusserious {
-	background-color: #f07000;
+	background-color: [[setting:seriousfontcolor]];
 }
 
 #page-admin-report-security-index .statuscritical {
-	background-color: #f00000;
+	background-color: [[setting:criticalfontcolor]];
 }
 
 #page-admin-report-backups-index .backup-error,
 #page-admin-report-backups-index .backup-unfinished {
-	color: #f00000;
+	color: [[setting:criticalfontcolor]];
 }
 
 #page-admin-report-backups-index .backup-skipped,
 #page-admin-report-backups-index .backup-ok {
-	color: #006400;
+	color: [[setting:okfontcolor]];
 }
 
 #page-admin-qbehaviours .disabled,

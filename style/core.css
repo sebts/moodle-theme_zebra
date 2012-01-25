@@ -43,12 +43,12 @@
 
 .red,
 .notifyproblem {
-	color: #660000;
+	color: [[setting:criticalfontcolor]];
 }
 
 .green,
 .notifysuccess {
-	color: #006600;
+	color: [[setting:okfontcolor]];
 }
 
 .yui-overlay .yui-widget-bd {
@@ -177,20 +177,20 @@ legend {
 }
 
 .mform fieldset.error {
-	border: 1px solid #A00;
+	border: 1px solid [[setting:criticalfontcolor]];
 }
 
 .mform .error,
 .mform .required {
-	color: #A00;
+	color: [[setting:criticalfontcolor]];
 }
 
 .mform .required .fgroup span label {
-	color: #000;
+	color: [[setting:fontcolor]];
 }
 
 .mform .fdescription.required {
-	color: #A00;
+	color: [[setting:criticalfontcolor]];
 }
 
 /**
@@ -235,7 +235,7 @@ legend {
 
 span.flagged-tag,
 span.flagged-tag a {
-	color: #FF0000;
+	color: [[setting:criticalfontcolor]];
 }
 
 #relatedtags-autocomplete .yui-ac-content {
@@ -260,7 +260,7 @@ span.flagged-tag a {
  */
 
 .path-backup .notification.dependencies_enforced {
-	color: #A00;
+	color: [[setting:criticalfontcolor]];
 }
 
 .path-backup .backup_progress {
@@ -285,7 +285,7 @@ span.flagged-tag a {
  */
 
 #webservice-doc-generator td {
-	border: 0px solid #000;
+	border: 0px solid [[setting:fontcolor]];
 }
 
 /**
@@ -307,7 +307,7 @@ span.flagged-tag a {
 
 #custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content,
 #custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content .ul {
-	border: 1px solid #000;
+	border: 1px solid [[setting:fontcolor]];
 }
 
 #custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu {

@@ -96,7 +96,7 @@ $string['footerbgcolor'] = 'Footer background color';
 $string['footerbgcolordesc'] = '<p>Footer background color.</p><p>Using <code>transparent</code> will cause the footer to display the value of <code>contentbgcolor</code> not <code>bodybgcolor</code>.  This should be set to the same value as <code>bodybgcolor</code> for a transparent effect.</p>';
 
 $string['moodlecolorsinfo'] = 'Moodle colors settings';
-$string['moodlecolorsinfodesc'] = '<p>Change specific colors that are defined in the Moodle core and are outside of the general colors defined above.  These include things like <code>.notifysuccess</code> and calendar event type colors.</p>';
+$string['moodlecolorsinfodesc'] = '<p>Change specific colors that are defined in the Moodle core and are outside of the general colors defined above.  These include things like <code>.notifysuccess</code> and calendar event type colors.  These probably do not need to be adjusted unless you have a specific conflict with the general color settings above.</p>';
 
 $string['calcourse'] = 'Calendar course events';
 $string['calcoursedesc'] = '<p>Sets the color used to represent course events in the calendar.</p>';
@@ -108,6 +108,14 @@ $string['caluser'] = 'Calendar user events';
 $string['caluserdesc'] = '<p>Sets the color used to represent user events in the calendar.</p>';
 $string['calweekend'] = 'Calendar weekend color';
 $string['calweekenddesc'] = '<p>Sets the font color used for weekends on the calendar.</p>';
+$string['okfontcolor'] = 'OK/Good font color';
+$string['okfontcolordesc'] = '<p>Sets the font color used for things that worked like saving settings, etc...  Specific examples are <code>.green</code> and <code>.notifysuccess</code>.</p>';
+$string['warningfontcolor'] = 'Warning font color';
+$string['warningfontcolordesc'] = '<p>Sets the font color used for things that generate a warning.  Generally this is <code>.statuswarning</code>.</p>';
+$string['seriousfontcolor'] = 'Serious font color';
+$string['seriousfontcolordesc'] = '<p>Sets the font color used for things that generate a serious notice.  Generally this is <code>.statusserious</code>.</p>';
+$string['criticalfontcolor'] = 'Critical font color';
+$string['criticalfontcolordesc'] = '<p>Sets teh font color used for things that generate a critical notice.  Generally this is <code>.statuscritical</code>, <code>.red</code>, and <code>.notifyproblem</code>.</p>';
 
 $string['schemeinfo'] = 'Color scheme settings';
 $string['schemeinfodesc'] = '<p>Change the settings for the color scheme of the page.</p>';
