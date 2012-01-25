@@ -135,6 +135,46 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_footerbgcolor($css, $footerbgcolor);
 
+	//Get the calendar course events color
+	if (!empty($theme->settings->calcourse)) {
+		$calcourse = $theme->settings->calcourse;
+	} else {
+		$calcourse = null;
+	}
+	$css = zebra_set_calcourse($css, $calcourse);
+
+	//Get the calendar global events color
+	if (!empty($theme->settings->calglobal)) {
+		$calglobal = $theme->settings->calglobal;
+	} else {
+		$calglobal = null;
+	}
+	$css = zebra_set_calglobal($css, $calglobal);
+
+	//Get the calendar group events color
+	if (!empty($theme->settings->calgroup)) {
+		$calgroup = $theme->settings->calgroup;
+	} else {
+		$calgroup = null;
+	}
+	$css = zebra_set_calgroup($css, $calgroup);
+
+	//Get the calendar user events color
+	if (!empty($theme->settings->caluser)) {
+		$caluser = $theme->settings->caluser;
+	} else {
+		$caluser = null;
+	}
+	$css = zebra_set_caluser($css, $caluser);
+
+	//Get the calendar weekend font color
+	if (!empty($theme->settings->calweekend)) {
+		$calweekend = $theme->settings->calweekend;
+	} else {
+		$calweekend = null;
+	}
+	$css = zebra_set_calweekend($css, $calweekend);
+
     //Get the min width for two column page layout from settings
     if (!empty($theme->settings->twocolmin)) {
         $twocolmin = $theme->settings->twocolmin;
@@ -397,6 +437,90 @@ function zebra_set_footerbgcolor($css, $footerbgcolor) {
     return $css;
 }
 
+/**
+ * Sets the color used for course calendar events
+ *
+ * @param string $css
+ * @param mixed $calcourse
+ * @return string
+ */
+function zebra_set_calcourse($css, $calcourse) {
+    $tag = '[[setting:calcourse]]';
+    $replacement = $calcourse;
+    if (is_null($replacement)) {
+        $replacement = '#FFD3BD';
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+/**
+ * Sets the color used for global calendar events
+ *
+ * @param string $css
+ * @param mixed $calglobal
+ * @return string
+ */
+function zebra_set_calglobal($css, $calglobal) {
+    $tag = '[[setting:calglobal]]';
+    $replacement = $calglobal;
+    if (is_null($replacement)) {
+        $replacement = '#D6F8CD';
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+/**
+ * Sets the color used for group calendar events
+ *
+ * @param string $css
+ * @param mixed $calgroup
+ * @return string
+ */
+function zebra_set_calgroup($css, $calgroup) {
+    $tag = '[[setting:calgroup]]';
+    $replacement = $calgroup;
+    if (is_null($replacement)) {
+        $replacement = '#FEE7AE';
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+/**
+ * Sets the color used for user calendar events
+ *
+ * @param string $css
+ * @param mixed $caluser
+ * @return string
+ */
+function zebra_set_caluser($css, $caluser) {
+    $tag = '[[setting:caluser]]';
+    $replacement = $caluser;
+    if (is_null($replacement)) {
+        $replacement = '#DCE7EC';
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+/**
+ * Sets the color used for weekends on the calendar
+ *
+ * @param string $css
+ * @param mixed $calweekend
+ * @return string
+ */
+function zebra_set_calweekend($css, $calweekend) {
+    $tag = '[[setting:calweekend]]';
+    $replacement = $calweekend;
+    if (is_null($replacement)) {
+        $replacement = '#A00';
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
 
 /**
  * Sets the gradient background color for blocks, navbar, etc.

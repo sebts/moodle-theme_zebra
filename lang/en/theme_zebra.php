@@ -75,7 +75,7 @@ $string['backgroundurldesc'] = '<p>Input the URL to your body background image.<
 $string['headeralt'] = 'Alternate text';
 $string['headeraltdesc'] = '<p>Text to use instead of the Site Name.</p><p>Hint: Use a space (<code>&amp;nbsp;</code>) to display nothing.</p>';
 
-$string['colorsinfo'] = 'Colors settings';
+$string['colorsinfo'] = 'General colors settings';
 $string['colorsinfodesc'] = '<p>Change the settings for the colors of the page.</p><p>You can use any valid color type like <code>red</code>, <code>#FF0000</code>, <code>rgb(0, 255, 255)</code>, or <code>rgba(0, 255, 255, 1.0)</code>.</p>';
 
 $string['bodybgcolor'] = 'Body background color';
@@ -94,6 +94,20 @@ $string['headerbgcolor'] = 'Header background color';
 $string['headerbgcolordesc'] = '<p>Header background color.</p>';
 $string['footerbgcolor'] = 'Footer background color';
 $string['footerbgcolordesc'] = '<p>Footer background color.</p><p>Using <code>transparent</code> will cause the footer to display the value of <code>contentbgcolor</code> not <code>bodybgcolor</code>.  This should be set to the same value as <code>bodybgcolor</code> for a transparent effect.</p>';
+
+$string['moodlecolorsinfo'] = 'Moodle colors settings';
+$string['moodlecolorsinfodesc'] = '<p>Change specific colors that are defined in the Moodle core and are outside of the general colors defined above.  These include things like <code>.notifysuccess</code> and calendar event type colors.</p>';
+
+$string['calcourse'] = 'Calendar course events';
+$string['calcoursedesc'] = '<p>Sets the color used to represent course events in the calendar.</p>';
+$string['calglobal'] = 'Calendar global events';
+$string['calglobaldesc'] = '<p>Sets the color used to represent global events in the calendar.</p>';
+$string['calgroup'] = 'Calendar group events';
+$string['calgroupdesc'] = '<p>Sets the color used to represent group events in the calendar.</p>';
+$string['caluser'] = 'Calendar user events';
+$string['caluserdesc'] = '<p>Sets the color used to represent user events in the calendar.</p>';
+$string['calweekend'] = 'Calendar weekend color';
+$string['calweekenddesc'] = '<p>Sets the font color used for weekends on the calendar.</p>';
 
 $string['schemeinfo'] = 'Color scheme settings';
 $string['schemeinfodesc'] = '<p>Change the settings for the color scheme of the page.</p>';

@@ -67,7 +67,7 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configtext($name, $title, $description, 'core/background', PARAM_URL);
     $settings->add($setting);
 
-    //This is the descriptor for the following color settings
+    //This is the descriptor for the following general color settings
     $name = 'theme_zebra/colorsinfo';
     $heading = get_string('colorsinfo', 'theme_zebra');
     $information = get_string('colorsinfodesc', 'theme_zebra');
@@ -128,6 +128,48 @@ if ($ADMIN->fulltree) {
     $title = get_string('footerbgcolor','theme_zebra');
     $description = get_string('footerbgcolordesc', 'theme_zebra');
     $setting = new admin_setting_configtext($name, $title, $description, '#DDDDDD', PARAM_CLEAN, 10);
+    $settings->add($setting);
+
+    //This is the descriptor for the following Moodle color settings
+    $name = 'theme_zebra/moodlecolorsinfo';
+    $heading = get_string('moodlecolorsinfo', 'theme_zebra');
+    $information = get_string('moodlecolorsinfodesc', 'theme_zebra');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $settings->add($setting);
+
+    //Set calendar course events color
+    $name = 'theme_zebra/calcourse';
+    $title = get_string('calcourse','theme_zebra');
+    $description = get_string('calcoursedesc', 'theme_zebra');
+    $setting = new admin_setting_configtext($name, $title, $description, '#FFD3BD', PARAM_CLEAN, 10);
+    $settings->add($setting);
+
+    //Set calendar global events color
+    $name = 'theme_zebra/calglobal';
+    $title = get_string('calglobal','theme_zebra');
+    $description = get_string('calglobaldesc', 'theme_zebra');
+    $setting = new admin_setting_configtext($name, $title, $description, '#D6F8CD', PARAM_CLEAN, 10);
+    $settings->add($setting);
+
+    //Set calendar group events color
+    $name = 'theme_zebra/calgroup';
+    $title = get_string('calgroup','theme_zebra');
+    $description = get_string('calgroupdesc', 'theme_zebra');
+    $setting = new admin_setting_configtext($name, $title, $description, '#FEE7AE', PARAM_CLEAN, 10);
+    $settings->add($setting);
+
+    //Set calendar user events color
+    $name = 'theme_zebra/caluser';
+    $title = get_string('caluser','theme_zebra');
+    $description = get_string('caluserdesc', 'theme_zebra');
+    $setting = new admin_setting_configtext($name, $title, $description, '#DCE7EC', PARAM_CLEAN, 10);
+    $settings->add($setting);
+
+    //Set calendar weekend color
+    $name = 'theme_zebra/calweekend';
+    $title = get_string('calweekend','theme_zebra');
+    $description = get_string('calweekenddesc', 'theme_zebra');
+    $setting = new admin_setting_configtext($name, $title, $description, '#A00', PARAM_CLEAN, 10);
     $settings->add($setting);
 
     //This is the descriptor for the following color scheme settings

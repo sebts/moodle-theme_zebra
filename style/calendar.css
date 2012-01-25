@@ -26,10 +26,10 @@
     border-color: [[setting:bodybgcolor]];
 }
 
-.calendar_event_course {background-color:#FFD3BD;}
-.calendar_event_global {background-color:#D6F8CD;}
-.calendar_event_group {background-color:#FEE7AE;}
-.calendar_event_user {background-color:#DCE7EC;}
+.calendar_event_course {background-color:[[setting:calcourse]];}
+.calendar_event_global {background-color:[[setting:calglobal]];}
+.calendar_event_group {background-color:[[setting:calgroup]];}
+.calendar_event_user {background-color:[[setting:caluser]];}
 
 .path-calendar .maincalendar .eventlist .event {
 	border: 0 none;
@@ -46,29 +46,29 @@
 
 .path-calendar .maincalendar .eventlist .event .calendar_event_course {
 	background-color: transparent;
-	border: 2px solid #FFD3BD;
+	border: 2px solid [[setting:calcourse]];
 }
 
 .path-calendar .maincalendar .eventlist .event .calendar_event_global {
 	background-color: transparent;
-	border: 2px solid #D6F8CD;
+	border: 2px solid [[setting:calglobal]];
 }
 
 .path-calendar .maincalendar .eventlist .event .calendar_event_group {
 	background-color: transparent;
-	border: 2px solid #FEE7EC;
+	border: 2px solid [[setting:calgroup]];
 }
 
 .path-calendar .maincalendar .eventlist .event .calendar_event_user {
 	background-color: transparent;
-	border: 2px solid #DCE7EC;
+	border: 2px solid [[setting:caluser]];
 }
 
 .block .minicalendar {
 	margin: 4px 0 0 0;
 }
 
-.block .minicalendar td.weekend {color:#A00;}
+.block .minicalendar td.weekend {color: [[setting:calweekend]];}
 
 .block .minicalendarblock h3 {
 	margin: 8px 0 0 0;
