@@ -210,7 +210,7 @@ if ($ADMIN->fulltree) {
     $title = get_string('seriousfontcolor','theme_zebra');
     $description = get_string('seriousfontcolordesc', 'theme_zebra');
 	$default = '#F07000';
-    $setting = new admin_setting_configtext($name, $title, $description, $default', PARAM_CLEAN, 10);
+    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_CLEAN, 10);
     $settings->add($setting);
 
     //Set critical font color
