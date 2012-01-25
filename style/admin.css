@@ -112,7 +112,7 @@
 }
 
 #page-admin-index #plugins-check .missingfromdisk .displayname {
-	background-color: #ffd3d9;
+	background-color: [[setting:criticalfontcolor]];
 }
 
 #page-admin-index #plugins-check .standard .source {
@@ -120,19 +120,19 @@
 }
 
 #page-admin-index #plugins-check .extension .source {
-	background-color: #f3f2aa;
+	background-color: [[setting:warningfontcolor]];
 }
 
 #page-admin-index #plugins-check .status-downgrade .status {
-	background-color: #ffd3d9;
+	background-color: [[setting:criticalfontcolor]];
 }
 
 #page-admin-index #plugins-check .status-missing .status {
-	background-color: #ffd3d9;
+	background-color: [[setting:criticalfontcolor]];
 }
 
 #page-admin-index #plugins-check .status-new .status {
-	background-color: #e7f1c3;
+	background-color: [[setting:warningfontcolor]];
 }
 
 #page-admin-index #plugins-check .status-nodb .status {
@@ -140,11 +140,11 @@
 }
 
 #page-admin-index #plugins-check .status-delete .status {
-	background-color: #d2ebff;
+	background-color: [[setting:seriousfontcolor]];
 }
 
 #page-admin-index #plugins-check .status-upgrade .status {
-	background-color: #d2ebff;
+	background-color: [[setting:seriousfontcolor]];
 }
 
 #page-admin-index #plugins-check .status-uptodate .status {
@@ -156,7 +156,7 @@
 }
 
 #page-admin-index #plugins-check .requires-failed {
-	background-color: #ffd3d9;
+	background-color: [[setting:criticalfontcolor]];
 }
 
 #page-admin-plugins #plugins-control-panel {
@@ -164,7 +164,7 @@
 }
 
 #page-admin-plugins #plugins-control-panel .missingfromdisk .displayname {
-	background-color: #ffd3d9;
+	background-color: [[setting:criticalfontcolor]];
 }
 
 #page-admin-plugins #plugins-control-panel .availability {
@@ -176,7 +176,7 @@
 }
 
 #page-admin-plugins #plugins-control-panel .extension .source {
-	background-color: #f3f2aa;
+	background-color: [[setting:warningfontcolor]];
 }
 
 #page-admin-plugins #plugins-control-panel .requiredby {
@@ -184,12 +184,13 @@
 }
 
 #page-admin-mnet-peers .mform .certdetails {
-	background-color: #fff;
+	background-color: [[setting:contentbgcolor]];
+	color: [[setting:fontcolor]];
 }
 
 #page-admin-mnet-peers .mform .deletedhostinfo {
-	background-color: #ffd3d9;
-	border: 2px solid #eeaaaa;
+	background-color: [[setting:contentbgcolor]];
+	border: 2px solid [[setting:criticalfontcolor]];
 	padding: 4px;
 	margin-bottom: 5px;
 }
