@@ -226,7 +226,7 @@ echo $OUTPUT->doctype(); ?>
 	}
 
 	if ($userespond == 1) {
-		$PAGE->requires->js('theme/zebra/javascript/respond.js', true);
+		$PAGE->requires->js('/theme/zebra/javascript/respond.js', true);
 	} ?>
     <?php echo $OUTPUT->standard_end_of_body_html(); ?>
 </body>
