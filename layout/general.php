@@ -187,9 +187,7 @@ echo $OUTPUT->doctype(); ?>
 				<!--[if lt IE 7 ]>
 					<?php $PAGE->requires->js(new moodle_url(http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js)); ?>
 					<script>
-						//<![CDATA[
 						window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
-						//]]>
 					</script>
 				<![endif]-->
 				<?php break;
@@ -197,9 +195,7 @@ echo $OUTPUT->doctype(); ?>
 				<!--[if lt IE 8 ]>
 					<?php $PAGE->requires->js(new moodle_url(http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js)); ?>
 					<script>
-						//<![CDATA[
 						window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
-						//]]>
 					</script>
 				<![endif]-->
 				<?php break;
@@ -207,9 +203,7 @@ echo $OUTPUT->doctype(); ?>
 				<!--[if lt IE 9 ]>
 					<?php $PAGE->requires->js(new moodle_url(http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js)); ?>
 					<script>
-						//<![CDATA[
 						window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
-						//]]>
 					</script>
 				<![endif]-->
 				<?php break;
@@ -217,9 +211,7 @@ echo $OUTPUT->doctype(); ?>
 				<!--[if lt IE 7 ]>
 					<?php $PAGE->requires->js(new moodle_url(http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js)); ?>
 					<script>
-						//<![CDATA[
 						window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
-						//]]>
 					</script>
 				<![endif]-->
             	<?php break;
