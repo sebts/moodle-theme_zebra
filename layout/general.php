@@ -195,7 +195,10 @@ echo $OUTPUT->doctype(); ?>
 	}
 
 	if ($userespond == 1) {
-		$PAGE->requires->js('/theme/zebra/javascript/respond.js', true);
+		$usingie = strpos($PAGE->bodyclasses, 'ie');
+		if ($usingie !== flase) {
+			$PAGE->requires->js('/theme/zebra/javascript/respond.js', true);
+		}
 	} ?>
     <?php echo $OUTPUT->standard_end_of_body_html(); ?>
 </body>

@@ -170,52 +170,23 @@ echo $OUTPUT->doctype() ?>
         </div>
     </div>
     <?php if ($usecf == 1) {
-	    switch($cfmaxversion) {
-	        case '6': ?>
-				<!--[if lt IE 7 ]>
-					<?php $PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
-					<script>
-						//<![CDATA[
-						window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
-						//]]>
-					</script>
-				<![endif]-->
-				<?php break;
-			case '7': ?>
-				<!--[if lt IE 8 ]>
-					<?php $PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
-					<script>
-						//<![CDATA[
-						window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
-						//]]>
-					</script>
-				<![endif]-->
-				<?php break;
-			case '8': ?>
-				<!--[if lt IE 9 ]>
-					<?php $PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
-					<script>
-						//<![CDATA[
-						window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
-						//]]>
-					</script>
-				<![endif]-->
-				<?php break;
-	        default: ?>
-				<!--[if lt IE 7 ]>
-					<?php $PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
-					<script>
-						//<![CDATA[
-						window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
-						//]]>
-					</script>
-				<![endif]-->
-            	<?php break;
-    	}
+		$cfmaxversion = 'ie' . $cfmaxversion;
+		$ieversion = strpos($PAGE->bodyclasses, $cfmaxversion);
+		if ($ieversion !== false) {
+				$PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
+				<script>
+					//<![CDATA[
+					window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
+					//]]>
+				</script>
+		<?php }
 	}
 
 	if ($userespond == 1) {
-		$PAGE->requires->js('/theme/zebra/javascript/respond.js', true);
+		$usingie = strpos($PAGE->bodyclasses, 'ie');
+		if ($usingie !== flase) {
+			$PAGE->requires->js('/theme/zebra/javascript/respond.js', true);
+		}
 	} ?>
     <?php echo $OUTPUT->standard_end_of_body_html(); ?>
 </body>
