@@ -194,16 +194,17 @@ echo $OUTPUT->doctype(); ?>
 					window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
 					//]]>
 				</script>
-		<?php } else { echo "you are not using IE<br/>Looking for version " . $cfmaxversion . " " . $ieversion; }
+		<?php } else { echo "you are not using IE<br/>Looking for version " . $cfmaxversion; }
 	}
 
 	if ($userespond == 1) {
-		$usingie = strpos($PAGE->bodyclasses, 'ie');
+		$usingie = strpos($PAGE->bodyclasses, 'ie ie');
+		$usingie9 = strpos($PAGE->bodyclasses, 'ie9');
 		echo "using respond";
 		if ($usingie !== false) {
 			echo "you are using IE!";
-			$PAGE->requires->js('/theme/zebra/javascript/respond.js', true);
-		} else { echo "you are not using IE"; }
+			$PAGE->requires->js('/theme/zebra/javascript/respond.js');
+		} else { echo "you are not using IE or are using IE9"; }
 	}
 
     echo $OUTPUT->standard_end_of_body_html(); ?>
