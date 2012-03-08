@@ -181,7 +181,9 @@ echo $OUTPUT->doctype(); ?>
             <?php } ?>
         </div>
     </div>
+
     <?php if ($usecf == 1) {
+		echo "using chrome frame";
 		$cfmaxversion = 'ie' . $cfmaxversion;
 		$ieversion = strpos($PAGE->bodyclasses, $cfmaxversion);
 		if ($ieversion !== false) {
@@ -191,15 +193,17 @@ echo $OUTPUT->doctype(); ?>
 					window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
 					//]]>
 				</script>
-		<?php }
+		<?php } else { echo "you are not using IE" }
 	}
 
 	if ($userespond == 1) {
 		$usingie = strpos($PAGE->bodyclasses, 'ie');
-		if ($usingie !== flase) {
+		echo "using respond";
+		if ($usingie !== false) {
 			$PAGE->requires->js('/theme/zebra/javascript/respond.js', true);
-		}
-	} ?>
-    <?php echo $OUTPUT->standard_end_of_body_html(); ?>
+		} else { echo "you are not using IE"; }
+	}
+
+    echo $OUTPUT->standard_end_of_body_html(); ?>
 </body>
 </html>
