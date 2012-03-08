@@ -183,7 +183,8 @@ echo $OUTPUT->doctype(); ?>
     </div>
     <?php if ($usecf == 1) {
 		$cfmaxversion = 'ie' . $cfmaxversion;
-		if (in_array($cfmaxversion, $PAGE->bodyclasses)) {
+		$ieversion = strpos($PAGE->bodyclasses, $cfmaxversion);
+		if ($ieversion !== false) {
 				$PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
 				<script>
 					//<![CDATA[
