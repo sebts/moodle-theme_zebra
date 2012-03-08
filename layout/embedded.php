@@ -74,7 +74,7 @@ if (!empty($PAGE->theme->settings->usecf)) {
 if (!empty($PAGE->theme->settings->cfmaxversion)) {
 	$cfmaxversion = $PAGE->theme->settings->cfmaxversion;
 } else {
-	$cfmaxversion = 6;
+	$cfmaxversion = 'ie6';
 }
 
 echo $OUTPUT->doctype(); ?>
@@ -181,7 +181,6 @@ echo $OUTPUT->doctype(); ?>
         </div>
     </div>
     <?php if ($usecf == 1) {
-		$cfmaxversion = 'ie' . $cfmaxversion;
 		$ieversion = strpos($PAGE->bodyclasses, $cfmaxversion);
 		if ($ieversion !== false) {
 				$PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
@@ -194,11 +193,13 @@ echo $OUTPUT->doctype(); ?>
 	}
 
 	if ($userespond == 1) {
-		$usingie = strpos($PAGE->bodyclasses, 'ie');
-		if ($usingie !== flase) {
-			$PAGE->requires->js('/theme/zebra/javascript/respond.js', true);
+		$usingie = strpos($PAGE->bodyclasses, 'ie ie');
+		$usingie9 = strpos($PAGE->bodyclasses, 'ie9');
+		if (($usingie !== false) && ($usingie9 === false)) {
+			$PAGE->requires->js('/theme/zebra/javascript/respond.js');
 		}
-	} ?>
-    <?php echo $OUTPUT->standard_end_of_body_html(); ?>
+	}
+
+    echo $OUTPUT->standard_end_of_body_html(); ?>
 </body>
 </html>

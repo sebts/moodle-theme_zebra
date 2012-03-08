@@ -181,30 +181,24 @@ echo $OUTPUT->doctype(); ?>
             <?php } ?>
         </div>
     </div>
-
     <?php if ($usecf == 1) {
-		echo "using chrome frame";
 		$ieversion = strpos($PAGE->bodyclasses, $cfmaxversion);
 		if ($ieversion !== false) {
-				echo "you are using IE!<br/>";
-				echo "version " . $cfmaxversion . " " . $ieversion;
 				$PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
 				<script>
 					//<![CDATA[
 					window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
 					//]]>
 				</script>
-		<?php } else { echo "you are not using IE<br/>Looking for version " . $cfmaxversion; }
+		<?php }
 	}
 
 	if ($userespond == 1) {
 		$usingie = strpos($PAGE->bodyclasses, 'ie ie');
 		$usingie9 = strpos($PAGE->bodyclasses, 'ie9');
-		echo "using respond";
 		if (($usingie !== false) && ($usingie9 === false)) {
-			echo "you are using IE!";
 			$PAGE->requires->js('/theme/zebra/javascript/respond.js');
-		} else { echo "you are not using IE or are using IE9"; }
+		}
 	}
 
     echo $OUTPUT->standard_end_of_body_html(); ?>
