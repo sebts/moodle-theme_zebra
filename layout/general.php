@@ -193,7 +193,7 @@ echo $OUTPUT->doctype(); ?>
 					window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
 					//]]>
 				</script>
-		<?php } else { echo "you are not using IE" }
+		<?php } else { echo "you are not using IE"; }
 	}
 
 	if ($userespond == 1) {
