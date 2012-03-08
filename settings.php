@@ -313,7 +313,7 @@ if ($ADMIN->fulltree) {
     $title = get_string('cfmaxversion','theme_zebra');
     $description = get_string('cfmaxversiondesc', 'theme_zebra');
     $default = '6';
-    $choices = array('6'=>'6', '7'=>'7', '8'=>'8');
+    $choices = array('6'=>'ie6', '7'=>'ie7', '8'=>'ie8');
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $settings->add($setting);
 
