@@ -201,7 +201,7 @@ echo $OUTPUT->doctype(); ?>
 		$usingie = strpos($PAGE->bodyclasses, 'ie ie');
 		$usingie9 = strpos($PAGE->bodyclasses, 'ie9');
 		echo "using respond";
-		if ($usingie !== false) {
+		if (($usingie !== false) && ($usingie9 === false)) {
 			echo "you are using IE!";
 			$PAGE->requires->js('/theme/zebra/javascript/respond.js');
 		} else { echo "you are not using IE or are using IE9"; }
