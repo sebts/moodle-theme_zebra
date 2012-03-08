@@ -186,15 +186,15 @@ echo $OUTPUT->doctype(); ?>
 		echo "using chrome frame";
 		$ieversion = strpos($PAGE->bodyclasses, $cfmaxversion);
 		if ($ieversion !== false) {
-				echo "you are using IE!";
-				echo "version " . $cfmaxversion . $ieversion;
+				echo "you are using IE!<br/>";
+				echo "version " . $cfmaxversion . " " . $ieversion;
 				$PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
 				<script>
 					//<![CDATA[
 					window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
 					//]]>
 				</script>
-		<?php } else { echo "you are not using IE"; }
+		<?php } else { echo "you are not using IE<br/>Looking for version " . $cfmaxversion . " " . $ieversion; }
 	}
 
 	if ($userespond == 1) {
