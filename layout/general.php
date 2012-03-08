@@ -74,7 +74,7 @@ if (!empty($PAGE->theme->settings->usecf)) {
 if (!empty($PAGE->theme->settings->cfmaxversion)) {
 	$cfmaxversion = $PAGE->theme->settings->cfmaxversion;
 } else {
-	$cfmaxversion = 6;
+	$cfmaxversion = 'ie6';
 }
 
 echo $OUTPUT->doctype(); ?>
@@ -184,9 +184,10 @@ echo $OUTPUT->doctype(); ?>
 
     <?php if ($usecf == 1) {
 		echo "using chrome frame";
-		$cfmaxversion = 'ie' . $cfmaxversion;
 		$ieversion = strpos($PAGE->bodyclasses, $cfmaxversion);
 		if ($ieversion !== false) {
+				echo "you are using IE!";
+				echo "version " . $cfmaxversion . $ieversion;
 				$PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
 				<script>
 					//<![CDATA[
@@ -200,6 +201,7 @@ echo $OUTPUT->doctype(); ?>
 		$usingie = strpos($PAGE->bodyclasses, 'ie');
 		echo "using respond";
 		if ($usingie !== false) {
+			echo "you are using IE!";
 			$PAGE->requires->js('/theme/zebra/javascript/respond.js', true);
 		} else { echo "you are not using IE"; }
 	}
