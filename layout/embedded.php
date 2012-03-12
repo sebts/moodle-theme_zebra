@@ -180,6 +180,7 @@ echo $OUTPUT->doctype(); ?>
             <?php } ?>
         </div>
     </div>
+
     <?php if ($usecf == 1) {
 		$ieversion = strpos($PAGE->bodyclasses, $cfmaxversion);
 		if ($ieversion !== false) {
@@ -198,6 +199,10 @@ echo $OUTPUT->doctype(); ?>
 		if (($usingie !== false) && ($usingie9 === false)) {
 			$PAGE->requires->js('/theme/zebra/javascript/respond.js');
 		}
+	}
+
+	if (preg_match('/\biPhone\b|\biPod\b|\biPad\b/i', $_SERVER['HTTP_USER_AGENT'])) {
+		$PAGE->requires->js('/theme/zebra/javascript/iOS-viewport-fix.js');
 	}
 
     echo $OUTPUT->standard_end_of_body_html(); ?>
