@@ -119,7 +119,7 @@ span.unread {
 }
 
 #page-content-wrapper {
-    background-color: [[setting:linkcolor]];
+    background-color: [[setting:contentbgcolor]];
 }
 
 .pagelayout-report #page-content {
