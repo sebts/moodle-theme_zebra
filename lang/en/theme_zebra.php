@@ -45,7 +45,7 @@ $string['choosereadme'] = '<div class="clearfix">
 		<br />
 		<p>The underlying page layout, designed independently of Moodle 2.0 by me (Danny Wahl) @ iyWare, and capable of being used standalone, is also licensed under the GNU General Public License.</p>
 		<h2>Theme Discussion Forum:</h2>
-		<p><a href="http://moodle.org/mod/forum/discuss.php?d=190066">http://moodle.org/mod/forum/discuss.php?d=190066</a></p>
+		<p><a href="http://moodle.org/mod/forum/discuss.php?d=199367">http://moodle.org/mod/forum/discuss.php?d=199367</a></p>
 		<h2>Theme Plugin URL:</h2>
                 <p><a href="http://moodle.org/plugins/view.php?plugin=theme_zebra">http://moodle.org/plugins/view.php?plugin=theme_zebra</a></p>
                 <h2>Theme Credits</h2>
