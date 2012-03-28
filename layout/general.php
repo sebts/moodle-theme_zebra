@@ -117,7 +117,7 @@ echo $OUTPUT->doctype(); ?>
                 <div id="page-border-wrapper">
                     <?php if ($hascustommenu) { ?>
                         <div id="custommenu-wrapper">
-                            <div id="custommenu"><a class="home" href="<?php new moodle_url('/index.php'); ?>"><div>&nbsp;</div></a><?php echo $custommenu; ?><a class="calendar" href="<?php new moodle_url('calendar/view.php'); ?>"><?php echo date("F j, Y"); ?></a></div>
+                            <div id="custommenu"><a class="home" href="<?php echo new moodle_url('/index.php'); ?>"><div>&nbsp;</div></a><?php echo $custommenu; ?><a class="calendar" href="<?php echo new moodle_url('calendar/view.php'); ?>"><?php echo date("F j, Y"); ?></a></div>
                         </div>
                     <?php } ?>
                     <?php if ($hasnavbar) { ?>
