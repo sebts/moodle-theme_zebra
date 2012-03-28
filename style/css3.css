@@ -93,17 +93,13 @@
     text-shadow:0 1px 0 [[setting:fontcolor]];
 }
 
-#custommenu,
-ul.dropdown {
+#navbar-wrapper {
     border-radius:5px 5px 0 0;
     -moz-border-radius:5px 5px 0 0;
     -webkit-border-radius:5px 5px 0 0;
     background-clip:padding-box;
     -moz-background-clip:padding;
     -webkit-background-clip:padding-box;
-}
-
-ul.dropdown {
     background:linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:linkcolor]];
     background:-moz-linear-gradient(center top , [[setting:menucolorscheme]] 0%, transparent 66%) [[setting:linkcolor]];
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:menucolorscheme]]),color-stop(66%,transparent)) [[setting:linkcolor]];
@@ -114,16 +110,16 @@ ul.dropdown {
     -webkit-box-shadow: 0 1px [[setting:linkcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:linkcolor]] inset;
 }
 
-ul.dropdown > li:first-child {
+#custommenu .home {
     border-radius:5px 0 0 0;
     -moz-border-radius:5px 0 0 0;
     -webkit-border-radius:5px 0 0 0;
     background-clip:padding-box;
     -moz-background-clip:padding;
-    -webkit-background-clip:padding-box;   
+    -webkit-background-clip:padding-box;
 }
 
-ul.dropdown > li:last-child {
+#custommenu .calendar {
     background:linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:fontcolor]];
     background:-moz-linear-gradient(center top , [[setting:menucolorscheme]] 0%, transparent 66%) [[setting:fontcolor]];
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:menucolorscheme]]),color-stop(66%,transparent)) [[setting:fontcolor]];
@@ -140,25 +136,19 @@ ul.dropdown > li:last-child {
     -webkit-background-clip:padding-box;
 }
 
-ul.dropdown > li:hover {
-    background:linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]];
-    background:-moz-linear-gradient(center top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]];
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:menucolorscheme]]), color-stop(100%,rgba(0,0,0,0.3))) [[setting:hovercolor]];
-    background:-webkit-linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]];
-    background:-ms-linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]];
+#custommenu .yui3-menu-label-active,
+#custommenu .yui3-menu-label-menuvisible,
+#custommenu .yui3-menuitem-active,
+#custommenu .calendar:hover,
+#custommenu .home:hover {
+    background:linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]]!important; /* Override Base Sheet "Core" Line 607 */
+    background:-moz-linear-gradient(center top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]]!important;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:menucolorscheme]]), color-stop(100%,rgba(0,0,0,0.3))) [[setting:hovercolor]]!important;
+    background:-webkit-linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]]!important;
+    background:-ms-linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]]!important;
     box-shadow: 0 1px [[setting:hovercolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
     -moz-box-shadow: 0 1px [[setting:hovercolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
     -webkit-box-shadow: 0 1px [[setting:hovercolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
-}
-
-ul.dropdown ul span a:after {
-  border-bottom:7px solid transparent;
-  border-left:7px solid [[setting:contentbgcolor]];
-  border-top:7px solid transparent;
-  content:"";
-  float:right;
-  margin-top:8px;
-  white-space:nowrap;
 }
 
 /* $3.0: Forum */

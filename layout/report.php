@@ -85,7 +85,7 @@ echo $OUTPUT->doctype() ?>
     <title><?php echo $PAGE->title; ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<link rel="shortcut icon" type="image/png" href="<?php echo $OUTPUT->pix_url('favicon/favicon', 'theme'); ?>" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $OUTPUT->pix_url('favicon/h/apple-touch-icon-precomposed', 'theme'); ?>">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $OUTPUT->pix_url('favicon/m/apple-touch-icon-precomposed', 'theme'); ?>">
@@ -111,20 +111,20 @@ echo $OUTPUT->doctype() ?>
                             echo $PAGE->headingmenu;
                         } else {
                             echo $OUTPUT->login_info();
-                        } ?>  
+                        } ?>
                     </div>
                 </div>
                 <div id="page-border-wrapper">
                     <?php if ($hascustommenu) { ?>
                         <div id="custommenu-wrapper">
-                            <div id="custommenu"><?php echo $custommenu; ?></div>
+                            <div id="custommenu"><a class="home" href="<?php new moodle_url('/index.php'); ?>"><div>&nbsp;</div></a><?php echo $custommenu; ?><a class="calendar" href="<?php new moodle_url('calendar/view.php'); ?>"><?php echo date("F j, Y"); ?></a></div>
                         </div>
                     <?php } ?>
                     <?php if ($hasnavbar) { ?>
                         <div id="navbar-wrapper">
                             <div class="navbar clearfix">
                                 <div class="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
-                                <div class="navbutton"> <?php echo $PAGE->button; ?></div>
+                                <div class="navbutton"><?php echo $PAGE->button; ?></div>
                             </div>
                         </div>
                     <?php } ?>

@@ -19,125 +19,122 @@
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- *
- * Table of Contents
- * $1.0: Top Level Menu
- * $2.0: Sub Menus
- * $3.0: All Menu Items
  */
 
-/* $1.0: Top Level Menu */
+/* Top Menu */
 
 #custommenu {
-    height:30px;
-    background-color:[[setting:linkcolor]];
+    background-color: [[setting:linkcolor]];
 }
 
-ul.dropdown-horizontal {
-    height:100%;
+#custommenu .yui3-menu {
+    float: left;
 }
 
-ul.dropdown-horizontal > li {
-    border-right:1px solid [[setting:fontcolor]]; 
+.yui3-skin-sam .yui3-menu-label,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-label,
+.yui3-skin-sam .yui3-menuitem-content,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menuitem-content {
+    color: [[setting:contentbgcolor]]!important;
+    text-decoration: none!important;
 }
 
-ul.dropdown > li:first-child a {
-    background:url([[pix:theme|menu/home_icon]]) no-repeat scroll center center;
-}
-
-ul.dropdown-horizontal > li:last-child {
-    background-color:[[setting:fontcolor]];
-    border-left:1px solid [[setting:fontcolor]];
-    border-right:0 none;
-    float:right;
-}
-
-ul.dropdown > li:hover {
-    background-color:[[setting:hovercolor]];
-}
-
-/* $2.0: Sub Menus */
-
-ul.dropdown ul li {
-    border-bottom:1px solid rgba(0,0,0,0.4);
-    border-top:1px solid rgba(255,255,255,0.1);
-}
-
-ul.dropdown ul li:hover {
-    border-bottom:1px solid [[setting:linkcolor]];
-    border-top:1px solid [[setting:linkcolor]];
-}
-
-ul.dropdown ul {
-    background-color:[[setting:fontcolor]];
-    position:absolute;
-    visibility:hidden;
-    z-index:598;
-    padding-left:1px;
-    min-width:120px;
-}
-
-ul.dropdown ul ul {
-    left:100%;
-    margin-top:-1px;
-    right:auto;
-    top:0;
-}
-
-ul.dropdown ul li:hover > span a,
-ul.dropdown ul ul li:hover > span a {
-    background-color:[[setting:linkcolor]];
-}
-
-/* $3.0: All Menu Items */
-
-#custommenu ul a {
-    display: block;
-    padding: 0 20px;
+.yui3-skin-sam .yui3-menu-content,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-content,
+.yui3-menuitem-content,
+.yui3-menu-label {
     line-height: 30px;
+    padding: 0;
 }
 
-#custommenu ul ul a {
-    min-width: 125px;
+.yui3-skin-sam .yui3-menu-content,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-content,
+.yui3-skin-sam .yui3-menu-horizontal .yui3-menu-label,
+.yui3-skin-sam .yui3-menu-horizontal .yui3-menuitem-content {
+    border: 0 none;
+    margin: 0;
 }
 
-#custommenu ul.dropdown-horizontal > li:first-child a,
-#custommenu ul.dropdown-horizontal > li:last-child a {
-    min-width: 0;
+/* Top Menu Items */
+
+#custommenu .yui3-menu-label,
+#custommenu .yui3-menuitem-content {
+    border-right: 1px solid [[setting:fontcolor]];
 }
 
-ul.dropdown,
-ul.dropdown li,
-ul.dropdown ul {
-    list-style:none;
-    margin:0;
+/* Top Menu Items - Active */
+
+#custommenu .yui3-menu-label-active,
+#custommenu .yui3-menu-label-menuvisible,
+#custommenu .yui3-menuitem-active {
+    background: [[setting:hovercolor]];
 }
 
-ul.dropdown-horizontal li {
-    float:left;
-    min-height:30px;
-    vertical-align:middle;
-    line-height:18px;
+/* Sub Menu */
+
+#custommenu .custom_menu_submenu .yui3-menu-content {
+    background: [[setting:fontcolor]];
 }
 
-ul.dropdown li:hover > ul {
-    visibility:visible;
+/* Sub Menu Items */
+
+#custommenu .custom_menu_submenu .yui3-menuitem,
+#custommenu .custom_menu_submenu .yui3-menu-label {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.4);
 }
 
-ul.dropdown li.hover,
-ul.dropdown li:hover {
-    cursor:default;
-    position:relative;
+/* Sub Menu Items - Active */
+
+.yui3-skin-sam .yui3-menuitem-active .yui3-menuitem-content,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menuitem-active .yui3-menuitem-content {
+    background-color: [[setting:linkcolor]]
 }
 
-ul.dropdown a:link,
-ul.dropdown a:visited,
-ul.dropdown a:hover,
-ul.dropdown a:visited {
-    color:[[setting:contentbgcolor]] !important;
-    text-decoration:none !important;
+/* Sub Sub Menu */
+
+#custommenu .custom_menu_submenu .yui3-menuitem-active,
+#custommenu .custom_menu_submenu .yui3-menu-label-active,
+#custommenu .custom_menu_submenu .yui3-menu-label-menuvisible {
+    background: url([[pix:theme|horizontal-menu-submenu-indicator]]) no-repeat right center scroll [[setting:linkcolor]] !important; /* Prevent CSS3 sheet from overriding this */
+    border-top: 1px solid [[setting:linkcolor]];
+    border-bottom: 1px solid [[setting:linkcolor]];
+    box-shadow: none;
 }
 
-ul.dropdown ul a:hover {
-    background-color:[[setting:linkcolor]];
+/* Home Link */
+
+#custommenu .home {
+    float: left;
+    color: [[setting:contentbgcolor]]!important;
+    text-decoration: none!important;
+    border-right: 1px solid [[setting:fontcolor]];
+}
+
+#custommenu .home:hover {
+    background-color: [[setting:hovercolor]];
+}
+
+#custommenu .home div {
+    background: url([[pix:theme|menu/home_icon]]) no-repeat scroll center center;
+    text-indent: -9999px;
+    line-height: 30px;
+    width: 18px;
+    padding: 0 10px;
+}
+
+/* Calendar Link */
+
+#custommenu .calendar {
+    float: right;
+    line-height: 30px;
+    padding: 0 10px;
+    color: [[setting:contentbgcolor]]!important;
+    text-decoration: none!important;
+    border-left: 1px solid [[setting:fontcolor]];
+    background-color: [[setting:fontcolor]];
+}
+
+#custommenu .calendar:hover {
+    background-color: [[setting:hovercolor]];
 }
