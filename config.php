@@ -121,7 +121,7 @@ $THEME->layouts = array(
     'maintenance' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>true)
+        'options' => array('nofooter'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true)
     ),
     'embedded' => array(
         'file' => 'embedded.php',
@@ -131,7 +131,7 @@ $THEME->layouts = array(
     'print' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>false, 'noblocks'=>true)
+        'options' => array('nofooter'=>true, 'noblocks'=>true)
     ),
     'redirect' => array(
         'file' => 'embedded.php',
