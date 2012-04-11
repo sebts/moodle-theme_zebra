@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * zebra theme report layout
+ * zebra theme report page layout
  *
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
@@ -45,6 +45,26 @@ if ($showsidepre && !$showsidepost) {
 }
 if ($hascustommenu) {
     $bodyclasses[] = 'has_custom_menu';
+}
+
+$homeicon = $PAGE->theme->settings->homeicon;
+if ($homeicon == 0) {
+    $bodyclasses[] = 'no_homeicon';
+} else {
+    $homeurl = new moodle_url('/index.php');
+}
+
+$callink = $PAGE->theme->settings->callink;
+if ($callink == 0) {
+    $bodyclasses[] = 'no_callink';
+} else {
+    $calurl = new moodle_url('calendar/view.php');
+}
+
+if (!empty($PAGE->theme->settings->dateformat)) {
+    $dateformat = $PAGE->theme->settings->dateformat;
+} else {
+    $dateformat = "F j, Y";
 }
 
 if (!empty($PAGE->theme->settings->headeralt)) {
@@ -77,7 +97,7 @@ if (!empty($PAGE->theme->settings->cfmaxversion)) {
 	$cfmaxversion = 'ie6';
 }
 
-echo $OUTPUT->doctype() ?>
+echo $OUTPUT->doctype(); ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
 <head>
 	<?php if ($usecf == 1) { ?><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><?php } ?>
@@ -117,7 +137,15 @@ echo $OUTPUT->doctype() ?>
                 <div id="page-border-wrapper">
                     <?php if ($hascustommenu) { ?>
                         <div id="custommenu-wrapper">
-                            <div id="custommenu"><a class="home" href="<?php new moodle_url('/index.php'); ?>"><div>&nbsp;</div></a><?php echo $custommenu; ?><a class="calendar" href="<?php new moodle_url('calendar/view.php'); ?>"><?php echo date("F j, Y"); ?></a></div>
+                            <div id="custommenu">
+				<?php if ($homeicon == 1) {
+				    echo '<a class="home" href="' . $homeurl . '"><div>&nbsp;</div></a>';
+				}
+				echo $custommenu;
+				if ($callink == 1) {
+				    echo '<a class="calendar" href="' . $calurl . '">' . date("$dateformat") . '</a>';
+				} ?>
+			    </div>
                         </div>
                     <?php } ?>
                     <?php if ($hasnavbar) { ?>

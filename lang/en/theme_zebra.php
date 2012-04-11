@@ -75,6 +75,13 @@ $string['backgroundurldesc'] = '<p>Input the URL to your body background image.<
 $string['headeralt'] = 'Alternate text';
 $string['headeraltdesc'] = '<p>Text to use instead of the Site Name.</p><p>Hint: Use a space (<code>&amp;nbsp;</code>) to display nothing.</p>';
 
+$string['homeicon'] = 'Show home icon';
+$string['homeicondesc'] = '<p>Show the home icon at the beginning of the custom menu.</p>';
+$string['callink'] = 'Calendar link';
+$string['callinkdesc'] = '<p>Show the date with a link to the calendar at the end of the custom menu.</p>';
+$string['dateformat'] = 'Date format';
+$string['dateformatdesc'] = '<p>Note: This requires callink to be enabled.</p><p>Set a format for displaying the date in the custom menu.  For more information on the date() function please see the php.net docs <a href="http://php.net/manual/en/function.date.php" title="PHP: date - Manual">here</a>.</p>';
+
 $string['colorsinfo'] = 'General colors settings';
 $string['colorsinfodesc'] = '<p>Change the settings for the colors of the page.</p><p>You can use any valid color type like <code>red</code>, <code>#FF0000</code>, <code>rgb(0, 255, 255)</code>, or <code>rgba(0, 255, 255, 1.0)</code>.</p>';
 

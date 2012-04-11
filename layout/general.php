@@ -47,6 +47,26 @@ if ($hascustommenu) {
     $bodyclasses[] = 'has_custom_menu';
 }
 
+$homeicon = $PAGE->theme->settings->homeicon;
+if ($homeicon == 0) {
+    $bodyclasses[] = 'no_homeicon';
+} else {
+    $homeurl = new moodle_url('/index.php');
+}
+
+$callink = $PAGE->theme->settings->callink;
+if ($callink == 0) {
+    $bodyclasses[] = 'no_callink';
+} else {
+    $calurl = new moodle_url('calendar/view.php');
+}
+
+if (!empty($PAGE->theme->settings->dateformat)) {
+    $dateformat = $PAGE->theme->settings->dateformat;
+} else {
+    $dateformat = "F j, Y";
+}
+
 if (!empty($PAGE->theme->settings->headeralt)) {
     $headeralt = $PAGE->theme->settings->headeralt;
 } else {
@@ -80,13 +100,13 @@ if (!empty($PAGE->theme->settings->cfmaxversion)) {
 echo $OUTPUT->doctype(); ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
 <head>
-	<?php if ($usecf == 1) { ?><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><?php } ?>
+    <?php if ($usecf == 1) { ?><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><?php } ?>
 
     <title><?php echo $PAGE->title; ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="shortcut icon" type="image/png" href="<?php echo $OUTPUT->pix_url('favicon/favicon', 'theme'); ?>" />
+    <link rel="shortcut icon" type="image/png" href="<?php echo $OUTPUT->pix_url('favicon/favicon', 'theme'); ?>" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $OUTPUT->pix_url('favicon/h/apple-touch-icon-precomposed', 'theme'); ?>">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $OUTPUT->pix_url('favicon/m/apple-touch-icon-precomposed', 'theme'); ?>">
     <link rel="apple-touch-icon-precomposed" href="<?php echo $OUTPUT->pix_url('favicon/l/apple-touch-icon-precomposed', 'theme'); ?>">
@@ -117,7 +137,15 @@ echo $OUTPUT->doctype(); ?>
                 <div id="page-border-wrapper">
                     <?php if ($hascustommenu) { ?>
                         <div id="custommenu-wrapper">
-                            <div id="custommenu"><a class="home" href="<?php echo new moodle_url('/index.php'); ?>"><div>&nbsp;</div></a><?php echo $custommenu; ?><a class="calendar" href="<?php echo new moodle_url('calendar/view.php'); ?>"><?php echo date("F j, Y"); ?></a></div>
+                            <div id="custommenu">
+				<?php if ($homeicon == 1) {
+				    echo '<a class="home" href="' . $homeurl . '"><div>&nbsp;</div></a>';
+				}
+				echo $custommenu;
+				if ($callink == 1) {
+				    echo '<a class="calendar" href="' . $calurl . '">' . date("$dateformat") . '</a>';
+				} ?>
+			    </div>
                         </div>
                     <?php } ?>
                     <?php if ($hasnavbar) { ?>

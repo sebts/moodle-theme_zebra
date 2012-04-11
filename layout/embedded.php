@@ -47,6 +47,26 @@ if ($hascustommenu) {
     $bodyclasses[] = 'has_custom_menu';
 }
 
+$homeicon = $PAGE->theme->settings->homeicon;
+if ($homeicon == 0) {
+    $bodyclasses[] = 'no_homeicon';
+} else {
+    $homeurl = new moodle_url('/index.php');
+}
+
+$callink = $PAGE->theme->settings->callink;
+if ($callink == 0) {
+    $bodyclasses[] = 'no_callink';
+} else {
+    $calurl = new moodle_url('calendar/view.php');
+}
+
+if (!empty($PAGE->theme->settings->dateformat)) {
+    $dateformat = $PAGE->theme->settings->dateformat;
+} else {
+    $dateformat = "F j, Y";
+}
+
 if (!empty($PAGE->theme->settings->headeralt)) {
     $headeralt = $PAGE->theme->settings->headeralt;
 } else {
@@ -116,7 +136,15 @@ echo $OUTPUT->doctype(); ?>
                 <div id="page-border-wrapper">
                     <?php if ($hascustommenu) { ?>
                         <div id="custommenu-wrapper">
-                            <div id="custommenu"><a class="home" href="<?php new moodle_url('/index.php'); ?>"><div>&nbsp;</div></a><?php echo $custommenu; ?><a class="calendar" href="<?php new moodle_url('calendar/view.php'); ?>"><?php echo date("F j, Y"); ?></a></div>
+                            <div id="custommenu">
+				<?php if ($homeicon == 1) {
+				    echo '<a class="home" href="' . $homeurl . '"><div>&nbsp;</div></a>';
+				}
+				echo $custommenu;
+				if ($callink == 1) {
+				    echo '<a class="calendar" href="' . $calurl . '">' . date("$dateformat") . '</a>';
+				} ?>
+			    </div>
                         </div>
                     <?php } ?>
                     <?php if ($hasnavbar) { ?>
