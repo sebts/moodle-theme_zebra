@@ -82,6 +82,9 @@ $string['callinkdesc'] = '<p>Show the date with a link to the calendar at the en
 $string['dateformat'] = 'Date format';
 $string['dateformatdesc'] = '<p>Note: This requires <a href="#admin-callink"><code>callink</code></a> to be enabled.</p><p>Set a format for displaying the date in the custom menu.  For more information on the date() function please see the php.net docs <a href="http://php.net/manual/en/function.date.php" title="PHP: date - Manual">here</a>.</p>';
 
+$string['userpic'] = 'Show user picture';
+$string['userpicdesc'] = '<p>Show the user\'s profile picture in the header</p>';
+
 $string['colorsinfo'] = 'General colors settings';
 $string['colorsinfodesc'] = '<p>Change the settings for the colors of the page.</p><p>You can use any valid color type like <code>red</code>, <code>#FF0000</code>, <code>rgb(0, 255, 255)</code>, or <code>rgba(0, 255, 255, 1.0)</code>.</p>';
 

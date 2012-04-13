@@ -95,6 +95,14 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_CLEAN, 10);
     $settings->add($setting);
 
+    //Set the user profile picture display option
+    $name = 'theme_zebra/userpic';
+    $visiblename = get_string('userpic', 'theme_zebra');
+    $title = get_string('userpic', 'theme_zebra');
+    $description = get_string('userpicdesc', 'theme_zebra');
+    $setting = new admin_setting_configcheckbox($name, $visiblename, $description, 1);
+    $settings->add($setting);
+
     //This is the descriptor for the following general color settings
     $name = 'theme_zebra/colorsinfo';
     $heading = get_string('colorsinfo', 'theme_zebra');

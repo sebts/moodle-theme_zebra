@@ -67,6 +67,8 @@ if (!empty($PAGE->theme->settings->dateformat)) {
     $dateformat = "F j, Y";
 }
 
+$userpic = $PAGE->theme->settings->userpic;
+
 if (!empty($PAGE->theme->settings->headeralt)) {
     $headeralt = $PAGE->theme->settings->headeralt;
 } else {
@@ -122,7 +124,9 @@ echo $OUTPUT->doctype(); ?>
                     <div id="profileblock">
                         <?php if (isloggedin()) {
                             if ($haslogininfo) {
-                                echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
+				if ($userpic == 1) {
+				    echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
+				}
                                 echo $OUTPUT->login_info();
                             }
                             if (!empty($PAGE->layout_options['langmenu'])) {
