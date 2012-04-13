@@ -28,9 +28,9 @@ $hasfooter = (empty($PAGE->layout_options['nofooter']));
 $hassidepre = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-pre', $OUTPUT));
 $hassidepost = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-post', $OUTPUT));
 $haslogininfo = (empty($PAGE->layout_options['nologininfo']));
+$haslangmenu = (!empty($PAGE->layout_options['langmenu']));
 $showsidepre = ($hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT));
 $showsidepost = ($hassidepost && !$PAGE->blocks->region_completely_docked('side-post', $OUTPUT));
-$haslangmenu = (!empty($PAGE->layout_options['langmenu']));
 $custommenu = $OUTPUT->custom_menu();
 $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu));
 $bodyclasses = array();
@@ -44,26 +44,26 @@ if ($showsidepre && !$showsidepost) {
 if ($hascustommenu) {
     $bodyclasses[] = 'has_custom_menu';
 }
-$homeicon = ($PAGE->theme->settings->homeicon);
-if (empty($homeicon)) {
+$hashomeicon = ($PAGE->theme->settings->homeicon);
+if (empty($hashomeicon)) {
     $bodyclasses[] = 'no_homeicon';
 } else {
     $homeurl = new moodle_url('/index.php');
 }
-$callink = ($PAGE->theme->settings->callink);
-if (empty($callink)) {
+$hascallink = ($PAGE->theme->settings->callink);
+if (empty($hascallink)) {
     $bodyclasses[] = 'no_callink';
 } else {
     $calurl = new moodle_url('calendar/view.php');
 }
 $dateformat = $PAGE->theme->settings->dateformat;
-$userpic = ($PAGE->theme->settings->userpic);
+$showuserpic = ($PAGE->theme->settings->userpic);
 if (!empty($PAGE->theme->settings->headeralt)) {
     $headeralt = $PAGE->theme->settings->headeralt;
 } else {
     $headeralt = $PAGE->heading;
 }
-$branding = ($PAGE->theme->settings->branding);
+$showbranding = ($PAGE->theme->settings->branding);
 $userespond = ($PAGE->theme->settings->userespond);
 $usecf = ($PAGE->theme->settings->usecf);
 $cfmaxversion = $PAGE->theme->settings->cfmaxversion;
@@ -90,7 +90,7 @@ echo $OUTPUT->doctype(); ?>
                     <div id="profileblock">
                         <?php if (isloggedin()) {
                             if ($haslogininfo) {
-				if ($userpic) {
+				if ($showuserpic) {
 				    echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
 				}
                                 echo $OUTPUT->login_info();
@@ -108,11 +108,11 @@ echo $OUTPUT->doctype(); ?>
                     <?php if ($hascustommenu) { ?>
                         <div id="custommenu-wrapper">
                             <div id="custommenu">
-				<?php if ($homeicon) {
+				<?php if ($hashomeicon) {
 				    echo '<a class="home" href="' . $homeurl . '"><div>&nbsp;</div></a>';
 				}
 				echo $custommenu;
-				if ($callink) {
+				if ($hascallink) {
 				    echo '<a class="calendar" href="' . $calurl . '">' . date("$dateformat") . '</a>';
 				} ?>
 			    </div>
@@ -166,7 +166,7 @@ echo $OUTPUT->doctype(); ?>
                         <?php echo $OUTPUT->login_info();
                         echo "<br />";
                         echo $OUTPUT->standard_footer_html();
-                        if (empty($branding)) {
+                        if (empty($showbranding)) {
 			    echo '<div id="branding">';
 			    echo '<a href="http://ldichina.com"><img src="'.$OUTPUT->pix_url('footer/LDi', 'theme').'" alt="LDi China"></a>';
 			    echo '<a href="http://teachwithisc.com"><img src="'.$OUTPUT->pix_url('footer/iSC', 'theme').'" alt="International Schools of China"></a>';
