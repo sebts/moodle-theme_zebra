@@ -22,17 +22,17 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$hasheading = ($PAGE->heading);
-$hasnavbar = (empty($PAGE->layout_options['nonavbar']) && $PAGE->has_navbar());
-$hasfooter = (empty($PAGE->layout_options['nofooter']));
+$hasheading = ($PAGE->heading); //Check for the page title
+$hasnavbar = (empty($PAGE->layout_options['nonavbar']) && $PAGE->has_navbar()); //Check to see if this page-lay has a navbar
+$hasfooter = (empty($PAGE->layout_options['nofooter'])); //Check to see if this page-layout has a footer
 $hassidepre = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-pre', $OUTPUT));
 $hassidepost = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-post', $OUTPUT));
-$haslogininfo = (empty($PAGE->layout_options['nologininfo']));
-$haslangmenu = (!empty($PAGE->layout_options['langmenu']));
+$haslogininfo = (empty($PAGE->layout_options['nologininfo'])); //Check if the login info (user name, etc...) is available in this page-layout
+$haslangmenu = (!empty($PAGE->layout_options['langmenu'])); //Check if the language menu is available in this page-layout
 $showsidepre = ($hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT));
 $showsidepost = ($hassidepost && !$PAGE->blocks->region_completely_docked('side-post', $OUTPUT));
 $custommenu = $OUTPUT->custom_menu();
-$hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu));
+$hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu)); //Check if this page-layout has a custommenu and if it has content
 $bodyclasses = array();
 if ($showsidepre && !$showsidepost) {
     $bodyclasses[] = 'side-pre-only';
@@ -44,29 +44,30 @@ if ($showsidepre && !$showsidepost) {
 if ($hascustommenu) {
     $bodyclasses[] = 'has_custom_menu';
 }
-$hashomeicon = ($PAGE->theme->settings->homeicon);
+$hashomeicon = ($PAGE->theme->settings->homeicon); //Check the theme settings to display the home icon
 if (empty($hashomeicon)) {
     $bodyclasses[] = 'no_homeicon';
 } else {
     $homeurl = new moodle_url('/index.php');
 }
-$hascallink = ($PAGE->theme->settings->callink);
+$hascallink = ($PAGE->theme->settings->callink); //Check the theme settings to display the calendar link
 if (empty($hascallink)) {
     $bodyclasses[] = 'no_callink';
 } else {
     $calurl = new moodle_url('calendar/view.php');
 }
-$dateformat = $PAGE->theme->settings->dateformat;
-$showuserpic = ($PAGE->theme->settings->userpic);
+$dateformat = $PAGE->theme->settings->dateformat; //Check the theme settings for the date format
+$showuserpic = ($PAGE->theme->settings->userpic); //Check the theme settings to show the user profile picture
 if (!empty($PAGE->theme->settings->headeralt)) {
-    $headeralt = $PAGE->theme->settings->headeralt;
+    $headeralt = $PAGE->theme->settings->headeralt; //Use the theme settings for the page title
 } else {
-    $headeralt = $PAGE->heading;
+    $headeralt = $PAGE->heading; //Use the default page title if the theme setting value is empty
 }
-$showbranding = ($PAGE->theme->settings->branding);
-$userespond = ($PAGE->theme->settings->userespond);
-$usecf = ($PAGE->theme->settings->usecf);
-$cfmaxversion = $PAGE->theme->settings->cfmaxversion;
+$showbranding = ($PAGE->theme->settings->branding); //Check the theme settings to see if footer logos are displayed
+$userespond = ($PAGE->theme->settings->userespond); //Check the theme settings to see if respond.js should be called
+$usecf = ($PAGE->theme->settings->usecf); //Check the theme settings to see if Chrome Frame should be called
+$cfmaxversion = $PAGE->theme->settings->cfmaxversion; //Check the theme settings to see which versions of IE get prompted for Chrome Frame
+$usingios = (preg_match('/iPhone|iPod|iPad/i', $_SERVER['HTTP_USER_AGENT']));
 
 echo $OUTPUT->doctype(); ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
@@ -179,7 +180,6 @@ echo $OUTPUT->doctype(); ?>
             <?php } ?>
         </div>
     </div>
-
     <?php if ($usecf) {
 	$ieversion = strpos($PAGE->bodyclasses, $cfmaxversion);
 	if ($ieversion !== false) {
@@ -191,19 +191,16 @@ echo $OUTPUT->doctype(); ?>
 	    </script>
 	<?php }
     }
-
     if ($userespond) {
 	$usingie = strpos($PAGE->bodyclasses, 'ie ie');
-	$usingie9 = strpos($PAGE->bodyclasses, 'ie9');
+	$usingie9 = strpos($PAGE->bodyclasses, 'ie9'); //Make sure the user isn't using IE9 because it can use @media declarations natively
 	if (($usingie !== false) && ($usingie9 === false)) {
 	    $PAGE->requires->js('/theme/zebra/javascript/respond.js');
 	}
     }
-
-    if (preg_match('/iPhone|iPod|iPad/i', $_SERVER['HTTP_USER_AGENT'])) {
+    if ($usingios) { //Check if the user is using iOS and serve a JS to fix a viewport re-flow bug
 	$PAGE->requires->js('/theme/zebra/javascript/iOS-viewport-fix.js');
     }
-
     echo $OUTPUT->standard_end_of_body_html(); ?>
 </body>
 </html>
