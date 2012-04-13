@@ -32,9 +32,18 @@
 }
 
 .forumpost .row .left {
-    width:auto;
+    width: auto;
 }
 
+.forumpost .row .left .grouppictures a {
+    margin: 0 0 4px 0; /* Add a margin between group pictures */
+}
+
+.forumpost .row .left .grouppictures {
+    border-right: 1px solid [[setting:bodybgcolor]];
+    width: 35px;
+    margin: 4px 4px 0 -6px; /* margin right for post content, margin left +2 for borders */
+}
 .forumpost .header {
     height:35px;
     border-bottom:3px solid;
