@@ -109,7 +109,7 @@ $THEME->layouts = array(
         'options' => array('langmenu'=>true)
     ),
     'popup' => array(
-        'file' => 'embedded.php',
+        'file' => 'general.php',
         'regions' => array(),
         'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true)
     ),
@@ -124,7 +124,7 @@ $THEME->layouts = array(
         'options' => array('nofooter'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true)
     ),
     'embedded' => array(
-        'file' => 'embedded.php',
+        'file' => 'general.php',
         'regions' => array(),
         'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true)
     ),
@@ -134,7 +134,7 @@ $THEME->layouts = array(
         'options' => array('nofooter'=>true, 'noblocks'=>true)
     ),
     'redirect' => array(
-        'file' => 'embedded.php',
+        'file' => 'general.php',
         'regions' => array(),
         'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true)
     ),
