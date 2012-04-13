@@ -35,15 +35,22 @@
     width: auto;
 }
 
-.forumpost .row .left .grouppictures a {
-    margin: 0 0 4px 0; /* Add a margin between group pictures */
-}
-
 .forumpost .row .left .grouppictures {
     border-right: 1px solid [[setting:bodybgcolor]];
     width: 35px;
-    margin: 4px 4px 0 -6px; /* margin right for post content, margin left +2 for borders */
+    margin: 0 4px 0 -6px; /* margin right for post content, margin left +2 for borders */
+    padding: 4px 0; /* Have the border extend above and below the group pictures */
 }
+
+.forumpost .row .left .grouppictures a {
+    margin: 0 0 4px 0; /* Add a margin between group pictures */
+    height: 20px; /* Size of the images */
+}
+
+.forumpost .row .left .grouppictures a:last-of-type {
+    margin: 0; /* Don't have a margin on the last picture */
+}
+
 .forumpost .header {
     height: 35px;
     border-bottom: 3px solid;
