@@ -167,7 +167,7 @@ echo $OUTPUT->doctype(); ?>
                         <?php echo $OUTPUT->login_info();
                         echo "<br />";
                         echo $OUTPUT->standard_footer_html();
-                        if (empty($showbranding)) {
+                        if (!$showbranding) {
 			    echo '<div id="branding">';
 			    echo '<a href="http://ldichina.com"><img src="'.$OUTPUT->pix_url('footer/LDi', 'theme').'" alt="LDi China"></a>';
 			    echo '<a href="http://teachwithisc.com"><img src="'.$OUTPUT->pix_url('footer/iSC', 'theme').'" alt="International Schools of China"></a>';
