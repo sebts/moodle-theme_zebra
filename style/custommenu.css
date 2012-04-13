@@ -138,3 +138,8 @@
 #custommenu .calendar:hover {
     background-color: [[setting:hovercolor]];
 }
+
+/* No home link */
+.no_homeicon #custommenu .first-of-type li:first-of-type .yui3-menu-label-active  {
+    border-radius: 5px 0 0 0; /* Preserve the border-radius on the first li when no home icon */
+}
