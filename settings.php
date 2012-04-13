@@ -361,7 +361,7 @@ if ($ADMIN->fulltree) {
     $visiblename = get_string('editingnotify', 'theme_zebra');
     $title = get_string('editingnotify', 'theme_zebra');
     $description = get_string('editingnotifydesc', 'theme_zebra');
-    $setting = new admin_setting_configcheckbox($name, $visiblename, $description, 1);
+    $setting = new admin_setting_configcheckbox($name, $visiblename, $description, 0);
     $settings->add($setting);
 
     //Set custom css for theme
