@@ -42,7 +42,7 @@ $THEME->sheets = array(
     'course',	    //Overrides for the course sheet from Base
     'custommenu',   //Applies style to the custommenu
     'dock',         //Derived from Rebase
-    'modules',      //Overrides for modules
+    'mod_forum',      //Overrides for forum
     'colors',       //Applies theme color settings
     'css3',         //Make the fancy stuff come later
     'extra',        //Extra stuff that doesn't fit the above - need this last

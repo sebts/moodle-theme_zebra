@@ -24,11 +24,11 @@
 /* Forum */
 
 .forumpost {
-    border:0 none;
+    border: 0 none;
 }
 
 .forumpost .picture img {
-    margin:0;
+    margin: 0;
 }
 
 .forumpost .row .left {
@@ -45,31 +45,31 @@
     margin: 4px 4px 0 -6px; /* margin right for post content, margin left +2 for borders */
 }
 .forumpost .header {
-    height:35px;
-    border-bottom:3px solid;
+    height: 35px;
+    border-bottom: 3px solid;
 }
 
 .forumpost .maincontent {
-    padding:4px;
-    width:auto;
-    border-width:0 1px 1px;
-    border-style:solid;
+    padding: 4px;
+    width: auto;
+    border-width: 0 1px 1px;
+    border-style: solid;
 }
 
 .forumpost .row .options {
-    padding:4px 0;
-    margin-left:0;
+    padding: 4px 0;
+    margin-left: 0;
 }
 
 .forumpost .row .options .commands {
-    float:right;
+    float: right;
 }
 
 .forumpost .row .options .commands:before {
-    content:" ";
-    margin-left:5px;
+    content: " ";
+    margin-left: 5px;
 }
 
 .forumpost .row .options .link {
-    float:right;
+    float: right;
 }
