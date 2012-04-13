@@ -30,7 +30,7 @@ $hassidepost = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->regio
 $haslogininfo = (empty($PAGE->layout_options['nologininfo']));
 $showsidepre = ($hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT));
 $showsidepost = ($hassidepost && !$PAGE->blocks->region_completely_docked('side-post', $OUTPUT));
-$langmenu = (!empty($PAGE->layout_options['langmenu']));
+$haslangmenu = (!empty($PAGE->layout_options['langmenu']));
 $custommenu = $OUTPUT->custom_menu();
 $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu));
 $bodyclasses = array();
@@ -95,7 +95,7 @@ echo $OUTPUT->doctype(); ?>
 				}
                                 echo $OUTPUT->login_info();
                             }
-                            if ($langmenu) {
+                            if ($haslangmenu) {
                                 echo $OUTPUT->lang_menu();
                             }
                             echo $PAGE->headingmenu;
