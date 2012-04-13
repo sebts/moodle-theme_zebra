@@ -241,7 +241,7 @@ function zebra_process_css($css, $theme) {
 
     //Get double the width of the colums from colwidth
     if (!empty($theme->settings->colwidth)) {
-        $colwidth = $theme->settings->colwidth;
+        $colwidth = $theme->settings->colwidth; //Integrate colwidth in this function
     } else {
         $colwidth = null;
     }
@@ -253,7 +253,7 @@ function zebra_process_css($css, $theme) {
     } else {
         $useautohide = null;
     }
-    if (!empty($theme->settings->hovercolor)) {
+    if (!empty($theme->settings->hovercolor)) { //Integrate hovercolor in this function
         $hovercolor = $theme->settings->hovercolor;
     } else {
         $hovercolor = null;
@@ -266,12 +266,12 @@ function zebra_process_css($css, $theme) {
     } else {
         $editingnotify = null;
     }
-    if (!empty($theme->settings->hovercolor)) {
+    if (!empty($theme->settings->hovercolor)) { //Integrate hovercolor in this function
         $hovercolor = $theme->settings->hovercolor;
     } else {
         $hovercolor = null;
     }
-    if (!empty($theme->settings->colorscheme)) {
+    if (!empty($theme->settings->colorscheme)) { //Integrate colorscheme in this function
         $colorscheme = $theme->settings->colorscheme;
     } else {
         $colorscheme = null;
@@ -299,16 +299,15 @@ function zebra_process_css($css, $theme) {
 function zebra_set_logourl($css, $logourl) {
     global $OUTPUT;
     $tag = '[[setting:logourl]]';
-    $replacement = $logourl;
-    if (is_null($replacement)) {
-        $replacement = $OUTPUT->pix_url('logo/logo', 'theme');
+    if (is_null($logourl)) {
+        $replacement = $OUTPUT->pix_url('logo/logo', 'theme'); //Default image
     }
     else {
        $protocol = '://';
-        $ntp = strpos($replacement, $protocol); // Check to see if a networking protocol is used
+        $ntp = strpos($logourl, $protocol); // Check to see if a networking protocol is used
         if($ntp === false) { // No networking protocol used
             $relative = '/';
-            $rel = strpos($replacement, $relative); // Check to see if a relative path is used
+            $rel = strpos($logourl, $relative); // Check to see if a relative path is used
             if($rel !== 0) { // Doesn't start with a slash
                 $replacement = $OUTPUT->pix_url("$logourl", 'theme'); // Using Moodle output
             }
@@ -327,9 +326,10 @@ function zebra_set_logourl($css, $logourl) {
  */
 function zebra_set_logourlheight($css, $logourlheight) {
     $tag = '[[setting:logourlheight]]';
-    $replacement = $logourlheight;
-    if (is_null($replacement)) {
-        $replacement = "100px";
+    if (is_null($logourlheight)) {
+        $replacement = "100px"; //Default height
+    } else {
+        $replacement = $logourlheight; //Height from Settings Page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -345,16 +345,15 @@ function zebra_set_logourlheight($css, $logourlheight) {
 function zebra_set_backgroundurl($css, $backgroundurl) {
     global $OUTPUT;
     $tag = '[[setting:backgroundurl]]';
-    $replacement = $backgroundurl;
-    if (is_null($replacement)) {
-        $replacement = $OUTPUT->pix_url('core/background', 'theme');
+    if (is_null($backgroundurl)) {
+        $replacement = $OUTPUT->pix_url('core/background', 'theme'); //Default image
     }
     else {
         $protocol = '://';
-        $ntp = strpos($replacement, $protocol); // Check to see if a networking protocol is used
+        $ntp = strpos($backgroundurl, $protocol); // Check to see if a networking protocol is used
         if($ntp === false) { // No networking protocol used
             $relative = '/';
-            $rel = strpos($replacement, $relative); // Check to see if a relative path is used
+            $rel = strpos($backgroundurl, $relative); // Check to see if a relative path is used
             if($rel !== 0) { // Doesn't start with a slash
                 $replacement = $OUTPUT->pix_url("$backgroundurl", 'theme'); // Using Moodle output
             }
@@ -373,9 +372,10 @@ function zebra_set_backgroundurl($css, $backgroundurl) {
  */
 function zebra_set_bodybgcolor($css, $bodybgcolor) {
     $tag = '[[setting:bodybgcolor]]';
-    $replacement = $bodybgcolor;
-    if (is_null($replacement)) {
-        $replacement = '#DDDDDD';
+    if (is_null($bodybgcolor)) {
+        $replacement = '#DDD'; //Default color
+    } else {
+        $replacement = $bodybgcolor; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -390,9 +390,10 @@ function zebra_set_bodybgcolor($css, $bodybgcolor) {
  */
 function zebra_set_linkcolor($css, $linkcolor) {
     $tag = '[[setting:linkcolor]]';
-    $replacement = $linkcolor;
-    if (is_null($replacement)) {
-        $replacement = '#234B6F';
+    if (is_null($linkcolor)) {
+        $replacement = '#234B6F'; //Default color
+    } else {
+        $replacement = $linkcolor; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -407,9 +408,10 @@ function zebra_set_linkcolor($css, $linkcolor) {
  */
 function zebra_set_hovercolor($css, $hovercolor) {
     $tag = '[[setting:hovercolor]]';
-    $replacement = $hovercolor;
-    if (is_null($replacement)) {
-        $replacement = '#4E7BAE';
+    if (is_null($hovercolor)) {
+        $replacement = '#4E7BAE'; //Default color
+    } else {
+        $replacement = $hovercolor; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -424,9 +426,10 @@ function zebra_set_hovercolor($css, $hovercolor) {
  */
 function zebra_set_fontcolor($css, $fontcolor) {
     $tag = '[[setting:fontcolor]]';
-    $replacement = $fontcolor;
-    if (is_null($replacement)) {
-        $replacement = '#2F2F2F';
+    if (is_null($fontcolor)) {
+        $replacement = '#2F2F2F'; //Default color
+    } else {
+        $replacement = $fontcolor; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -441,9 +444,10 @@ function zebra_set_fontcolor($css, $fontcolor) {
  */
 function zebra_set_contentbgcolor($css, $contentbgcolor) {
     $tag = '[[setting:contentbgcolor]]';
-    $replacement = $contentbgcolor;
-    if (is_null($replacement)) {
-        $replacement = '#F4F6F8';
+    if (is_null($contentbgcolor)) {
+        $replacement = '#F4F6F8'; //Default color
+    } else {
+        $replacement = $contentbgcolor; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -458,9 +462,10 @@ function zebra_set_contentbgcolor($css, $contentbgcolor) {
  */
 function zebra_set_columnbgcolor($css, $columnbgcolor) {
     $tag = '[[setting:columnbgcolor]]';
-    $replacement = $columnbgcolor;
-    if (is_null($replacement)) {
-        $replacement = '#F4F6F8';
+    if (is_null($columnbgcolor)) {
+        $replacement = '#F4F6F8'; //Default color
+    } else {
+        $replacement = $columnbgcolor; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -475,9 +480,10 @@ function zebra_set_columnbgcolor($css, $columnbgcolor) {
  */
 function zebra_set_headerbgcolor($css, $headerbgcolor) {
     $tag = '[[setting:headerbgcolor]]';
-    $replacement = $headerbgcolor;
-    if (is_null($replacement)) {
-        $replacement = 'transparent';
+    if (is_null($headerbgcolor)) {
+        $replacement = 'transparent'; //Default color
+    } else {
+        $replacement = $headerbgcolor; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -492,9 +498,10 @@ function zebra_set_headerbgcolor($css, $headerbgcolor) {
  */
 function zebra_set_footerbgcolor($css, $footerbgcolor) {
     $tag = '[[setting:footerbgcolor]]';
-    $replacement = $footerbgcolor;
-    if (is_null($replacement)) {
-        $replacement = '#DDDDDD';
+    if (is_null($footerbgcolor)) {
+        $replacement = '#DDD'; //Default color
+    } else {
+        $replacement = $footerbgcolor; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -509,9 +516,10 @@ function zebra_set_footerbgcolor($css, $footerbgcolor) {
  */
 function zebra_set_calcourse($css, $calcourse) {
     $tag = '[[setting:calcourse]]';
-    $replacement = $calcourse;
-    if (is_null($replacement)) {
-        $replacement = '#FFD3BD';
+    if (is_null($calcourse)) {
+        $replacement = '#FFD3BD'; //Default color
+    } else {
+        $replacement = $calcourse; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -526,9 +534,10 @@ function zebra_set_calcourse($css, $calcourse) {
  */
 function zebra_set_calglobal($css, $calglobal) {
     $tag = '[[setting:calglobal]]';
-    $replacement = $calglobal;
-    if (is_null($replacement)) {
-        $replacement = '#D6F8CD';
+    if (is_null($calglobal)) {
+        $replacement = '#D6F8CD'; //Default color
+    } else {
+        $replacement = $calglobal; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -543,9 +552,10 @@ function zebra_set_calglobal($css, $calglobal) {
  */
 function zebra_set_calgroup($css, $calgroup) {
     $tag = '[[setting:calgroup]]';
-    $replacement = $calgroup;
-    if (is_null($replacement)) {
-        $replacement = '#FEE7AE';
+    if (is_null($calgroup)) {
+        $replacement = '#FEE7AE'; //Default color
+    } else {
+        $replacement = $calgroup; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -560,9 +570,10 @@ function zebra_set_calgroup($css, $calgroup) {
  */
 function zebra_set_caluser($css, $caluser) {
     $tag = '[[setting:caluser]]';
-    $replacement = $caluser;
-    if (is_null($replacement)) {
-        $replacement = '#DCE7EC';
+    if (is_null($caluser)) {
+        $replacement = '#DCE7EC'; //Default Color
+    } else {
+        $replacement = $caluser; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -577,9 +588,10 @@ function zebra_set_caluser($css, $caluser) {
  */
 function zebra_set_calweekend($css, $calweekend) {
     $tag = '[[setting:calweekend]]';
-    $replacement = $calweekend;
-    if (is_null($replacement)) {
-        $replacement = '#A00';
+    if (is_null($calweekend)) {
+        $replacement = '#A00'; //Default color
+    } else {
+        $replacement = $calweekend; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -594,9 +606,10 @@ function zebra_set_calweekend($css, $calweekend) {
  */
 function zebra_set_okfontcolor($css, $okfontcolor) {
     $tag = '[[setting:okfontcolor]]';
-    $replacement = $okfontcolor;
-    if (is_null($replacement)) {
-        $replacement = '#060';
+    if (is_null($okfontcolor)) {
+        $replacement = '#060'; //Default color
+    } else {
+        $replacement = $okfontcolor; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -611,9 +624,10 @@ function zebra_set_okfontcolor($css, $okfontcolor) {
  */
 function zebra_set_warningfontcolor($css, $warningfontcolor) {
     $tag = '[[setting:warningfontcolor]]';
-    $replacement = $warningfontcolor;
-    if (is_null($replacement)) {
-        $replacement = '#F0E000';
+    if (is_null($warningfontcolor)) {
+        $replacement = '#F0E000'; //Default color
+    } else {
+        $replacement = $warningfontcolor; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -628,9 +642,10 @@ function zebra_set_warningfontcolor($css, $warningfontcolor) {
  */
 function zebra_set_seriousfontcolor($css, $seriousfontcolor) {
     $tag = '[[setting:seriousfontcolor]]';
-    $replacement = $seriousfontcolor;
-    if (is_null($replacement)) {
-        $replacement = '#F07000';
+    if (is_null($seriousfontcolor)) {
+        $replacement = '#F07000'; //Default color
+    } else {
+        $replacement = $seriousfontcolor; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -645,9 +660,10 @@ function zebra_set_seriousfontcolor($css, $seriousfontcolor) {
  */
 function zebra_set_criticalfontcolor($css, $criticalfontcolor) {
     $tag = '[[setting:criticalfontcolor]]';
-    $replacement = $criticalfontcolor;
-    if (is_null($replacement)) {
-        $replacement = '#F00000';
+    if (is_null($criticalfontcolor)) {
+        $replacement = '#F00000'; //Default color
+    } else {
+        $replacement = $criticalfontcolor; //Color from settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -662,20 +678,21 @@ function zebra_set_criticalfontcolor($css, $criticalfontcolor) {
  */
 function zebra_set_colorscheme($css, $colorscheme) {
     $tag = '[[setting:colorscheme]]';
-    if (is_null($colorscheme)) {
-        $replacement = 'transparent';
-    }
-    switch($colorscheme) {
+    switch($colorscheme) { //Get value from Settings Page
+        default:
+            $replacement = 'transparent'; //Default value
+            break;
+
+        case 'none':
+            $replacement = 'transparent';
+            break;
+
         case 'dark':
-            $replacement = 'rgba(0, 0, 0, 0.08)';
+            $replacement = 'rgba(0, 0, 0, 0.08)'; //Black
             break;
 
         case 'light':
-            $replacement = 'rgba(255, 255, 255, 0.2)';
-            break;
-
-        default:
-            $replacement = 'transparent';
+            $replacement = 'rgba(255, 255, 255, 0.2)'; //White
             break;
     }
     $css = str_replace($tag, $replacement, $css);
@@ -691,20 +708,21 @@ function zebra_set_colorscheme($css, $colorscheme) {
  */
 function zebra_set_menucolorscheme($css, $menucolorscheme) {
     $tag = '[[setting:menucolorscheme]]';
-    if (is_null($menucolorscheme)) {
-        $replacement = 'transparent';
-    }
-    switch($menucolorscheme) {
+    switch($menucolorscheme) { //Get value from settings page
+        default:
+            $replacement = 'transparent'; //Default value
+            break;
+
+        case 'none':
+            $replacement = 'transparent';
+            break;
+
         case 'dark':
-            $replacement = 'rgba(0, 0, 0, 0.4)';
+            $replacement = 'rgba(0, 0, 0, 0.4)'; //Black
             break;
 
         case 'light':
-            $replacement = 'rgba(255, 255, 255, 0.3)';
-            break;
-
-        default:
-            $replacement = 'transparent';
+            $replacement = 'rgba(255, 255, 255, 0.3)'; //White
             break;
     }
     $css = str_replace($tag, $replacement, $css);
@@ -725,9 +743,10 @@ function zebra_set_menucolorscheme($css, $menucolorscheme) {
  */
 function zebra_set_twocolmin($css, $twocolmin) {
     $tag = '[[setting:twocolmin]]';
-    $replacement = $twocolmin;
-    if (is_null($replacement)) {
-        $replacement = '481px';
+    if (is_null($twocolmin)) {
+        $replacement = '481px'; //Default width: 1px wider than a "smart phone" in portrait (generally)
+    } else {
+        $replacement = $twocolmin; //Get the value from the settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -747,9 +766,10 @@ function zebra_set_twocolmin($css, $twocolmin) {
  */
 function zebra_set_threecolmin($css, $threecolmin) {
     $tag = '[[setting:threecolmin]]';
-    $replacement = $threecolmin;
-    if (is_null($replacement)) {
-        $replacement = '769px';
+    if (is_null($threecolmin)) {
+        $replacement = '769px'; //Default width: 1px wider than a "tablet" in portrait (generally)
+    } else {
+        $replacement = $threecolmin; //Get the value from the settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -765,9 +785,10 @@ function zebra_set_threecolmin($css, $threecolmin) {
  */
 function zebra_set_pagemaxwidth($css, $pagemaxwidth) {
     $tag = '[[setting:pagemaxwidth]]';
-    $replacement = $pagemaxwidth;
-    if (is_null($replacement)) {
-        $replacement = '100%';
+    if (is_null($pagemaxwidth)) {
+        $replacement = '100%'; //Default width
+    } else {
+        $replacement = $pagemaxwidth; //Get the value from the settings page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -783,9 +804,10 @@ function zebra_set_pagemaxwidth($css, $pagemaxwidth) {
  */
 function zebra_set_colwidth($css, $colwidth) {
     $tag = '[[setting:colwidth]]';
-    $replacement = $colwidth;
-    if (is_null($replacement)) {
-            $replacement = 200;
+    if (is_null($colwidth)) {
+        $replacement = 200; //Default width
+    } else {
+        $replacement = $colwidth; //Settings page value
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -800,11 +822,10 @@ function zebra_set_colwidth($css, $colwidth) {
  */
 function zebra_set_doublecolwidth($css, $colwidth) {
     $tag = '[[setting:doublecolwidth]]';
-    if (is_null($colwidth)) {
-            $colwidth = 200;
+    if (is_null($colwidth)) { //Get the value from the settings page
+        $colwidth = 200; //Default width
     }
-    $doublecolwidth = $colwidth * 2;
-    $replacement = $doublecolwidth;
+    $replacement = $colwidth * 2; //Multiply it by two
     $css = str_replace($tag, $replacement, $css);
     return $css;
 }
@@ -817,8 +838,9 @@ function zebra_set_doublecolwidth($css, $colwidth) {
  * @return string
  */
 function zebra_set_useautohide($css, $useautohide, $hovercolor) {
+    $tag = '[[setting:useautohide]]';
     if (is_null($hovercolor)) { //Get hovercolor from settings
-        $hovercolor = '#4E7BA3';
+        $hovercolor = '#4E7BA3'; //Default color
     }
     $rules = '
         .editing h3.sectionname {
@@ -849,7 +871,7 @@ function zebra_set_useautohide($css, $useautohide, $hovercolor) {
             -moz-transition: opacity 0.5s linear 0s;
             -ms-transition: opacity 0.5s linear 0s;
             -o-transition: opacity 0.5s linear 0s;
-            transition: opacity 0.5s linear 0s;
+            transition: opacity 0.5s linear 0s; /* half-second fade in */
         }
 
         .editing .block:hover .title .commands,
@@ -876,7 +898,7 @@ function zebra_set_useautohide($css, $useautohide, $hovercolor) {
         .editing .section .summary,
         .editing .sitetopic > .no-overflow {
             padding: 4px!important; /* Add some padding for the hover rules below, !important is necessary to override a rule from "Base" */
-            border: 1px dashed transparent;
+            border: 1px dashed transparent; /* Transparent border to prevent items from moving when showing border */
         }
 
         .editing .block_site_main_menu .content .r0:hover,
@@ -888,11 +910,10 @@ function zebra_set_useautohide($css, $useautohide, $hovercolor) {
             border-color: ' . $hovercolor . '; /* Change the border color around individual activities/resource/summaries */
         }
     ';
-    $tag = '[[setting:useautohide]]';
-    if ($useautohide == 1) {
+    if ($useautohide) { //Setting is "YES"
         $replacement = $rules;
-    } else {
-        $replacement = null;
+    } else { //Setting is "NO"
+        $replacement = null; //NULL so we don't actually output anything to the stylesheet
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -906,19 +927,17 @@ function zebra_set_useautohide($css, $useautohide, $hovercolor) {
  * @return string
  */
 function zebra_set_editingnotify($css, $editingnotify, $hovercolor, $colorscheme) {
+    $tag = '[[setting:editingnotify]]';
     if (is_null($hovercolor)) { //Get hovercolor from settings
-        $hovercolor = '#4E7BA3';
+        $hovercolor = '#4E7BA3'; //Default color
     }
-    if (is_null($colorscheme)) {
-        $colorscheme = 'transparent';
-    }
-    switch($colorscheme) { //Get colorscheme from settings
+    switch($colorscheme) { //Check the colorscheme value from settings
         case 'dark':
-            $colorscheme = 'rgba(0, 0, 0, 0.08)';
+            $colorscheme = 'rgba(0, 0, 0, 0.08)'; //Black
             break;
 
         case 'light':
-            $colorscheme = 'rgba(255, 255, 255, 0.2)';
+            $colorscheme = 'rgba(255, 255, 255, 0.2)'; //White
             break;
 
         default:
@@ -946,11 +965,10 @@ function zebra_set_editingnotify($css, $editingnotify, $hovercolor, $colorscheme
             padding:4px 4px 0 0;
         }
     ';
-    $tag = '[[setting:editingnotify]]';
-    if ($editingnotify == 1) {
+    if ($editingnotify) { //Setting is "YES"
         $replacement = $rules;
-    } else {
-        $replacement = null;
+    } else { //Setting is "NO"
+        $replacement = null; //NULL so we don't actually output anything to the stylesheet
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
@@ -966,7 +984,7 @@ function zebra_set_editingnotify($css, $editingnotify, $hovercolor, $colorscheme
  */
 function zebra_set_customcss($css, $customcss) {
     $tag = '[[setting:customcss]]';
-    $replacement = $customcss;
+    $replacement = $customcss; //All the rules in the CSS box on the settings page
     $css = str_replace($tag, $replacement, $css);
     return $css;
 }
