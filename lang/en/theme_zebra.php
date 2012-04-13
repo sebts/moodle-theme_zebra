@@ -80,7 +80,7 @@ $string['homeicondesc'] = '<p>Show the home icon at the beginning of the custom 
 $string['callink'] = 'Calendar link';
 $string['callinkdesc'] = '<p>Show the date with a link to the calendar at the end of the custom menu.</p>';
 $string['dateformat'] = 'Date format';
-$string['dateformatdesc'] = '<p>Note: This requires callink to be enabled.</p><p>Set a format for displaying the date in the custom menu.  For more information on the date() function please see the php.net docs <a href="http://php.net/manual/en/function.date.php" title="PHP: date - Manual">here</a>.</p>';
+$string['dateformatdesc'] = '<p>Note: This requires <a href="#admin-callink"><code>callink</code></a> to be enabled.</p><p>Set a format for displaying the date in the custom menu.  For more information on the date() function please see the php.net docs <a href="http://php.net/manual/en/function.date.php" title="PHP: date - Manual">here</a>.</p>';
 
 $string['colorsinfo'] = 'General colors settings';
 $string['colorsinfodesc'] = '<p>Change the settings for the colors of the page.</p><p>You can use any valid color type like <code>red</code>, <code>#FF0000</code>, <code>rgb(0, 255, 255)</code>, or <code>rgba(0, 255, 255, 1.0)</code>.</p>';
@@ -122,7 +122,7 @@ $string['warningfontcolordesc'] = '<p>Sets the font color used for things that g
 $string['seriousfontcolor'] = 'Serious font color';
 $string['seriousfontcolordesc'] = '<p>Sets the font color used for things that generate a serious notice.  Generally this is <code>.statusserious</code>.</p>';
 $string['criticalfontcolor'] = 'Critical font color';
-$string['criticalfontcolordesc'] = '<p>Sets teh font color used for things that generate a critical notice.  Generally this is <code>.statuscritical</code>, <code>.red</code>, and <code>.notifyproblem</code>.</p>';
+$string['criticalfontcolordesc'] = '<p>Sets the font color used for things that generate a critical notice.  Generally this is <code>.statuscritical</code>, <code>.red</code>, and <code>.notifyproblem</code>.</p>';
 
 $string['schemeinfo'] = 'Color scheme settings';
 $string['schemeinfodesc'] = '<p>Change the settings for the color scheme of the page.</p>';
@@ -154,10 +154,16 @@ $string['usecf'] = 'Prompt users to install Google Chrome Frame';
 $string['usecfdesc'] = '<p>Google <a href="http://code.google.com/chrome/chromeframe/">Chrome Frame</a> is an Internet Explorer plugin that installs the Chromium Rendering engine on older browsers and enables them to use modern web technologies.</p>';
 
 $string['cfmaxversion'] = 'Maximum IE version';
-$string['cfmaxversiondesc'] = '<p>Note: <code>usecf</code> must be enabled for this to work.</p><p>This is the maximum version of Internet Explorer to prompt users to install Chrome Frame.  Versions above this will not be prompted.</p>';
+$string['cfmaxversiondesc'] = '<p>Note: <a href="#admin-usecf"><code>usecf</code></a> must be enabled for this to work.</p><p>This is the maximum version of Internet Explorer to prompt users to install Chrome Frame.  Versions above this will not be prompted.</p>';
 
 $string['miscinfo'] = 'Misc. settings';
 $string['miscinfodesc'] = '<p>Change the settings for miscellaneous things.</p>';
+
+$string['useautohide'] = 'Include Autohide CSS';
+$string['useautohidedesc'] = '<p>Include the Autohide rules for users in Edit Mode.</p><p>Read more about this feature <a href="http://moodle.org/mod/forum/discuss.php?d=197470">here</a> or <a href="http://www.moodlenews.com/2012/a-moodle-administrators-dream-come-true-autohide-for-moodle-2-2/">here</a>.</p>';
+
+$string['editingnotify'] = 'Include Editing Mode CSS';
+$string['editingnotifydesc'] = '<p>This is a complementary series of rules for <a href="#admin-useautohide"><code>Autohide</code></a> that provides a visual indicator that the user is in Edit Mode.</p>';
 
 $string['customcss'] = 'Custom CSS';
 $string['customcssdesc'] = '<p>Input any custom CSS here.</p><p>CSS input here is the very last thing called on the page and should not be overwritten by any other rules.  If your rules are not displaying please try the following:<ol><li>check your syntax</li><li>add <code>!important</code> to your rule</li><li>manually append the rule to extra.css</li></ol></p>';

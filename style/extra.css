@@ -61,6 +61,15 @@
 	padding: 0 10px;
 }
 
+/* Autohide CSS: see lib.php, function set_zebra_useautohide
+ * and function set_zebra_
+ * for the specific rules
+ */
+
+[[setting:useautohide]]
+
+[[setting:editingnotify]]
+
 /**
  * Custom CSS
  * This is the very last piece of CSS loaded, so if something looks weird,

@@ -94,3 +94,15 @@
 	top: 2px;
 	right: 2px;
 }
+
+.path-course-view .content .summary .no-overflow {
+    float: left; /* Make paragraphs the width of their content */
+}
+
+.path-course-view .content .summary .iconsmall {
+    margin-left: 8px; /* Add margin between the summary text and the edit icon */
+}
+
+.path-course ul.section {
+    clear: both; /* Clear the float in the summary text */
+}
