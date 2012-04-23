@@ -116,7 +116,7 @@
 }
 
 #custommenu .home div {
-    background: url([[pix:theme|menu/home_icon]]) no-repeat scroll center center;
+    background: url([[setting:homeiconcolor]]) no-repeat scroll center center;
     text-indent: -9999px;
     line-height: 30px;
     width: 18px;
