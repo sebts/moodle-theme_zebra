@@ -68,7 +68,7 @@ function xmldb_theme_zebra_upgrade($oldversion) {
 	$currentsetting = get_config('theme_zebra');
 	set_config('userespond', 0, 'theme_zebra'); // Create userespond
 	set_config('usecf', 0, 'theme_zebra'); // Create usecf
-	set_config('maxcfversion', 'ie6', 'theme_zebra'); // Create maxcfversion
+	set_config('maxcfversion', 6, 'theme_zebra'); // Create maxcfversion
 	upgrade_plugin_savepoint(true, 2012011500, 'theme', 'zebra');
     }
 
