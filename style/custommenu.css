@@ -93,10 +93,15 @@
 
 /* Sub Sub Menu */
 
+#custommenu .yui3-menu-label,
+#custommenu .yui3-menu .yui3-menu .yui3-menu-label {
+    background-image: url([[setting:vmenuiconcolor]]);
+}
+
 #custommenu .custom_menu_submenu .yui3-menuitem-active,
 #custommenu .custom_menu_submenu .yui3-menu-label-active,
 #custommenu .custom_menu_submenu .yui3-menu-label-menuvisible {
-    background: url([[pix:theme|horizontal-menu-submenu-indicator]]) no-repeat right center scroll [[setting:linkcolor]] !important; /* Prevent CSS3 sheet from overriding this */
+    background: url([[setting:hmenuiconcolor]]) no-repeat right center scroll [[setting:linkcolor]] !important; /* Prevent CSS3 sheet from overriding this */
     border-top: 1px solid [[setting:linkcolor]];
     border-bottom: 1px solid [[setting:linkcolor]];
     box-shadow: none;

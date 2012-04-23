@@ -79,6 +79,22 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_homeiconcolor($css, $menucolorscheme);
 
+    //Get the hmenuiconcolor from menucolorscheme
+    if (!empty($theme->settings->menucolorscheme)) {
+        $menucolorscheme = $theme->settings->menucolorscheme;
+    } else {
+        $menucolorscheme = null;
+    }
+    $css = zebra_set_hmenuiconcolor($css, $menucolorscheme);
+
+    //Get the vmenuiconcolor from menucolorscheme
+    if (!empty($theme->settings->menucolorscheme)) {
+        $menucolorscheme = $theme->settings->menucolorscheme;
+    } else {
+        $menucolorscheme = null;
+    }
+    $css = zebra_set_vmenuiconcolor($css, $menucolorscheme);
+
     //Get the body background color from settings
     if (!empty($theme->settings->bodybgcolor)) {
         $bodybgcolor = $theme->settings->bodybgcolor;
@@ -762,20 +778,84 @@ function zebra_set_homeiconcolor($css, $menucolorscheme) {
             break;
 
         case 'none':
-            $replacement = $OUTPUT->pix_url('menu/home-icon-light', 'theme');;
+            $replacement = $OUTPUT->pix_url('menu/home-icon-light', 'theme');
             break;
 
         case 'dark':
-            $replacement = $OUTPUT->pix_url('menu/home-icon', 'theme');; //Black
+            $replacement = $OUTPUT->pix_url('menu/home-icon', 'theme'); //Black
             break;
 
         case 'light':
-            $replacement = $OUTPUT->pix_url('menu/home-icon-light', 'theme');; //White
+            $replacement = $OUTPUT->pix_url('menu/home-icon-light', 'theme'); //White
             break;
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
+}
 
+
+/**
+ * Sets the color of the horizontal menu indicator in the custommenu based on the
+ * settings value of menucolorscheme
+ *
+ * @param string $css
+ * @param mixed $menucolorscheme
+ * @return string
+ */
+function zebra_set_hmenuiconcolor($css, $menucolorscheme) {
+    global $OUTPUT;
+    $tag = '[[setting:hmenuiconcolor]]';
+    switch($menucolorscheme) { //Get value from settings page
+        default:
+            $replacement = $OUTPUT->pix_url('menu/horizontal-menu-submenu-indicator-light', 'theme'); //Default value
+            break;
+
+        case 'none':
+            $replacement = $OUTPUT->pix_url('menu/horizontal-menu-submenu-indicator-light', 'theme');
+            break;
+
+        case 'dark':
+            $replacement = $OUTPUT->pix_url('menu/horizontal-menu-submenu-indicator', 'theme'); //Black
+            break;
+
+        case 'light':
+            $replacement = $OUTPUT->pix_url('menu/horizontal-menu-submenu-indicator-light', 'theme'); //White
+            break;
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
+}
+
+/**
+ * Sets the color of the vertical menu indicator in the custommenu based on the
+ * settings value of menucolorscheme
+ *
+ * @param string $css
+ * @param mixed $menucolorscheme
+ * @return string
+ */
+function zebra_set_vmenuiconcolor($css, $menucolorscheme) {
+    global $OUTPUT;
+    $tag = '[[setting:vmenuiconcolor]]';
+    switch($menucolorscheme) { //Get value from settings page
+        default:
+            $replacement = $OUTPUT->pix_url('menu/vertical-menu-submenu-indicator-light', 'theme'); //Default value
+            break;
+
+        case 'none':
+            $replacement = $OUTPUT->pix_url('menu/vertical-menu-submenu-indicator-light', 'theme');
+            break;
+
+        case 'dark':
+            $replacement = $OUTPUT->pix_url('menu/vertical-menu-submenu-indicator', 'theme'); //Black
+            break;
+
+        case 'light':
+            $replacement = $OUTPUT->pix_url('menu/vertical-menu-submenu-indicator-light', 'theme'); //White
+            break;
+    }
+    $css = str_replace($tag, $replacement, $css);
+    return $css;
 }
 
 /**
