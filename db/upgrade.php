@@ -23,7 +23,7 @@
  */
 
 defined('MOODLE_INTERNAL') || die();
- 
+
 function xmldb_theme_zebra_upgrade($oldversion) {
     global $CFG, $DB;
 
@@ -66,7 +66,7 @@ function xmldb_theme_zebra_upgrade($oldversion) {
         set_config('footerbgcolor', $currentsetting->seventhcolor, 'theme_zebra');
         // Remove seventhcolor
         unset_config('seventhcolor', 'theme_zebra');
-        
+
         // Upgrade version number
         upgrade_plugin_savepoint(true, 2011111004, 'theme', 'zebra');
     }
@@ -108,6 +108,13 @@ function xmldb_theme_zebra_upgrade($oldversion) {
 
 		upgrade_plugin_savepoint(true, 2012011501, 'theme', 'zebra');
 	}
- 
+
+	if ($oldversion < 2012042300) { // New Settings in 2.2.5
+	    $currentsetting = get_config('theme_zebra');
+	    unset_config('colwidth', 'theme_zebra'); //Remove the old colwidth
+	    set_config('colwidth', '200px', 'theme_zebra'); //Set the new colwidth
+	    upgrade_plugin_savepoint(true, 2012042300, 'theme', 'zebra');
+	}
+
     return true;
 }

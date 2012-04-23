@@ -813,7 +813,7 @@ function zebra_set_pagemaxwidth($css, $pagemaxwidth) {
 function zebra_set_colwidth($css, $colwidth) {
     $tag = '[[setting:colwidth]]';
     if (is_null($colwidth)) {
-        $replacement = 200; //Default width
+        $replacement = '200px'; //Default width
     } else {
         $replacement = $colwidth; //Settings page value
     }
@@ -831,9 +831,10 @@ function zebra_set_colwidth($css, $colwidth) {
 function zebra_set_doublecolwidth($css, $colwidth) {
     $tag = '[[setting:doublecolwidth]]';
     if (is_null($colwidth)) { //Get the value from the settings page
-        $colwidth = 200; //Default width
+        $colwidth = '200px'; //Default width
     }
-    $replacement = $colwidth * 2; //Multiply it by two
+    preg_match('/(?P<int>\d+)(?P<type>\w+)/', $colwidth, $matches); //Divide the value from the type
+    $replacement = $matches['int'] * 2 . $matches['type']; //Multiply it by two
     $css = str_replace($tag, $replacement, $css);
     return $css;
 }

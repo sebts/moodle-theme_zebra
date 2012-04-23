@@ -313,7 +313,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_zebra/colwidth';
     $title = get_string('colwidth','theme_zebra');
     $description = get_string('colwidthdesc','theme_zebra');
-    $default = '200';
+    $default = '200px';
     $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_CLEAN, 5);
     $settings->add($setting);
 

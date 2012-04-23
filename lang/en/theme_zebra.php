@@ -145,7 +145,7 @@ $string['threecolmindesc'] = '<p>Min width for three column layout.  Display ord
 $string['pagemaxwidth'] = 'Page max width';
 $string['pagemaxwidthdesc'] = '<p>Max width for page content.</p>';
 $string['colwidth'] = 'Column width';
-$string['colwidthdesc'] = '<p>Width of columns in pixels.  This is <code>region-pre</code> and <code>region-post</code>.</p>';
+$string['colwidthdesc'] = '<p>Width of columns.  This is <code>region-pre</code> and <code>region-post</code>.</p>';
 
 $string['compatinfo'] = 'Browser compatibility settings';
 $string['compatinfodesc'] = '<p>Various settings to attempt to improve browser compatibility with this theme for a more consistent user experience.</p>';
