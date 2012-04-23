@@ -310,7 +310,11 @@ function zebra_set_logourl($css, $logourl) {
             $rel = strpos($logourl, $relative); // Check to see if a relative path is used
             if($rel !== 0) { // Doesn't start with a slash
                 $replacement = $OUTPUT->pix_url("$logourl", 'theme'); // Using Moodle output
+            } else {
+                $replacement = $logourl;
             }
+        } else {
+            $replacement = $logourl;
         }
     }
     $css = str_replace($tag, $replacement, $css);
@@ -339,7 +343,7 @@ function zebra_set_logourlheight($css, $logourlheight) {
  * Sets the body background image url
  *
  * @param string $css
- * @param mixed $bodybackgroundurl
+ * @param mixed $backgroundurl
  * @return string
  */
 function zebra_set_backgroundurl($css, $backgroundurl) {
@@ -356,7 +360,11 @@ function zebra_set_backgroundurl($css, $backgroundurl) {
             $rel = strpos($backgroundurl, $relative); // Check to see if a relative path is used
             if($rel !== 0) { // Doesn't start with a slash
                 $replacement = $OUTPUT->pix_url("$backgroundurl", 'theme'); // Using Moodle output
+            } else {
+                $replacement = $backgroundurl;
             }
+        } else {
+            $replacement = $backgroundurl;
         }
     }
     $css = str_replace($tag, $replacement, $css);
