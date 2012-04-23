@@ -111,6 +111,10 @@
 	border-color: [[setting:linkcolor]];
 }
 
+#page-admin-index .adminwarning.maturityinfo.maturity50 {
+	background-color: [[setting:warningfontcolor]];
+}
+
 #page-admin-index #plugins-check .missingfromdisk .displayname {
 	background-color: [[setting:criticalfontcolor]];
 }
@@ -205,19 +209,19 @@
 		float: left;
 		text-align: right;
 	}
-	
+
 	#adminsettings .form-item .form-setting {
 		margin: 0 0 0 224px;
 		padding: 0 0 0 4px;
 		border-left: 1px solid [[setting:bodybgcolor]];
 	}
-	
+
 	#adminsettings .form-item .form-description {
 		margin: 0 0 0 224px;
 		padding: 4px 0 0 4px;
 		border-left: 1px solid [[setting:bodybgcolor]];
 	}
-	
+
 	.form-buttons {
 		margin: 4px 0 0 229px;
 	}
