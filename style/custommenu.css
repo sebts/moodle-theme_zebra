@@ -107,6 +107,13 @@
     box-shadow: none;
 }
 
+.yui3-skin-sam .yui3-menu-label,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-label,
+.yui3-skin-sam .yui3-menuitem-content,
+.yui3-skin-sam .yui3-menu .yui3-menu .yui3-menuitem-content {
+    padding: 0 2em; /* Increase side padding to allow for indicators */
+}
+
 /* Home Link */
 
 #custommenu .home {
