@@ -54,7 +54,7 @@ $hascallink = ($PAGE->theme->settings->callink); //Check the theme settings to d
 if (empty($hascallink)) {
     $bodyclasses[] = 'no_callink';
 } else {
-    $calurl = new moodle_url('calendar/view.php');
+    $calurl = new moodle_url('/calendar/view.php');
 }
 $dateformat = $PAGE->theme->settings->dateformat; //Check the theme settings for the date format
 if (empty($dateformat)) {
