@@ -36,11 +36,14 @@
 }
 
 .forumpost .row .left .grouppictures a {
-    border-right: 1px solid [[setting:bodybgcolor]];
-    padding: 4px 6px 4px 3px; /* Add padding between group pictures */
+    padding: 0 7px 4px 3px; /* Add padding between group pictures */
     margin: 0 4px 0 0; /* Margin between border and post content */
     width: 20px; /* 35 -4 padding -2 border */
     height: 20px; /* Size of the images */
+}
+
+.forumpost .row .left .grouppictures a:last-of-type {
+    padding-bottom: 0;
 }
 
 .forumpost .header {
