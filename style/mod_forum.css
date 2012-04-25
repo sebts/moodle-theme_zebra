@@ -35,20 +35,12 @@
     width: auto;
 }
 
-.forumpost .row .left .grouppictures {
-    border-right: 1px solid [[setting:bodybgcolor]];
-    width: 35px;
-    margin: 0 4px 0 -6px; /* margin right for post content, margin left +2 for borders */
-    padding: 4px 0; /* Have the border extend above and below the group pictures */
-}
-
 .forumpost .row .left .grouppictures a {
-    margin: 0 0 4px 0; /* Add a margin between group pictures */
+    border-right: 1px solid [[setting:bodybgcolor]];
+    padding: 4px 6px 4px 3px; /* Add padding between group pictures */
+    margin: 0 4px 0 0; /* Margin between border and post content */
+    width: 20px; /* 35 -4 padding -2 border */
     height: 20px; /* Size of the images */
-}
-
-.forumpost .row .left .grouppictures a:last-of-type {
-    margin: 0; /* Don't have a margin on the last picture */
 }
 
 .forumpost .header {
