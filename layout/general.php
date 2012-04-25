@@ -31,20 +31,19 @@ require_once('header.php'); ?>
                 <div id="page-header" class="clearfix">
                     <h1 class="headermain"><?php echo $headeralt; ?></h1>
                     <div id="profileblock">
-                        <?php if (isloggedin()) {
-                            if ($haslogininfo) {
+			<?php if ($haslogininfo) {
+			    if (isloggedin()) {
 				if ($showuserpic) {
 				    echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
+
 				}
-                                echo $OUTPUT->login_info();
-                            }
-                            if ($haslangmenu) {
-                                echo $OUTPUT->lang_menu();
-                            }
-                            echo $PAGE->headingmenu;
-                        } else {
+			    }
                             echo $OUTPUT->login_info();
-                        } ?>
+			}
+			if ($haslangmenu) {
+			    echo $OUTPUT->lang_menu();
+			}
+			echo $PAGE->headingmenu; ?>
                     </div>
                 </div>
                 <div id="page-border-wrapper">
