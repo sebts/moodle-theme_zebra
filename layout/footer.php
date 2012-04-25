@@ -44,23 +44,16 @@
             <?php } ?>
         </div>
     </div>
-    <?php if ($usecf) {
-	$ieversion = strpos($PAGE->bodyclasses, $cfmaxversion);
-	if ($ieversion !== false) {
-	    $PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
-	    <script>
-		//<![CDATA[
-		    window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
-		//]]>
-	    </script>
-	<?php }
-    }
-    if ($userespond) {
-	$usingie = strpos($PAGE->bodyclasses, 'ie ie');
-	$usingie9 = strpos($PAGE->bodyclasses, 'ie9'); //Make sure the user isn't using IE9 because it can use @media declarations natively
-	if (($usingie !== false) && ($usingie9 === false)) {
-	    $PAGE->requires->js('/theme/zebra/javascript/respond.js');
-	}
+    <?php if ($requirescf) {
+	$PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
+	<script>
+	    //<![CDATA[
+		window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
+	    //]]>
+	</script>
+    <?php }
+    if ($requiresrespond) {
+	$PAGE->requires->js('/theme/zebra/javascript/respond.js');
     }
     if ($usingios) { //Check if the user is using iOS and serve a JS to fix a viewport re-flow bug
 	$PAGE->requires->js('/theme/zebra/javascript/iOS-viewport-fix.js');

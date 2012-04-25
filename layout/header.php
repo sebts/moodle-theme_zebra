@@ -70,7 +70,12 @@ $showbranding = ($PAGE->theme->settings->branding); //Check the theme settings t
 $userespond = ($PAGE->theme->settings->userespond); //Check the theme settings to see if respond.js should be called
 $usecf = ($PAGE->theme->settings->usecf); //Check the theme settings to see if Chrome Frame should be called
 $cfmaxversion = $PAGE->theme->settings->cfmaxversion; //Check the theme settings to see which versions of IE get prompted for Chrome Frame
+$ieversion = strpos($PAGE->bodyclasses, $cfmaxversion);
+$usingie = strpos($PAGE->bodyclasses, 'ie ie'); //Check if the user is using IE
+$usingie9 = strpos($PAGE->bodyclasses, 'ie9'); //Make sure the user isn't using IE9 because it can use @media declarations natively
 $usingios = (preg_match('/iPhone|iPod|iPad/i', $_SERVER['HTTP_USER_AGENT']));
+$requiresrespond = ($userespond && $usingie && !$usingie9); //Check all the options necessary to print respond.js
+$requirescf = ($usecf && $usingie && $ieversion); // Check all the options necessary to print chrome frame
 
 echo $OUTPUT->doctype(); ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
