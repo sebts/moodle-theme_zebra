@@ -23,6 +23,10 @@
 
 /* All Views */
 
+html {
+    height: 100%; /* Prevent pages with small content from cutting off background image: doesn't work until a body tag has a height too */
+}
+
 body {
     padding: 0 10px 10px 10px;
 }
@@ -220,6 +224,11 @@ body {
 }
 
 /* Simple Login Layout */
+
+.path-login.pagelayout-simple-login {
+    height: 100%; /* Show the full background image if it's bigger than #page */
+    overflow: hidden; /* Don't show scrollbars though */
+}
 .path-login.pagelayout-simple-login #page {
     display: table; /* Force the page width to that of the content */
 }
