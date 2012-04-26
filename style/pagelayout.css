@@ -218,3 +218,20 @@ body {
     direction: ltr;
     overflow-x: hidden;
 }
+
+/* Simple Login Layout */
+.path-login.pagelayout-simple-login #page {
+    display: table; /* Force the page width to that of the content */
+}
+
+.path-login.pagelayout-simple-login .loginbox {
+    max-width: [[setting:twocolmin]]; /* single column width */
+}
+
+.path-login.pagelayout-simple-login .loginbox.twocolumns {
+    max-width: [[setting:threecolmin]]; /* two column width */
+}
+
+.path-login .loginbox.twocolumns .loginpanel {
+    border-right: 0 none; /* Remove the border between the columns */
+}

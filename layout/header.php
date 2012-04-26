@@ -21,18 +21,19 @@
  * @copyright  2011 Danny Wahl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+$simplelogin = (($PAGE->theme->settings->simplelogin) && (strpos($PAGE->bodyclasses, 'path-login'))); //Check for simplelogin setting
 
 $hasheading = ($PAGE->heading); //Check for the page title
-$hasnavbar = (empty($PAGE->layout_options['nonavbar']) && $PAGE->has_navbar()); //Check to see if this page-lay has a navbar
-$hasfooter = (empty($PAGE->layout_options['nofooter'])); //Check to see if this page-layout has a footer
+$hasnavbar = (empty($PAGE->layout_options['nonavbar']) && $PAGE->has_navbar() && !$simplelogin); //Check to see if this page-lay has a navbar
+$hasfooter = (empty($PAGE->layout_options['nofooter']) && !$simplelogin); //Check to see if this page-layout has a footer
 $hassidepre = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-pre', $OUTPUT));
 $hassidepost = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-post', $OUTPUT));
-$haslogininfo = (empty($PAGE->layout_options['nologininfo'])); //Check if the login info (user name, etc...) is available in this page-layout
-$haslangmenu = (!empty($PAGE->layout_options['langmenu'])); //Check if the language menu is available in this page-layout
+$haslogininfo = (empty($PAGE->layout_options['nologininfo']) && !$simplelogin); //Check if the login info (user name, etc...) is available in this page-layout
+$haslangmenu = (!empty($PAGE->layout_options['langmenu']) && !$simplelogin); //Check if the language menu is available in this page-layout
 $showsidepre = ($hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT));
 $showsidepost = ($hassidepost && !$PAGE->blocks->region_completely_docked('side-post', $OUTPUT));
 $custommenu = $OUTPUT->custom_menu();
-$hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu)); //Check if this page-layout has a custommenu and if it has content
+$hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu) && !$simplelogin); //Check if this page-layout has a custommenu and if it has content
 $bodyclasses = array();
 if ($showsidepre && !$showsidepost) {
     $bodyclasses[] = 'side-pre-only';
@@ -40,6 +41,9 @@ if ($showsidepre && !$showsidepost) {
     $bodyclasses[] = 'side-post-only';
 } else if (!$showsidepost && !$showsidepre) {
     $bodyclasses[] = 'content-only';
+}
+if ($simplelogin) {
+    $bodyclasses[] = 'pagelayout-simple-login'; //Add class to body tag for styling
 }
 if ($hascustommenu) {
     $bodyclasses[] = 'has_custom_menu';

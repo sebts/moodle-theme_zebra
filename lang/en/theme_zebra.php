@@ -147,6 +147,9 @@ $string['pagemaxwidthdesc'] = '<p>Max width for page content.</p>';
 $string['colwidth'] = 'Column width';
 $string['colwidthdesc'] = '<p>Width of columns.  This is <code>region-pre</code> and <code>region-post</code>.</p>';
 
+$string['simplelogin'] = 'Use a basic login form';
+$string['simplelogindesc'] = '<p>Enabling this option will simply the login page layout by not displaying the header, footer, navbar, lang menu, or custommenu.  This option can be use for sites that require authentication before access to those items is granted.</p>';
+
 $string['compatinfo'] = 'Browser compatibility settings';
 $string['compatinfodesc'] = '<p>Various settings to attempt to improve browser compatibility with this theme for a more consistent user experience.</p>';
 

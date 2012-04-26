@@ -54,7 +54,7 @@ $THEME->layouts = array(
         'file' => 'general.php',
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-pre',
-        'options' => array('langmenu'=>true)
+        'options' => array('langmenu'=>true, 'noblocks'=>true)
     ),
     'standard' => array(
         'file' => 'general.php',
@@ -66,19 +66,19 @@ $THEME->layouts = array(
         'file' => 'general.php',
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-pre',
-        'options' => array()
+        'options' => array('langmenu'=>true)
     ),
     'coursecategory' => array(
         'file' => 'general.php',
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-pre',
-        'options' => array()
+        'options' => array('langmenu'=>true)
     ),
     'incourse' => array(
         'file' => 'general.php',
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-pre',
-        'options' => array()
+        'options' => array('langmenu'=>true)
     ),
     'frontpage' => array(
         'file' => 'general.php',
@@ -90,24 +90,24 @@ $THEME->layouts = array(
         'file' => 'general.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
-        'options' => array()
+        'options' => array('langmenu'=>true)
     ),
     'mydashboard' => array(
         'file' => 'general.php',
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-pre',
-        'options' => array()
+        'options' => array('langmenu'=>true)
     ),
     'mypublic' => array(
         'file' => 'general.php',
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-pre',
-        'options' => array()
+        'options' => array('langmenu'=>true)
     ),
     'login' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true)
+        'options' => array('langmenu'=>true)
     ),
     'popup' => array(
         'file' => 'general.php',
@@ -122,7 +122,7 @@ $THEME->layouts = array(
     'maintenance' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true)
+        'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true)
     ),
     'embedded' => array(
         'file' => 'general.php',
@@ -132,7 +132,7 @@ $THEME->layouts = array(
     'print' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('nofooter'=>true, 'noblocks'=>true)
+        'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true)
     ),
     'redirect' => array(
         'file' => 'general.php',

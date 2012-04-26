@@ -309,6 +309,14 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_CLEAN, 5);
     $settings->add($setting);
 
+    //Set whether or not to use the simple login layout
+    $name = 'theme_zebra/simplelogin';
+    $visiblename = get_string('simplelogin', 'theme_zebra');
+    $title = get_string('simplelogin', 'theme_zebra');
+    $description = get_string('simplelogindesc', 'theme_zebra');
+    $setting = new admin_setting_configcheckbox($name, $visiblename, $description, 0);
+    $settings->add($setting);
+
     //Set column width for region-pre and region-post
     $name = 'theme_zebra/colwidth';
     $title = get_string('colwidth','theme_zebra');
