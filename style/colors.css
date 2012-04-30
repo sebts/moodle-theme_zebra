@@ -30,8 +30,14 @@ body {
     background: url([[setting:backgroundurl]]) no-repeat scroll center top transparent;
 }
 
-#user-pic .defaultuserpic {
-    background-color: [[setting:linkcolor]];
+hr {
+    background-color: [[setting:bodybgcolor]];
+    border-width: 0;
+    color: [[setting:bodybgcolor]];
+    height: 1px;
+    line-height: 0;
+    page-break-after: always;
+    text-align: center;
 }
 
 a,
@@ -44,6 +50,11 @@ a:hover,
 a:active {
     color: [[setting:linkcolor]];
     text-decoration: underline;
+}
+
+
+#user-pic .defaultuserpic {
+    background-color: [[setting:linkcolor]];
 }
 
 #page-border-wrapper a,
