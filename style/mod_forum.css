@@ -72,6 +72,9 @@ span.unread {
 
 .forumpost.unread .maincontent {
     border-color: [[setting:hovercolor]];
+    -moz-box-shadow: 0 2px 3px [[setting:hovercolor]];
+    -webkit-box-shadow: 0 2px 3px [[setting:hovercolor]];
+    box-shadow: 0 2px 3px [[setting:hovercolor]];
 }
 
 .forumpost .picture img {

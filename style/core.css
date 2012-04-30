@@ -90,7 +90,7 @@ table.generalbox {
 }
 
 .navbar {
-    background-color:[[setting:contentbgcolor]];
+    background-color: [[setting:contentbgcolor]];
     border-bottom: 1px solid [[setting:bodybgcolor]];
 }
 
@@ -110,7 +110,7 @@ table.generalbox {
 
 #page-footer {
     background-color: [[setting:footerbgcolor]];
-	padding: 4px 0;
+    padding: 4px 0;
 }
 
 /**
@@ -118,44 +118,44 @@ table.generalbox {
  */
 
 .tabtree {
-	margin: 0 0 8px 0;
+    margin: 0 0 8px 0;
 }
 
 .tabtree ul {
-	margin: 8px 0;
-	padding: 0 0 4px 0;
-	border-bottom: 1px solid [[setting:bodybgcolor]];
+    margin: 8px 0;
+    padding: 0 0 4px 0;
+    border-bottom: 1px solid [[setting:bodybgcolor]];
 }
 
 .tabtree li {
-	margin: 0 0 0 8px;
-	padding: 4px;
-	border: 1px solid [[setting:bodybgcolor]];
+    margin: 0 0 0 8px;
+    padding: 4px;
+    border: 1px solid [[setting:bodybgcolor]];
 }
 
 .tabtree ul li.here {
-	border-bottom: 1px solid [[setting:contentbgcolor]];
+    border-bottom: 1px solid [[setting:contentbgcolor]];
 }
 
 .tabtree ul li.here ul {
-	position:absolute;
-	top:100%;
-	width:100%;
+    position:absolute;
+    top:100%;
+    width:100%;
 }
 
 .tabtree ul li.here .empty {
-	display:none;
+    display:none;
 }
 
 .tabtree .nolink,
 .tabtree .nolink:hover,
 .tabtree .here {
-	color: [[setting:fontcolor]]!important;
-	text-decoration: none!important;
+    color: [[setting:fontcolor]]!important;
+    text-decoration: none!important;
 }
 
 .tabtree + .clearer + .generalbox {
-	border: 0 none;
+    border: 0 none;
 }
 
 
@@ -168,29 +168,29 @@ table.generalbox {
 }
 
 legend {
-	color: [[setting:fontcolor]];
+    color: [[setting:fontcolor]];
 }
 
 .mform fieldset legend {
-	padding: 0 4px;
-	margin-left: 4px;
+    padding: 0 4px;
+    margin-left: 4px;
 }
 
 .mform fieldset.error {
-	border: 1px solid [[setting:criticalfontcolor]];
+    border: 1px solid [[setting:criticalfontcolor]];
 }
 
 .mform .error,
 .mform .required {
-	color: [[setting:criticalfontcolor]];
+    color: [[setting:criticalfontcolor]];
 }
 
 .mform .required .fgroup span label {
-	color: [[setting:fontcolor]];
+    color: [[setting:fontcolor]];
 }
 
 .mform .fdescription.required {
-	color: [[setting:criticalfontcolor]];
+    color: [[setting:criticalfontcolor]];
 }
 
 /**
@@ -198,11 +198,11 @@ legend {
  */
 
 #help hr {
-	background: #CCC;
+    background: #CCC;
 }
 
 #help #emoticons li{
-	border-left: 3px solid gray;
+    border-left: 3px solid gray;
 }
 
 /**
@@ -210,15 +210,15 @@ legend {
  */
 
 .comment-meta span {
-	color: gray;
+    color: gray;
 }
 
 .comment-paging .curpage {
-	border: 1px solid #CCC;
+    border: 1px solid #CCC;
 }
 
 .comment-delete-confirm {
-	background: #EEE;
+    background: #EEE;
 }
 
 /**
@@ -226,7 +226,7 @@ legend {
  */
 
 .completion-expired {
-	background: #FFDDDD;
+    background: #FFDDDD;
 }
 
 /**
@@ -235,24 +235,24 @@ legend {
 
 span.flagged-tag,
 span.flagged-tag a {
-	color: [[setting:criticalfontcolor]];
+    color: [[setting:criticalfontcolor]];
 }
 
 #relatedtags-autocomplete .yui-ac-content {
-	border: 1px solid #404040;
-	background: #FFF;
+    border: 1px solid #404040;
+    background: #FFF;
 }
 
 #relatedtags-autocomplete .ysearchquery {
-	color: #808080;
+    color: #808080;
 }
 
 #relatedtags-autocomplete .yui-ac-shadow {
-	background: #A0A0A0;
+    background: #A0A0A0;
 }
 
 #relatedtags-autocomplete li.yui-ac-highlight{
-	background: #FFFFCC;
+    background: #FFFFCC;
 }
 
 /*
@@ -260,24 +260,24 @@ span.flagged-tag a {
  */
 
 .path-backup .notification.dependencies_enforced {
-	color: [[setting:criticalfontcolor]];
+    color: [[setting:criticalfontcolor]];
 }
 
 .path-backup .backup_progress {
-	margin-bottom: 4px;
+    margin-bottom: 4px;
 }
 
 .path-backup .backup_progress span.backup_stage,
 .path-backup .backup_progress .arrow {
-	color: [[setting:bodybgcolor]];
+    color: [[setting:bodybgcolor]];
 }
 
 .path-backup .backup_progress .backup_stage.backup_stage_current,
 .path-backup .backup_progress span.backup_stage.backup_stage_complete,
 .path-backup .backup_progress .backup_stage_current + .accesshide + .arrow,
 .path-backup .backup_progress .backup_stage_complete + .accesshide + .arrow {
-	color: [[setting:fontcolor]];
-	font-weight: normal;
+    color: [[setting:fontcolor]];
+    font-weight: normal;
 }
 
 /**
@@ -285,7 +285,7 @@ span.flagged-tag a {
  */
 
 #webservice-doc-generator td {
-	border: 0px solid [[setting:fontcolor]];
+    border: 0px solid [[setting:fontcolor]];
 }
 
 /**
@@ -293,12 +293,12 @@ span.flagged-tag a {
  */
 
 #helppopupbox {
-	background-color: [[setting:contentbgcolor]];
-	border: 1px solid [[setting:linkcolor]];
+    background-color: [[setting:contentbgcolor]];
+    border: 1px solid [[setting:linkcolor]];
 }
 
 #helppopupbox .yui3-widget-bd {
-	border-top: 1px solid transparent;
+    border-top: 1px solid transparent;
 }
 
 /**
@@ -307,24 +307,11 @@ span.flagged-tag a {
 
 #custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content,
 #custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content .ul {
-	border: 1px solid [[setting:fontcolor]];
+    border: 1px solid [[setting:fontcolor]];
 }
 
 #custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu {
-	background-color: #FFF;
-}
-
-/**
- * Fix for broken YUI images in the menunav component
- */
-
-#custommenu .yui3-menu-label,
-#custommenu .yui3-menu .yui3-menu .yui3-menu-label {
-	background-image: url([[pix:theme|menu/vertical-menu-submenu-indicator]]);
-}
-
-#custommenu .yui3-menu .yui3-menu .yui3-menu-label-menuvisible {
-	background-image: url([[pix:theme|menu/horizontal-menu-submenu-indicator]]);
+    background-color: #FFF;
 }
 
 /**
@@ -332,17 +319,17 @@ span.flagged-tag a {
  */
 
 .smartselect .smartselect_mask {
-	background-color: #FFF;
+    background-color: #FFF;
 }
 
 .smartselect .smartselect_menu,
 .smartselect .smartselect_submenu {
-	border: 1px solid #000;
-	background-color: #FFF;
+    border: 1px solid #000;
+    background-color: #FFF;
 }
 
 .smartselect .smartselect_menu_content ul li a {
-	color: #333;
+    color: #333;
 }
 
 /**
@@ -350,79 +337,62 @@ span.flagged-tag a {
  */
 
 .backup-restore .backup-section {
-	border: 1px solid [[setting:bodybgcolor]];
-	background-color: transparent;
+    border: 1px solid [[setting:bodybgcolor]];
+    background-color: transparent;
 }
 
 .backup-restore .backup-section > h2.header {
-	border-bottom: 0 none;
+    border-bottom: 0 none;
 }
 
 .backup-restore .backup-section .backup-sub-section {
-	background-color: transparent;
-	border: 0 none;
+    background-color: transparent;
+    border: 0 none;
 }
 
 .backup-restore .backup-section .backup-sub-section h3 {
-	border-bottom: 1px solid [[setting:bodybgcolor]];
-	background-color: transparent;
+    border-bottom: 1px solid [[setting:bodybgcolor]];
+    background-color: transparent;
 }
 .backup-restore .detail-pair-label {
-	color: [[setting:fontcolor]];
+    color: [[setting:fontcolor]];
 }
 
 .backup-restore .detail-pair-value > .sub-detail {
-	color: [[setting:fontcolor]];
+    color: [[setting:fontcolor]];
 }
 
 .restore-course-search .rcs-results {
-	border: 1px solid [[setting:bodybgcolor]];
+    border: 1px solid [[setting:bodybgcolor]];
 }
 
 .restore-course-search .rcs-results .paging {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 .restore-course-category .rcs-results {
-	border: 1px solid [[setting:bodybgcolor]];
+    border: 1px solid [[setting:bodybgcolor]];
 }
 
 .restore-course-category .rcs-results .paging {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 .corelightbox {
-	background-color: #CCC;
+    background-color: #CCC;
 }
 
 .restore-precheck-notices {
-	margin-bottom: 4px;
+    margin-bottom: 4px;
 }
 
-/**
- * IE - Overide for RTL layout
- */
+/* Table rows */
+.r0,
+.odd {
+    background-color: [[setting:colorscheme]];
+}
 
-/* Fix YUI 2 Treeview for Right to left languages */
-
-.dir-rtl .ygtvtn,
-.dir-rtl .ygtvtm,
-.dir-rtl .ygtvtmh,
-.dir-rtl .ygtvtmhh,
-.dir-rtl .ygtvtp,
-.dir-rtl .ygtvtph,
-.dir-rtl .ygtvtphh,
-.dir-rtl .ygtvln,
-.dir-rtl .ygtvlm,
-.dir-rtl .ygtvlmh,
-.dir-rtl .ygtvlmhh,
-.dir-rtl .ygtvlp,
-.dir-rtl .ygtvlph,
-.dir-rtl .ygtvlphh,
-.dir-rtl .ygtvdepthcell,
-.dir-rtl .ygtvok,
-.dir-rtl .ygtvok:hover,
-.dir-rtl .ygtvcancel,
-.dir-rtl .ygtvcancel:hover {
-	background-image: url([[pix:theme|core/yui2-treeview-sprite-rtl]]);
+.block .r0,
+#dock .r0 {
+    background: none;
 }

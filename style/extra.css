@@ -47,6 +47,10 @@
 	width: 80px;
 }
 
+#user-pic .defaultuserpic {
+    background-color: [[setting:linkcolor]];
+}
+
 .langmenu {
 	margin-top: 5px;
 }
@@ -61,9 +65,9 @@
 	padding: 0 10px;
 }
 
-/* Autohide CSS: see lib.php, function set_zebra_useautohide
- * and function set_zebra_
- * for the specific rules
+/**
+ * Autohide CSS
+ * see lib.php, function set_zebra_useautohide for the specific rules
  */
 
 [[setting:useautohide]]
