@@ -23,32 +23,43 @@
 
 /* Forum */
 
-.forumpost {
+.path-mod-forum .forumheaderlist td {
     border: 0 none;
 }
 
-.forumpost .picture img {
-    margin: 0;
+.path-mod-forum .forumheaderlist {
+    border: 1px solid [[setting:bodybgcolor]];
 }
 
-.forumpost .row .left {
-    width: auto;
-}
-
-.forumpost .row .left .grouppictures a {
-    padding: 0 7px 4px 3px; /* Add padding between group pictures */
-    margin: 0 4px 0 0; /* Margin between border and post content */
-    width: 20px; /* 35 -4 padding -2 border */
-    height: 20px; /* Size of the images */
-}
-
-.forumpost .row .left .grouppictures a:last-of-type {
-    padding-bottom: 0;
+.forumpost {
+    border: 0 none;
 }
 
 .forumpost .header {
     height: 35px;
     border-bottom: 3px solid;
+    background-color: [[setting:linkcolor]];
+    border-bottom-color: [[setting:bodybgcolor]];
+}
+
+.forumpost.unread .header {
+    border-color: [[setting:hovercolor]];
+}
+
+span.unread {
+    background-color: [[setting:hovercolor]];
+}
+
+.forumpost .header .subject {
+    color: [[setting:contentbgcolor]];
+}
+
+.forumpost .header .author {
+    color: [[setting:bodybgcolor]];
+}
+
+.forumpost .header a {
+    color: [[setting:contentbgcolor]];
 }
 
 .forumpost .maincontent {
@@ -56,6 +67,15 @@
     width: auto;
     border-width: 0 1px 1px;
     border-style: solid;
+    border-color: [[setting:bodybgcolor]];
+}
+
+.forumpost.unread .maincontent {
+    border-color: [[setting:hovercolor]];
+}
+
+.forumpost .picture img {
+    margin: 0;
 }
 
 .forumpost .row .options {
@@ -74,4 +94,19 @@
 
 .forumpost .row .options .link {
     float: right;
+}
+
+.forumpost .row .left {
+    width: auto;
+}
+
+.forumpost .row .left .grouppictures a {
+    padding: 0 7px 4px 3px; /* Add padding between group pictures */
+    margin: 0 4px 0 0; /* Margin between border and post content */
+    width: 20px; /* 35 -4 padding -2 border */
+    height: 20px; /* Size of the images */
+}
+
+.forumpost .row .left .grouppictures a:last-of-type {
+    padding-bottom: 0;
 }

@@ -67,47 +67,6 @@ a:active {
     color: [[setting:hovercolor]];
 }
 
-.forumpost .header {
-    background-color: [[setting:linkcolor]];
-    border-bottom-color: [[setting:bodybgcolor]];
-}
-
-.forumpost.unread .header {
-    border-color: [[setting:hovercolor]];
-}
-
-.forumpost .maincontent {
-    border-color: [[setting:bodybgcolor]];
-}
-
-.forumpost.unread .maincontent {
-    border-color: [[setting:hovercolor]];
-}
-
-.forumpost .header .subject {
-    color: [[setting:contentbgcolor]];
-}
-
-.forumpost .header .author {
-    color: [[setting:bodybgcolor]];
-}
-
-.forumpost .header a {
-    color: [[setting:contentbgcolor]];
-}
-
-.path-mod-forum .forumheaderlist td {
-    border: 0 none;
-}
-
-.path-mod-forum .forumheaderlist {
-    border: 1px solid [[setting:bodybgcolor]];
-}
-
-span.unread {
-    background-color: [[setting:hovercolor]];
-}
-
 .r0,
 .odd {
     background-color: [[setting:colorscheme]];
