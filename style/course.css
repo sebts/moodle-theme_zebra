@@ -69,7 +69,7 @@
     clear: both; /* Clear the float in the summary text */
 }
 
-.path-course .section .left > div {
+.path-course .section .left {
     padding-top: 1em;
 }
 
