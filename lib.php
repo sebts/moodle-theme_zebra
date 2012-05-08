@@ -989,7 +989,7 @@ function zebra_set_useautohide($css, $useautohide, $hovercolor) {
         .editing .section .left a, /* Move Controls */
         .editing .section .right a, /* Right Side Visibility Controls */
         .editing .section .right div,
-        .editing .section .summary a, /* Edit Section Summary */
+        .editing .section .summary a[title~="Edit"], /* Edit Section Summary */
         .editing .section .section_add_menus, /* Add Resource/Activity dropdowns */
         .editing .section .activity .commands, /* Individual activity and resource controls */
         .editing .sitetopic > .no-overflow + a,
