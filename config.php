@@ -44,7 +44,8 @@ $THEME->sheets = array(
     'dock',         //Derived from Rebase
     'mod_forum',    //Overrides for forum
     'extra',        //Extra stuff that doesn't fit the above
-    'ie'           //Special Internet Explorer rules
+    'ie',            //Special Internet Explorer rules
+    'import'        //Special import rules that come from lib
 );
 
 $THEME->layouts = array(
