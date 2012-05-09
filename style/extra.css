@@ -66,6 +66,13 @@
 }
 
 /**
+ * autohide CSS
+ * This adds the special autohide css in lib.php if the setting is enabled.
+ */
+
+[[setting:useautohide]]
+
+/**
  * Custom CSS
  * This is the very last piece of CSS loaded, so if something looks weird,
  * try removing your custom CSS from the theme settings page.
