@@ -284,24 +284,6 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_useautohide($css, $useautohide, $hovercolor);
 
-    //Get the editingnotify value from settings
-    if (!empty($theme->settings->editingnotify)) {
-        $editingnotify = $theme->settings->editingnotify;
-    } else {
-        $editingnotify = null;
-    }
-    if (!empty($theme->settings->hovercolor)) { //Integrate hovercolor in this function
-        $hovercolor = $theme->settings->hovercolor;
-    } else {
-        $hovercolor = null;
-    }
-    if (!empty($theme->settings->colorscheme)) { //Integrate colorscheme in this function
-        $colorscheme = $theme->settings->colorscheme;
-    } else {
-        $colorscheme = null;
-    }
-    $css = zebra_set_editingnotify($css, $editingnotify, $hovercolor, $colorscheme);
-
     //Get any extra css the user adds from settings
     if(!empty($theme->settings->customcss)) {
         $customcss = $theme->settings->customcss;
@@ -968,134 +950,11 @@ function zebra_set_doublecolwidth($css, $colwidth) {
  * @return string
  */
 function zebra_set_useautohide($css, $useautohide, $hovercolor) {
+    global $CFG;
     $tag = '[[setting:useautohide]]';
-    if (is_null($hovercolor)) { //Get hovercolor from settings
-        $hovercolor = '#4E7BA3'; //Default color
-    }
-    $rules = '
-        .editing h3.sectionname {
-            margin: 0; /* Swap the margin for padding for the hover rules below */
-            padding: 1em 0;
-        }
-
-        .editing .block_site_main_menu .urlselect select {
-            max-width: 86%; /* Keep the "Add Resources and Add Activity" Dropdowns in the block */
-        }
-
-        .editing .block .title .commands, /* Block Title Controls */
-        .editing .block .content li .commands, /* Command in block content */
-        .editing .block .editbutton,
-        .editing .block .section_add_menus, /* Add Resource/Activity dropdowns in blocks */
-        .editing .section .left a, /* Move Controls */
-        .editing .section .right a, /* Right Side Visibility Controls */
-        .editing .section .right div,
-        .editing .section .summary a[title~="Edit"], /* Edit Section Summary */
-        .editing .section .section_add_menus, /* Add Resource/Activity dropdowns */
-        .editing .section .activity .commands, /* Individual activity and resource controls */
-        .editing .sitetopic > .no-overflow + a,
-        .editing .sitetopic .section_add_menus /* Front Page Site Topic Add resource/activity dropdowns */ {
-            visibility: hidden;
-            filter: alpha(opacity=0);
-            opacity: 0;
-            -webkit-transition: opacity 0.5s linear 0s;
-            -moz-transition: opacity 0.5s linear 0s;
-            -ms-transition: opacity 0.5s linear 0s;
-            -o-transition: opacity 0.5s linear 0s;
-            transition: opacity 0.5s linear 0s; /* half-second fade in */
-        }
-
-        .editing .block:hover .title .commands,
-        .editing .block .content li:hover .commands,
-        .editing .block:hover .editbutton,
-        .editing .block:hover .section_add_menus,
-        .editing .section:hover .left a,
-        .editing .section:hover .right a,
-        .editing .section:hover .right div,
-        .editing .section .summary:hover a,
-        .editing .section .sectionname:hover + .summary a,
-        .editing .section:hover .section_add_menus,
-        .editing .section .activity:hover .commands,
-        .editing .sitetopic:hover > .no-overflow + a,
-        .editing .sitetopic:hover .section_add_menus {
-            visibility: visible;
-            filter: none;
-            opacity: 1;
-        }
-
-        .editing .block_site_main_menu .content .r0, /* Site Main Menu Resources/Activities */
-        .editing .block_site_main_menu .content .r1,
-        .editing .section .activity,
-        .editing .section .summary,
-        .editing .sitetopic > .no-overflow {
-            padding: 4px!important; /* Add some padding for the hover rules below, !important is necessary to override a rule from "Base" */
-            border: 1px dashed transparent; /* Transparent border to prevent items from moving when showing border */
-        }
-
-        .editing .block_site_main_menu .content .r0:hover,
-        .editing .block_site_main_menu .content .r1:hover,
-        .editing .section .activity:hover,
-        .editing .section .summary:hover,
-        .editing .section .sectionname:hover + .summary,
-        .editing .sitetopic > .no-overflow:hover {
-            border-color: ' . $hovercolor . '; /* Change the border color around individual activities/resource/summaries */
-        }
-    ';
     if ($useautohide) { //Setting is "YES"
-        $replacement = $rules;
-    } else { //Setting is "NO"
-        $replacement = null; //NULL so we don't actually output anything to the stylesheet
-    }
-    $css = str_replace($tag, $replacement, $css);
-    return $css;
-}
-
-/**
- * Displays the Editing Mode CSS based on settings value
- *
- * @param string $css
- * @param mixed $editingnotify
- * @return string
- */
-function zebra_set_editingnotify($css, $editingnotify, $hovercolor, $colorscheme) {
-    $tag = '[[setting:editingnotify]]';
-    if (is_null($hovercolor)) { //Get hovercolor from settings
-        $hovercolor = '#4E7BA3'; //Default color
-    }
-    switch($colorscheme) { //Check the colorscheme value from settings
-        case 'dark':
-            $colorscheme = 'rgba(0, 0, 0, 0.08)'; //Black
-            break;
-
-        case 'light':
-            $colorscheme = 'rgba(255, 255, 255, 0.2)'; //White
-            break;
-
-        default:
-            $colorscheme = 'transparent';
-            break;
-    }
-    $rules = '
-        #add_block .select {
-            max-width: 100%; /* Keep the "Add Block" Select in the border */
-        }
-
-        .editing.path-course-view .content,
-        .editing.path-site .sitetopic,
-        .editing.path-site .content {
-            border: 2px dashed ' . $hovercolor . '; /* Add a border around the editable content */
-            box-shadow: 0 0 2px 2px ' . $colorscheme . '; /* Add a box-shadow around editable content */
-            padding: 4px;margin:4px;
-        }
-
-        .editing.path-course-view .section .content .section_add_menus,
-        .editing.path-site .sitetopic .section_add_menus,
-        .editing.path-site .block_site_main_menu .content .section_add_menus {
-            background-color: ' . $hovercolor . '; /* Add a background color the the "Add New..." Menus */
-            margin:0 -4px -4px;
-            padding:4px 4px 0 0;
-        }
-    ';
-    if ($editingnotify) { //Setting is "YES"
+        $path = $CFG->wwwroot . DIRECTORY_SEPARATOR . 'theme' . DIRECTORY_SEPARATOR . 'zebra' . DIRECTORY_SEPARATOR . 'style' . DIRECTORY_SEPARATOR . 'autohide.css'; //Get the URL path to the stylesheet
+        $rules = '@import url(' . $path . ');'; //Build the import rule
         $replacement = $rules;
     } else { //Setting is "NO"
         $replacement = null; //NULL so we don't actually output anything to the stylesheet

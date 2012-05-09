@@ -372,14 +372,6 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configcheckbox($name, $visiblename, $description, 1);
     $settings->add($setting);
 
-    //Include the Edit Mode Notify css rules
-    $name = 'theme_zebra/editingnotify';
-    $visiblename = get_string('editingnotify', 'theme_zebra');
-    $title = get_string('editingnotify', 'theme_zebra');
-    $description = get_string('editingnotifydesc', 'theme_zebra');
-    $setting = new admin_setting_configcheckbox($name, $visiblename, $description, 0);
-    $settings->add($setting);
-
     //Set custom css for theme
     $name = 'theme_zebra/customcss';
     $title = get_string('customcss', 'theme_zebra');

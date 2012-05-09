@@ -84,5 +84,10 @@ function xmldb_theme_zebra_upgrade($oldversion) {
 	upgrade_plugin_savepoint(true, 2012042300, 'theme', 'zebra');
     }
 
+    if ($oldversion < 2012050900) { // New Settings in 2.2.8
+	unset_config('editingnotify', 'theme_zebra'); //Remove the old colwidth
+	upgrade_plugin_savepoint(true, 2012050900, 'theme', 'zebra');
+    }
+
     return true;
 }
