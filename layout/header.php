@@ -42,8 +42,8 @@ if ($showsidepre && !$showsidepost) {
 } else if (!$showsidepost && !$showsidepre) {
     $bodyclasses[] = 'content-only';
 }
-$canedit = has_capability('moodle/block:edit', $this->page->context);
-if ($canedit && $USER->editing) {
+$canedit = has_capability('moodle/block:edit', $this->page->context); //See if the user is able to edit here
+if ($canedit && $USER->editing) { //If they can edit and they are editing add a class
     $bodyclasses[] = 'can_edit'; //Add a .can_edit class to editing mode
 }
 if ($simplelogin) {
