@@ -42,6 +42,10 @@ if ($showsidepre && !$showsidepost) {
 } else if (!$showsidepost && !$showsidepre) {
     $bodyclasses[] = 'content-only';
 }
+$canedit = has_capability('moodle/block:edit', $this->page->context);
+if ($canedit && $USER->editing) {
+    $bodyclasses[] = 'can_edit'; //Add a .can_edit class to editing mode
+}
 if ($simplelogin) {
     $bodyclasses[] = 'pagelayout-simple-login'; //Add class to body tag for styling
 }

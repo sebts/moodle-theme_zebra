@@ -1014,12 +1014,12 @@ function zebra_set_useautohide($css, $useautohide, $hovercolor) {
                 border: 1px dashed transparent; /* Transparent border to prevent items from moving when showing border */
             }
 
-            .editing .block_site_main_menu .content .r0:hover,
-            .editing .block_site_main_menu .content .r1:hover,
+            .editing.can_edit .block_site_main_menu .content .r0:hover,
+            .editing.can_edit .block_site_main_menu .content .r1:hover,
             .editing .section .activity:hover,
             .editing .section .summary:hover,
             .editing .section .sectionname:hover + .summary,
-            .editing .sitetopic > .no-overflow:hover {
+            .editing.can_edit .sitetopic > .no-overflow:hover {
                 border-color: ' . $hovercolor . '; /* Change the border color around individual activities/resource/summaries */
             }
         ';
