@@ -1007,6 +1007,7 @@ function zebra_set_useautohide($css, $useautohide, $hovercolor) {
 
             .editing .block_site_main_menu .content .r0, /* Site Main Menu Resources/Activities */
             .editing .block_site_main_menu .content .r1,
+            .editing .block_course_summary .no-overflow,
             .editing .section .activity,
             .editing .section .summary,
             .editing .sitetopic > .no-overflow {
@@ -1016,6 +1017,7 @@ function zebra_set_useautohide($css, $useautohide, $hovercolor) {
 
             .editing.can_edit .block_site_main_menu .content .r0:hover,
             .editing.can_edit .block_site_main_menu .content .r1:hover,
+            .editing.can_edit .block_course_summary .no-overflow:hover,
             .editing .section .activity:hover,
             .editing .section .summary:hover,
             .editing .section .sectionname:hover + .summary,
