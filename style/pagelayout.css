@@ -215,6 +215,7 @@ a:active {
 @media screen and (min-width:[[setting:threecolmin]]) {
     #region-main-box {
     	left: [[setting:colwidth]];
+	float: left;
     }
 
     #region-post-box {
