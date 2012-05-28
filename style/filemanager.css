@@ -25,6 +25,10 @@
     color: [[setting:fontcolor]];
 }
 
+.filemanager .fp-navbar {
+    border-color: [[setting:bodybgcolor]];
+}
+
 #dndupload-status {
     width: 100%;
     border: 0 none;
