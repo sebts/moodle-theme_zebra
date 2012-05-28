@@ -38,38 +38,38 @@
 
 .course-content li.current {
     border-color: [[setting:linkcolor]];
-	background: none;
+    background: none;
 }
 
 .red,
 .notifyproblem {
-	color: [[setting:criticalfontcolor]];
+    color: [[setting:criticalfontcolor]];
 }
 
 .green,
 .notifysuccess {
-	color: [[setting:okfontcolor]];
+    color: [[setting:okfontcolor]];
 }
 
 .yui-overlay .yui-widget-bd {
-	background-color: #FFEE69;
-	border: 1px solid #A6982B;
-	border-top-color: #D4C237;
-	color: #000000;
+    background-color: #FFEE69;
+    border: 1px solid #A6982B;
+    border-top-color: #D4C237;
+    color: #000000;
 }
 
 .generalbox {
-	margin-bottom: 4px;
-	padding: 2px;
+    margin-bottom: 4px;
+    padding: 2px;
     border: 1px solid [[setting:bodybgcolor]];
 }
 
 table.generalbox {
-	width: 100%;
+    width: 100%;
 }
 
 #maincontent {
-	margin-top: -1px;
+    margin-top: -1px;
 }
 
 /**
@@ -96,8 +96,8 @@ table.generalbox {
 
 .breadcrumb,
 .navbutton {
-	line-height: 26px;
-	padding: 0 4px;
+    line-height: 26px;
+    padding: 0 4px;
 }
 
 /**
