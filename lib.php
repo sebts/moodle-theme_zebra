@@ -969,14 +969,17 @@ function zebra_set_useautohide($css, $useautohide, $hovercolor) {
             .editing .block .content li .commands, /* Command in block content */
             .editing .block .editbutton,
             .editing .block .section_add_menus, /* Add Resource/Activity dropdowns in blocks */
+            .editing .block .addresourcemodchooser, /* Add Resource/Activity Link in blocks */
             .editing .section .left a, /* Move Controls */
             .editing .section .right a, /* Right Side Visibility Controls */
             .editing .section .right div,
             .editing .section .summary a[title~="Edit"], /* Edit Section Summary */
             .editing .section .section_add_menus, /* Add Resource/Activity dropdowns */
+            .editing .section .addresourcemodchooser, /* Add Resource/Activity Link (2.3) */
             .editing .section .activity .commands, /* Individual activity and resource controls */
             .editing .sitetopic > .no-overflow + a,
-            .editing .sitetopic .section_add_menus /* Front Page Site Topic Add resource/activity dropdowns */ {
+            .editing .sitetopic .section_add_menus, /* Front Page Site Topic Add resource/activity dropdowns */
+            .editing .sitetopic .addresourcemodchooser {
                 visibility: hidden;
                 filter: alpha(opacity=0);
                 opacity: 0;
@@ -991,15 +994,18 @@ function zebra_set_useautohide($css, $useautohide, $hovercolor) {
             .editing .block .content li:hover .commands,
             .editing .block:hover .editbutton,
             .editing .block:hover .section_add_menus,
+            .editing .block:hover .addresourcemodchooser,
             .editing .section:hover .left a,
             .editing .section:hover .right a,
             .editing .section:hover .right div,
             .editing .section .summary:hover a,
             .editing .section .sectionname:hover + .summary a,
             .editing .section:hover .section_add_menus,
+            .editing .section:hover .addresourcemodchooser,
             .editing .section .activity:hover .commands,
             .editing .sitetopic:hover > .no-overflow + a,
-            .editing .sitetopic:hover .section_add_menus {
+            .editing .sitetopic:hover .section_add_menus,
+            .editing .sitetopic:hover .addresourcemodchooser {
                 visibility: visible;
                 filter: none;
                 opacity: 1;
