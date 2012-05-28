@@ -107,3 +107,11 @@
 .path-course-view .content .summary .iconsmall {
     margin-left: 8px; /* Add margin between the summary text and the edit icon */
 }
+
+#dndupload-status {
+    width: 100%;
+    border: 0 none;
+    border-bottom: 1px solid [[setting:bodybgcolor]];
+    padding: 4px;
+    background: [[setting:contentbgcolor]];
+}
