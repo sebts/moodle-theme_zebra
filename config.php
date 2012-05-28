@@ -36,6 +36,7 @@ $THEME->parents_exclude_sheets  = array(
 $THEME->sheets = array(
     'pagelayout',   //Generate the layout of the pages - need this first
     'core',         //Overrides for the core sheet from Base - need this second
+    'filemanager',  //Overrides for the filemanager sheet
     'admin',	    //Overrides for the admin sheet from Base
     'blocks',	    //Overrides for the blocks sheet from Base
     'calendar',	    //Overrides for the calendar sheet from Base
@@ -43,6 +44,7 @@ $THEME->sheets = array(
     'custommenu',   //Applies style to the custommenu
     'dock',         //Derived from Rebase
     'mod_forum',    //Overrides for forum
+    'mod_resource', //Overrides for resources
     'extra',        //Extra stuff that doesn't fit the above
     'ie'            //Special Internet Explorer rules
 );
