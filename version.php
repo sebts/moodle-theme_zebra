@@ -18,7 +18,7 @@
  * zebra theme config page
  *
  * @package    theme_zebra
- * @copyright  2011 Danny Wahl
+ * @copyright  2012 Danny Wahl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
