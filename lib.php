@@ -39,14 +39,6 @@ function zebra_process_css($css, $theme) {
     }
     $css = zebra_set_logourl($css, $logourl);
 
-    //Get the minimum header height from settings
-    if (!empty($theme->settings->logourlheight)) {
-        $logourlheight = $theme->settings->logourlheight;
-    } else {
-        $logourlheight = null;
-    }
-    $css = zebra_set_logourlheight($css, $logourlheight);
-
     //Get the path to the background url from settings
     if (!empty($theme->settings->backgroundurl)) {
         $backgroundurl = $theme->settings->backgroundurl;
@@ -322,24 +314,6 @@ function zebra_set_logourl($css, $logourl) {
         } else {
             $replacement = $logourl;
         }
-    }
-    $css = str_replace($tag, $replacement, $css);
-    return $css;
-}
-
-/**
- * Sets the minimum height for the header
- *
- * @param string $css
- * @param mixed $logourlheight
- * @return string
- */
-function zebra_set_logourlheight($css, $logourlheight) {
-    $tag = '[[setting:logourlheight]]';
-    if (is_null($logourlheight)) {
-        $replacement = "100px"; //Default height
-    } else {
-        $replacement = $logourlheight; //Height from Settings Page
     }
     $css = str_replace($tag, $replacement, $css);
     return $css;
