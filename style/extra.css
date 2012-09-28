@@ -24,17 +24,17 @@
 /* Profile Block */
 
 .headermain {
-	position: absolute;
-	bottom: 0;
-	float: none;
+    padding-top: 10px;
 }
 
 #profileblock {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 7px;
+    padding: 10px 0 5px;
     text-align: right;
-    width: 100%;
+    float: right;
+}
+
+#profileblock .logininfo {
+    float: left;
 }
 
 #user-pic {
@@ -49,10 +49,6 @@
 
 #user-pic .defaultuserpic {
     background-color: [[setting:linkcolor]];
-}
-
-.langmenu {
-	margin-top: 5px;
 }
 
 /* Branding */
