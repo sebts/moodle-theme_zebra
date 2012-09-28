@@ -21,36 +21,6 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-/* Profile Block */
-
-.headermain {
-    padding-top: 10px;
-}
-
-#profileblock {
-    padding: 10px 0 5px;
-    text-align: right;
-    float: right;
-}
-
-#profileblock .logininfo {
-    float: left;
-}
-
-#user-pic {
-    float: right;
-    margin-left: 10px;
-}
-
-#user-pic .userpicture {
-    width: 80px;
-    height: 80px;
-}
-
-#user-pic .defaultuserpic {
-    background-color: [[setting:linkcolor]];
-}
-
 /* Branding */
 
 #branding {

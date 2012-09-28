@@ -29,21 +29,23 @@ require_once('header.php'); ?>
         <div id="page-inner-wrapper">
             <div id="page-header-wrapper">
                 <div id="page-header" class="clearfix">
-                    <h1 class="headermain"><?php echo $headeralt; ?></h1>
+                    <div class="headermain">
+                    	<?php if($haslogo) {
+                    	    echo '<img src="'.$OUTPUT->pix_url($PAGE->theme->settings->logourl, 'theme').'" class="logo" >';
+                    	} ?>
+                    	<h1 class="header"><?php echo $headeralt; ?></h1>
+                    </div>
                     <div id="profileblock">
-			<?php if ($haslogininfo) {
-			    if (isloggedin()) {
-				if ($showuserpic) {
-				    echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
-
-				}
-			    }
-                            echo $OUTPUT->login_info();
-			}
-			if ($haslangmenu) {
-			    echo $OUTPUT->lang_menu();
-			}
-			echo $PAGE->headingmenu; ?>
+						<?php if (($haslogininfo) && (isloggedin()) && ($showuserpic)) {
+					        echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
+						} ?>
+						<div id="user-info">
+							<?php echo $OUTPUT->login_info();
+							if ($haslangmenu) {
+								echo $OUTPUT->lang_menu();
+							}
+							echo $PAGE->headingmenu; ?>
+						</div>
                     </div>
                 </div>
                 <div id="page-border-wrapper">

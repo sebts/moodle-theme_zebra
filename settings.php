@@ -47,14 +47,6 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_URL);
     $settings->add($setting);
 
-    //Set the minimum height for the logo image
-    $name = 'theme_zebra/logourlheight';
-    $title = get_string('logourlheight','theme_zebra');
-    $description = get_string('logourlheightdesc', 'theme_zebra');
-    $default = '100px';
-    $setting = new admin_setting_configtext($name, $title, $description, $default, PARAM_CLEAN, 5);
-    $settings->add($setting);
-
     //Set alternate text for headermain
     $name = 'theme_zebra/headeralt';
     $title = get_string('headeralt','theme_zebra');

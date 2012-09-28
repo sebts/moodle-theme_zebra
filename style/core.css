@@ -76,9 +76,41 @@ table.generalbox {
  * Header
  */
 
-#page-header {
-    background: url([[setting:logourl]]) no-repeat scroll left top [[setting:headerbgcolor]];
-    min-height: [[setting:logourlheight]];
+.headermain {
+    margin: 0;
+}
+
+.headermain .logo {
+	vertical-align: bottom;
+}
+
+.headermain .header {
+	margin: 0;
+	display: inline;
+}
+
+#profileblock {
+    padding: 10px 0 0;
+    text-align: right;
+    float: right;
+}
+
+#user-info {
+    float: left;
+}
+
+#user-pic {
+    float: right;
+    margin-left: 10px;
+}
+
+#user-pic .userpicture {
+    width: 80px;
+    height: 80px;
+}
+
+#user-pic .defaultuserpic {
+    background-color: [[setting:linkcolor]];
 }
 
 /**
