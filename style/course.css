@@ -107,3 +107,7 @@
 .path-course-view .content .summary .iconsmall {
     margin-left: 8px; /* Add margin between the summary text and the edit icon */
 }
+
+.course-content .section-summary .section-summary-activities .activity-count {
+    color: [[setting:bodybgcolor]];
+}
