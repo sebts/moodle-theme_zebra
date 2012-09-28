@@ -45,7 +45,7 @@ $string['choosereadme'] = '<div class="clearfix">
 		<br />
 		<p>The underlying page layout, designed independently of Moodle 2.0 by me (Danny Wahl) @ iyWare, and capable of being used standalone, is also licensed under the GNU General Public License.</p>
 		<h2>Theme Discussion Forum:</h2>
-		<p><a href="http://moodle.org/mod/forum/discuss.php?d=199367">http://moodle.org/mod/forum/discuss.php?d=199367</a></p>
+		<p><a href="http://moodle.org/mod/forum/discuss.php?d=211918">http://moodle.org/mod/forum/discuss.php?d=211918</a></p>
 		<h2>Theme Plugin URL:</h2>
                 <p><a href="http://moodle.org/plugins/view.php?plugin=theme_zebra">http://moodle.org/plugins/view.php?plugin=theme_zebra</a></p>
                 <h2>Theme Credits</h2>
@@ -67,8 +67,6 @@ $string['headerinfodesc'] = '<p>Change the settings for the header region.</p>';
 
 $string['logourl'] = 'Logo URL';
 $string['logourldesc'] = '<p>Input the URL to your logo.</p><p>This can be used in one of three protocol types:<ul><li><p>Moodle Output (relative to theme):</p><p><code>logo/companylogo</code></p></li><li><p>Full path:</p><p><code>http://domain.com/theme/image.php?theme=zebra&image=logo&rev=1&component=theme</code><br /><code>http://domain.com/path/to/image.jpg</code></p></li><li><p>Relative Path:</p><p><code>/path/to/file/companylogo.png</code></p></li></ul></p>';
-$string['logourlheight'] = 'Logo image height';
-$string['logourlheightdesc'] = '<p>Minimum height for header to provide space for logo image.</p><p>If you do not have a logo you should still leave this at the default to provide space for the profile block.</p>';
 $string['backgroundurl'] = 'Background URL';
 $string['backgroundurldesc'] = '<p>Input the URL to your body background image.</p><p>This can be used in Moodle Output format (relative to theme), full path, or relative path.</p>';
 
