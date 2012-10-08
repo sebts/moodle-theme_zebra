@@ -31,7 +31,7 @@ require_once('header.php'); ?>
                 <div id="page-header" class="clearfix">
                     <div class="headermain">
                     	<?php if($haslogo) {
-                    	    echo '<img src="'.$OUTPUT->pix_url($PAGE->theme->settings->logourl, 'theme').'" class="logo" >';
+                    	    echo $logo;
                     	} ?>
                     	<h1 class="header"><?php echo $headeralt; ?></h1>
                     </div>

@@ -75,6 +75,10 @@ if (!empty($PAGE->theme->settings->headeralt)) {
     $headeralt = $PAGE->heading; //Use the default page title if the theme setting value is empty
 }
 $haslogo = (!empty($PAGE->theme->settings->logourl)); //Check if a logo is selected
+if ($haslogo) { //Pass the raw variable to the function to render with pix_url if necessary
+    $logourl = zebra_print_logourl($PAGE->theme->settings->logourl);
+    $logo = html_writer::tag('img', '', array('src'=>$logourl));
+}
 $showbranding = ($PAGE->theme->settings->branding); //Check the theme settings to see if footer logos are displayed
 $userespond = ($PAGE->theme->settings->userespond); //Check the theme settings to see if respond.js should be called
 $usecf = ($PAGE->theme->settings->usecf); //Check the theme settings to see if Chrome Frame should be called
