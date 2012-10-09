@@ -107,7 +107,7 @@ $THEME->layouts = array(
     'login' => array(
         'file' => 'general.php',
         'regions' => array(),
-        'options' => array('langmenu'=>true)
+        'options' => array('langmenu'=>false, 'nologininfo'=>true)
     ),
     'popup' => array(
         'file' => 'general.php',

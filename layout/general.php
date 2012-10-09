@@ -32,21 +32,25 @@ require_once('header.php'); ?>
                     <div class="headermain">
                     	<?php if($haslogo) {
                     	    echo $logo;
-                    	} ?>
-                    	<h1 class="header"><?php echo $headeralt; ?></h1>
+                    	}
+                    	if (!$simplelogin) { ?>
+                    		<h1 class="header"><?php echo $headeralt; ?></h1>
+                    	<?php } ?>
                     </div>
-                    <div id="profileblock">
-						<?php if (($haslogininfo) && (isloggedin()) && ($showuserpic)) {
-					        echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
-						} ?>
-						<div id="user-info">
-							<?php echo $OUTPUT->login_info();
-							if ($haslangmenu) {
-								echo $OUTPUT->lang_menu();
-							}
-							echo $PAGE->headingmenu; ?>
-						</div>
-                    </div>
+                    <?php if (!$simplelogin) { ?>
+	                    <div id="profileblock">
+							<?php if (($haslogininfo) && (isloggedin()) && ($showuserpic)) {
+						        echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
+							} ?>
+							<div id="user-info">
+								<?php echo $OUTPUT->login_info();
+								if ($haslangmenu) {
+									echo $OUTPUT->lang_menu();
+								}
+								echo $PAGE->headingmenu; ?>
+							</div>
+	                    </div>
+                    <?php } ?>
                 </div>
                 <div id="page-border-wrapper">
                     <?php if ($hascustommenu) { ?>
