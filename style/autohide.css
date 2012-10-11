@@ -45,8 +45,6 @@
 .editing .sitetopic > .no-overflow + a,
 .editing .sitetopic .section_add_menus, /* Front Page Site Topic Add resource/activity dropdowns */
 .editing .sitetopic .addresourcemodchooser {
-    /* position: absolute;
-    top: -1000em; */
     filter: alpha(opacity=0);
     opacity: 0;
     -webkit-transition: opacity 0.5s linear 0s;
@@ -74,27 +72,6 @@
 .editing .sitetopic:hover > .no-overflow + a,
 .editing .sitetopic:hover .section_add_menus,
 .editing .sitetopic:hover .addresourcemodchooser {
-    position: static;
     filter: none;
     opacity: 1;
-}
-
-.editing .block_site_main_menu .content .r0, /* Site Main Menu Resources/Activities */
-.editing .block_site_main_menu .content .r1,
-.editing .block_course_summary .no-overflow,
-.editing .section .activity,
-.editing .section .summary,
-.editing .sitetopic > .no-overflow {
-    padding: 4px!important; /* Add some padding for the hover rules below, !important is necessary to override a rule from "Base" */
-    border: 1px dashed transparent; /* Transparent border to prevent items from moving when showing border */
-}
-
-.editing.can_edit .block_site_main_menu .content .r0:hover,
-.editing.can_edit .block_site_main_menu .content .r1:hover,
-.editing.can_edit .block_course_summary .no-overflow:hover,
-.editing .section .activity:hover,
-.editing .section .summary:hover,
-.editing .section .sectionname:hover + .summary,
-.editing.can_edit .sitetopic > .no-overflow:hover {
-    border-color: ' . $hovercolor . '; /* Change the border color around individual activities/resource/summaries */
 }
