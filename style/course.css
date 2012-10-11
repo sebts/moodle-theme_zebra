@@ -111,3 +111,7 @@
 .course-content .section-summary .section-summary-activities .activity-count {
     color: [[setting:bodybgcolor]];
 }
+
+.course-content .section .activity:hover {
+	background-color: transparent;
+}
