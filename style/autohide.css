@@ -30,7 +30,7 @@
     max-width: 86%; /* Keep the "Add Resources and Add Activity" Dropdowns in the block */
 }
 
-.editing .block .title .commands, /* Block Title Controls */
+.editing .block .title .commands .icon, /* Block Title Controls */
 .editing .block .content li .commands, /* Command in block content */
 .editing .block .editbutton,
 .editing .block .section_add_menus, /* Add Resource/Activity dropdowns in blocks */
@@ -45,7 +45,9 @@
 .editing .sitetopic > .no-overflow + a,
 .editing .sitetopic .section_add_menus, /* Front Page Site Topic Add resource/activity dropdowns */
 .editing .sitetopic .addresourcemodchooser {
-    visibility: hidden;
+    /* visibility: hidden; */
+    position: absolute;
+    top: -1000em; 
     filter: alpha(opacity=0);
     opacity: 0;
     -webkit-transition: opacity 0.5s linear 0s;
@@ -55,7 +57,9 @@
     transition: opacity 0.5s linear 0s; /* half-second fade in */
 }
 
-.editing .block:hover .title .commands,
+.editing .block:hover .title .commands .icon,
+.editing .block .title .commands .icon:active,
+.editing .block .title .commands .icon:focus,
 .editing .block .content li:hover .commands,
 .editing .block:hover .editbutton,
 .editing .block:hover .section_add_menus,
@@ -71,7 +75,8 @@
 .editing .sitetopic:hover > .no-overflow + a,
 .editing .sitetopic:hover .section_add_menus,
 .editing .sitetopic:hover .addresourcemodchooser {
-    visibility: visible;
+    /* visibility: visible; */
+    position: static;
     filter: none;
     opacity: 1;
 }
