@@ -45,8 +45,8 @@
 .editing .sitetopic > .no-overflow + a,
 .editing .sitetopic .section_add_menus, /* Front Page Site Topic Add resource/activity dropdowns */
 .editing .sitetopic .addresourcemodchooser {
-    position: absolute;
-    top: -1000em; 
+    /* position: absolute;
+    top: -1000em; */
     filter: alpha(opacity=0);
     opacity: 0;
     -webkit-transition: opacity 0.5s linear 0s;
