@@ -33,14 +33,12 @@
 .section_add_menus, /* Add Resource/Activity dropdowns (2.2) */
 .addresourcemodchooser, /* Add Resource/Activity Link (2.3) */
 .editing .block .title .commands .icon, /* Block Title Controls */
-.editing .block .content li .commands a, /* Command in block content (added resources/activities in Main menu) */
+.editing .block .content li .commands a, /* Command in block content (add resources/activities in Main menu) */
 .editing .block .editbutton a, /* Edit button in custom HTML blocks */
-.editing .section .left a, /* Move Controls */
-.editing .section .right a, /* Right Side Visibility Controls */
-.editing .section .right div,
-.editing .section .summary a[title~="Edit"], /* Edit Section Summary */
-.editing .section .activity .commands, /* Individual activity and resource controls */
-.editing .sitetopic > .no-overflow + a {
+.editing .section .side > *:not(br), /* Section controls (can't use 'a' b/c ajax uses 'span') */
+.editing .section .summary a:first-child, /* Edit Section Summary */
+.editing .section .activity .commands > *, /* Individual activity and resource controls (can't use 'a' b/c ajax uses 'span') */
+.editing .sitetopic > a {
     filter: alpha(opacity=0);
     opacity: 0;
     -webkit-transition: opacity 0.5s linear 0s;
@@ -65,13 +63,19 @@
 .editing .block:hover .editbutton a,
 .editing .block .editbutton a:active,
 .editing .block .editbutton a:focus,
-.editing .section:hover .left a,
-.editing .section:hover .right a,
-.editing .section:hover .right div,
-.editing .section .summary:hover a,
+.editing .section:hover .side > *:not(br),
+.editing .section .side > *:active,
+.editing .section .side > *:focus,
+.editing .section .summary:hover a:first-child,
+.editing .section .summary a:first-child:active,
+.editing .section .summary a:first-child:focus,
 .editing .section .sectionname:hover + .summary a,
-.editing .section .activity:hover .commands,
-.editing .sitetopic:hover > .no-overflow + a {
+.editing .section .activity:hover .commands > *,
+.editing .section .activity .commands > *:active,
+.editing .section .activity .commands > *:focus,
+.editing .sitetopic:hover > a,
+.editing .sitetopic > a:active,
+.editing .sitetopic > a:focus {
     filter: none;
     opacity: 1;
 }
