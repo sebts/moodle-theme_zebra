@@ -885,14 +885,14 @@ function zebra_set_doublecolwidth($css, $colwidth) {
  */
 function zebra_set_useautohide($css, $useautohide, $hovercolor) {
 	global $CFG;
-	$autohide = $CFG->themedir . '/' . current_theme() . '/' . 'style/autohide.css'; //Pull the full path for autohide css
+	$autohide = $CFG->themedir . '/' . current_theme() . '/style/autohide.css'; //Pull the full path for autohide css
     $tag = '[[setting:useautohide]]';
     if ($useautohide) { //Setting is "YES"
         if (is_null($hovercolor)) { //Get the value from the settings page
             $hovercolor = '#91979F';
         }
         $rules = file_get_contents($autohide);
-        $replacement = $rules;
+        $replacement = "/* " . $autohide . " */" . $rules;
     } else { //Setting is "NO"
         $replacement = null; //NULL so we don't actually output anything to the stylesheet
     }
