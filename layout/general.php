@@ -56,14 +56,14 @@ require_once('header.php'); ?>
                     <?php if ($hascustommenu) { ?>
                         <div id="custommenu-wrapper">
                             <div id="custommenu">
-				<?php if ($hashomeicon) {
-				    echo '<a class="home" href="' . $homeurl . '"><div>&nbsp;</div></a>';
-				}
-				echo $custommenu;
-				if ($hascallink) {
-				    echo '<a class="calendar" href="' . $calurl . '">' . date("$dateformat") . '</a>';
-				} ?>
-			    </div>
+	                            <?php if ($hashomeicon) {
+		                            echo '<a class="home" href="' . $homeurl . '"><div>&nbsp;</div></a>';
+		                        }
+		                        echo $custommenu;
+		                        if ($hascallink) {
+			                        echo '<a class="calendar" href="' . $calurl . '">' . date("$dateformat") . '</a>';
+			                    } ?>
+			    			</div>
                         </div>
                     <?php } ?>
                     <?php if ($hasnavbar) { ?>
