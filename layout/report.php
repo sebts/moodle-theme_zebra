@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * zebra theme general page layout
+ * zebra theme report page layout
  *
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
@@ -29,35 +29,41 @@ require_once('header.php'); ?>
         <div id="page-inner-wrapper">
             <div id="page-header-wrapper">
                 <div id="page-header" class="clearfix">
-                    <h1 class="headermain"><?php echo $headeralt; ?></h1>
-                    <div id="profileblock">
-			<?php if ($haslogininfo) {
-			    if (isloggedin()) {
-				if ($showuserpic) {
-				    echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
-
-				}
-			    }
-                            echo $OUTPUT->login_info();
-			}
-			if ($haslangmenu) {
-			    echo $OUTPUT->lang_menu();
-			}
-			echo $PAGE->headingmenu; ?>
+                    <div class="headermain">
+                    	<?php if($haslogo) {
+                    	    echo $logo;
+                    	}
+                    	if (!$simplelogin) { ?>
+                    		<h1 class="header"><?php echo $headeralt; ?></h1>
+                    	<?php } ?>
                     </div>
+                    <?php if (!$simplelogin) { ?>
+	                    <div id="profileblock">
+							<?php if (($haslogininfo) && (isloggedin()) && ($showuserpic)) {
+						        echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
+							} ?>
+							<div id="user-info">
+								<?php echo $OUTPUT->login_info();
+								if ($haslangmenu) {
+									echo $OUTPUT->lang_menu();
+								}
+								echo $PAGE->headingmenu; ?>
+							</div>
+	                    </div>
+                    <?php } ?>
                 </div>
                 <div id="page-border-wrapper">
                     <?php if ($hascustommenu) { ?>
                         <div id="custommenu-wrapper">
                             <div id="custommenu">
-				<?php if ($hashomeicon) {
-				    echo '<a class="home" href="' . $homeurl . '"><div>&nbsp;</div></a>';
-				}
-				echo $custommenu;
-				if ($hascallink) {
-				    echo '<a class="calendar" href="' . $calurl . '">' . date("$dateformat") . '</a>';
-				} ?>
-			    </div>
+	                            <?php if ($hashomeicon) {
+		                            echo '<a class="home" href="' . $homeurl . '"><div>&nbsp;</div></a>';
+		                        }
+		                        echo $custommenu;
+		                        if ($hascallink) {
+			                        echo '<a class="calendar" href="' . $calurl . '">' . date("$dateformat") . '</a>';
+			                    } ?>
+			    			</div>
                         </div>
                     <?php } ?>
                     <?php if ($hasnavbar) { ?>
@@ -87,5 +93,5 @@ require_once('header.php'); ?>
                         </div>
                     </div>
                 </div>
-	    </div>
+            </div>
 	    <?php require_once('footer.php');
