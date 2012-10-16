@@ -43,7 +43,7 @@
 
 /**
  * autohide CSS
- * This adds the special autohide css in lib.php if the setting is enabled.
+ * This adds the special autohide css in autohide.css if the setting is enabled.
  */
 
 [[setting:useautohide]]
