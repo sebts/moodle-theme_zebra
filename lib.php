@@ -896,7 +896,7 @@ function zebra_set_useautohide($css, $useautohide, $hovercolor) {
             $hovercolor = '#91979F';
         }
         $rules = file_get_contents($autohide);
-        $replacement = "/* " . $autohide . " */" . $rules;
+        $replacement = $rules;
     } else { //Setting is "NO"
         $replacement = null; //NULL so we don't actually output anything to the stylesheet
     }
