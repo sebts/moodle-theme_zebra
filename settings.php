@@ -256,8 +256,8 @@ if ($ADMIN->fulltree) {
     $name = 'theme_zebra/colorscheme';
     $title = get_string('colorscheme','theme_zebra');
     $description = get_string('colorschemedesc', 'theme_zebra');
-    $default = 'none';
-    $choices = array('none'=>'None', 'dark'=>'Dark', 'light'=>'Light');
+    $default = get_string('schemenone', 'theme_zebra');
+    $choices = array('none'=>get_string('schemenone', 'theme_zebra'), 'dark'=>get_string('schemedark', 'theme_zebra'), 'light'=>get_string('schemelight', 'theme_zebra'));
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $settings->add($setting);
 
@@ -265,8 +265,8 @@ if ($ADMIN->fulltree) {
     $name = 'theme_zebra/menucolorscheme';
     $title = get_string('menucolorscheme','theme_zebra');
     $description = get_string('menucolorschemedesc', 'theme_zebra');
-    $default = 'none';
-    $choices = array('none'=>'None', 'dark'=>'Dark', 'light'=>'Light');
+    $default = get_string('schemenone', 'theme_zebra');
+    $choices = array('none'=>get_string('schemenone', 'theme_zebra'), 'dark'=>get_string('schemedark', 'theme_zebra'), 'light'=>get_string('schemelight', 'theme_zebra'));
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
     $settings->add($setting);
 
