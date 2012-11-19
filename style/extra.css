@@ -35,8 +35,6 @@
 .editing .block_site_main_menu .content .r0, /* Site Main Menu Resources/Activities */
 .editing .block_site_main_menu .content .r1,
 .editing .block_course_summary .no-overflow,
-.editing .section .activity,
-.editing .section .summary,
 .editing .sitetopic > .no-overflow {
     padding: 4px!important; /* !important is necessary to override a rule from "Base" */
 }
