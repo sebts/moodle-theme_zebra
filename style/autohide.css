@@ -36,6 +36,7 @@
 .editing .block .content li .commands a, /* Command in block content (add resources/activities in Main menu) */
 .editing .block .editbutton a, /* Edit button in custom HTML blocks */
 .editing .section .side > *:not(br), /* Section controls (can't use 'a' b/c ajax uses 'span') */
+.editing .section .summary > a, /* Gross - section summaries may contain links */
 .editing .sitetopic > a {
     filter: alpha(opacity=0);
     opacity: 0;
@@ -64,6 +65,9 @@
 .editing .section:hover .side > *:not(br),
 .editing .section .side > *:active,
 .editing .section .side > *:focus,
+.editing .section:hover .summary > a,
+.editing .section .summary > a:active,
+.editing .section .summary > a:focus,
 .editing .sitetopic:hover > a,
 .editing .sitetopic > a:active,
 .editing .sitetopic > a:focus {
