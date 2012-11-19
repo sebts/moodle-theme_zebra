@@ -21,6 +21,8 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+/* Stuff related to courses */
+
 #page-site-index .headingblock,
 .path-course-view .headingblock {
     margin: 0 0 8px 0;
@@ -64,7 +66,9 @@
     padding: 4px;
 }
 
-.path-course #course-content {
+/* Actual courses */
+
+.path-course .course-content {
 	margin-top: -5px; /* Pull the content up to the blocks */
 }
 
@@ -96,6 +100,18 @@
 
 .path-course .section .activity .commands {
 	float: right;
+}
+
+.sitetopic .section .activity img.activityicon,
+.course-content .section .activity img.activityicon {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.sitetopic .section .activity .commands img,
+.course-content .section .activity .commands img {
+    height: 24px;
+    vertical-align: middle;
 }
 
 .path-course .section .activity .editing_title {
@@ -133,6 +149,7 @@
 	border-left: 1px solid [[setting:bodybgcolor]];
 	margin-left: 10px;
 	padding-left: 10px;
+	display: inline-block; /* Make the border the appropriate height */
 }
 
 .path-course .section .activity .editing_assign,
@@ -144,18 +161,33 @@
  */
 .editing.path-course .section .activity.label .no-overflow {
 	float: left; /* keep it from bumping commands to a new row, only when editing */
+	padding-bottom: 0;
 }
 
 .path-course .section .activity.label .editing_move {
-	margin-right: 31px; /* Compensate for missing "edit title" command */
+	margin-right: 34px; /* Compensate for missing "edit title" command */
 }
 
 .path-course .section .activity.label {
 	border-bottom: 0 none; /* remove the border from labels - less like list-items */
 }
 
+.editing.path-course .section .activity.label:after { /* Make it like a clearfix */
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	min-width: 0;
+	visibility: hidden;
+}
+
 .editing.path-course .section .activity.label {
 	border-bottom: 1px solid [[setting:bodybgcolor]]; /* but make sure it's there when editing... */
+	min-height: 24px; /* match the large icons */
+}
+
+.editing.path-course .section .activity.label p:last-of-type {
+	margin-bottom: 0;
 }
 
 .path-course .section .section-modchooser {
