@@ -110,8 +110,7 @@
 
 .sitetopic .section .activity .commands img,
 .course-content .section .activity .commands img {
-    height: 24px;
-    vertical-align: middle;
+    vertical-align: text-bottom;
 }
 
 .path-course .section .activity .editing_title {
