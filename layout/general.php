@@ -81,7 +81,12 @@ require_once('header.php'); ?>
                                     <div id="region-main-wrap">
                                         <div id="region-main">
                                             <div class="region-content">
+                                            	<?php if (!empty($courseheader)) { ?>
+                                            		<div id="course-header"><?php echo $courseheader; ?></div>
+                                            	<?php } ?>
+                                            	<?php echo $coursecontentheader; ?>
                                                 <?php echo method_exists($OUTPUT, "main_content") ? $OUTPUT->main_content() : core_renderer::MAIN_CONTENT_TOKEN ?>
+                                                <?php echo $coursecontentfooter; ?>
                                             </div>
                                         </div>
                                     </div>

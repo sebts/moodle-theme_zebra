@@ -22,6 +22,9 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+ 		if (!empty($coursefooter)) { ?>
+ 			<div id="course-footer"><?php echo $coursefooter; ?></div>
+ 		<?php }
 	    if ($hasfooter) { ?>
                 <div id="page-footer-wrapper">
                     <div id="page-footer">
