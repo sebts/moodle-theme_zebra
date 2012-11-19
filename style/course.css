@@ -64,9 +64,116 @@
     padding: 4px;
 }
 
+.path-course #course-content {
+	margin-top: -5px; /* Pull the content up to the blocks */
+}
+
 .path-course .section {
-    margin: 4px;
+    margin: 1em 0;
     clear: both; /* Clear the float in the summary text */
+}
+
+.path-course .section .summary {
+	margin-top: 1em; /* Match the section title spacing */
+}
+
+.path-course .section .summary > a {
+	float: right;
+	margin: 0 10px 1em 5px;
+}
+
+.path-course .section .activity {
+	padding: 10px!important; /* Need important to override "base" */
+}
+
+.editing.path-course .section .activity {
+    border-bottom: 1px solid [[setting:bodybgcolor]];
+}
+
+.editing.path-course .section .activity:first-of-type {
+	border-top: 1px solid [[setting:bodybgcolor]];
+}
+
+.path-course .section .activity .commands {
+	float: right;
+}
+
+.path-course .section .activity .editing_title {
+	padding-left: 5px;
+}
+
+.path-course .section .activity .editing_moveright,
+.path-course .section .activity .editing_moveleft {
+	float: left;
+	padding-left: 5px;
+}
+
+.path-course .section .activity .editing_move {
+	border-right: 1px solid [[setting:bodybgcolor]];
+	float: left;
+	padding-right: 10px;
+	margin-right: 10px;
+	padding-left: 5px;
+}
+
+.path-course .section .activity .editing_update {
+	padding-left: 5px;
+}
+
+.path-course .section .activity .editing_duplicate {
+	padding-left: 5px;
+}
+
+.path-course .section .activity .editing_delete {
+    float: right;
+	padding: 0 0 0 5px;
+}
+
+.path-course .section .activity .editing_hide {
+	border-left: 1px solid [[setting:bodybgcolor]];
+	margin-left: 10px;
+	padding-left: 10px;
+}
+
+.path-course .section .activity .editing_assign,
+.path-course .section .activity .editing_groupsnone {
+	display: none;
+}
+
+/* Do some crazy stuff with labels!
+ */
+.editing.path-course .section .activity.label .no-overflow {
+	float: left; /* keep it from bumping commands to a new row, only when editing */
+}
+
+.path-course .section .activity.label .editing_move {
+	margin-right: 31px; /* Compensate for missing "edit title" command */
+}
+
+.path-course .section .activity.label {
+	border-bottom: 0 none; /* remove the border from labels - less like list-items */
+}
+
+.editing.path-course .section .activity.label {
+	border-bottom: 1px solid [[setting:bodybgcolor]]; /* but make sure it's there when editing... */
+}
+
+.path-course .section .section-modchooser {
+	margin-top: 1em;
+	padding: 10px 10px 5px 0px;
+	background: [[setting:bodybgcolor]];
+	border-radius: 5px 5px 0 0;
+}
+
+.path-course .section.current .section-mod-chooser-link {
+	box-shadow: 0 -1px [[setting:linkcolor]] inset;
+}
+
+.section_add_menus {
+    background: none repeat scroll 0 0 [[setting:bodybgcolor]];
+    border-radius: 5px 5px 0 0;
+    margin-top: 1em;
+    padding: 5px 10px;
 }
 
 .path-course .section .left {
