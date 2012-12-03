@@ -77,7 +77,7 @@ $string['colorsinfo'] = 'General colors settings';
 $string['colorsinfodesc'] = '<p>Change the settings for the colors of the page.</p><p>You can use any valid color type like <code>red</code>, <code>#FF0000</code>, <code>rgb(0, 255, 255)</code>, or <code>rgba(0, 255, 255, 1.0)</code>.</p>';
 
 $string['bodybgcolor'] = 'Body background color';
-$string['bodybgcolordesc'] = '<p>Main background color of the page.</p><p>This is applied to the <code>&lt;body&gt;</code> tag.</p>';
+$string['bodybgcolordesc'] = '<p>Main background color of the page.</p><p>This is applied to the <code>&lt;html&gt;</code> tag.</p>';
 $string['linkcolor'] = 'Links color';
 $string['linkcolordesc'] = '<p>Links and menu color.</p><p>This is applied to all links (in and out of page content) except the custommenu and the custommenu background with the exception of the "date".</p>';
 $string['hovercolor'] = 'Hover color';
