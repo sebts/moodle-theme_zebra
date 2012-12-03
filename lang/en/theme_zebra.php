@@ -176,6 +176,9 @@ $string['editingnotifydesc'] = '<p>This is a complementary series of rules for <
 $string['customcss'] = 'Custom CSS';
 $string['customcssdesc'] = '<p>Input any custom CSS here.</p><p>CSS input here is the very last thing called on the page and should not be overwritten by any other rules.  If your rules are not displaying please try the following:<ol><li>check your syntax</li><li>add <code>!important</code> to your rule</li><li>manually append the rule to extra.css</li></ol></p>';
 
+$string['customjs'] = 'Custom JavaScript';
+$string['customjsdesc'] = '<p>Input any custom JavaScript here.</p><p>JS input here is called inline in the page footer.  Any text input here will be wrapped in script tags.</p>';
+
 $string['enablezoom'] = 'Enable page zoom';
 $string['enablezoomdesc'] = '<p>Enable page zooming for mobile devices.</p>';
 

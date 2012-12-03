@@ -370,6 +370,13 @@ if ($ADMIN->fulltree) {
     $description = get_string('customcssdesc', 'theme_zebra');
     $setting = new admin_setting_configtextarea($name, $title, $description, null);
     $settings->add($setting);
+    
+    //Set custom JS for theme
+    $name = 'theme_zebra/customjs';
+    $title = get_string('customjs', 'theme_zebra');
+    $description = get_string('customjsdesc', 'theme_zebra');
+    $setting = new admin_setting_configtextarea($name, $title, $description, null);
+    $settings->add($setting);
 
     //Display branded footer logos
     $name = 'theme_zebra/branding';

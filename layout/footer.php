@@ -56,10 +56,13 @@
 	</script>
     <?php }
     if ($requiresrespond) {
-	$PAGE->requires->js('/theme/zebra/javascript/respond.js');
+		$PAGE->requires->js('/theme/zebra/javascript/respond.js');
     }
     if ($usingios) { //Check if the user is using iOS and serve a JS to fix a viewport re-flow bug
-	$PAGE->requires->js('/theme/zebra/javascript/iOS-viewport-fix.js');
+		$PAGE->requires->js('/theme/zebra/javascript/iOS-viewport-fix.js');
+    }
+    if ($hascustomjs) { //Check to see if we need to output some custom JS
+		echo '<script>' . $customjs . '</script>';
     }
     echo $OUTPUT->standard_end_of_body_html(); ?>
 </body>

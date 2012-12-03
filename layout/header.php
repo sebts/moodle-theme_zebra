@@ -97,7 +97,11 @@ $usingie = strpos($PAGE->bodyclasses, 'ie ie'); //Check if the user is using IE
 $usingie9 = strpos($PAGE->bodyclasses, 'ie9'); //Make sure the user isn't using IE9 because it can use @media declarations natively
 $usingios = (preg_match('/iPhone|iPod|iPad/i', $_SERVER['HTTP_USER_AGENT']));
 $requiresrespond = ($userespond && $usingie && !$usingie9); //Check all the options necessary to print respond.js
-$requirescf = ($usecf && $usingie && $ieversion); // Check all the options necessary to print chrome frame
+$requirescf = ($usecf && $usingie && $ieversion); //Check all the options necessary to print chrome frame
+$hascustomjs = ($PAGE->theme->settings->customjs); //Check to see if there's any custom JS in the settings page
+if ($hascustomjs) {
+	$customjs = $PAGE->theme->settings->customjs;
+}
 
 echo $OUTPUT->doctype(); ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
