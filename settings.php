@@ -385,4 +385,11 @@ if ($ADMIN->fulltree) {
     $description = get_string('brandingdesc', 'theme_zebra');
     $setting = new admin_setting_configcheckbox($name, $visiblename, $description, 0);
     $settings->add($setting);
+    
+    //Beg for money
+    $name = 'theme_zebra/donate';
+    $heading = get_string('donate', 'theme_zebra');
+    $information = get_string('donatedesc', 'theme_zebra');
+    $setting = new admin_setting_heading($name, $heading, $information);
+    $settings->add($setting);
 }
