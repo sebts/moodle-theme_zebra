@@ -170,17 +170,11 @@ $string['miscinfodesc'] = '<p>Change the settings for miscellaneous things.</p>'
 $string['useautohide'] = 'Include Autohide CSS';
 $string['useautohidedesc'] = '<p>Include the Autohide rules for users in Edit Mode.</p><p>Read more about this feature <a href="http://moodle.org/mod/forum/discuss.php?d=197470">here</a> or <a href="http://www.moodlenews.com/2012/a-moodle-administrators-dream-come-true-autohide-for-moodle-2-2/">here</a>.</p>';
 
-$string['editingnotify'] = 'Include Editing Mode CSS';
-$string['editingnotifydesc'] = '<p>This is a complementary series of rules for <a href="#admin-useautohide"><code>Autohide</code></a> that provides a visual indicator that the user is in Edit Mode.</p>';
-
 $string['customcss'] = 'Custom CSS';
 $string['customcssdesc'] = '<p>Input any custom CSS here.</p><p>CSS input here is the very last thing called on the page and should not be overwritten by any other rules.  If your rules are not displaying please try the following:<ol><li>check your syntax</li><li>add <code>!important</code> to your rule</li><li>manually append the rule to extra.css</li></ol></p>';
 
 $string['customjs'] = 'Custom JavaScript';
-$string['customjsdesc'] = '<p>Input any custom JavaScript here.</p><p>JS input here is called inline in the page footer.  Any text input here will be wrapped in script tags.</p>';
-
-$string['enablezoom'] = 'Enable page zoom';
-$string['enablezoomdesc'] = '<p>Enable page zooming for mobile devices.</p>';
+$string['customjsdesc'] = '<p>Input any custom JavaScript here.</p><p>JS input here is called inline in the page footer.  Any text input here will be wrapped in <code>script</code> tags.</p>';
 
 $string['branding'] = 'Hide footer logos';
 $string['brandingdesc'] = '<p>Hide the branded logos in the footer.</p><p>These links are to sites that either sponsored or contributed directly to development of this theme.  Full credits can be found in the readme when selecting this theme.</p>';
