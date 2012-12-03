@@ -85,7 +85,7 @@ require_once('header.php'); ?>
                                             		echo '<div id="course-header">' . $courseheader . '</div>';
                                             	}
                                             	echo $coursecontentheader;
-                                                echo method_exists($OUTPUT, "main_content") ? $OUTPUT->main_content() : core_renderer::MAIN_CONTENT_TOKEN;
+                                                echo $maincontent;
                                                 echo $coursecontentfooter; ?>
                                             </div>
                                         </div>

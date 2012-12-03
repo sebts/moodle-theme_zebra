@@ -43,6 +43,7 @@ if (empty($PAGE->layout_options['nocourseheaderfooter'])) {  //Check if we're di
     	$coursecontentfooter = method_exists($OUTPUT, "course_content_footer") ? $OUTPUT->course_content_footer() : NULL; //Course Content Footer - Backward compatible for <2.4
     }
 }
+$maincontent = method_exists($OUTPUT, "main_content") ? $OUTPUT->main_content() : core_renderer::MAIN_CONTENT_TOKEN; // Main Content - Backward compatible for <2.2
 $bodyclasses = array();
 if ($showsidepre && !$showsidepost) {
     $bodyclasses[] = 'side-pre-only';
