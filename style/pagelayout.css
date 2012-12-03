@@ -86,6 +86,10 @@ a:active {
     width: 100%;
 }
 
+#page-header-wrapper {
+	background-color: [[setting:headerbgcolor]];
+}
+
 .sitetopic,
 .coursebox,
 .block,
