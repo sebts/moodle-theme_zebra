@@ -24,34 +24,24 @@
 
 $string['pluginname'] = 'Zebra';
 $string['choosereadme'] = '<div class="clearfix">
-	<h1>Zebra</h1>
+	<h2>Zebra</h2>
         <hr>
-	<div style="float:right;margin-left:4px;">
-		<img src="zebra/pix/screenshot.jpg" />
-	</div>
-	<div>
-	    <p><span class="warning">Warning:</span> Zebra 2.0+ relies heavily on CSS3 and is <u>NOT recommended</u> for IE6 or below, but then, neither is Moodle 2.0+.</p>
-	    <br />
-		<h2>About</h2>
-		<p>Zebra uses CSS3 <code>@media</code> queries to dynamically reflow the page layout based on screen width.  This custom 2-1-3 (middle, left, right) page layout can display 1, 2, or 3 columns depending on screen width.  It is also compatible with <code>.side-pre-only</code>, <code>.side-post-only</code>, and <code>.content-only</code> body classes in all 3 layouts.</p>
-        <br />
-        <p>Zebra also provides extensive customization via its settings page, including colors, logos, reflow settings, mobile settings, and a custom CSS field.</p>
-		<h2>Parents</h2>
-		<p>This theme is built upon Base and integrates the pagelayout and dock from Rebase.</p>
-		<h2>Credits</h2>
-		<p>Zebra 2.0 is based off of the original Aardvark 1.2 (1.9) by Shaun Daubney @ Newbury-College, Zebra 1.4 (1.9) by me (Danny Wahl) @ iyWare, Aardvark_makeover (2.0) by Mary Evans @ Visible-Expressions, and whatever themes those themes are based off of.</p>
-		<h2>License</h2>
-		<p>This, and all other themes included in the Moodle core, are licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>.</p>
-		<br />
-		<p>The underlying page layout, designed independently of Moodle 2.0 by me (Danny Wahl) @ iyWare, and capable of being used standalone, is also licensed under the GNU General Public License.</p>
-		<h2>Theme Discussion Forum:</h2>
-		<p><a href="http://moodle.org/mod/forum/discuss.php?d=211918">http://moodle.org/mod/forum/discuss.php?d=211918</a></p>
-		<h2>Theme Plugin URL:</h2>
-                <p><a href="http://moodle.org/plugins/view.php?plugin=theme_zebra">http://moodle.org/plugins/view.php?plugin=theme_zebra</a></p>
-                <h2>Theme Credits</h2>
+		<h3>About</h3>
+		<p>Zebra is a mobile-first, responsive theme that uses CSS3 to reflow the layout for the best experience on every device.</p>
+        <p>Zebra also provides extensive customization via its settings page, including colors, logos, responsive settings, and custom CSS and JavaScript options.</p>
+		<h3>Parents</h3>
+		<p>This theme is built on Base but uses a custom page layout and dock.  This, and all other themes included in the Moodle core, are licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>.</p>
+		<p>The underlying page layout (<a href="http://iyware.com/antioch">antioch</a>), designed independently of Moodle 2.0 by Danny Wahl @<a href="http://iyware.com">iyWare</a>, and capable of being used standalone, is also licensed under the GNU General Public License v3.</p>
+		<h3>Other Components</h3>
+		<p>This theme utilizes other open source libraries and the rights of those libraries belong to their authors.  More information can be found on the <a href="../admin/settings.php?section=themesettingzebra">Zebra Theme Settings</a> page.</p>
+		<h3>Theme Discussion Forum:</h3>
+		<p><a href="https://moodle.org/mod/forum/discuss.php?d=211918">http://moodle.org/mod/forum/discuss.php?d=211918</a></p>
+		<h3>Theme Plugin URL:</h3>
+        <p><a href="https://moodle.org/plugins/view.php?plugin=theme_zebra">http://moodle.org/plugins/view.php?plugin=theme_zebra</a></p>
+        <h3>Theme Credits</h3>
 		<p><a href="http://iyware.com">Danny Wahl</a></p>
-                <h2>Don\'t forget to customize your settings!</h2>
-                <a href="../admin/settings.php?section=themesettingzebra">Zebra Theme Settings</a>
+        <h3>Don\'t forget to customize your settings!</h3>
+        <a href="../admin/settings.php?section=themesettingzebra">Zebra Theme Settings</a>
 	</div>
 </div>
 ';
