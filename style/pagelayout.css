@@ -32,6 +32,7 @@ html {
 body {
     padding: 0 10px 10px 10px;
     background: url([[setting:backgroundurl]]) no-repeat scroll center top transparent;
+    height: 97%; /* Show the full background image if it's bigger than #page - 100% causes scrollbars, weird... */
 }
 
 hr {
@@ -327,7 +328,6 @@ a:active {
 /* Simple Login Layout */
 
 .path-login.pagelayout-simple-login {
-    height: 100%; /* Show the full background image if it's bigger than #page */
     overflow: hidden; /* Don't show scrollbars though */
 }
 .path-login.pagelayout-simple-login #page {
