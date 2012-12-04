@@ -196,6 +196,10 @@
 	left: -32px; /* Move autocompletion to the left of the activities */
 }
 
+.path-course-view .completionprogress {
+	margin: 1em;
+}
+
 .path-course-view .single-section .completionprogress {
 	display: none; /* This is a hack until I can sort it out! */
 }
