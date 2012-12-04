@@ -119,13 +119,13 @@
 
 .path-course .section .activity .editing_moveright,
 .path-course .section .activity .editing_moveleft {
-	float: left;
+	/* float: left; */
 	padding-left: 5px;
 }
 
 .path-course .section .activity .editing_move {
 	border-right: 1px solid [[setting:bodybgcolor]];
-	float: left;
+	/* float: left; */
 	padding-right: 10px;
 	margin-right: 10px;
 	padding-left: 5px;
@@ -140,7 +140,7 @@
 }
 
 .path-course .section .activity .editing_delete {
-    float: right;
+    /* float: right; */
 	padding: 0 0 0 5px;
 }
 
@@ -153,7 +153,7 @@
 
 .path-course .section .activity .editing_assign,
 .path-course .section .activity .editing_groupsnone {
-	display: none;
+	/* display: none; */
 }
 
 /* Do some crazy stuff with labels!
@@ -187,6 +187,17 @@
 
 .editing.path-course .section .activity.label p:last-of-type {
 	margin-bottom: 0;
+}
+
+.path-course-view li.activity span.autocompletion,
+.path-course-view li.activity form.togglecompletion,
+.path-course-view li.activity span.autocompletion,
+.path-course-view li.activity form.togglecompletion {
+	left: -32px; /* Move autocompletion to the left of the activities */
+}
+
+.path-course-view .single-section .completionprogress {
+	display: none; /* This is a hack until I can sort it out! */
 }
 
 .path-course .section .section-modchooser {
