@@ -190,12 +190,17 @@
 }
 
 .path-course-view li.activity span.autocompletion,
-.path-course-view li.activity form.togglecompletion,
-.path-course-view li.activity span.autocompletion,
 .path-course-view li.activity form.togglecompletion {
 	left: -32px; /* Move autocompletion to the left of the activities */
 	right: inherit;
 }
+
+.path-course-view li.activity .mod-indent-1 span.autocompletion,
+.path-course-view li.activity .mod-indent-1 form.togglecompletion {
+	left: -62px; /* compensate for autocomplete */
+}
+
+.path-course-view
 
 .path-course-view .completionprogress {
 	margin: 1em;
