@@ -194,6 +194,7 @@
 .path-course-view li.activity span.autocompletion,
 .path-course-view li.activity form.togglecompletion {
 	left: -32px; /* Move autocompletion to the left of the activities */
+	right: inherit;
 }
 
 .path-course-view .completionprogress {
