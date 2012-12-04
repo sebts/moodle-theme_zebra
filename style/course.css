@@ -67,11 +67,6 @@
 }
 
 /* Actual courses */
-
-.path-course .course-content {
-	margin-top: -5px; /* Pull the content up to the blocks */
-}
-
 .path-course .section {
     margin: 1em 0;
     clear: both; /* Clear the float in the summary text */
@@ -87,7 +82,7 @@
 }
 
 .path-course .section .activity {
-	padding: 10px!important; /* Need important to override "base" */
+	padding: 10px 10px 20px!important; /* Need important to override "base" */
 }
 
 .editing.path-course .section .activity {
