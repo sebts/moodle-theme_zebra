@@ -35,7 +35,7 @@ $string['choosereadme'] = '<div class="clearfix">
 		<h3>Other Components</h3>
 		<p>This theme utilizes other open source libraries and the rights of those libraries belong to their authors.  More information can be found on the <a href="../admin/settings.php?section=themesettingzebra">Zebra Theme Settings</a> page.</p>
 		<h3>Theme Discussion Forum:</h3>
-		<p><a href="https://moodle.org/mod/forum/discuss.php?d=211918">http://moodle.org/mod/forum/discuss.php?d=211918</a></p>
+		<p><a href="https://moodle.org/mod/forum/discuss.php?d=217191">https://moodle.org/mod/forum/discuss.php?d=217191</a></p>
 		<h3>Theme Plugin URL:</h3>
         <p><a href="https://moodle.org/plugins/view.php?plugin=theme_zebra">http://moodle.org/plugins/view.php?plugin=theme_zebra</a></p>
         <h3>Theme Credits</h3>
