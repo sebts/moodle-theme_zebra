@@ -141,7 +141,7 @@ $THEME->layouts = array(
         'options' => array('nofooter'=>true, 'noblocks'=>true, 'nonavbar'=>true, 'nocustommenu'=>true, 'nologininfo'=>true, 'nocourseheaderfooter'=>true)
     ),
     'report' => array(
-        'file' => 'report.php', //Enables overflow for reports
+        'file' => 'general.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
         'options' => array()
