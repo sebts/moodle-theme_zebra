@@ -27,6 +27,10 @@
     background-color: [[setting:colorscheme]]; /* re-stripe the table (YUI removes it) */
 }
 
+.gradingtable .cell tr {
+    background-color: transparent; /* uncolor tables in tables */
+}
+
 .gradingtable tr.unselectedrow {
     border: 1px inset transparent; /* put the border to prevent pixel-shifting */
 }
