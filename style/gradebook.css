@@ -28,7 +28,7 @@
 }
 
 .gradingtable .cell tr {
-    background-color: transparent; /* uncolor tables in tables */
+    background-color: transparent!important; /* uncolor tables in tables */
 }
 
 .gradingtable tr.unselectedrow {
