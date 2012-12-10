@@ -41,6 +41,7 @@ $THEME->sheets = array(
     'blocks',	    //Overrides for the blocks sheet from Base
     'calendar',	    //Overrides for the calendar sheet from Base
     'course',	    //Overrides for the course sheet from Base
+    'gradebook',    //Overrides for the gradebook from YUI
     'custommenu',   //Applies style to the custommenu
     'dock',         //Derived from Rebase
     'mod_forum',    //Overrides for forum
