@@ -49,7 +49,7 @@
     </div>
     <?php if ($requirescf) {
 	$PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
-	<script>
+	<script type="text/javascript">
 	    //<![CDATA[
 		window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
 	    //]]>
@@ -62,7 +62,7 @@
 		$PAGE->requires->js(new moodle_url('https://raw.github.com/scottjehl/iOS-Orientationchange-Fix/master/ios-orientationchange-fix.js'));
     }
     if ($hascustomjs) { //Check to see if we need to output some custom JS
-		echo '<script>//<![CDATA[' . "\r\n" . $customjs . "\r\n" . '//]]></script>';
+		echo '<script type="text/javascript">//<![CDATA[' . "\r\n" . $customjs . "\r\n" . '//]]></script>';
     }
     echo $OUTPUT->standard_end_of_body_html(); ?>
 </body>
