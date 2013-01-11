@@ -62,7 +62,7 @@
 		$PAGE->requires->js('/theme/zebra/javascript/iOS-viewport-fix.js');
     }
     if ($hascustomjs) { //Check to see if we need to output some custom JS
-		echo '<script>' . $customjs . '</script>';
+		echo '<script>//<![CDATA[' . $customjs . '//]]></script>';
     }
     echo $OUTPUT->standard_end_of_body_html(); ?>
 </body>
