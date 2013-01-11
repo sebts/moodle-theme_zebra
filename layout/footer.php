@@ -56,7 +56,7 @@
 	</script>
     <?php }
     if ($requiresrespond) {
-		$PAGE->requires->js('/theme/zebra/javascript/respond.js');
+		$PAGE->requires->js(new moodle_url('https://raw.github.com/scottjehl/Respond/master/respond.min.js'));
     }
     if ($usingios) { //Check if the user is using iOS and serve a JS to fix a viewport re-flow bug
 		$PAGE->requires->js('/theme/zebra/javascript/iOS-viewport-fix.js');
