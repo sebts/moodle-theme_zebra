@@ -59,7 +59,7 @@
 		$PAGE->requires->js(new moodle_url('https://raw.github.com/scottjehl/Respond/master/respond.min.js'));
     }
     if ($usingios) { //Check if the user is using iOS and serve a JS to fix a viewport re-flow bug
-		$PAGE->requires->js('/theme/zebra/javascript/iOS-viewport-fix.js');
+		$PAGE->requires->js(new moodle_url('https://raw.github.com/scottjehl/iOS-Orientationchange-Fix/master/ios-orientationchange-fix.js'));
     }
     if ($hascustomjs) { //Check to see if we need to output some custom JS
 		echo '<script>//<![CDATA[' . $customjs . '//]]></script>';
