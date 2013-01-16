@@ -318,6 +318,10 @@ a:active {
     width: [[setting:colwidth]];
 }
 
+.pagelayout-report .no-overflow {
+    overflow-x: scroll;
+}
+
 /* RTL Hack */
 
 .dir-rtl {
