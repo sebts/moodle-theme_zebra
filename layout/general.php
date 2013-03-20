@@ -22,7 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-require_once('header.php'); ?>
+require_once(dirname(__FILE__).'/header.php'); ?>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
     <?php echo $OUTPUT->standard_top_of_body_html(); ?>
     <div id="page">
@@ -110,4 +110,4 @@ require_once('header.php'); ?>
                     </div>
                 </div>
             </div>
-	    <?php require_once('footer.php');
+	    <?php require_once(dirname(__FILE__).'/footer.php');
