@@ -46,6 +46,7 @@ $THEME->sheets = array(
     'dock',         //Derived from Rebase
     'mod_forum',    //Overrides for forum
     'mod_resource', //Overrides for resources
+    'mod_lesson',   //Overrides for Lesson
     'extra',        //Extra stuff that doesn't fit the above
     'ie'            //Special Internet Explorer rules
 );
