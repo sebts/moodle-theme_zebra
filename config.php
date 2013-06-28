@@ -153,3 +153,5 @@ $THEME->csspostprocess = 'zebra_process_css'; //Process the settings page (color
 
 $THEME->javascripts = array();
 $THEME->javascripts_footer = array();
+
+$THEME->rendererfactory = 'theme_overridden_renderer_factory';

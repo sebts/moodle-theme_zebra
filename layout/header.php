@@ -101,4 +101,37 @@ echo $OUTPUT->doctype(); ?>
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $OUTPUT->pix_url('favicon/m/apple-touch-icon-precomposed', 'theme'); ?>">
     <link rel="apple-touch-icon-precomposed" href="<?php echo $OUTPUT->pix_url('favicon/l/apple-touch-icon-precomposed', 'theme'); ?>">
 <?php echo $OUTPUT->standard_head_html(); ?>
+
+<?php if (strpos($_SERVER["PHP_SELF"], "login/index.php") === false) { ?>
+<!-- SEBTS Begin Single Sign On -->
+<script type="text/javascript">
+$(document).ready(function() {
+loaded = false;
+
+$("#hlogin").submit(function() {
+   if (!loaded) {
+      var user = $("#husername").val();
+      var pass = $("#hpassword").val();
+      document.getElementById('selfserv').src = 'https://selfservice.sebts.edu/selfservice/login.aspx#mdl|'+user+'|'+pass;
+      return false;
+   } else {
+      return true;
+   }
+});
+});
+
+function doneload() {
+if (document.getElementById('selfserv').src.search("selfservice") > 0) {
+   loaded = true;
+   $("#hlogin").submit();
+}
+}
+</script>
+<!-- SEBTS End Single Sign On -->
+<?php } ?>
 </head>
+
+<!-- SEBTS Single Sign On Hidden Frame -->
+<iframe id="selfserv" onload="doneload();" src="about:blank" width="0" height="0" frameborder="no"></iframe>
+<!-- Close SEBTS -->
+

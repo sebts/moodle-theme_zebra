@@ -30,6 +30,9 @@
 /**
  * General
  */
+body * a {
+	text-decoration:none !important;
+}
 
 .course-content li.section {
     border: 1px solid [[setting:bodybgcolor]];
@@ -78,6 +81,7 @@ table.generalbox {
 
 .headermain {
     margin: 0;
+	color: #F4F6F8;
 }
 
 .headermain .logo {
@@ -87,6 +91,7 @@ table.generalbox {
 .headermain .header {
 	margin: 0;
 	display: inline;
+	color: #F4F6F8;
 }
 
 #profileblock {
