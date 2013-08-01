@@ -89,6 +89,7 @@ class theme_zebra_core_renderer extends core_renderer {
 			$branch->add("STR 2.2 (2011)", new moodle_url('/mod/resource/view.php?inpopup=true&id=66483'), "STR 2.2 (2011)");
 			$branch->add("STR 3.1 (2012)", new moodle_url('/mod/resource/view.php?inpopup=true&id=62328'), "STR 3.1 (2012)");
 			$branch->add("STR 3.2 (2012)", new moodle_url('/mod/page/view.php?id=84134'), "STR 3.2 (2012)");
+			$branch->add("STR 4.1 (2013)", new moodle_url('/mod/page/view.php?id=103550'), "STR 4.1 (2013)");
 		}
 
 		$branch = $menu->add('Help', new moodle_url('') , 'Help', 90000);
