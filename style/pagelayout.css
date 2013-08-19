@@ -32,7 +32,7 @@ html {
 body {
     padding: 0 10px 10px 10px;
     background: url([[setting:backgroundurl]]) repeat-x scroll center top transparent !important;
-
+    height: 97%; /* Show the full background image if it's bigger than #page - 100% causes scrollbars, weird... */
 }
 
 hr {
@@ -85,6 +85,10 @@ a:active {
     float: none;
     position: relative;
     width: 100%;
+}
+
+#page-header-wrapper {
+	background-color: [[setting:headerbgcolor]];
 }
 
 .sitetopic,
@@ -314,6 +318,10 @@ a:active {
     width: [[setting:colwidth]];
 }
 
+.pagelayout-report .no-overflow {
+    overflow-x: scroll;
+}
+
 /* RTL Hack */
 
 .dir-rtl {
@@ -324,7 +332,6 @@ a:active {
 /* Simple Login Layout */
 
 .path-login.pagelayout-simple-login {
-    height: 100%; /* Show the full background image if it's bigger than #page */
     overflow: hidden; /* Don't show scrollbars though */
 }
 .path-login.pagelayout-simple-login #page {

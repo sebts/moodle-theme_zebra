@@ -14,42 +14,15 @@
 */
 
 /**
- * zebra extras css file
+ * zebra theme modules css file
  *
  * @package    theme_zebra
  * @copyright  2011 Danny Wahl
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-/* Branding */
+/* Lesson */
 
-#branding {
-	margin-top: 10px;
+.path-mod-lesson .edit_pages_box .addlinks {
+    margin: 2em 0 1em;
 }
-
-#branding img {
-	padding: 0 10px;
-}
-
-/* Add some padding to some areas */
-.editing .block_site_main_menu .content .r0, /* Site Main Menu Resources/Activities */
-.editing .block_site_main_menu .content .r1,
-.editing .block_course_summary .no-overflow,
-.editing .sitetopic > .no-overflow {
-    padding: 4px!important; /* !important is necessary to override a rule from "Base" */
-}
-
-/**
- * autohide CSS
- * This adds the special autohide css in autohide.css if the setting is enabled.
- */
-
-[[setting:useautohide]]
-
-/**
- * Custom CSS
- * This is the very last piece of CSS loaded, so if something looks weird,
- * try removing your custom CSS from the theme settings page.
- */
-
-[[setting:customcss]]

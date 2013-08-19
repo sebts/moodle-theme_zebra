@@ -24,34 +24,24 @@
 
 $string['pluginname'] = 'Zebra';
 $string['choosereadme'] = '<div class="clearfix">
-	<h1>Zebra</h1>
+	<h2>Zebra</h2>
         <hr>
-	<div style="float:right;margin-left:4px;">
-		<img src="zebra/pix/screenshot.jpg" />
-	</div>
-	<div>
-	    <p><span class="warning">Warning:</span> Zebra 2.0+ relies heavily on CSS3 and is <u>NOT recommended</u> for IE6 or below, but then, neither is Moodle 2.0+.</p>
-	    <br />
-		<h2>About</h2>
-		<p>Zebra uses CSS3 <code>@media</code> queries to dynamically reflow the page layout based on screen width.  This custom 2-1-3 (middle, left, right) page layout can display 1, 2, or 3 columns depending on screen width.  It is also compatible with <code>.side-pre-only</code>, <code>.side-post-only</code>, and <code>.content-only</code> body classes in all 3 layouts.</p>
-        <br />
-        <p>Zebra also provides extensive customization via its settings page, including colors, logos, reflow settings, mobile settings, and a custom CSS field.</p>
-		<h2>Parents</h2>
-		<p>This theme is built upon Base and integrates the pagelayout and dock from Rebase.</p>
-		<h2>Credits</h2>
-		<p>Zebra 2.0 is based off of the original Aardvark 1.2 (1.9) by Shaun Daubney @ Newbury-College, Zebra 1.4 (1.9) by me (Danny Wahl) @ iyWare, Aardvark_makeover (2.0) by Mary Evans @ Visible-Expressions, and whatever themes those themes are based off of.</p>
-		<h2>License</h2>
-		<p>This, and all other themes included in the Moodle core, are licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>.</p>
-		<br />
-		<p>The underlying page layout, designed independently of Moodle 2.0 by me (Danny Wahl) @ iyWare, and capable of being used standalone, is also licensed under the GNU General Public License.</p>
-		<h2>Theme Discussion Forum:</h2>
-		<p><a href="http://moodle.org/mod/forum/discuss.php?d=211918">http://moodle.org/mod/forum/discuss.php?d=211918</a></p>
-		<h2>Theme Plugin URL:</h2>
-                <p><a href="http://moodle.org/plugins/view.php?plugin=theme_zebra">http://moodle.org/plugins/view.php?plugin=theme_zebra</a></p>
-                <h2>Theme Credits</h2>
+		<h3>About</h3>
+		<p>Zebra is a mobile-first, responsive theme that uses CSS3 to reflow the layout for the best experience on every device.</p>
+        <p>Zebra also provides extensive customization via its settings page, including colors, logos, responsive settings, and custom CSS and JavaScript options.</p>
+		<h3>Parents</h3>
+		<p>This theme is built on Base but uses a custom page layout and dock.  This, and all other themes included in the Moodle core, are licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>.</p>
+		<p>The underlying page layout (<a href="http://iyware.com/antioch">antioch</a>), designed independently of Moodle 2.0 by Danny Wahl @<a href="http://iyware.com">iyWare</a>, and capable of being used standalone, is also licensed under the GNU General Public License v3.</p>
+		<h3>Other Components</h3>
+		<p>This theme utilizes other open source libraries and the rights of those libraries belong to their authors.  More information can be found on the <a href="../admin/settings.php?section=themesettingzebra">Zebra Theme Settings</a> page.</p>
+		<h3>Theme Discussion Forum:</h3>
+		<p><a href="https://moodle.org/mod/forum/discuss.php?d=217191">https://moodle.org/mod/forum/discuss.php?d=217191</a></p>
+		<h3>Theme Plugin URL:</h3>
+        <p><a href="https://moodle.org/plugins/view.php?plugin=theme_zebra">http://moodle.org/plugins/view.php?plugin=theme_zebra</a></p>
+        <h3>Theme Credits</h3>
 		<p><a href="http://iyware.com">Danny Wahl</a></p>
-                <h2>Don\'t forget to customize your settings!</h2>
-                <a href="../admin/settings.php?section=themesettingzebra">Zebra Theme Settings</a>
+        <h3>Don\'t forget to customize your settings!</h3>
+        <a href="../admin/settings.php?section=themesettingzebra">Zebra Theme Settings</a>
 	</div>
 </div>
 ';
@@ -87,7 +77,7 @@ $string['colorsinfo'] = 'General colors settings';
 $string['colorsinfodesc'] = '<p>Change the settings for the colors of the page.</p><p>You can use any valid color type like <code>red</code>, <code>#FF0000</code>, <code>rgb(0, 255, 255)</code>, or <code>rgba(0, 255, 255, 1.0)</code>.</p>';
 
 $string['bodybgcolor'] = 'Body background color';
-$string['bodybgcolordesc'] = '<p>Main background color of the page.</p><p>This is applied to the <code>&lt;body&gt;</code> tag.</p>';
+$string['bodybgcolordesc'] = '<p>Main background color of the page.</p><p>This is applied to the <code>&lt;html&gt;</code> tag.</p>';
 $string['linkcolor'] = 'Links color';
 $string['linkcolordesc'] = '<p>Links and menu color.</p><p>This is applied to all links (in and out of page content) except the custommenu and the custommenu background with the exception of the "date".</p>';
 $string['hovercolor'] = 'Hover color';
@@ -133,6 +123,10 @@ $string['colorschemedesc'] = '<p>Gradients and highlights.</p><p>Note: Safari 4 
 $string['menucolorscheme'] = 'Menu color scheme';
 $string['menucolorschemedesc'] = '<p>Gradient of menu.</p>';
 
+$string['schemenone'] = 'None';
+$string['schemedark'] = 'Dark';
+$string['schemelight'] = 'Light';
+
 $string['columninfo'] = 'Layout Settings';
 $string['columninfodesc'] = '<p>Change the settings for the layout of the page.  To test your settings simply resize your browser window or rotate the orientation of your phone/tablet.</p><figure style="float: left;"><img src="../theme/image.php?theme=zebra&image=core/one_column&component=theme"/><figcaption><ul><li>top: <code>region-main</code></li><li>middle: <code>region-pre</code></li><li>bottom: <code>region-post</code></li></ul></figcaption></figure><figure style="float: left;"><img src="../theme/image.php?theme=zebra&image=core/two_columns&component=theme"/><figcaption><ul><li>top left: <code>region-pre</code></li><li>bottom left: <code>region-post</code></li><li>right: <code>region-main</code></li></ul></figcaption></figure><figure style="float: left;"><img src="../theme/image.php?theme=zebra&image=core/three_columns&component=theme"/><figcaption><ul><li>left: <code>region-pre</code></li><li>center: <code>region-main</code></li><li>right: <code>region-post</code></li></ul></figcaption></figure><br style="clear: left;" />';
 
@@ -166,17 +160,17 @@ $string['miscinfodesc'] = '<p>Change the settings for miscellaneous things.</p>'
 $string['useautohide'] = 'Include Autohide CSS';
 $string['useautohidedesc'] = '<p>Include the Autohide rules for users in Edit Mode.</p><p>Read more about this feature <a href="http://moodle.org/mod/forum/discuss.php?d=197470">here</a> or <a href="http://www.moodlenews.com/2012/a-moodle-administrators-dream-come-true-autohide-for-moodle-2-2/">here</a>.</p>';
 
-$string['editingnotify'] = 'Include Editing Mode CSS';
-$string['editingnotifydesc'] = '<p>This is a complementary series of rules for <a href="#admin-useautohide"><code>Autohide</code></a> that provides a visual indicator that the user is in Edit Mode.</p>';
-
 $string['customcss'] = 'Custom CSS';
 $string['customcssdesc'] = '<p>Input any custom CSS here.</p><p>CSS input here is the very last thing called on the page and should not be overwritten by any other rules.  If your rules are not displaying please try the following:<ol><li>check your syntax</li><li>add <code>!important</code> to your rule</li><li>manually append the rule to extra.css</li></ol></p>';
 
-$string['enablezoom'] = 'Enable page zoom';
-$string['enablezoomdesc'] = '<p>Enable page zooming for mobile devices.</p>';
+$string['customjs'] = 'Custom JavaScript';
+$string['customjsdesc'] = '<p>Input any custom JavaScript here.</p><p>JS input here is called inline in the page footer.  Any text input here will be wrapped in <code>script</code> tags.</p>';
 
 $string['branding'] = 'Hide footer logos';
 $string['brandingdesc'] = '<p>Hide the branded logos in the footer.</p><p>These links are to sites that either sponsored or contributed directly to development of this theme.  Full credits can be found in the readme when selecting this theme.</p>';
+
+$string['donate'] = 'Donate with PayPal';
+$string['donatedesc'] = '<p style="text-align:center;">If you think this theme and its features are worth a few bucks then please donate toward its continued development.<br/><br/><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=danny%40iywahl%2ecom&lc=US&item_name=iyWare&item_number=Zebra%202%20&currency_code=USD" style="background: url(data:image/png;base64,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) no-repeat scroll 8px 4px #234B6F; padding: 8px 22px 12px 54px; color:#fff; border-radius:4px;box-shadow:1px 1px 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2) inset;text-align:center;text-shadow:0 1px 1px rgba(0, 0, 0, 0.3);text-decoration:none;">Donate</a></p>';
 
 $string['menuhome'] = 'Home';
 $string['menumyhome'] = 'My Home';

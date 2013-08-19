@@ -22,7 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-require_once('header.php'); ?>
+require_once(dirname(__FILE__).'/header.php'); ?>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
     <?php echo $OUTPUT->standard_top_of_body_html(); ?>
     <div id="page">
@@ -69,20 +69,38 @@ require_once('header.php'); ?>
 <?php   } ?>
 <!-- SEBTS Close Block -->
 						</div>
+                    	}
+                    	if (!$simplelogin) { ?>
+                    		<h1 class="header"><?php /*SEBTS: Uniform Title*/ echo "SEBTS CampusNet"; // echo $headeralt; ?></h1>
+                    	<?php } ?>
                     </div>
+                    <?php if (!$simplelogin) { ?>
+	                    <div id="profileblock">
+							<?php if (($haslogininfo) && (isloggedin()) && ($showuserpic) && !(isguestuser())) {
+						        echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
+							} ?>
+							<div id="user-info">
+								<?php echo $OUTPUT->login_info();
+								if ($haslangmenu) {
+									echo $OUTPUT->lang_menu();
+								}
+								echo $PAGE->headingmenu; ?>
+							</div>
+	                    </div>
+                    <?php } ?>
                 </div>
                 <div id="page-border-wrapper">
                     <?php if ($hascustommenu) { ?>
                         <div id="custommenu-wrapper">
                             <div id="custommenu">
-				<?php if ($hashomeicon) {
-				    echo '<a class="home" href="' . $homeurl . '"><div>&nbsp;</div></a>';
-				}
-				echo $custommenu;
-				if ($hascallink) {
-				    echo '<a class="calendar" href="' . $calurl . '">' . date("$dateformat") . '</a>';
-				} ?>
-			    </div>
+	                            <?php if ($hashomeicon) {
+		                            echo '<a class="home" href="' . $homeurl . '"><div>&nbsp;</div></a>';
+		                        }
+		                        echo $custommenu;
+		                        if ($hascallink) {
+			                        echo '<a class="calendar" href="' . $calurl . '">' . date("$dateformat") . '</a>';
+			                    } ?>
+			    			</div>
                         </div>
                     <?php } ?>
                     <?php if ($hasnavbar) { ?>
@@ -100,7 +118,12 @@ require_once('header.php'); ?>
                                     <div id="region-main-wrap">
                                         <div id="region-main">
                                             <div class="region-content">
-                                                <?php echo method_exists($OUTPUT, "main_content") ? $OUTPUT->main_content() : core_renderer::MAIN_CONTENT_TOKEN ?>
+                                            	<?php if (!empty($courseheader)) { 
+                                            		echo '<div id="course-header">' . $courseheader . '</div>';
+                                            	}
+                                            	echo $coursecontentheader;
+                                                echo $maincontent;
+                                                echo $coursecontentfooter; ?>
                                             </div>
                                         </div>
                                     </div>
@@ -124,4 +147,4 @@ require_once('header.php'); ?>
                     </div>
                 </div>
             </div>
-	    <?php require_once('footer.php');
+	    <?php require_once(dirname(__FILE__).'/footer.php');

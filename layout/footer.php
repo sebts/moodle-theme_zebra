@@ -22,6 +22,9 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+ 		if (!empty($coursefooter)) { ?>
+ 			<div id="course-footer"><?php echo $coursefooter; ?></div>
+ 		<?php }
 	    if ($hasfooter) { ?>
                 <div id="page-footer-wrapper">
                     <div id="page-footer">
@@ -46,17 +49,20 @@
     </div>
     <?php if ($requirescf) {
 	$PAGE->requires->js(new moodle_url('http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js')); ?>
-	<script>
+	<script type="text/javascript">
 	    //<![CDATA[
 		window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
 	    //]]>
 	</script>
     <?php }
     if ($requiresrespond) {
-	$PAGE->requires->js('/theme/zebra/javascript/respond.js');
+		$PAGE->requires->js(new moodle_url('https://raw.github.com/scottjehl/Respond/master/respond.min.js'));
     }
     if ($usingios) { //Check if the user is using iOS and serve a JS to fix a viewport re-flow bug
-	$PAGE->requires->js('/theme/zebra/javascript/iOS-viewport-fix.js');
+		$PAGE->requires->js(new moodle_url('https://raw.github.com/scottjehl/iOS-Orientationchange-Fix/master/ios-orientationchange-fix.js'));
+    }
+    if ($hascustomjs) { //Check to see if we need to output some custom JS
+		echo '<script type="text/javascript">//<![CDATA[' . "\r\n" . $customjs . "\r\n" . '//]]></script>';
     }
     echo $OUTPUT->standard_end_of_body_html(); ?>
 </body>

@@ -34,6 +34,16 @@ $showsidepre = ($hassidepre && !$PAGE->blocks->region_completely_docked('side-pr
 $showsidepost = ($hassidepost && !$PAGE->blocks->region_completely_docked('side-post', $OUTPUT));
 $custommenu = $OUTPUT->custom_menu();
 $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu) && !$simplelogin); //Check if this page-layout has a custommenu and if it has content
+$courseheader = $coursecontentheader = $coursecontentfooter = $coursefooter = '';
+if (empty($PAGE->layout_options['nocourseheaderfooter'])) {  //Check if we're displaying course specific headers and footers
+    $courseheader = method_exists($OUTPUT, "course_header") ? $OUTPUT->course_header() : NULL; //Course header - Backward compatible for <2.4
+    $coursecontentheader = method_exists($OUTPUT, "course_content_header") ? $OUTPUT->course_content_header() : NULL; //Course content header - Backward compatible for <2.4
+    if (empty($PAGE->layout_options['nocoursefooter'])) { //Chekc if we're displaying course footers
+        $coursefooter = method_exists($OUTPUT, "course_footer") ? $OUTPUT->course_footer() : NULL; //Course footer - Backward compatible for <2.4
+    	$coursecontentfooter = method_exists($OUTPUT, "course_content_footer") ? $OUTPUT->course_content_footer() : NULL; //Course Content Footer - Backward compatible for <2.4
+    }
+}
+$maincontent = method_exists($OUTPUT, "main_content") ? $OUTPUT->main_content() : core_renderer::MAIN_CONTENT_TOKEN; // Main Content - Backward compatible for <2.2
 $bodyclasses = array();
 if ($showsidepre && !$showsidepost) {
     $bodyclasses[] = 'side-pre-only';
@@ -88,7 +98,11 @@ $usingie = strpos($PAGE->bodyclasses, 'ie ie'); //Check if the user is using IE
 $usingie9 = strpos($PAGE->bodyclasses, 'ie9'); //Make sure the user isn't using IE9 because it can use @media declarations natively
 $usingios = (preg_match('/iPhone|iPod|iPad/i', $_SERVER['HTTP_USER_AGENT']));
 $requiresrespond = ($userespond && $usingie && !$usingie9); //Check all the options necessary to print respond.js
-$requirescf = ($usecf && $usingie && $ieversion); // Check all the options necessary to print chrome frame
+$requirescf = ($usecf && $usingie && $ieversion); //Check all the options necessary to print chrome frame
+$hascustomjs = ($PAGE->theme->settings->customjs); //Check to see if there's any custom JS in the settings page
+if ($hascustomjs) {
+	$customjs = $PAGE->theme->settings->customjs;
+}
 
 echo $OUTPUT->doctype(); ?>
 <html <?php echo $OUTPUT->htmlattributes(); ?>>
