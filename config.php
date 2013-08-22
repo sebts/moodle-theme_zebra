@@ -56,7 +56,7 @@ $THEME->layouts = array(
         'file' => 'general.php',
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-pre',
-        'options' => array('langmenu'=>true, 'noblocks'=>true)
+        'options' => array('langmenu'=>true)
     ),
     'standard' => array(
         'file' => 'general.php',
