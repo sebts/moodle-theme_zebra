@@ -158,3 +158,8 @@ $THEME->layouts = array(
 $THEME->enable_dock = true;
 
 $THEME->csspostprocess = 'zebra_process_css'; //Process the settings page (colors, widths, etc.)
+
+$THEME->javascripts = array();
+$THEME->javascripts_footer = array();
+
+$THEME->rendererfactory = 'theme_overridden_renderer_factory';

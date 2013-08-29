@@ -31,7 +31,7 @@ html {
 
 body {
     padding: 0 10px 10px 10px;
-    background: url([[setting:backgroundurl]]) no-repeat scroll center top transparent;
+    background: url([[setting:backgroundurl]]) repeat-x scroll center top transparent !important;
     height: 97%; /* Show the full background image if it's bigger than #page - 100% causes scrollbars, weird... */
 }
 
