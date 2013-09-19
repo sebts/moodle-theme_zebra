@@ -81,6 +81,9 @@ class theme_zebra_core_renderer extends core_renderer {
 		if (isloggedin() && !isguestuser()) {
 			$branch = $menu->add('Library', new moodle_url('/course/view.php?id=227') , 'Library', 60000);
 		}
+		if (isloggedin() && !isguestuser()) {
+			$branch = $menu->add('Writing Center', new moodle_url('/course/view.php?id=40') , 'Writing Center', 65000);
+		}
 
 		if (isloggedin() && !isguestuser()) {
 			$branch = $menu->add('STR Journal', new moodle_url('') , 'STR Journal', 80000);
