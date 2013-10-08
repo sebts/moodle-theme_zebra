@@ -28,7 +28,7 @@ class theme_zebra_core_renderer extends core_renderer {
 		}
 		if (isloggedin() && !isguestuser()) {
 	        $branch = $menu->add('Moodle', new moodle_url('/my') , 'Moodle', 10000);
-	 		$branch->add("Current Courses", new moodle_url('/my'), "My Moodle");
+	 		$branch->add("Current Courses", new moodle_url('/my/?semester=current'), "My Moodle");
 	 		$branch->add("Previous Courses", new moodle_url('/my/showpastsemesters.php'), "Previous Courses");
 	 		$branch->add("Future Courses", new moodle_url('/my/showfuturesemesters.php'), "Future Courses");
 	 		$branch->add("MOOC", new moodle_url('/mod/page/view.php?id=87104'), "MOOC");
