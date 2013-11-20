@@ -70,7 +70,8 @@
 .editing .section .summary > a:focus,
 .editing .sitetopic:hover > a,
 .editing .sitetopic > a:active,
-.editing .sitetopic > a:focus {
+.editing .sitetopic > a:focus,
+.editing .course-content .section .activity .commands:hover {
     filter: none;
-    opacity: 1;
+    opacity: .6;
 }

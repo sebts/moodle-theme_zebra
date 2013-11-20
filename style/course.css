@@ -113,7 +113,7 @@
 .course-content .section li.activity {
     margin: 0;
     padding: 0 0 0 40px; /* bottom +1 to account for -1 margin */ 
-    border-top: 1px solid [[setting:bodybgcolor]]; /* border between all activities */
+    border-top: 0px solid [[setting:bodybgcolor]]; /* border between all activities */
     margin-top: -1px; /* For sections with only 1 item */
     min-height: 32px; /* make sure everything looks even */
 }
@@ -205,16 +205,25 @@
     float: left; /* TODO: replace this w/ margin-right */
 }
 
+/* SEBTS inserting showhide opacity below - orig in comment
 .editing .sitetopic .section .activity .commands,
 .editing .course-content .section .activity .commands {
-    float: right;
+    float: none;
     padding: 0 4px 0 0;
+}
+*/
+.editing .sitetopic .section .activity .commands,
+.editing .course-content .section .activity .commands {
+    float: none;
+    padding: 0 1px 0 0;
+    opacity: 0;
+    transition: opacity 0.5s linear 0s;
 }
 
 .sitetopic .section .activity .commands img,
 .course-content .section .activity .commands img {
-  height: 24px;
-  padding: 4px;
+  height: 12px;
+  padding: 1px 0 0 0;
   vertical-align: middle;
 }
 
@@ -222,7 +231,7 @@
 
 .editing .sitetopic .summary .no-overflow,
 .editing .course-content .summary .no-overflow {
-    float: left;
+    // float: left;
 }
 
 .editing .sitetopic .summary > a,
