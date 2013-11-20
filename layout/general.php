@@ -22,6 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+require_once($CFG->libdir.'/moodlelib.php');
 require_once(dirname(__FILE__).'/header.php'); ?>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
     <?php echo $OUTPUT->standard_top_of_body_html(); ?>
@@ -32,51 +33,14 @@ require_once(dirname(__FILE__).'/header.php'); ?>
                     <div class="headermain">
                     	<?php if($haslogo) {
                     	    echo $logo;
-                    	} ?>
-                    	<h1 class="header"><?php /*SEBTS: Uniform Title*/ echo "SEBTS CampusNet"; // echo $headeralt; ?></h1>
-                    </div>
-                    <div id="profileblock">
-						<?php if (($haslogininfo) && (isloggedin()) && ($showuserpic) && !(isguestuser())) {
-//global $PAGE;
-//$user_picture = new user_picture($USER);
-//echo '<br />'.$user_picture->get_url($PAGE);
-					        echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
-						} ?>
-						<div id="user-info">
-							<?php echo $OUTPUT->login_info();
-							if ($haslangmenu) {
-								echo $OUTPUT->lang_menu();
-							}
-							echo $PAGE->headingmenu; ?>
-<!-- SEBTS - Add login boxes to the top corner of each page before login -->
-<?php
-   if ((isguestuser()) && (strpos($_SERVER['PHP_SELF'], 'login/index.php') === false)) { ?>
-      <div>
-	<form class="loginform" id="hlogin" method="post" action="/moodle/login/index.php">
-	<table>
-	<tr>
-            <td><input size="10" name="username" id="husername" /></td>
-	    <td><input size="10" name="password" id="hpassword" type="password" /></td>
-	    <td><input name="Submit" value="Login" type="submit" /></td>
-	</tr>
-	<tr>
-	    <td align="left"><span style="color: white; font-style: italic;">&nbsp;&nbsp;Username</span></td>
-	    <td align="left"><span style="color: white; font-style: italic;">&nbsp;&nbsp;Password</span></td>
-	    <td></td>
-	</table>
-	</form>
-      </div>
-<?php   } ?>
-<!-- SEBTS Close Block -->
-						</div>
                     	}
                     	if (!$simplelogin) { ?>
-                    		<h1 class="header"><?php /*SEBTS: Uniform Title*/ echo "SEBTS CampusNet"; // echo $headeralt; ?></h1>
+                    		<h1 class="header"><?php echo $headeralt; ?></h1>
                     	<?php } ?>
                     </div>
                     <?php if (!$simplelogin) { ?>
 	                    <div id="profileblock">
-							<?php if (($haslogininfo) && (isloggedin()) && ($showuserpic) && !(isguestuser())) {
+							<?php if (($haslogininfo) && (isloggedin()) && ($showuserpic)) {
 						        echo html_writer::tag('div', $OUTPUT->user_picture($USER, array('size'=>80)), array('id'=>'user-pic'));
 							} ?>
 							<div id="user-info">
@@ -85,6 +49,30 @@ require_once(dirname(__FILE__).'/header.php'); ?>
 									echo $OUTPUT->lang_menu();
 								}
 								echo $PAGE->headingmenu; ?>
+                                <!-- SEBTS - Add login boxes to the top corner of each page before login -->
+                                <?php
+                                if ((isguestuser() || !isloggedin()) && (string)$this->page->url != get_login_url()) { ?>
+                                    <div class="loginbox">
+                                        <form class="loginform" id="hlogin" method="post" action="<?php echo get_login_url(); ?>">
+											<table>
+                                                <tr>
+                                                    <td>
+                                                        <label for="husername"><?php echo get_string("username"); ?></label><br/>
+                                                        <input size="10" name="username" id="husername" />
+                                                    </td>
+                                                    <td>
+                                                        <label for="hpassword"><?php echo get_string("password"); ?></label><br/>
+                                                        <input size="10" name="password" id="hpassword" type="password" />
+                                                    </td>
+                                                    <td style="vertical-align: bottom;">
+                                                        <input type="submit" name="Submit" id="hlogin" value="<?php echo get_string("login"); ?>" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </form>
+                                    </div>
+                                <?php   } ?>
+                                <!-- SEBTS Close Block -->
 							</div>
 	                    </div>
                     <?php } ?>
