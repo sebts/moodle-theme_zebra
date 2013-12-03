@@ -113,8 +113,9 @@
 .course-content .section li.activity {
     margin: 0;
     padding: 0 0 0 40px; /* bottom +1 to account for -1 margin */ 
-    border-top: 1px solid [[setting:bodybgcolor]]; /* border between all activities */
-    margin-top: -1px; /* For sections with only 1 item */
+    border-top: 0 solid [[setting:bodybgcolor]]; /* SEBTS */
+/*  border-top: 1px solid [[setting:bodybgcolor]]; /* border between all activities */
+/*  margin-top: -1px; /* For sections with only 1 item */
     min-height: 32px; /* make sure everything looks even */
 }
 
@@ -207,7 +208,8 @@
 
 .editing .sitetopic .section .activity .commands,
 .editing .course-content .section .activity .commands {
-    float: right;
+/*  float: right; 
+ * SEBTS */
     padding: 0 4px 0 0;
 }
 

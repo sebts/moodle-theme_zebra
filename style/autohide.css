@@ -30,6 +30,7 @@
     max-width: 86%; /* Keep the "Add Resources and Add Activity" Dropdowns in the block */
 }
 
+.editing .course-content .section .activity .commands, /* SEBTS - hide course activity commands */
 .section_add_menus, /* Add Resource/Activity dropdowns (2.2) */
 .addresourcemodchooser, /* Add Resource/Activity Link (2.3) */
 .editing .block .title .commands .icon, /* Block Title Controls */
@@ -47,6 +48,7 @@
     transition: opacity 0.5s linear 0s; /* half-second fade in */
 }
 
+.editing .course-content .section .activity:hover .commands, /* SEBTS */
 .editing .section:hover .section_add_menus,
 .editing .block:hover .section_add_menus,
 .editing .sitetopic:hover .section_add_menus,
