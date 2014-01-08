@@ -493,3 +493,14 @@ span.flagged-tag a {
 .dir-rtl .mod-indent-14 {padding-right:420px;padding-left:0;}
 .dir-rtl .mod-indent-15,
 .dir-rtl .mod-indent-huge {padding-right:420px;padding-left:0;}
+
+/* Errors */
+
+.warning  {font-style: italic;}
+.error {color:[[setting:criticalfontcolor]];}
+.errorbox {color:#ffffff;border-color:#660000;background-color:#990000;font-style: italic;}
+.errorbox .title {font-size: 1.2em;text-align: center;background-color:#FFBBBB;}
+.errorboxcontent {text-align: center;}
+.errorcode {font-size: 0.7em;}
+.errorbox {border-width:1px;border-style:solid;margin: 1em 15%;width: 70%;padding:10px;}
+.errorbox .title {padding: 5px;}
