@@ -5,7 +5,7 @@ class theme_zebra_core_renderer extends core_renderer {
  
     protected function render_custom_menu(custom_menu $menu) {
  
-        $branch = $menu->add('Welcome', new moodle_url('/course/view.php?id=236') , 'Welcome', 5000);
+        $branch = $menu->add('Welcome', new moodle_url($CFG->customHomepage) , 'Welcome', 5000);
 
 //        $mycourses = $this->page->navigation->get('mycourses');
 // 
