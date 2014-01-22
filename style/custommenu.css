@@ -25,10 +25,12 @@
 
 #custommenu {
     background-color: [[setting:linkcolor]];
-    text-shadow:0 1px 0 [[setting:fontcolor]];
+/*    text-shadow:0 1px 0 [[setting:linkcolor]];*/
 }
 
-#navbar-wrapper,
+/* ------------------ COMMENTED OUT TO FLATTEN DESIGN --------------------
+
+/*#navbar-wrapper,
 #page-content-wrapper {
     border-radius:5px 5px 0 0;
     -moz-border-radius:5px 5px 0 0;
@@ -45,7 +47,7 @@
     -moz-box-shadow: 0 1px [[setting:linkcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:linkcolor]] inset;
     -webkit-box-shadow: 0 1px [[setting:linkcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:linkcolor]] inset;
 }
-
+*/
 #custommenu .yui3-menu {
     float: left;
 }
@@ -78,7 +80,8 @@
 
 #custommenu .yui3-menu-label,
 #custommenu .yui3-menuitem-content {
-    border-right: 1px solid [[setting:fontcolor]];
+    border-right: 1px solid [[setting:linkcolor]];
+	padding: 0px 13px;
 }
 
 /* Top Menu Items - Active */
@@ -88,15 +91,16 @@
 #custommenu .yui3-menuitem-active,
 #custommenu .calendar:hover,
 #custommenu .home:hover {
-    background:-moz-linear-gradient(center top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]]!important;
+    background:[[setting:hovercolor]]!important;
+	/*background:-moz-linear-gradient(center top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]]!important;
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:menucolorscheme]]), color-stop(100%,rgba(0,0,0,0.3))) [[setting:hovercolor]]!important;
     background:-webkit-linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]]!important;
     background:-ms-linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]]!important;
     background:linear-gradient(top, [[setting:menucolorscheme]] 0%, rgba(0,0,0,0.3) 100%) [[setting:hovercolor]]!important; /* Override Base Sheet "Core" Line 607 */
-    -moz-box-shadow: 0 1px [[setting:hovercolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
+    /*-moz-box-shadow: 0 1px [[setting:hovercolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
     -webkit-box-shadow: 0 1px [[setting:hovercolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
-    box-shadow: 0 1px [[setting:hovercolor]] inset, 0 2px [[setting:menucolorscheme]] inset;
-}
+    box-shadow: 0 1px [[setting:hovercolor]] inset, 0 2px [[setting:menucolorscheme]] inset; */
+} 
 
 /* Sub Menu */
 
@@ -126,20 +130,20 @@
     background-image: url([[setting:vmenuiconcolor]]);
 }
 
-#custommenu .custom_menu_submenu .yui3-menuitem-active,
+ #custommenu .custom_menu_submenu .yui3-menuitem-active,
 #custommenu .custom_menu_submenu .yui3-menu-label-active,
 #custommenu .custom_menu_submenu .yui3-menu-label-menuvisible {
     background: url([[setting:hmenuiconcolor]]) no-repeat right center scroll [[setting:linkcolor]] !important; /* Prevent CSS3 sheet from overriding this */
-    border-top: 1px solid [[setting:linkcolor]];
+   border-top: 1px solid [[setting:linkcolor]];
     border-bottom: 1px solid [[setting:linkcolor]];
     box-shadow: none;
-}
+} 
 
 .yui3-skin-sam .yui3-menu-label,
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-label,
 .yui3-skin-sam .yui3-menuitem-content,
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menuitem-content {
-    padding: 0 2em; /* Increase side padding to allow for indicators */
+    padding: 0 2em;  /* Increase side padding to allow for indicators */
 }
 
 /* Home Link */
@@ -183,7 +187,8 @@
     color: [[setting:contentbgcolor]]!important;
     text-decoration: none!important;
     border-left: 1px solid [[setting:fontcolor]];
-    background:-moz-linear-gradient(center top , [[setting:menucolorscheme]] 0%, transparent 66%) [[setting:fontcolor]];
+	background: #333333;
+    /*background:-moz-linear-gradient(center top , [[setting:menucolorscheme]] 0%, transparent 66%) [[setting:fontcolor]];
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,[[setting:menucolorscheme]]),color-stop(66%,transparent)) [[setting:fontcolor]];
     background:-webkit-linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:fontcolor]];
     background:-ms-linear-gradient(top, [[setting:menucolorscheme]] 0%,transparent 66%) [[setting:fontcolor]];
@@ -196,7 +201,7 @@
     border-radius:0 5px 0 0;
     -moz-background-clip:padding;
     -webkit-background-clip:padding-box;
-    background-clip:padding-box;
+    background-clip:padding-box; */
 }
 
 #custommenu .calendar:hover {
