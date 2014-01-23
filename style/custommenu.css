@@ -25,10 +25,12 @@
 
 #custommenu {
     background-color: [[setting:linkcolor]];
-/*    text-shadow:0 1px 0 [[setting:linkcolor]];*/
+	font-size: 115% !important;
 }
 
-/* ------------------ COMMENTED OUT TO FLATTEN DESIGN --------------------
+
+
+/* ------------------ COMMENTED OUT TO FLATTEN DESIGN 1/23/14 BU--------------------
 
 /*#navbar-wrapper,
 #page-content-wrapper {
@@ -48,6 +50,7 @@
     -webkit-box-shadow: 0 1px [[setting:linkcolor]] inset, 0 2px [[setting:menucolorscheme]] inset, 0 -1px [[setting:linkcolor]] inset;
 }
 */
+
 #custommenu .yui3-menu {
     float: left;
 }
@@ -80,7 +83,7 @@
 
 #custommenu .yui3-menu-label,
 #custommenu .yui3-menuitem-content {
-    border-right: 1px solid [[setting:linkcolor]];
+    /* border-right: 1px solid [[setting:linkcolor]]; -- removed lines between top nav links 1/24/14*/
 	padding: 0px 13px;
 }
 
@@ -105,8 +108,10 @@
 /* Sub Menu */
 
 #custommenu .custom_menu_submenu .yui3-menu-content {
-    background: [[setting:fontcolor]];
+    /* background: [[setting:fontcolor]];   from zebra theme settings page */
+	background: #2795BC;
 }
+
 
 /* Sub Menu Items */
 
@@ -207,3 +212,32 @@
 #custommenu .calendar:hover {
     background-color: [[setting:hovercolor]];
 }
+
+/* ------------------------- CUT AND PASTED FROM ZEBRA THEME SETTINGS CUSTOM CSS SECTION SO FUTURE CHANGES GO IN CUSTOMMENU.CSS, NOT IN THE MOODLE DATABASE!! */
+
+
+#navbar-wrapper
+{
+  background-color: #2795BC !important;
+}
+
+#profileblock
+{
+  color: #DDD !important;
+}
+
+#profileblock a, #profileblock a:visited, #profileblock a:active, #profileblock a:hover
+{
+  color: #FFF !important;
+  font-weight: bold !important;
+}
+
+
+.course-content ul.weeks li.section .content {
+    margin: 20px 40px !important;
+}
+
+/* ----------- END CUT AND PASTE 1/23/14 BU --------- */
+
+
+
