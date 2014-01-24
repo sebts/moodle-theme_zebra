@@ -4,7 +4,7 @@
 class theme_zebra_core_renderer extends core_renderer {
  
     protected function render_custom_menu(custom_menu $menu) {
-        $branch = $menu->add('Welcome', new moodle_url('/') , 'Welcome', 5000);
+//        $branch = $menu->add('WELCOME', new moodle_url('/') , 'WELCOME', 5000);
 
 //        $mycourses = $this->page->navigation->get('mycourses');
 // 
@@ -22,11 +22,11 @@ class theme_zebra_core_renderer extends core_renderer {
 //        }
 
 		if (!isloggedin() || isguestuser()) {
-	        $branch = $menu->add('Moodle', new moodle_url('/login/index.php') , 'Moodle', 10000);
+	        $branch = $menu->add('MOODLE', new moodle_url('/login/index.php') , 'MOODLE', 10000);
 	 		$branch->add("Login", new moodle_url('/login/index.php'), "Login"); 
 		}
 		if (isloggedin() && !isguestuser()) {
-	        $branch = $menu->add('Moodle', new moodle_url('/my') , 'Moodle', 10000);
+	        $branch = $menu->add('MOODLE', new moodle_url('/my') , 'MOODLE', 10000);
 	 		$branch->add("Current Courses", new moodle_url('/my/?semester=current'), "My Moodle");
 	 		$branch->add("Previous Courses", new moodle_url('/my/?semester=past'), "Previous Courses");
 	 		$branch->add("Future Courses", new moodle_url('/my/?semester=future'), "Future Courses");
@@ -38,7 +38,7 @@ class theme_zebra_core_renderer extends core_renderer {
 		}	
 
 		if (has_capability('moodle/site:config', get_context_instance(CONTEXT_SYSTEM))) {
-        	$branch = $menu->add('Admin', new moodle_url('/admin/index.php') , 'Admin', 20000);
+        	$branch = $menu->add('ADMIN', new moodle_url('/admin/index.php') , 'ADMIN', 20000);
 	 		$branch->add("Users", new moodle_url('/admin/user.php'), "Users");
 	 		$branch->add("Courses", new moodle_url('/course/index.php?categoryedit=off'), "Courses");
 	 		$branch->add("Moodle Admin", new moodle_url('/admin/index.php'), "Moodle Admin");
@@ -47,7 +47,7 @@ class theme_zebra_core_renderer extends core_renderer {
 	 		$branch->add("Theme Admin", new moodle_url('/admin/settings.php?section=themesettingzebra'), "Theme Admin");
 		}
 
-        $branch = $menu->add('Student Life', NULL, 'Student Life', 30000);
+        $branch = $menu->add('STUDENT LIFE', NULL, 'STUDENT LIFE', 30000);
  		$branch->add("Around Southeastern", new moodle_url('/mod/page/view.php?id=3715'), "Around Southeastern");
  		$branch->add("Southeastern1Card", new moodle_url('/mod/page/view.php?id=3729'), "Southeastern1Card");
 		if (isloggedin() && !isguestuser()) {
@@ -59,7 +59,7 @@ class theme_zebra_core_renderer extends core_renderer {
 	 		$branch->add("D Groups", new moodle_url('/mod/page/view.php?id=4975'), "D Groups"); }
 
 
-        $branch = $menu->add('Forms & Info', NULL , 'Forms & Info', 40000);
+        $branch = $menu->add('FORMS & INFO', NULL , 'Forms & Info', 40000);
  		$branch->add("Registrar's Office", new moodle_url('/mod/page/view.php?id=3721'), "Registrar's Office");
  		$branch->add("Accounting Services", new moodle_url('/mod/page/view.php?id=3722'), "Accounting Services");
  		$branch->add("Campus Security", new moodle_url('/mod/page/view.php?id=3723'), "Campus Security");
@@ -67,7 +67,7 @@ class theme_zebra_core_renderer extends core_renderer {
  		$branch->add("Housing", new moodle_url('/mod/page/view.php?id=3724'), "Housing");
 
 		// $branch = $menu->add('Self-Service', new moodle_url('/mod/page/view.php?id=3725') , 'Self-Service', 50000);
-		$branch = $menu->add('Self-Service', NULL, 'Self-Service', 50000);
+		$branch = $menu->add('SELF-SERVICE', NULL, 'Self-Service', 50000);
 		$branch->add("Self-Service Home", new moodle_url('https://selfservice.sebts.edu" target="mdltoselfservice'), "Self-Service Home");
 		$branch->add("Student/Faculty Directory", new moodle_url('https://selfservice.sebts.edu/selfservice/account/directorysearch.asp" target="mdltoselfservice'), "Student/Faculty Directory");
 		$branch->add("Course Search", new moodle_url('https://selfservice.sebts.edu/selfservice/Search/SectionSearch.aspx" target="mdltoselfservice'), "Course Search");
@@ -78,14 +78,14 @@ class theme_zebra_core_renderer extends core_renderer {
 //		$branch->add("Pay Tuition & Housing Online", new moodle_url('/mod/page/view.php?id=20545'), "Pay Tuition & Housing Online");
 
 		if (isloggedin() && !isguestuser()) {
-			$branch = $menu->add('Library', new moodle_url('/course/view.php?id=227') , 'Library', 60000);
+			$branch = $menu->add('LIBRARY', new moodle_url('/course/view.php?id=227') , 'Library', 60000);
 		}
 		if (isloggedin() && !isguestuser()) {
-			$branch = $menu->add('Writing Center', new moodle_url('/course/view.php?id=40') , 'Writing Center', 65000);
+			$branch = $menu->add('WRITING CENTER', new moodle_url('/course/view.php?id=40') , 'Writing Center', 65000);
 		}
 
 		if (isloggedin() && !isguestuser()) {
-			$branch = $menu->add('STR Journal', NULL, 'STR Journal', 80000);
+			$branch = $menu->add('STR JOURNAL', NULL, 'STR Journal', 80000);
 			$branch->add("STR 1.1 (2010)", new moodle_url('/mod/resource/view.php?inpopup=true&id=66624'), "STR 1.1 (2010)");
 			$branch->add("STR 2.1 (2011)", new moodle_url('/mod/resource/view.php?inpopup=true&id=66484'), "STR 2.1 (2011)");
 			$branch->add("STR 2.2 (2011)", new moodle_url('/mod/resource/view.php?inpopup=true&id=66483'), "STR 2.2 (2011)");
@@ -94,7 +94,7 @@ class theme_zebra_core_renderer extends core_renderer {
 			$branch->add("STR 4.1 (2013)", new moodle_url('/mod/page/view.php?id=103550'), "STR 4.1 (2013)");
 		}
 
-		$branch = $menu->add('Help', NULL, 'Help', 90000);
+		$branch = $menu->add('HELP', NULL, 'Help', 90000);
  		$branch->add("Access Guides", new moodle_url('/mod/page/view.php?id=3730'), "Access Guides");
  		//$branch->add("Moodle Browser Settings", new moodle_url(''), "Moodle Browser Settings");
  		$branch->add("CampusNet", new moodle_url('/mod/page/view.php?id=3731'), "CampusNet");

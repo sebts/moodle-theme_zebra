@@ -25,7 +25,8 @@
 
 #custommenu {
     background-color: [[setting:linkcolor]];
-	font-size: 115% !important;
+	/*font-size: 100% !important;*/
+	font-weight: bold;
 }
 
 
@@ -157,13 +158,13 @@
     float: left;
     color: [[setting:contentbgcolor]]!important;
     text-decoration: none!important;
-    border-right: 1px solid [[setting:fontcolor]];
+    /*border-right: 1px solid [[setting:linkcolor]];
     -moz-border-radius:5px 0 0 0;
     -webkit-border-radius:5px 0 0 0;
     border-radius:5px 0 0 0;
     -moz-background-clip:padding;
     -webkit-background-clip:padding-box;
-    background-clip:padding-box;
+    background-clip:padding-box;*/
 }
 
 #custommenu .home:hover {
