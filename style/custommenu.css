@@ -78,6 +78,12 @@
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menuitem-content {
     border: 0 none;
     margin: 0;
+	background-color: #2795BC; /* BU 2-7-2014 override */
+}
+
+/* BU 2-7-2014 override */
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content, #custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content .ul {
+border: none;
 }
 
 /* Top Menu Items */
@@ -119,7 +125,8 @@
 #custommenu .custom_menu_submenu .yui3-menuitem,
 #custommenu .custom_menu_submenu .yui3-menu-label {
     border-top: 1px solid rgba(255,255,255,0.1);
-    border-bottom: 1px solid rgba(0,0,0,0.4);
+    /* border-bottom: 1px solid rgba(0,0,0,0.4); BU 2014-02-07 */ 
+	border-bottom: 1px solid #1F7594; /*BU 2014-02-07 */
 }
 
 /* Sub Menu Items - Active */
