@@ -53,7 +53,16 @@
 */
 
 #custommenu .yui3-menu {
-    float: left;
+     float: left; /* might want to disable so menu can float next to home icon @ topnav bar <----------------------------*/
+}
+
+.yui3-skin-sam .yui3-menu-horizontal .yui3-menu-content { /* BU override */
+	background-image: none; 
+	background-color: #2795BC;
+}
+
+.yui3-menu-horizontal>.yui3-menu-content>ul:after {  /* BU override */
+	content: 000;
 }
 
 .yui3-skin-sam .yui3-menu-label,
@@ -76,7 +85,7 @@
 .yui3-skin-sam .yui3-menu .yui3-menu .yui3-menu-content,
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menu-label,
 .yui3-skin-sam .yui3-menu-horizontal .yui3-menuitem-content {
-    border: 0 none;
+    border: none;
     margin: 0;
 	background-color: #2795BC; /* BU 2-7-2014 override */
 }
