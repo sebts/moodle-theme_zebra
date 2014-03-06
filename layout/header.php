@@ -142,6 +142,36 @@ if (document.getElementById('selfserv').src.search("selfservice") > 0) {
 }
 </script>
 <!-- SEBTS End Single Sign On -->
+
+
+<?php } else { ?>
+
+<!-- SEBTS Begin Single Sign On -->
+<script type="text/javascript">
+$(document).ready(function() {
+loaded = false;
+
+$("#login").submit(function() {
+   if (!loaded) {
+      var user = $("#username").val();
+      var pass = $("#password").val();
+      document.getElementById('selfserv').src = 'https://selfservice.sebts.edu/selfservice/login.aspx#mdl|'+user+'|'+pass;
+      return false;
+   } else {
+      return true;
+   }
+});
+});
+
+function doneload() {
+if (document.getElementById('selfserv').src.search("selfservice") > 0) {
+   loaded = true;
+   $("#login").submit();
+}
+}
+</script>
+<!-- SEBTS End Single Sign On -->
+
 <?php } ?>
 </head>
 
