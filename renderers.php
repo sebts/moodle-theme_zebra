@@ -70,7 +70,7 @@ class theme_zebra_core_renderer extends core_renderer {
             $branch->add("Parking Permits and Vehicle Registration", new moodle_url('https://www.permitsales.net/SEBTS" target="_blank'), "Parking Permits and Vehicle Registration");
             $branch->add("Appeal or Pay Citations", new moodle_url('https://www.permitsales.net/SEBTS/violations" target="_blank'), "Appeal or Pay Citations");
             $branch->add("Parking Map", new moodle_url('http://www.sebts.edu/files/parking_map.pdf" target="_blank'), "Parking Map");
-            $branch->add("Parking Policies", new moodle_url('http://www.sebts.edu/portal/parking-policies.aspx" target="_blank'), "Parking Policies");
+            $branch->add("Parking Policies", new moodle_url('/mod/page/view.php?id=154412" target="_blank'), "Parking Policies");
             $branch->add("Email Security", new moodle_url('mailto:campussecurity@sebts.edu'), "Email Security");
         }
 
