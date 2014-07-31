@@ -54,7 +54,9 @@ class theme_zebra_core_renderer extends core_renderer {
 	 		$branch->add("Student Employment Portal", new moodle_url('/mod/page/view.php?id=47357'), "Student Employment Portal"); }
  		$branch->add("Chapel Information", new moodle_url('/mod/page/view.php?id=3718'), "Chapel Information");
  		$branch->add("General Student Information/Services", new moodle_url('/mod/page/view.php?id=3719'), "General Student Information/Services");
- 		$branch->add("Intramurals", new moodle_url('/mod/page/view.php?id=3720'), "Intramurals");
+ 		$branch->add("Intramurals", new moodle_url('/mod/page/view.php?id=3720'), "Intramurals");        
+		if (isloggedin() && !isguestuser()) {
+	 		$branch->add("Fitness Initiative", new moodle_url('/mod/page/view.php?id=157410'), "Fitness Initiative"); }
 		if (isloggedin() && !isguestuser()) {
 	 		$branch->add("D Groups", new moodle_url('/mod/page/view.php?id=4975'), "D Groups"); }
 
