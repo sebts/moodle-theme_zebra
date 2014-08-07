@@ -20,7 +20,7 @@ class theme_zebra_core_renderer extends core_renderer {
 //                $branch->add($coursenode->get_content(), $coursenode->action, $coursenode->get_title());
 //            }
 //        }
-
+	if (!$menu->has_children()) {
 		if (!isloggedin() || isguestuser()) {
 	        $branch = $menu->add('MOODLE', new moodle_url('/login/index.php') , 'MOODLE', 10000);
 	 		$branch->add("Login", new moodle_url('/login/index.php'), "Login"); 
@@ -117,7 +117,7 @@ class theme_zebra_core_renderer extends core_renderer {
  		$branch->add("Software for Students", new moodle_url('/mod/page/view.php?id=3737'), "Software for Students");
  		$branch->add("Where to Buy Computers", new moodle_url('/mod/page/view.php?id=3738'), "Where to Buy Computers");
  		//$branch->add("Moodle Help for Students", NULL, "Moodle Help for Students");
-		
+	}
         return parent::render_custom_menu($menu);
     }
  
