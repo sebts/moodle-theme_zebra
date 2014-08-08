@@ -64,7 +64,6 @@ class theme_zebra_core_renderer extends core_renderer {
         $branch = $menu->add('FORMS & INFO', NULL , 'Forms & Info', 40000);
  		$branch->add("Registrar's Office", new moodle_url('/mod/page/view.php?id=3721'), "Registrar's Office");
  		$branch->add("Accounting Services", new moodle_url('/mod/page/view.php?id=3722'), "Accounting Services");
- 		if (isloggedin() && !isguestuser()) {$branch->add("SEBTS Alerts / Announcements", new moodle_url('/mod/page/view.php?id=62373'), "SEBTS Alerts / Announcements"); }
  		$branch->add("Housing", new moodle_url('/mod/page/view.php?id=3724'), "Housing");
 
         if (isloggedin() && !isguestuser()) {
@@ -73,6 +72,7 @@ class theme_zebra_core_renderer extends core_renderer {
             $branch->add("Appeal or Pay Citations", new moodle_url('https://www.permitsales.net/SEBTS/violations" target="_blank'), "Appeal or Pay Citations");
             $branch->add("Parking Map", new moodle_url('http://www.sebts.edu/files/parking_map.pdf" target="_blank'), "Parking Map");
             $branch->add("Parking Policies", new moodle_url('/mod/page/view.php?id=154412'), "Parking Policies");
+ 		    $branch->add("SEBTS Alerts / Announcements", new moodle_url('/mod/page/view.php?id=62373'), "SEBTS Alerts / Announcements"); 
             $branch->add("Email Security", new moodle_url('mailto:campussecurity@sebts.edu'), "Email Security");
         }
 
