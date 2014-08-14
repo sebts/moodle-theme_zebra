@@ -112,7 +112,7 @@
 .sitetopic .section li.activity,
 .course-content .section li.activity {
     margin: 0;
-    padding: 0 0 0 40px; /* bottom +1 to account for -1 margin */ 
+    padding: 0 0 0 40px; /* bottom +1 to account for -1 margin */
     border-top: 0 solid [[setting:bodybgcolor]]; /* SEBTS */
 /*  border-top: 1px solid [[setting:bodybgcolor]]; /* border between all activities */
 /*  margin-top: -1px; /* For sections with only 1 item */
@@ -208,7 +208,7 @@
 
 .editing .sitetopic .section .activity .commands,
 .editing .course-content .section .activity .commands {
-/*  float: right; 
+/*  float: right;
  * SEBTS */
     padding: 0 4px 0 0;
 }
@@ -220,6 +220,11 @@
   vertical-align: middle;
 }
 
+.course-content .section .activity .commands .menubar img {
+    padding-bottom: 0;
+    margin-bottom: -4px;
+    vertical-align: text-bottom;
+}
 /* Topic Summary */
 
 .editing .sitetopic .summary .no-overflow,
