@@ -49,30 +49,27 @@ require_once(dirname(__FILE__).'/header.php'); ?>
 									echo $OUTPUT->lang_menu();
 								}
 								echo $PAGE->headingmenu; ?>
-                                <!-- SEBTS - Add login boxes to the top corner of each page before login -->
-                                <?php
-                                if ((isguestuser() || !isloggedin()) && (string)$this->page->url != get_login_url()) { ?>
+                                <?php if ((isguestuser() || !isloggedin()) && (string)$this->page->url != get_login_url()) { ?>
                                     <div class="loginbox">
-                                        <form class="loginform" id="hlogin" method="post" action="<?php echo get_login_url(); ?>">
+                                        <form class="loginform" id="login" method="post" action="<?php echo get_login_url(); ?>">
 											<table>
                                                 <tr>
                                                     <td>
-                                                        <label for="husername"><?php echo get_string("username"); ?></label><br/>
-                                                        <input size="10" name="username" id="husername" />
+                                                        <label for="username"><?php echo get_string("username"); ?></label><br/>
+                                                        <input size="10" name="username" id="username" />
                                                     </td>
                                                     <td>
-                                                        <label for="hpassword"><?php echo get_string("password"); ?></label><br/>
-                                                        <input size="10" name="password" id="hpassword" type="password" />
+                                                        <label for="password"><?php echo get_string("password"); ?></label><br/>
+                                                        <input size="10" name="password" id="password" type="password" />
                                                     </td>
                                                     <td style="vertical-align: bottom;">
-                                                        <input type="submit" name="Submit" id="hlogin" value="<?php echo get_string("login"); ?>" />
+                                                        <input type="submit" name="Submit" id="login" value="<?php echo get_string("login"); ?>" />
                                                     </td>
                                                 </tr>
                                             </table>
                                         </form>
                                     </div>
                                 <?php   } ?>
-                                <!-- SEBTS Close Block -->
 							</div>
 	                    </div>
                     <?php } ?>

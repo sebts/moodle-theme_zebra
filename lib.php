@@ -22,6 +22,13 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+function theme_zebra_page_init(moodle_page $page) {
+    $page->requires->jquery();
+    if (isguestuser() || !isloggedin()) {
+        $page->requires->js('/theme/zebra/javascript/sso.js');
+    }
+}
+
 /**
  * This is the postprocess function for the theme
  *
